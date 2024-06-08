@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 CS unit-2</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit 2</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>Cyber Security</strong></p>
+        <p><strong>Approaches to Message Authentication:</strong></p>
+        <p>Encryption protects against passive attack (eavesdropping). A different requirement is to protect against active attack (falsification of data and transactions).</p>
+        <p>&nbsp;</p>
+        <p>Protection against such attacks is known as message authentication. A message, file, document, or other collection of data is said to be authentic when it is genuine and comes from its alleged source. Message authentication is a procedure that allows communicating parties to verify that received messages are authentic.</p>
+        <p>&nbsp;</p>
+        <p>1 The two important aspects are to verify that the contents of the message have not been altered and that the source is authentic. We may also wish to verify a message&rsquo;s timeliness (it has not been artificially delayed and replayed) and sequence relative to other messages flowing between two parties.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Authentication Using Conventional Encryption</strong></p>
+        <p>It would seem possible to perform authentication simply by the use of symmetric encryption. If we assume that only the sender and receiver share a key (which is as it should be), then only the genuine sender would be able to encrypt a message successfully for the other participant, provided the receiver can recognize a valid message.</p>
+        <p>Furthermore, if the message includes an error-detection code and a sequence number, the receiver is assured that no alterations have been made and that sequencing is proper. If the message also includes a timestamp, the receiver is assured that the message has not been delayed beyond that normally expected for network transit.</p>
+        <p>In fact, symmetric encryption alone is not a suitable tool for data authentication. To give one simple example, in the ECB mode of encryption, if an attacker reorders the blocks of ciphertext, then each block will still decrypt successfully. However, the reordering may alter the meaning of the overall data sequence. Although sequence numbers may be used at some level (e.g., each IP packet), it is typically not the case that a separate sequence number will be associated with each <em>b</em>-bit block of plaintext. Thus, block reordering is a threat.</p>
+        <p>&nbsp;</p>
+        <p><strong>Message Authentication without Message Encryption</strong></p>
+        <p>In this section, we examine several approaches to message authentication that do not rely on encryption. In all of these approaches, an authentication tag is generated and appended to each message for transmission. The message itself is not encrypted and can be read at the destination independent of the authentication function at the destination.</p>
+        <p>Because the approaches discussed in this section do not encrypt the message, message confidentiality is not provided. As was mentioned, message encryption by itself does not provide a secure form of authentication. However, it is possible to combine authentication and confidentiality in a single algorithm by encrypting a message plus its authentication tag. Typically, however, message authentication is provided as a separate function from message encryption. [DAVI89] suggests three situations in which message authentication without confidentiality is preferable:</p>
+        <p>&nbsp;</p>
+        <ol>
+          <li>There are a number of applications in which the same message is broadcast to a number of destinations. Two examples are notification to users that the network is now unavailable and an alarm signal in a control center. It is cheaper and more reliable to have only one destination responsible for monitoring authenticity. Thus, the message must be broadcast in plaintext with an associated message authentication tag. The responsible system performs authentication. If a violation occurs, the other destination systems are alerted by a general alarm.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="2">
+          <li>Another possible scenario is an exchange in which one side has a heavy load and cannot afford the time to decrypt all incoming messages. Authentication is carried out on a selective basis with messages being chosen at random for checking.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="3">
+          <li>Authentication of a computer program in plaintext is an attractive service. The computer program can be executed without having to decrypt it every time, which would be wasteful of processor resources. However, if a message authentication tag were attached to the program, it could be checked whenever assurance is required of the integrity of the program.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p><strong>Secure Hash Function</strong></p>
+        <p>The one-way hash function, or <strong>secure hash function</strong>, is important not only in message authentication but in digital signatures. In this section, we begin with a discussion of requirements for a secure hash function. Then we look at the most important hash function, SHA.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Hash Function Requirements</strong></p>
+        <p>The purpose of a hash function is to produce a &ldquo;fingerprint&rdquo; of a file, message, or other block of data. To be useful for message authentication, a hash function H must have the following properties:</p>
+        <ol>
+          <li>H can be applied to a block of data of any size.</li>
+          <li>H produces a fixed-length output.</li>
+          <li>H(<em>x</em>) is relatively easy to compute for any given <em>x</em>, making both hardware and software implementations practical.</li>
+          <li>For any given code <em>h</em>, it is computationally infeasible to find <em>x </em>such that</li>
+        </ol>
+        <p>H(<em>x</em>) = <em>h</em>. A hash function with this property is referred to as <strong>one-way </strong>or <strong>preimage resistant</strong>.</p>
+        <ol start="5">
+          <li>For any given block <em>x</em>, it is computationally infeasible to find <em>y </em>_ <em>x </em>with</li>
+        </ol>
+        <p>H(<em>y</em>) = H(<em>x</em>). A hash function with this property is referred to as <strong>second</strong></p>
+        <p><strong>pre- image resistant</strong>. This is sometimes referred to as <strong>weak collision resistant</strong>.</p>
+        <ol start="6">
+          <li>It is computationally infeasible to find any pair (<em>x</em>, <em>y</em>) such that H(<em>x</em>) = H(<em>y</em>).</li>
+        </ol>
+        <p>A hash function with this property is referred to as <strong>collision resistant</strong>. This is</p>
+        <p>sometimes referred to as <strong>strong collision resistant</strong>.</p>
+        <p>&nbsp;</p>
+        <p>The first three properties are requirements for the practical application of a hash function to message authentication. The fourth property, preimage resistant, is the &ldquo;one-way&rdquo; property: It is easy to generate a code given a message, but virtually impossible to generate a message given a code. This property is important if the authentication technique involves the use of a secret value (Figure 3.2c). The secret value itself is not sent; however, if the hash function is not one way, an attacker can easily discover the secret value: If the attacker can observe or intercept a transmission, the attacker obtains the message <em>M </em>and the hash code <em>C </em>= H(<em>SAB </em>}<em>M</em>). The attacker then inverts the hash function to obtain <em>SAB </em>}<em>M </em>= H-1(<em>C</em>). Because the attacker now has both <em>M </em>and <em>SAB </em>}<em>M</em>, it is a trivial matter to recover <em>SAB</em>. The second preimage resistant property guarantees that it is impossible to find an alternative message with the same hash value as a given message. This prevents forgery when an encrypted hash code is used (Figures 3.2a and b). If this property were not true, an attacker would be capable of the following sequence: First, observe or intercept a message plus its encrypted hash code; second, generate an&nbsp;unencrypted hash code from the message; third, generate an alternate message with the same hash code.</p>
+        <p>A hash function that satisfies the first five properties in the preceding list is referred to as a weak hash function. If the sixth property is also satisfied, then it is referred to as a strong hash function. The sixth property, collision resistant, protects against a sophisticated class of attack known as the birthday attack. Details of this attack are beyond the scope of this book. The attack reduces the strength of an <em>m</em>-bit hash function from 2<em>m </em>to 2<em>m</em>/2. See [STAL13] for details.</p>
+        <p>In addition to providing authentication, a message digest also provides data integrity. It performs the same function as a frame check sequence: If any bits in the message are accidentally altered in transit, the message digest will be in error.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Security of Hash Functions</strong></p>
+        <p>As with symmetric encryption, there are two approaches to attacking a secure hash function: cryptanalysis and brute-force attack. As with symmetric encryption algorithms, cryptanalysis of a hash function involves exploiting logical weaknesses in the algorithm. The strength of a hash function against brute-force attacks depends solely on</p>
+        <p>the length of the hash code produced by the algorithm. For a hash code of length <em>n</em>, the level of effort required is proportional to the following:</p>
+        <p>&nbsp;</p>
+        <p>Preimage resistant 2<em>n</em></p>
+        <p>Second preimage resistant 2<em>n</em></p>
+        <p>Collision resistant 2<em>n</em>/2</p>
+        <p>&nbsp;</p>
+        <p>If collision resistance is required (and this is desirable for a general-purpose secure hash code), then the value 2<em>n</em>/2 determines the strength of the hash code against brute-force attacks. Van Oorschot and Wiener [VANO94] presented a design for a $10 million collision search machine for MD5, which has a 128-bit hash length, that could find a collision in 24 days. Thus, a 128-bit code may be viewed as inadequate. The next step up, if a hash code is treated as a sequence of 32 bits, is a 160-bit hash length. With a hash length of 160 bits, the same search machine would require over four thousand years to find a collision. With today&rsquo;s technology, the time would be much shorter, so that 160 bits now appears suspect.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Simple Hash Functions</strong></p>
+        <p>All hash functions operate using the following general principles. The input (message, file, etc.) is viewed as a sequence of <em>n</em>-bit blocks. The input is processed one block at a time in an iterative fashion to produce an <em>n</em>-bit hash function.</p>
+        <p>One of the simplest hash functions is the bit-by-bit exclusive-OR (XOR) of every block. This can be expressed as</p>
+        <p><em>Ci </em>= <em>bi</em>1 _<em>bi</em>2 _ g _<em>bim</em></p>
+        <p>where</p>
+        <p><em>Ci </em>= <em>i</em>th bit of the hash code, 1 &hellip; <em>i </em>&hellip; <em>n</em></p>
+        <p><em>m </em>= number of <em>n</em>-bit blocks in the input</p>
+        <p><em>bij </em>= <em>i</em>th bit in <em>j</em>th block</p>
+        <p>_ = XOR operation</p>
+        <p>&nbsp;</p>
+        <p>Figure 3.3 illustrates this operation; it produces a simple parity for each bit position and is known as a longitudinal redundancy check. It is reasonably effective for random data as a data integrity check. Each <em>n</em>-bit hash value is equally likely.</p>
+        <p>Thus, the probability that a data error will result in an unchanged hash value is 2-<em>n</em>. With more predictably formatted data, the function is less effective. For example, in most normal text files, the high-order bit of each octet is always zero. So if a 128-bit hash value is used, instead of an effectiveness of 2-128, the hash function on this type of data has an effectiveness of 2-112. A simple way to improve matters is to perform a 1-bit circular shift, or rotation, on the hash value after each block is processed. The procedure can be summarized as</p>
+        <p>&nbsp;</p>
+        <ol>
+          <li>Initially set the <em>n</em>-bit hash value to zero.</li>
+          <li>Process each successive <em>n</em>-bit block of data:</li>
+          <li>Rotate the current hash value to the left by one bit.</li>
+          <li>XOR the block into the hash value.</li>
+        </ol>
+        <p>This has the effect of &ldquo;randomizing&rdquo; the input more completely and overcoming any regularities that appear in the input.</p>
+        <p>&nbsp;</p>
+        <p><strong>HMAC</strong></p>
+        <p>In recent years, there has been increased interest in developing a MAC derived from a cryptographic hash code, such as SHA-1. The motivations for this interest are as follows:</p>
+        <p>■■&nbsp;Cryptographic hash functions generally execute faster in software than conventional encryption algorithms such as DES.</p>
+        <p>■■&nbsp;Library code for cryptographic hash functions is widely available. A hash function such as SHA-1 was not designed for use as a MAC and cannot be used directly for that purpose because it does not rely on a secret key. There have been a number of proposals for the incorporation of a secret key into an existing hash algorithm. The approach that has received the most support is HMAC [BELL96a, BELL96b]. HMAC has been issued as RFC 2104, has been chosen as the mandatoryto- implement MAC for IP Security, and is used in other Internet protocols, such as Transport Layer Security (TLS) and Secure Electronic Transaction (SET).</p>
+        <p><strong><em>&nbsp;</em></strong></p>
+        <p><strong>HMAC Design Objectives</strong><strong><em>&nbsp;</em></strong>RFC 2104 lists the following design objectives for HMAC.</p>
+        <p>■■&nbsp;To use, without modifications, available hash functions. In particular, hash</p>
+        <p>functions that perform well in software, and for which code is freely and</p>
+        <p>widely available</p>
+        <p>■■&nbsp;To allow for easy replaceability of the embedded hash function in case faster</p>
+        <p>or more secure hash functions are found or required</p>
+        <p>■■&nbsp;To preserve the original performance of the hash function without incurring</p>
+        <p>a significant degradation</p>
+        <p>■■&nbsp;To use and handle keys in a simple way</p>
+        <p>■■&nbsp;To have a well-understood cryptographic analysis of the strength of the authentication mechanism based on reasonable assumptions on the embedded</p>
+        <p>hash function</p>
+        <p>The first two objectives are important to the acceptability of HMAC. HMAC treats the hash function as a &ldquo;black box.&rdquo; This has two benefits. First, an existing implementation of a hash function can be used as a module in implementing HMAC.</p>
+        <p>&nbsp;</p>
+        <p>In this way, the bulk of the HMAC code is prepackaged and ready to use without modification. Second, if it is ever desired to replace a given hash function in an HMAC implementation, all that is required is to remove the existing hash function module and drop in the new module. This could be done if a faster hash function were desired. More important, if the security of the embedded hash function were compromised, the security of HMAC could be retained simply by replacing the embedded hash function with a more secure one.</p>
+        <p>&nbsp;</p>
+        <p>The last design objective in the preceding list is, in fact, the main advantage of HMAC over other proposed hash-based schemes. HMAC can be proven secure provided that the embedded hash function has some reasonable cryptographic strengths. We return to this point later in this section, but first we examine the structure of HMAC.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Cryptography </strong></p>
+        <p><strong>Definition</strong></p>
+        <p>Cryptography is the process of hiding or coding information so that only the person a message was intended for can read it. The art of cryptography has been used to code messages for thousands of years and continues to be used in bank cards, computer passwords, and ecommerce.</p>
+        <p>Modern cryptography techniques include algorithms and ciphers that enable the&nbsp;<a href="https://www.fortinet.com/resources/cyberglossary/encryption"><u>encryption</u></a>&nbsp;and decryption of information, such as 128-bit and 256-bit encryption keys. Modern&nbsp;<a href="https://www.fortiguard.com/psirt/FG-IR-19-007"><u>ciphers</u></a>, such as the Advanced Encryption Standard (AES), are considered virtually unbreakable.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>A common cryptography definition is the practice of coding information to ensure only the person that a message was written for can read and process the information. This&nbsp;<a href="https://www.fortinet.com/content/dam/fortinet/assets/white-papers/WP-The-Rapid-Growth-Of-SSL-Encryption.pdf"><u>cybersecurity</u></a>&nbsp;practice, also known as cryptology, combines various disciplines like computer science, engineering, and mathematics to create complex codes that hide the true meaning of a message.</p>
+        <p>Cryptography can be traced all the way back to ancient Egyptian hieroglyphics but remains vital to securing communication and information in transit and preventing it from being read by untrusted parties. It uses algorithms and mathematical concepts to transform messages into difficult-to-decipher codes through techniques like cryptographic keys and digital signing to protect data privacy, credit card transactions, email, and web browsing.</p>
+        <h2><strong>The Importance of Cryptography</strong></h2>
+        <p>Cryptography remains important to protecting data and users, ensuring confidentiality, and preventing cyber criminals from intercepting sensitive corporate information. Common uses and examples of cryptography include the following:</p>
+        <p><strong>Privacy and Confidentiality</strong></p>
+        <p>Individuals and organizations use cryptography on a daily basis&nbsp;to protect their privacy and keep their conversations and data confidential. Cryptography ensures confidentiality by encrypting sent messages using an algorithm with a key only known to the sender and recipient. A common example of this is the messaging tool WhatsApp, which encrypts conversations between people to ensure they cannot be hacked or intercepted.&nbsp;</p>
+        <p>Cryptography also secures browsing, such as with virtual private networks (VPNs), which use encrypted tunnels, asymmetric encryption, and public and private shared keys.</p>
+        <h3><strong>Authentication</strong></h3>
+        <h3><strong>Integrity </strong>Similar to how cryptography can confirm the authenticity of a message, it can also prove the integrity of the information being sent and received. Cryptography ensures information is not altered while in storage or during transit between the sender and the intended recipient. For example, digital signatures can detect forgery or tampering in software distribution and financial transactions.</h3>
+        <p>&nbsp;</p>
+        <p><strong>Nonrepudiation</strong></p>
+        <p>Cryptography confirms accountability and responsibility from the sender of a message, which means they cannot later deny their intentions when they created or transmitted information. Digital signatures are a good example of this, as they ensure a sender cannot claim a message, contract, or document they created to be fraudulent. Furthermore, in email nonrepudiation, email tracking makes sure the sender cannot deny sending a message and a recipient cannot deny receiving it.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Key Exchange</strong></p>
+        <p>Key exchange is the method used to share cryptographic keys between a sender and their recipient.</p>
+        <p>&nbsp;</p>
+        <p><strong>Digital Signature</strong></p>
+        <p>&nbsp;</p>
+        <p>NIST FIPS PUB 186-4 [<em>Digital Signature Standard (DSS)</em>, July 2013] defines a digital signature as follows: The result of a cryptographic transformation of data that, when properly implemented, provides a mechanism for verifying origin authentication, data integrity, and signatory non-repudiation.</p>
+        <p>Thus, a digital signature is a data-dependent bit pattern, generated by an agent as a function of a file, message, or other form of data block. Another agent can access the data block and its associated signature and verify that (1) the data block has been signed by the alleged signer and that (2) the data block has not been altered since the signing. Further, the signer cannot repudiate the signature.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;FIPS 186-4 specifies the use of one of three digital signature algorithms:</p>
+        <p>■■&nbsp;<strong>Digital Signature Algorithm (DSA): </strong>The original NIST-approved algorithm, which is based on the difficulty of computing discrete logarithms.</p>
+        <p>■■&nbsp;<strong>RSA Digital Signature Algorithm: </strong>Based on the RSA public-key algorithm.</p>
+        <p>■■&nbsp;<strong>Elliptic Curve Digital Signature Algorithm (ECDSA): </strong>Based on elliptic-curve cryptography.</p>
+        <p>&nbsp;</p>
+        <p>A digital signature is a mathematical technique which validates the authenticity and integrity of a message, software or digital documents. It allows us to verify the author name, date and time of signatures, and authenticate the message contents. The digital signature offers far more inherent security and intended to solve the problem of tampering and impersonation (Intentionally copy another person's characteristics) in digital communications.</p>
+        <p>The computer-based business information authentication interrelates both technology and the law. It also calls for cooperation between the people of different professional backgrounds and areas of expertise. The digital signatures are different from other electronic signatures not only in terms of process and result, but also it makes digital signatures more serviceable for legal purposes. Some electronic signatures that legally recognizable as signatures may not be secure as digital signatures and may lead to uncertainty and disputes.</p>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

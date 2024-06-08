@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 oops unit-1</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-1</strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;<h1>Explain groups and decision making with proper syntax :-</h1></p>
+        <p>Decision making statements allow you to decide the order of execution of specific statements in your program. You can set up a condition and tell the compiler to take a particular action if the condition is met. In case the condition is not met, you can instruct the compiler to execute a different block of code. The decision-making statements available in C++ are:-</p>
+        <p>&nbsp;</p>
+        <p>if statement</p>
+        <p>if .. else statement</p>
+        <p>nested if statements</p>
+        <p>if-else-if ladder</p>
+        <p>switch statement</p>
+        <p>&nbsp;</p>
+        <p><strong>IF</strong>&nbsp;<strong>STATEMENT</strong></p>
+        <p>If statement is the basic decision-making statement that tells the compiler to execute a code block only if the condition is true.</p>
+        <p>The syntax of if statement will be :-</p>
+        <p>&nbsp;</p>
+        <p>if (condition)</p>
+        <p>{</p>
+        <p>// execute statement 1;</p>
+        <p>// execute statement 2;</p>
+        <p>&hellip;..</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h3><strong>&nbsp;</strong></h3>
+        <h3><strong>If .. Else Statement</strong></h3>
+        <p>The if .. else statement works in the same way as the if statement. The only difference is that you can define what the compiler should do if the condition is false.</p>
+        <p>The syntax of if .. else statement will be :-</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>if (condition)</p>
+        <p>{</p>
+        <p>// execute statement 1;</p>
+        <p>// execute statement 2;</p>
+        <p>&hellip;..</p>
+        <p>}</p>
+        <p>else</p>
+        <p>{</p>
+        <p>// execute statement 3;</p>
+        <p>// execute statement 4;</p>
+        <p>&hellip;..</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <h3><strong>Nested if statements</strong></h3>
+        <p>Nested if statements means &ldquo;One if statement within another if statement&rdquo;. There may be situations where you may need to evaluate a condition based on the result of another condition.</p>
+        <p>The syntax of nested if statement will be :-</p>
+        <p>&nbsp;</p>
+        <p>if (condition 1)</p>
+        <p>{</p>
+        <p>&nbsp;if (condition 2)</p>
+        <p>&nbsp;{</p>
+        <p>&nbsp;if (condition 3)</p>
+        <p>&nbsp;{</p>
+        <p>&nbsp;// execute statement 1;</p>
+        <p>&nbsp;}</p>
+        <p>&nbsp;if (condition 4)</p>
+        <p>{</p>
+        <p>// execute statement 2;</p>
+        <p>}</p>
+        <p>}</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h3><strong>If &ndash; else &ndash; if Ladder</strong></h3>
+        <p>In this decision-making statement, the compiler will execute the statement from the top to bottom. The compiler will look for the condition to match true. Until the positive result is reached, the compiler will traverse through the if-else-if loop. Once the condition matches to true, it will execute the piece of code within the success loop. If none of the conditions are true, the final else statement will get executed. If the final else statement is not available, no action will take place. The syntax of if &ndash; else &ndash; if ladder will be :-</p>
+        <p>&nbsp;</p>
+        <p>if (condition 1)</p>
+        <p>statement;</p>
+        <p>else if (condition 2)</p>
+        <p>statement;</p>
+        <p>else if (condition 3)</p>
+        <p>statement;</p>
+        <p>&hellip;</p>
+        <p>&hellip;</p>
+        <p>else</p>
+        <p>statement;</p>
+        <p>// execute statement 2;</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h3><strong>&nbsp;</strong></h3>
+        <h3><strong>Switch Statement</strong></h3>
+        <p>You can use the switch statement when you want to evaluate a condition against different cases (expressions). Depending on the input, the appropriate case will be executed, and the result will be printed.</p>
+        <p>The syntax of switch case statement will be :-</p>
+        <p>&nbsp;</p>
+        <p>switch (condition)</p>
+        <p>{</p>
+        <p>case expression1:</p>
+        <p>//statement to execute;</p>
+        <p>break;</p>
+        <p>case expression2:</p>
+        <p>//statement to execute;</p>
+        <p>break;</p>
+        <p>case expression3:</p>
+        <p>//statement to execute;</p>
+        <p>break;</p>
+        <p>&hellip;</p>
+        <p>default:</p>
+        <p>// statement to execute;</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Q.2) Explain array object with examples :-</p>
+        <p>&nbsp;</p>
+        <p><strong>Array of objects :-</strong></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An&nbsp;<strong>array of objects</strong>&nbsp;is a collection of objects of the same class type that are stored in contiguous memory locations. Since each item in the array is an instance of the class, each one's member variables can have a unique value. This makes it possible to manage and handle numerous objects by storing them in a single data structure and giving them similar properties and behaviours.</p>
+        <p>We can think of array of objects as a single variable that can hold multiple values. Each value is stored in a separate element of the array, and each element can be accessed by its index.</p>
+        <p>Arrays in C++ are typically defined using square brackets [] after the type. The index of the array, which ranges from 0 to n - 1, can be used to access each element.</p>
+        <p><strong><em>Example :-</em></strong><strong>&nbsp;&nbsp;</strong>Book bk[100] &ndash; This is an array of objects having a maximum limit of 100 Books.</p>
+        <p>#include&lt;bits/stdc++.h&gt;</p>
+        <p>using&nbsp;namespace&nbsp;std;</p>
+        <p>&nbsp;</p>
+        <p>class&nbsp;Book</p>
+        <p>{</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;public:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;name[50];</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;cost;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void&nbsp;getdetails();</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void&nbsp;putdetails();</p>
+        <p>};</p>
+        <p>&nbsp;</p>
+        <p>void&nbsp;Book::getdetails()</p>
+        <p>{</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Enter Name : ";</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;name;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Enter Cost : ";</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;cost;</p>
+        <p>&nbsp;</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p>void&nbsp;Book::putdetails()</p>
+        <p>{</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;name &lt;&lt;&nbsp;" ";</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;cost &lt;&lt;&nbsp;" ";</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;endl;</p>
+        <p>&nbsp;</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p>int&nbsp;main()</p>
+        <p>{</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Book bk[100];</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;n,&nbsp;i;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Enter Number of Books - ";</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cin&nbsp;&gt;&gt;&nbsp;n;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;for(i =&nbsp;0;&nbsp;i &lt;&nbsp;n;&nbsp;i++){</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bk[i].getdetails();</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;"Details of Books - "&nbsp;&lt;&lt;&nbsp;endl;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;for(i =&nbsp;0;&nbsp;i &lt;&nbsp;n;&nbsp;i++){</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bk[i].putdetails();</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p><strong>Output:</strong></p>
+        <p>Enter Number&nbsp;of&nbsp;Books - 4</p>
+        <p>Enter Name : Atomic Habits</p>
+        <p>Enter Cost : 200</p>
+        <p>Enter Name : Ikigai</p>
+        <p>Enter Cost : 150</p>
+        <p>Enter Name : Deep Work</p>
+        <p>Enter Cost : 160</p>
+        <p>Details of&nbsp;Books -</p>
+        <p>Atomic Habits 200</p>
+        <p>Ikigai 150</p>
+        <p>Deep Work 160</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Q.3) Explain pointer to object with the help of examples :- &nbsp;A pointer is a variable that holds the memory address of another&nbsp;<a href="https://unstop.com/blog/variables-in-cpp"><u>Variable</u></a>. Pointers allow for efficient memory utilization, as they enable dynamic memory allocation, deallocation, and indirect access to objects. When declaring a pointer, the type of the pointer must match the type of the variable it will be pointing to.</p>
+        <p><strong><em>Example :- &nbsp;</em></strong></p>
+        <p>#include&nbsp;&lt;iostream&gt;</p>
+        <p>&nbsp;</p>
+        <p>#include&nbsp;&lt;string&gt;</p>
+        <p>&nbsp;</p>
+        <p>using&nbsp;namespace&nbsp;std;</p>
+        <p><br />class&nbsp;Person&nbsp;{</p>
+        <p>&nbsp;</p>
+        <p>public:</p>
+        <p>&nbsp;</p>
+        <p>string&nbsp;name;</p>
+        <p>&nbsp;</p>
+        <p>int&nbsp;age;</p>
+        <p>&nbsp;</p>
+        <p>};</p>
+        <p>&nbsp;</p>
+        <p>int&nbsp;main()&nbsp;{</p>
+        <p>&nbsp;</p>
+        <p>Person*&nbsp;people&nbsp;=&nbsp;new&nbsp;Person[3];</p>
+        <p>&nbsp;</p>
+        <p>//&nbsp;Initialize&nbsp;array&nbsp;elements</p>
+        <p>&nbsp;</p>
+        <p>people[0].name&nbsp;=&nbsp;"John";</p>
+        <p>&nbsp;</p>
+        <p>people[0].age&nbsp;=&nbsp;25;</p>
+        <p>&nbsp;</p>
+        <p>people[1].name&nbsp;=&nbsp;"Mary";</p>
+        <p>&nbsp;</p>
+        <p>people[1].age&nbsp;=&nbsp;30;</p>
+        <p>&nbsp;</p>
+        <p>people[2].name&nbsp;=&nbsp;"Bob";</p>
+        <p>&nbsp;</p>
+        <p>people[2].age&nbsp;=&nbsp;35;</p>
+        <p>&nbsp;</p>
+        <p>//&nbsp;Print&nbsp;array&nbsp;elements</p>
+        <p>&nbsp;</p>
+        <p>for&nbsp;(int&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;3;&nbsp;i++)&nbsp;{</p>
+        <p>&nbsp;</p>
+        <p>cout&nbsp;&lt;&lt;&nbsp;people[i].name&nbsp;&lt;&lt;&nbsp;"&nbsp;is&nbsp;"&nbsp;&lt;&lt;&nbsp;people[i].age&nbsp;&lt;&lt;&nbsp;"&nbsp;years&nbsp;old."&nbsp;&lt;&lt;&nbsp;endl;</p>
+        <p>&nbsp;</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p>//&nbsp;Free&nbsp;allocated&nbsp;memory</p>
+        <p>&nbsp;</p>
+        <p>delete[]&nbsp;people;</p>
+        <p>&nbsp;</p>
+        <p>return&nbsp;0;</p>
+        <p>&nbsp;</p>
+        <p>}</p>
+        <p>&nbsp;</p>
+        <p>Output:</p>
+        <p>John is 25 years old.<br />Mary is 30 years old.<br />Bob is 35 years old.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Q.4)What is the need of passing object as a argument. Discuss different ways to pass object as argument to the functions</p>
+        <p>=&gt; In C++ programming language, we can also pass an object as an argument within the member function of class. This is useful, when we want to initialize all data members of an object with another object, we can pass objects and assign the values of supplied object to the current object.</p>
+        <p>&nbsp;</p>
+        <p>There are five ways of passing objects to functions. Let's assume you have a class X and want to pass it to a function fun, then</p>
+        <h2><strong>1)Pass by Value</strong></h2>
+        <p>This creates a shallow local copy of the object in the function scope. Things you modify here won't be reflected in the object passed to it. For example,</p>
+        <h3><strong>Declaration</strong></h3>
+        <p>void fun(X x);</p>
+        <h3><strong>Calling</strong></h3>
+        <p>X x;</p>
+        <p>fun(x);</p>
+        <h2><strong>2)Pass by Reference</strong></h2>
+        <p>This passes a reference to the object to the function. Things you modify here will be reflected in the object passed to it. No copy of the object is created. For example,</p>
+        <h3><strong>Declaration</strong></h3>
+        <p>void fun(X &amp;x);</p>
+        <h3><strong>Calling</strong></h3>
+        <p>X x;</p>
+        <p>fun(x);</p>
+        <h2><strong>3)Pass by const Reference</strong></h2>
+        <p>This passes a const reference to the object to the function. You cannot modify/reassign the object here directly(you can use its methods that do so though). This is useful if you want the function to have only a readonly copy of the object. No copy of the object is created. For example,</p>
+        <h3><strong>Declaration</strong></h3>
+        <p>void fun(X const *x);</p>
+        <h3><strong>Calling</strong></h3>
+        <p>X x;</p>
+        <p>fun(&amp;x);</p>
+        <h2><strong>4)Pass by const Pointer</strong></h2>
+        <p>This passes a const pointer to the object to the function. You cannot modify/reassign the pointer here. This is useful if you want the function to have only the address of this object in the pointer. No copy of object is created. For example,</p>
+        <h3><strong>Declaration</strong></h3>
+        <p>void fun(X *x);</p>
+        <h3><strong>Calling</strong></h3>
+        <p>X x;</p>
+        <p>fun(&amp;x);</p>
+        <h2><strong>5)Pass by Pointer</strong></h2>
+        <p>This passes a pointer to the object to the function. This is similar to passing a reference to the object. No copy of object is created. For example,</p>
+        <h3><strong>Declaration</strong></h3>
+        <p>&lt;void fun(X *x);&gt;</p>
+        <h3><strong>Calling</strong></h3>
+        <p>X x;</p>
+        <p>fun(&amp;x);</p>
+        <p>&nbsp;</p>
+        <p>Q.5) Discuss default constructor and parameters constructor with the help&nbsp;of&nbsp;examples</p>
+        <p>&nbsp;</p>
+        <h2><strong>Default Constructor</strong></h2>
+        <ul>
+          <li>A default constructor is a&nbsp;<strong>0 argument constructor&nbsp;</strong>which contains a no-argument call to the super class constructor.</li>
+          <li>To assign default values to the newly created objects is the main responsibility of default constructor.</li>
+          <li>Compiler writes a default constructor in the code only if the program does not write any constructor in the class.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h2>&nbsp;<strong>Parameterized Constructors</strong></h2>
+        <ul>
+          <li>The parameterized constructors are the constructors having a&nbsp;<strong>specific number of arguments</strong>to be passed.</li>
+          <li>The purpose of a parameterized constructor is to assign user-wanted specific values to the instance variables of different objects.</li>
+          <li>A parameterized constructor is written explicitly by a programmer.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><em>Example:-</em></strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <ul>
+          <li>publicclass&nbsp;Student&nbsp;{</li>
+          <li>&nbsp;int&nbsp;roll_no;</li>
+          <li>&nbsp;String&nbsp;stu_name;</li>
+          <li>&nbsp;Student(int&nbsp;i,&nbsp;String&nbsp;n)&nbsp;{&nbsp;// Parameterized constructor</li>
+          <li>&nbsp; &nbsp; roll_no =&nbsp;i;</li>
+          <li>&nbsp; &nbsp; stu_name =&nbsp;n;</li>
+          <li>&nbsp;}</li>
+          <li>&nbsp;void&nbsp;display()&nbsp;{</li>
+          <li>&nbsp; &nbsp; System.out.println(roll_no+" "+stu_name);</li>
+          <li>&nbsp;}</li>
+          <li>&nbsp;public&nbsp;static&nbsp;void&nbsp;main(String&nbsp;args[])&nbsp;{</li>
+          <li>&nbsp; &nbsp; Student&nbsp;s1 =&nbsp;new&nbsp;Student(1,"Adithya");</li>
+          <li>&nbsp; &nbsp; Student&nbsp;s2 =&nbsp;new&nbsp;Student(2,"Jai");</li>
+          <li>&nbsp; &nbsp; s1.display();</li>
+          <li>&nbsp; &nbsp; s2.display();</li>
+          <li>&nbsp;}</li>
+          <li>}</li>
+        </ul>
+        <p>In the above program, the programmer defines one parameterized constructor with 2 parameters. Now the compiler adds no default constructor to the code, and nor the programmer has written any 0 argument constructor.</p>
+        <p>&nbsp;</p>
+        <h2><strong>&middot;&nbsp;</strong><strong>Output</strong></h2>
+        <ul>
+          <li>1 Adithya</li>
+          <li>2 Jai</li>
+        </ul>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

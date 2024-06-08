@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 OS unit-3</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><b>UNIT-3</b></p>
+        <p><strong>&nbsp;</strong></p>
+        <h1 class="h1">Process Management in OS</h1>
+        <p>A Program does nothing unless its instructions are executed by a CPU. A program in execution is called a process. In order to accomplish its task, process needs the computer resources.</p>
+        <p>There may exist more than one process in the system which may require the same resource at the same time. Therefore, the operating system has to manage all the processes and the resources in a convenient and efficient way.</p>
+        <p>Some resources may need to be executed by one process at one time to maintain the consistency otherwise the system can become inconsistent and deadlock may occur.</p>
+        <p>The operating system is responsible for the following activities in connection with Process Management</p>
+        
+          <li>Scheduling processes and threads on the CPUs.</li>
+          <li>Creating and deleting both user and system processes.</li>
+          <li>Suspending and resuming processes.</li>
+          <li>Providing mechanisms for process synchronization.</li>
+          <li>Providing mechanisms for process communication.</li>
+        </ol>
+        <div style="margin: 5px 0;">
+          <h1 class="h1">Process Synchronization in OS (Operating System)</h1>
+          <p>When two or more process cooperates with each other, their order of execution must be preserved otherwise there can be conflicts in their execution and inappropriate outputs can be produced.</p>
+          <p>A cooperative process is the one which can affect the execution of other process or can be affected by the execution of other process. Such processes need to be synchronized so that their order of execution can be guaranteed.</p>
+          <p>The procedure involved in preserving the appropriate order of execution of cooperative processes is known as Process Synchronization. There are various synchronization mechanisms that are used to synchronize the processes.</p>
+          <h3 class="h2">Race Condition</h3>
+          <p>A Race Condition typically occurs when two or more threads try to read, write and possibly make the decisions based on the memory that they are accessing concurrently.</p>
+          <h3 class="h2">Critical Section</h3>
+          <p>The regions of a program that try to access shared resources and may cause race conditions are called critical section. To avoid race condition among the processes, we need to assure that only one process at a time can execute within the critical section.</p>
+          <h1 class="h1">Critical Section Problem in OS (Operating System)</h1>
+          <p>Critical Section is the part of a program which tries to access shared resources. That resource may be any resource in a computer like a memory location, Data structure, CPU or any IO device.</p>
+          <p>The critical section cannot be executed by more than one process at the same time; operating system faces the difficulties in allowing and disallowing the processes from entering the critical section.</p>
+          <p>The critical section problem is used to design a set of protocols which can ensure that the Race condition among the processes will never arise.</p>
+          <p>In order to synchronize the cooperative processes, our main task is to solve the critical section problem. We need to provide a solution in such a way that the following conditions can be satisfied.</p>
+          <h2 class="h2">Requirements of Synchronization mechanisms</h2>
+          <p>&nbsp;</p>
+          <h3 class="h3">Primary</h3>
+          <ol class="points">
+            <ol class="points">
+              <li><strong>Mutual Exclusion</strong></li>
+            </ol>
+          </ol>
+          <p>Our solution must provide mutual exclusion. By Mutual Exclusion, we mean that if one process is executing inside critical section then the other process must not enter in the critical section.</p>
+          <br /><img src="https://static.javatpoint.com/operating-system/images/os-critical-section.png" alt="os Critical Section" /><br /><br /><img src="https://static.javatpoint.com/operating-system/images/os-critical-section1.png" alt="os Critical Section 1" /><br />
+          <ol class="points">
+            <ol class="points">
+              <li><strong>Progress</strong></li>
+            </ol>
+          </ol>
+          <p>Progress means that if one process doesn't need to execute into critical section then it should not stop other processes to get into the critical section.</p>
+          <h3 class="h3">Secondary</h3>
+          <ol class="points">
+            <ol class="points">
+              <li><strong>Bounded Waiting</strong></li>
+            </ol>
+          </ol>
+          <p>We should be able to predict the waiting time for every process to get into the critical section. The process must not be endlessly waiting for getting into the critical section.</p>
+          <ol class="points">
+            <ol class="points">
+              <li><strong>Architectural Neutrality</strong></li>
+            </ol>
+          </ol>
+          <p>Our mechanism must be architectural natural. It means that if our solution is working fine on one architecture then it should also run on the other ones as well.</p>
+          <p>&nbsp;</p>
+          <h1 class="h1">Semaphore in Operating Systems (OS)</h1>
+          <p>In thi tutorial, we are about to learn about the most important topic called Semaphores. There is a 100% surety that there is going to be a question about the topic named Semaphores in Viva, Interviews, Exams, and even Placement Exams. So, please understand this topic with utmost care and preference.</p>
+          <p>In this topic, we are going to learn about Semaphore definition, Types of Semaphores, Operations of Semaphores, Advantages and Disadvantages in Semaphores, Process of Solving Classical Synchronization Problems using Semaphores and the usage of these types of Semaphores in solving these Classical Synchronization Problems.</p>
+          <h2 class="h2">Semaphore Definition</h2>
+          <p>Semaphore is a Hardware Solution. This Hardware solution is written or given to critical section problem.</p>
+          <h2 class="h2">What is a Critical Section Problem?</h2>
+          <p>The Critical Section Problem is a Code Snippet. This code snippet contains a few variables. These variables can be accessed by a few processes. There is a condition for these processes.</p>
+          <p>The condition is that only one process can only enter the critical section. Remaining Processes which are interested to enter the critical section have to wait for the process to complete its work and then enter the critical section.</p>
+          <h2 class="h2">Critical Section Representation</h2>
+          <p><img src="https://static.javatpoint.com/operating-system/images/os-semaphore-introduction.png" alt="Introduction to Semaphore in Operating Systems (OS)" /></p>
+          <h2 class="h2">Problems in Critical Section Problems</h2>
+          <p>There may be a state where one or more processes try to enter the critical state. After multiple processes enter the Critical Section, the second process try to access variable which already accessed by the first process.</p>
+          <h3 class="h3">Explanation</h3>
+          <p>Suppose there is a variable which is also known as shared variable. Let us define that shared variable.</p>
+          <p>Here, x is the shared variable.</p>
+          <div class="codeblock">
+            <div class="dp-highlighter">
+              <div class="bar">&nbsp;</div>
+              <ol class="dp-j" start="1">
+                <li class="alt"><span class="keyword">int</span>&nbsp;x&nbsp;=&nbsp;<span class="number">10</span>;&nbsp;&nbsp;</li>
+              </ol>
+            </div>
+          </div>
+          <p><strong>&nbsp;</strong></p>
+          <p><strong>Process 1</strong></p>
+          <div class="codeblock">
+            <div class="dp-highlighter">
+              <div class="bar">&nbsp;</div>
+              <ol class="dp-j" start="1">
+                <li class="alt"><span class="comment">//&nbsp;Process&nbsp;1</span>&nbsp;&nbsp;</li>
+                <li class=""><span class="keyword">int</span>&nbsp;s&nbsp;=&nbsp;<span class="number">10</span>;&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">int</span>&nbsp;u&nbsp;=&nbsp;<span class="number">20</span>;&nbsp;&nbsp;</li>
+                <li class="">x&nbsp;=&nbsp;s&nbsp;+&nbsp;u;&nbsp;&nbsp;</li>
+              </ol>
+            </div>
+          </div>
+          <p><strong>&nbsp;</strong></p>
+          <p><strong>Process 2</strong></p>
+          
+          <div class="codeblock">
+            <div class="dp-highlighter">
+              <div class="bar">&nbsp;</div>
+              <ol class="dp-j" start="1">
+                <li class="alt"><span class="comment">//&nbsp;Process&nbsp;2</span>&nbsp;&nbsp;</li>
+                <li class=""><span class="keyword">int</span>&nbsp;s&nbsp;=&nbsp;<span class="number">10</span>;&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">int</span>&nbsp;u&nbsp;=&nbsp;<span class="number">20</span>;&nbsp;&nbsp;</li>
+                <li class="">x&nbsp;=&nbsp;s&nbsp;-&nbsp;u;&nbsp;&nbsp;</li>
+              </ol>
+            </div>
+          </div>
+          <p>If the process is accessed the x shared variable one after other, then we are going to be in a good position.</p>
+          <p>If Process 1 is alone executed, then the value of x is denoted as x = 30;</p>
+          <p>The shared variable x changes to 30 from 10</p>
+          <p>If Process 2 is alone executed, then the value of x is denoted as x = -10;</p>
+          <p>The shared variable x changes to -10 from 30</p>
+          <p>If both the processes occur at the same time, then the compiler would be in a confusion to choose which variable value i.e. -10 or 30. This state faced by the variable x is Data Inconsistency. These problems can also be solved by Hardware Locks</p>
+          <p>To, prevent such kind of problems can also be solved by Hardware solutions named Semaphores.</p>
+          <p><strong>&nbsp;</strong></p>
+          <h2 class="h2">Semaphores</h2>
+          <p>The Semaphore is just a normal integer. The Semaphore cannot be negative. The least value for a Semaphore is zero (0). The Maximum value of a Semaphore can be anything. The Semaphores usually have two operations. The two operations have the capability to decide the values of the semaphores.</p>
+          <p>The two Semaphore Operations are:</p>
+          <ol class="points">
+            <li>Wait ( )</li>
+            <li>Signal ( )</li>
+          </ol>
+          <h3 class="h3">Wait Semaphore Operation</h3>
+          <p>The Wait Operation is used for deciding the condition for the process to enter the critical state or wait for execution of process. Here, the wait operation has many different names. The different names are:</p>
+          
+            <li>Sleep Operation</li>
+            <li>Down Operation</li>
+            <li>Decrease Operation</li>
+            <li>P Function (most important alias name for wait operation)</li>
+          </ol>
+          <p>The Wait Operation works on the basis of Semaphore or Mutex Value.</p>
+          <p>Here, if the Semaphore value is greater than zero or positive then the Process can enter the Critical Section Area.</p>
+         
+          <p>If the Semaphore value is equal to zero then the Process has to wait for the Process to exit the Critical Section Area.</p>
+          <p>This function is only present until the process enters the critical state. If the Processes enters the critical state, then the P Function or Wait Operation has no job to do.</p>
+          <p>If the Process exits the Critical Section we have to reduce the value of Semaphore</p>
+          <p><strong>Basic Algorithm of P Function or Wait Operation</strong></p>
+          <div class="codeblock">
+            <div class="dp-highlighter">
+              <div class="bar">&nbsp;</div>
+              <ol class="dp-j" start="1">
+                <li class="alt">P&nbsp;(Semaphore&nbsp;value)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">Allow&nbsp;the&nbsp;process&nbsp;to&nbsp;enter&nbsp;<span class="keyword">if</span>&nbsp;the&nbsp;value&nbsp;of&nbsp;Semaphore&nbsp;is&nbsp;greater&nbsp;than&nbsp;zero&nbsp;or&nbsp;positive.&nbsp;&nbsp;</li>
+                <li class="">Do&nbsp;not&nbsp;allow&nbsp;the&nbsp;process&nbsp;<span class="keyword">if</span>&nbsp;the&nbsp;value&nbsp;of&nbsp;Semaphore&nbsp;is&nbsp;less&nbsp;than&nbsp;zero&nbsp;or&nbsp;zero.&nbsp;&nbsp;</li>
+                <li class="alt">Decrement&nbsp;the&nbsp;Semaphore&nbsp;value&nbsp;<span class="keyword">if</span>&nbsp;the&nbsp;Process&nbsp;leaves&nbsp;the&nbsp;Critical&nbsp;State.&nbsp;&nbsp;</li>
+                <li class="">&nbsp;&nbsp;</li>
+                <li class="alt">}&nbsp;&nbsp;</li>
+              </ol>
+            </div>
+          </div>
+          <h3 class="h3">Signal Semaphore Operation</h3>
+          <p>The Signal Semaphore Operation is used to update the value of Semaphore. The Semaphore value is updated when the new processes are ready to enter the Critical Section.</p>
+          <p>The Signal Operation is also known as:</p>
+          <ol class="points">
+            <li>Wake up Operation</li>
+            <li>Up Operation</li>
+            <li>Increase Operation</li>
+            <li>V Function (most important alias name for signal operation)</li>
+          </ol>
+          
+          <p>We know that the semaphore value is decreased by one in the wait operation when the process left the critical state. So, to counter balance the decreased number 1 we use signal operation which increments the semaphore value. This induces the critical section to receive more and more processes into it.</p>
+          <p>The most important part is that this Signal Operation or V Function is executed only when the process comes out of the critical section. The value of semaphore cannot be incremented before the exit of process from the critical section</p>
+          <p><strong>Basic Algorithm of V Function or Signal Operation</strong></p>
+          <div class="codeblock">
+            <div class="dp-highlighter">
+              
+              <ol class="dp-j" start="1">
+                <li class="alt">V&nbsp;(Semaphore&nbsp;value)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">If&nbsp;the&nbsp;process&nbsp;goes&nbsp;out&nbsp;of&nbsp;the&nbsp;critical&nbsp;section&nbsp;then&nbsp;add&nbsp;<span class="number">1</span>&nbsp;to&nbsp;the&nbsp;semaphore&nbsp;value&nbsp;&nbsp;</li>
+                <li class="">Else&nbsp;keep&nbsp;calm&nbsp;until&nbsp;process&nbsp;exits&nbsp;&nbsp;</li>
+                <li class="alt">}&nbsp;&nbsp;</li>
+              </ol>
+            </div>
+          </div>
+          <h2 class="h2">Types of Semaphores</h2>
+          <p>There are two types of Semaphores.</p>
+          <p>They are:</p>
+          <h3 class="h3">1. Binary Semaphore</h3>
+          <p>Here, there are only two values of Semaphore in Binary Semaphore Concept. The two values are 1 and 0.</p>
+          <p>If the Value of Binary Semaphore is 1, then the process has the capability to enter the critical section area. If the value of Binary Semaphore is 0 then the process does not have the capability to enter the critical section area.</p>
+          
+          <h3 class="h3">2. Counting Semaphore</h3>
+          <p>Here, there are two sets of values of Semaphore in Counting Semaphore Concept. The two types of values are values greater than and equal to one and other type is value equal to zero.</p>
+          <p>If the Value of Binary Semaphore is greater than or equal to 1, then the process has the capability to enter the critical section area. If the value of Binary Semaphore is 0 then the process does not have the capability to enter the critical section area.</p>
+          <p>This is the brief description about the Binary and Counting Semaphores. You will learn still more about them in next articles.</p>
+          
+          <h2 class="h2">Advantages of a Semaphore</h2>
+          
+          <ul class="points">
+            <li>Semaphores are machine independent since their implementation and codes are written in the microkernel's machine independent code area.</li>
+            <li>They strictly enforce mutual exclusion and let processes enter the crucial part one at a time (only in the case of binary semaphores).</li>
+            <li>With the use of semaphores, no resources are lost due to busy waiting since we do not need any processor time to verify that a condition is met before allowing a process access to the crucial area.</li>
+            <li>Semaphores have the very good management of resources</li>
+            <li>They forbid several processes from entering the crucial area. They are significantly more effective than other synchronization approaches since mutual exclusion is made possible in this way.</li>
+          </ul>
+          
+          <h2 class="h2">Disadvantages of a Semaphore</h2>
+          <ul class="points">
+            <li>Due to the employment of semaphores, it is possible for high priority processes to reach the vital area before low priority processes.</li>
+            <li>Because semaphores are a little complex, it is important to design the wait and signal actions in a way that avoids deadlocks.</li>
+            <li>Programming a semaphore is very challenging, and there is a danger that mutual exclusion won't be achieved.</li>
+            <li>The wait ( ) and signal ( ) actions must be carried out in the appropriate order to prevent deadlocks.</li>
+          </ul>
+          <p>Now, let us solve the Classical Synchronization Problems using the concept of Semaphore.</p>
+          <h2 class="h2">Solving Classical Synchronization Problems using Semaphore Concept</h2>
+          <h3 class="h3">1) Solving Readers - Writers Problem using Semaphore</h3>
+          <p><strong>Definition:</strong></p>
+          <p>First of all let us all know about the Readers - Writers Problem.</p>
+          
+          <p>In Readers - Writers Problems there are two Actors for the problem. They are Reader and Writer. The Reader - Writer Problem tries to access or change the value of the Shared Variable. Due, to this parallel execution of accessing and changing operation data faults take place. Due, to this expected outputs are not the actual outputs of the problem. This is the problem of Readers - Writers</p>
+          <p>The duties of Readers and Writers are different from each other.</p>
+          <p>The Reader duty is to read the value of the Shared Variable.</p>
+          <p>The Writer duty is to change the value of the Shared Variable.</p>
+          <p>Now, let us solve this problem with the help of a Semaphore.</p>
+          <p><strong>Required Data</strong></p>
+          <p>First of all let us consider there is Critical Section which contains a shared variable. Let us consider that there are two processes. The first process is the one which always tries to access the shared variable. The second process is the one which always tries to change the value of the variable.</p>
+          <p><strong>Solution</strong></p>
+          <p>Now, let us understand the solution to the Readers and Writers Problem using</p>
+          <p>Now, our task is to perform the operations of both Readers and Writers using Semaphores without any possibility of occurrence of Deadlock.</p>
+          <p><strong>Solving Readers - Writers Problem with the help of Binary Semaphore</strong></p>
+          <p>We know that the Binary Semaphore allows the process to enter the critical section if the value of Binary Semaphore is 1.</p>
+          <p>Now, we are going to allow the writer to work or execute its task if the value of Binary Semaphore value is 1. This allows that the data changes are error free.</p>
+          <p>We can allow the reader to work or execute its task if the value of Binary Semaphore is 1 or 0. This is because the Reader just reads the value of Shared Variable. But according to the rules laid by the Semaphore. We can only enter the critical section if the value of Semaphore is greater than or equal to 1.</p>
+          
+          <p>So, we can allow the reader if the value of semaphore 1.</p>
+          <p><strong>Algorithm for Solving Readers - Writers Problem with the help of Binary Semaphore</strong></p>
+          <div class="codeblock">
+            <div class="dp-highlighter">
+              <div class="bar">&nbsp;</div>
+              <ol class="dp-j" start="1">
+                <li class="alt"><span class="comment">/*&nbsp;Process&nbsp;1&nbsp;-&nbsp;-&nbsp;-&nbsp;&gt;&nbsp;Reader</span>&nbsp;</li>
+                <li class=""><span class="comment">Process&nbsp;2&nbsp;-&nbsp;-&nbsp;-&nbsp;&gt;&nbsp;Writer&nbsp;*/</span>&nbsp;&nbsp;</li>
+                <li class="alt">Solving&nbsp;(<span class="keyword">int</span>&nbsp;n)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">if</span>&nbsp;(n==<span class="number">0</span>)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt"><span class="comment">//You&nbsp;cannot&nbsp;enter&nbsp;the&nbsp;critical&nbsp;section&nbsp;area.</span>&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">if</span>&nbsp;(n==<span class="number">1</span>)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">Enter&nbsp;the&nbsp;process&nbsp;which&nbsp;you&nbsp;want&nbsp;to&nbsp;perform&nbsp;&nbsp;</li>
+                <li class="">scan&nbsp;(op)&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">if</span>&nbsp;(op==<span class="number">1</span>)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">Read&nbsp;(&nbsp;)&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;read</span>&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">else</span>&nbsp;<span class="keyword">if</span>&nbsp;(op==<span class="number">2</span>)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">Write&nbsp;(&nbsp;)&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;write</span>&nbsp;&nbsp;</li>
+                <li class="alt">}&nbsp;<span class="comment">//&nbsp;if&nbsp;condition&nbsp;for&nbsp;entering&nbsp;critical&nbsp;section</span>&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;Solving</span>&nbsp;&nbsp;</li>
+                <li class="alt">&nbsp;&nbsp;</li>
+                <li class="">Main&nbsp;(&nbsp;)&nbsp;&nbsp;</li>
+                <li class="alt">{&nbsp;&nbsp;</li>
+                <li class=""><span class="keyword">do</span>&nbsp;&nbsp;&nbsp;</li>
+                <li class="alt">{&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">Process&nbsp;(Semaphore)&nbsp;&nbsp;</li>
+                <li class=""><span class="comment">//&nbsp;Enter&nbsp;the&nbsp;Entry&nbsp;section&nbsp;if&nbsp;the&nbsp;Semaphore&nbsp;value&nbsp;is&nbsp;one.</span>&nbsp;&nbsp;</li>
+                <li class="alt">Entry&nbsp;Section&nbsp;&nbsp;&nbsp;</li>
+                <li class="">Critical&nbsp;Section&nbsp;&nbsp;</li>
+                <li class="alt">Exit&nbsp;Section&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;Entry&nbsp;Section</span>&nbsp;&nbsp;</li>
+                <li class="alt">}&nbsp;<span class="comment">//&nbsp;main</span>&nbsp;&nbsp;</li>
+              </ol>
+            </div>
+          </div>
+          <p><strong>Solving Readers - Writers Problem with the help of Counting Semaphore</strong></p>
+          <p>We know that the Counting Semaphore allows the process to enter the critical section if the value of Counting Semaphore is greater than or equal to 1.</p>
+          <p>Now, we are going to allow the writer to work or execute its task if the value of Counting Semaphore value is greater than or equal to 1. This allows that the data changes are error free.</p>
+         
+          <p>We can allow the reader to work or execute its task if the value of Counting Semaphore is greater than or equal to 1 or Counting Semaphore is equal to 0. This is because the Reader just reads the value of Shared Variable. But according to the rules laid by the Semaphore. We can only enter the critical section if the value of Counting Semaphore is greater than or equal to 1.</p>
+          <p>So, we can allow the reader if the value of Counting Semaphore is greater than or equal to 1.</p>
+          <p><strong>Algorithm for Solving Readers - Writers Problem with the help of Binary Semaphore</strong></p>
+          <div class="codeblock">
+            <div class="dp-highlighter">
+              <div class="bar">&nbsp;</div>
+              <ol class="dp-j" start="1">
+                <li class="alt"><span class="comment">/*&nbsp;Process&nbsp;1&nbsp;-&nbsp;-&nbsp;-&nbsp;&gt;&nbsp;Reader</span>&nbsp;</li>
+                <li class=""><span class="comment">Process&nbsp;2&nbsp;-&nbsp;-&nbsp;-&nbsp;&gt;&nbsp;Writer&nbsp;*/</span>&nbsp;&nbsp;</li>
+                <li class="alt">Solving&nbsp;(<span class="keyword">int</span>&nbsp;n)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">if</span>&nbsp;(n==<span class="number">0</span>)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt"><span class="comment">//You&nbsp;cannot&nbsp;enter&nbsp;the&nbsp;critical&nbsp;section&nbsp;area.</span>&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">if</span>&nbsp;(n&gt;=<span class="number">1</span>)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">Enter&nbsp;the&nbsp;process&nbsp;which&nbsp;you&nbsp;want&nbsp;to&nbsp;perform&nbsp;&nbsp;</li>
+                <li class="">scan&nbsp;(op)&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">if</span>&nbsp;(op==<span class="number">1</span>)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">Read&nbsp;(&nbsp;)&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;read</span>&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">else</span>&nbsp;<span class="keyword">if</span>&nbsp;(op==<span class="number">2</span>)&nbsp;&nbsp;</li>
+                <li class="">{&nbsp;&nbsp;</li>
+                <li class="alt">Write&nbsp;(&nbsp;)&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;write</span>&nbsp;&nbsp;</li>
+                <li class="alt">}&nbsp;<span class="comment">//&nbsp;if&nbsp;condition&nbsp;for&nbsp;entering&nbsp;critical&nbsp;section</span>&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;Solving</span>&nbsp;&nbsp;</li>
+                <li class="alt">&nbsp;&nbsp;</li>
+                <li class="">Main&nbsp;(&nbsp;)&nbsp;&nbsp;</li>
+                <li class="alt">{&nbsp;&nbsp;</li>
+                <li class=""><span class="keyword">do</span>&nbsp;&nbsp;&nbsp;</li>
+                <li class="alt">{&nbsp;&nbsp;</li>
+                <li class="">Process&nbsp;(Semaphore)&nbsp;&nbsp;</li>
+                <li class="alt"><span class="comment">//&nbsp;Enter&nbsp;the&nbsp;Entry&nbsp;section&nbsp;if&nbsp;the&nbsp;Semaphore&nbsp;value&nbsp;is&nbsp;greater&nbsp;or&nbsp;equal&nbsp;to&nbsp;one.</span>&nbsp;&nbsp;</li>
+                <li class="">Entry&nbsp;Section&nbsp;&nbsp;&nbsp;</li>
+                <li class="alt">Critical&nbsp;Section&nbsp;&nbsp;</li>
+                <li class="">Exit&nbsp;Section&nbsp;&nbsp;</li>
+                <li class="alt">Remainder&nbsp;Section&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;do</span>&nbsp;&nbsp;</li>
+                <li class="alt"><span class="keyword">while</span>&nbsp;(<span class="keyword">true</span>);&nbsp;&nbsp;</li>
+                <li class="">}&nbsp;<span class="comment">//&nbsp;Entry&nbsp;Section</span>&nbsp;&nbsp;</li>
+                <li class="alt">}&nbsp;<span class="comment">//&nbsp;main</span>&nbsp;&nbsp;</li>
+              </ol>
+            </div>
+          </div>
+          <h3 class="h3">2. Solving Bound Buffer Problem using the concept of Semaphores</h3>
+          <p><strong>Definition:</strong></p>
+          <p>The Producer-Consumer problem is another name for Bound Buffer Problem. In this issue, there are n slots in a buffer, and each slot may hold one data unit. Producer and Consumer are the two operations that are using the buffer. Both the producer and the consumer attempt to enter and delete data.</p>
+          <p><strong>Solution:</strong></p>
+          <p>Now, we are going to solve the problem faced in the Bound Buffer or Producer Consumer Problem.</p>
+          <p>We already know that the duty of the Producer is to enter data in which ever area possible.</p>
+          <p>The duty of Consumer is to remove the data produced by the Producer or already present data where ever possible.</p>
+          <p>Now, let us understand how these two Producers and Consumers are going to work along with the concepts of Binary and Counting Semaphore.</p>
+          <p><strong>Solving Bound Buffer or Producer Consumer Problem with the help of Binary Semaphore</strong></p>
+          <p>We know that the Binary Semaphore allows the process to enter the critical section if the value of Binary Semaphore is 1.</p>
+          
+          <p>Now, we are going to allow the writer to work or execute its task if the value of Binary Semaphore value is 1. This allows that the data changes are error free.</p>
+          <p>Now, let us assume that the Producer is creating a few shared variables inside the critical section.</p>
+          <p>Now, let us allow the process named Producer and produce new value inside the critical section after entering the Critical Section. The entry is accepted only if the value of Binary Semaphore is equal to 1.</p>
+          <p>Now, let us allow the process named Consumer and delete the processes created after entering the Critical Section. The entry is accepted only if the value of Binary Semaphore is equal to 1.</p>
+          <p>Now, it is our duty to prevent the Producer and Consumer gets executed at the same time. So, we give the user or the computer an option to choose which operation to be performed at the time of Entering the Entry Section of the Critical Section</p>
+          <p><strong>Solving Bound Buffer or Producer Consumer Problem with the help of Counting Semaphore</strong></p>
+          <p>We know that the Binary Semaphore allows the process to enter the critical section if the value of Counting Semaphore is 1 or greater than 1.</p>
+          <p>Now, we are going to allow the writer to work or execute its task if the value of Counting Semaphore is 1 or greater than 1.. This allows that the data changes are error free.</p>
+          <p>Now, let us assume that the Producer is creating a few shared variables inside the critical section.</p>
+          <p>Now, let us allow the process named Producer and produce new value inside the critical section after entering the Critical Section. The entry is accepted only if the value of Counting Semaphore is equal to or greater than 1.</p>
+          <p>Now, let us allow the process named Consumer and delete the processes created after entering the Critical Section. The entry is accepted only if the value of Counting Semaphore is 1 or greater than 1.</p>
+          <p>Now, it is our duty to prevent the Producer and Consumer gets executed at the same time. So, we give the user or the computer an option to choose which operation to be performed at the time of Entering the Entry Section of the Critical Section</p>
+          <h3 class="h3">3. Solving Dining Philosopher's Problem using the concept of Semaphores</h3>
+          <p><strong>Definition:</strong></p>
+          <p>The dining philosopher's dilemma, also known as the classical synchronization issue, has five philosophers seated around a circular table who must alternate between thinking and eating. At the center of the table sits a bowl of noodles and five chopsticks, one for each of the philosophers. A philosopher must use both their right and left chopsticks in order to eat. A philosopher can only eat if both of their right and left chopsticks are within reach. If the philosopher's left and right chopsticks are not immediately available, the philosopher sets down one of the chopsticks (either the left or right) and resumes pondering.</p>
+          <p>The Dining Philosopher is a classic synchronization problem because it illustrates a broad class of concurrency control problems.</p>
+          <p>Now, you might have understood how Semaphores are useful in solving the problems created by the Synchronization Process.</p>
+          <p>This is all about Semaphores in Operating Systems.</p>
+          
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

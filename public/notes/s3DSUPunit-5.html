@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 DSUP unit-5</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit 5</strong></p>
+        <p>&nbsp;</p>
+        <h2>Regression:</h2>
+        
+              <section class="section2">
+                <section class="section3">
+                  <p>Regression searches for relationships among&nbsp;<strong>variables</strong>. For example, you can observe several employees of some company and try to understand how their salaries depend on their&nbsp;<strong>features</strong>, such as experience, education level, role, city of employment, and so on.</p>
+                  <p>This is a regression problem where data related to each employee represents one&nbsp;<strong>observation</strong>. The presumption is that the experience, education, role, and city are the independent features, while the salary depends on them.</p>
+                  <p>Similarly, you can try to establish the mathematical dependence of housing prices on area, number of bedrooms, distance to the city center, and so on.</p>
+                  <p>Generally, in regression analysis, you consider some phenomenon of interest and have a number of observations. Each observation has two or more features. Following the assumption that at least one of the features depends on the others, you try to establish a relation among them.</p>
+                  <p>In other words, you need to find a&nbsp;<strong>function that maps some features or variables to others</strong>&nbsp;sufficiently well.</p>
+                  <p>The dependent features are called the&nbsp;<strong>dependent variables</strong>,&nbsp;<strong>outputs</strong>, or&nbsp;<strong>responses</strong>. The independent features are called the&nbsp;<strong>independent variables</strong>,&nbsp;<strong>inputs</strong>,&nbsp;<strong>regressors</strong>, or&nbsp;<strong>predictors</strong>.</p>
+                  <p>Regression problems usually have one continuous and unbounded dependent variable. The inputs, however, can be continuous, discrete, or even categorical data such as gender, nationality, or brand.</p>
+                  <p>It&rsquo;s a common practice to denote the outputs with 𝑦 and the inputs with 𝑥. If there are two or more independent variables, then they can be represented as the vector 𝐱 = (𝑥₁, &hellip;, 𝑥ᵣ), where 𝑟 is the number of inputs.</p>
+                </section>
+                <section class="section3">
+                  <h3 id="when-do-you-need-regression">When Do You Need Regression?</h3>
+                  <p>Typically, you need regression to answer whether and how some phenomenon influences the other or how&nbsp;<strong>several</strong>&nbsp;variables are related. For example, you can use it to determine&nbsp;<em>if</em>&nbsp;and&nbsp;<em>to what extent</em>&nbsp;experience or gender impacts salaries.</p>
+                  <p>Regression is also useful when you want to&nbsp;<strong>forecast</strong>&nbsp;a response using a new set of predictors. For example, you could try to predict electricity consumption of a household for the next hour given the outdoor temperature, time of day, and number of residents in that household.</p>
+                  <p>Regression is used in many different fields, including economics, computer science, and the social sciences. Its importance rises every day with the availability of large amounts of data and increased awareness of the practical value of data.</p>
+                </section>
+              </section>
+              <section class="section2">
+                <h2 id="linear-regression">Linear Regression</h2>
+                <p>Linear regression is probably one of the most important and widely used regression techniques. It&rsquo;s among the simplest regression methods. One of its main advantages is the ease of interpreting results.</p>
+                <section class="section3">
+                  <h3 id="problem-formulation">Problem Formulation</h3>
+                  <p>When implementing linear regression of some dependent variable 𝑦 on the set of independent variables 𝐱 = (𝑥₁, &hellip;, 𝑥ᵣ), where 𝑟 is the number of predictors, you assume a linear relationship between 𝑦 and 𝐱: 𝑦 = 𝛽₀ + 𝛽₁𝑥₁ + ⋯ + 𝛽ᵣ𝑥ᵣ + 𝜀. This equation is the&nbsp;<strong>regression equation</strong>. 𝛽₀, 𝛽₁, &hellip;, 𝛽ᵣ are the&nbsp;<strong>regression coefficients</strong>, and 𝜀 is the&nbsp;<strong>random error</strong>.</p>
+                  <p>Linear regression calculates the&nbsp;<strong>estimators</strong>&nbsp;of the regression coefficients or simply the&nbsp;<strong>predicted weights</strong>, denoted with 𝑏₀, 𝑏₁, &hellip;, 𝑏ᵣ. These estimators define the&nbsp;<strong>estimated regression function</strong>&nbsp;𝑓(𝐱) = 𝑏₀ + 𝑏₁𝑥₁ + ⋯ + 𝑏ᵣ𝑥ᵣ. This function should capture the dependencies between the inputs and output sufficiently well.</p>
+                  <p>The&nbsp;<strong>estimated</strong>&nbsp;or&nbsp;<strong>predicted response</strong>, 𝑓(𝐱ᵢ), for each observation 𝑖 = 1, &hellip;, 𝑛, should be as close as possible to the corresponding&nbsp;<strong>actual response</strong>&nbsp;𝑦ᵢ. The differences 𝑦ᵢ - 𝑓(𝐱ᵢ) for all observations 𝑖 = 1, &hellip;, 𝑛, are called the&nbsp;<strong>residuals</strong>. Regression is about determining the&nbsp;<strong>best predicted weights</strong>&mdash;that is, the weights corresponding to the smallest residuals.</p>
+                  <p>To get the best weights, you usually&nbsp;<strong>minimize the sum of squared residuals (SSR)</strong>&nbsp;for all observations 𝑖 = 1, &hellip;, 𝑛: SSR = &Sigma;ᵢ(𝑦ᵢ - 𝑓(𝐱ᵢ))&sup2;. This approach is called the&nbsp;<strong>method of ordinary least squares</strong>.</p>
+                  <h2 id="10" class="blog-post-title-10">Predictive Modeling:</h2>
+                  <p>Predictive modeling in Python involves using statistical algorithms and machine learning techniques to build models that can make predictions or classifications based on data. The process typically includes data preparation, model training, model evaluation, and making predictions on new or unseen data. <code>scikit-learn</code> is a widely-used Python library for predictive modeling, offering various tools and algorithms for regression, classification, clustering, and more.</p>
+                  <p>Here's a step-by-step guide to predictive modeling using Python and <code>scikit-learn</code>:</p>
+                  <h3>Step 1: Import Necessary Libraries</h3>
+                  <div class="bg-black rounded-md">
+                    <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span class="" data-state="closed"></span></div>
+                    <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+                        <span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+                        <span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+                        <span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler
+                        <span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> cross_val_score
+                        <span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score, classification_report
+                      </code></div>
+                  </div>
+                  <h3>Step 2: Load and Prepare the Data</h3>
+                  <div class="bg-black rounded-md">
+                    <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span class="" data-state="closed"></span></div>
+                    <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-comment"># Load your dataset (replace 'your_dataset.csv' with your actual dataset file)</span>
+                        data = pd.read_csv(<span class="hljs-string">'your_dataset.csv'</span>)
+      
+                        <span class="hljs-comment"># Identify the features (X) and the target variable (y)</span>
+                        X = data.drop(<span class="hljs-string">'target_variable'</span>, axis=<span class="hljs-number">1</span>)
+                        y = data[<span class="hljs-string">'target_variable'</span>]
+      
+                        <span class="hljs-comment"># Split the data into training and testing sets</span>
+                        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>, random_state=<span class="hljs-number">42</span>)
+                      </code></div>
+                  </div>
+                  <h3>Step 3: Preprocess the Data</h3>
+                  <div class="bg-black rounded-md">
+                    <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span class="" data-state="closed"></span></div>
+                    <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-comment"># Standardize features using StandardScaler</span>
+                        scaler = StandardScaler()
+                        X_train_scaled = scaler.fit_transform(X_train)
+                        X_test_scaled = scaler.transform(X_test)
+                      </code></div>
+                  </div>
+                  <h3>Step 4: Choose a Predictive Model</h3>
+                  <div class="bg-black rounded-md">
+                    <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span class="" data-state="closed"></span></div>
+                    <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">from</span> sklearn.ensemble <span class="hljs-keyword">import</span> RandomForestClassifier
+      
+                        <span class="hljs-comment"># Create a predictive model (replace RandomForestClassifier with your chosen algorithm)</span>
+                        model = RandomForestClassifier(n_estimators=<span class="hljs-number">100</span>, random_state=<span class="hljs-number">42</span>)
+                      </code></div>
+                  </div>
+                  <h3>Step 5: Train the Model</h3>
+                  <div class="bg-black rounded-md">
+                    <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span class="" data-state="closed"></span></div>
+                    <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-comment"># Train the model on the training set</span>
+                        model.fit(X_train_scaled, y_train)
+                      </code></div>
+                  </div>
+                  <h3>Step 6: Evaluate the Model</h3>
+                  <div class="bg-black rounded-md">
+                    <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span class="" data-state="closed"></span></div>
+                    <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-comment"># Make predictions on the testing set</span>
+                        y_pred = model.predict(X_test_scaled)
+      
+                        <span class="hljs-comment"># Evaluate accuracy</span>
+                        accuracy = accuracy_score(y_test, y_pred)
+                        <span class="hljs-built_in">print</span>(<span class="hljs-string">f'Accuracy: <span class="hljs-subst">{accuracy:<span class="hljs-number">.2</span>f}</span>'</span>)
+      
+                        <span class="hljs-comment"># Classification report</span>
+                        <span class="hljs-built_in">print</span>(<span class="hljs-string">'Classification Report:'</span>)
+                        <span class="hljs-built_in">print</span>(classification_report(y_test, y_pred))
+                      </code></div>
+                  </div>
+                  <h3>Step 7: Cross-Validation (Optional)</h3>
+                  <div class="bg-black rounded-md">
+                    <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span class="" data-state="closed"></span></div>
+                    <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-comment"># Perform cross-validation to assess model performance</span>
+                        cv_scores = cross_val_score(model, X_train_scaled, y_train, cv=<span class="hljs-number">5</span>)
+                        <span class="hljs-built_in">print</span>(<span class="hljs-string">f'Cross-Validation Scores: <span class="hljs-subst">{cv_scores}</span>'</span>)
+                        <span class="hljs-built_in">print</span>(<span class="hljs-string">f'Mean CV Score: <span class="hljs-subst">{np.mean(cv_scores):<span class="hljs-number">.2</span>f}</span>'</span>)
+                      </code></div>
+                  </div>
+                  <h3>Step 8: Make Predictions on New Data</h3>
+                  <div class="bg-black rounded-md">
+                    <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span class="" data-state="closed"></span></div>
+                    <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-comment"># You can use the trained model to make predictions on new, unseen data</span>
+                        new_data = pd.read_csv(<span class="hljs-string">'new_data.csv'</span>) <span class="hljs-comment"># Load your new data</span>
+                        new_data_scaled = scaler.transform(new_data) <span class="hljs-comment"># Standardize new data</span>
+                        new_predictions = model.predict(new_data_scaled) <span class="hljs-comment"># Make predictions</span>
+                      </code></div>
+                  </div>
+                  <p>This example uses a random forest classifier as the predictive model, but you can replace it with other algorithms such as logistic regression, support vector machines, or neural networks, depending on the nature of your data and the problem you are trying to solve. The key steps include data preparation, choosing a model, training the model, evaluating its performance, and making predictions on new data. Additionally, cross-validation is often performed to assess the model's robustness and generalization capabilities.</p>
+                  <h1 class="text-light-primary fs-44 fw-semibold mb-4">Clustering:</h1>
+                  <div style="margin: 5px 0;">
+                    <div class="flex-1 overflow-hidden">
+                      <div class="react-scroll-to-bottom--css-pedmg-79elbk h-full">
+                        <div class="react-scroll-to-bottom--css-pedmg-1n7m0yu">
+                          <div class="flex flex-col pb-9 text-sm">
+                            <div class="w-full text-token-text-primary" data-testid="conversation-turn-29">
+                              <div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+                                <div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group">
+                                  <div class="relative flex w-full flex-col lg:w-[calc(100%-115px)] agent-turn">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                      <div class="flex flex-grow flex-col max-w-full">
+                                        <div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="aa37ed0a-1889-4142-954a-313dd7f029be">
+                                          <div class="markdown prose w-full break-words dark:prose-invert light">
+                                            <p>Clustering is a type of unsupervised machine learning technique that involves grouping similar data points into clusters or groups. Clustering algorithms aim to discover inherent patterns or structures in the data without the need for predefined labels. Two commonly used clustering methods are K-Nearest Neighbors (KNN) and K-Means clustering.</p>
+                                            <h3>K-Nearest Neighbors (KNN):</h3>
+                                            <h4>Algorithm Overview:</h4>
+                                            <ol>
+                                              <li><strong>Training:</strong> Store all the training examples.</li>
+                                              <li><strong>Prediction (Classification):</strong> For a new data point, find the K-nearest neighbors from the training set and assign the majority class as the predicted class.</li>
+                                              <li><strong>Prediction (Regression):</strong> For a new data point, find the K-nearest neighbors from the training set and assign the average of their values as the predicted value.</li>
+                                            </ol>
+                                            <h4>Key Concepts:</h4>
+                                            <ul>
+                                              <li><strong>K:</strong> Represents the number of neighbors to consider.</li>
+                                              <li><strong>Distance Metric:</strong> Commonly used metrics include Euclidean distance, Manhattan distance, or other similarity measures.</li>
+                                              <li><strong>Voting:</strong> In classification, the class with the majority vote among the K-nearest neighbors is assigned. In regression, the average of their values is assigned.</li>
+                                            </ul>
+                                            <h4>Implementation in Python (Scikit-Learn):</h4>
+                                            <div class="bg-black rounded-md">
+                                              <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">python<span class="" data-state="closed"><button class="flex gap-1 items-center">Copy code</button></span></div>
+                                              <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">from</span> sklearn.neighbors <span class="hljs-keyword">import</span> KNeighborsClassifier
+      
+                                                  <span class="hljs-comment"># Create KNN classifier</span>
+                                                  knn = KNeighborsClassifier(n_neighbors=<span class="hljs-number">3</span>)
+      
+                                                  <span class="hljs-comment"># Train the model</span>
+                                                  knn.fit(X_train, y_train)
+      
+                                                  <span class="hljs-comment"># Make predictions</span>
+                                                  predictions = knn.predict(X_test)
+                                                </code></div>
+                                            </div>
+                                            <h3>K-Means Clustering:</h3>
+                                            <h4>Algorithm Overview:</h4>
+                                            <ol>
+                                              <li><strong>Initialization:</strong> Randomly choose K cluster centroids.</li>
+                                              <li><strong>Assignment:</strong> Assign each data point to the nearest centroid.</li>
+                                              <li><strong>Update Centroids:</strong> Recalculate the centroids based on the mean of the data points assigned to each cluster.</li>
+                                              <li><strong>Repeat Steps 2-3:</strong> Iteratively update assignments and centroids until convergence (minimal change in assignments or a fixed number of iterations).</li>
+                                            </ol>
+                                            <h4>Key Concepts:</h4>
+                                            <ul>
+                                              <li><strong>K:</strong> Represents the number of clusters.</li>
+                                              <li><strong>Centroids:</strong> Representative points for each cluster.</li>
+                                              <li><strong>Distance Metric:</strong> Typically uses Euclidean distance.</li>
+                                            </ul>
+                                            <h4>Implementation in Python (Scikit-Learn):</h4>
+                                            <div class="bg-black rounded-md">
+                                              <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">python<span class="" data-state="closed"><button class="flex gap-1 items-center">Copy code</button></span></div>
+                                              <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans
+      
+                                                  <span class="hljs-comment"># Create KMeans model</span>
+                                                  kmeans = KMeans(n_clusters=<span class="hljs-number">3</span>)
+      
+                                                  <span class="hljs-comment"># Fit the model to the data</span>
+                                                  kmeans.fit(X)
+      
+                                                  <span class="hljs-comment"># Get cluster assignments for each data point</span>
+                                                  cluster_assignments = kmeans.labels_
+                                                </code></div>
+                                            </div>
+                                            <h4>Choosing the Number of Clusters (K):</h4>
+                                            <p>The choice of K is crucial and can impact the results. Common methods for determining K include the elbow method, silhouette score, and cross-validation.</p>
+                                            <h4>Elbow Method Example:</h4>
+                                            <div class="bg-black rounded-md">
+                                              <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">python<span class="" data-state="closed"><button class="flex gap-1 items-center">Copy code</button></span></div>
+                                              <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-comment"># Elbow method to find the optimal number of clusters</span>
+                                                  inertia = []
+                                                  <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>):
+                                                  kmeans = KMeans(n_clusters=k)
+                                                  kmeans.fit(X)
+                                                  inertia.append(kmeans.inertia_)
+      
+                                                  <span class="hljs-comment"># Plotting the elbow curve</span>
+                                                  plt.plot(<span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>), inertia, marker=<span class="hljs-string">'o'</span>)
+                                                  plt.xlabel(<span class="hljs-string">'Number of Clusters (K)'</span>)
+                                                  plt.ylabel(<span class="hljs-string">'Inertia'</span>)
+                                                  plt.title(<span class="hljs-string">'Elbow Method'</span>)
+                                                  plt.show()
+                                                </code></div>
+                                            </div>
+                                            <h3>Summary:</h3>
+                                            <ul>
+                                              <li>KNN is a classification or regression algorithm based on the similarity of data points, considering their nearest neighbors.</li>
+                                              <li>K-Means clustering is an unsupervised learning algorithm that partitions data into K clusters based on the similarity of data points.</li>
+                                            </ul>
+                                            <p>Both algorithms are widely used for various applications, including pattern recognition, image processing, and customer segmentation. The choice between KNN and K-Means depends on the nature of the data and the problem at hand.</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="mt-1 flex justify-start gap-3 empty:hidden">&nbsp;</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="w-full text-token-text-primary" data-testid="conversation-turn-30">&nbsp;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full pt-2 md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:w-[calc(100%-.5rem)]">
+                      <form class="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
+                        <div class="relative flex h-full flex-1 items-stretch md:flex-col">
+                          <div class="flex w-full items-center">
+                            <h1>Cross Validation:</h1>
+                            <div style="margin: 5px 0;">
+                              <p dir="ltr">Cross validation is a technique used in machine learning to evaluate the performance of a model on unseen data. It involves dividing the available data into multiple folds or subsets, using one of these folds as a validation set, and training the model on the remaining folds. This process is repeated multiple times, each time using a different fold as the validation set. Finally, the results from each validation step are averaged to produce a more robust estimate of the model&rsquo;s performance. Cross validation is an important step in the&nbsp;<a href="https://www.geeksforgeeks.org/machine-learning/" rel="noreferrer noopener">machine learning</a>&nbsp;process and helps to ensure that the model selected for deployment is robust and generalizes well to new data.</p>
+                              <div id="GFG_AD_gfg_mobile_336x280">&nbsp;</div>
+                              <h2>What is cross-validation used for?</h2>
+                              <p dir="ltr">The main purpose of cross validation is to prevent&nbsp;<a href="https://www.geeksforgeeks.org/overfitting-and-regularization-in-ml/" rel="noreferrer noopener">overfitting</a>, which occurs when a model is trained too well on the training data and performs poorly on new, unseen data. By evaluating the model on multiple validation sets, cross validation provides a more realistic estimate of the model&rsquo;s generalization performance, i.e., its ability to perform well on new, unseen data.</p>
+                              <h2>Types of Cross-Validation</h2>
+                              <p dir="ltr">There are several types of cross validation techniques, including&nbsp;<strong>k-fold cross validation, leave-one-out cross validation, and Holdout validation, Stratified Cross-Validation.&nbsp;</strong>The choice of technique depends on the size and nature of the data, as well as the specific requirements of the modeling problem.</p>
+                              <h3><strong>1. Holdout Validation</strong></h3>
+                              <p dir="ltr">In<a href="https://www.geeksforgeeks.org/introduction-of-holdout-method/" rel="noreferrer noopener">&nbsp;Holdout Validation</a>, we perform training on the 50% of the given dataset and rest 50% is used for the testing purpose. It&rsquo;s a simple and quick way to evaluate a model. The major drawback of this method is that we perform training on the 50% of the dataset, it may possible that the remaining 50% of the data contains some important information which we are leaving while training our model i.e. higher bias.</p>
+                              <h3><strong>2. LOOCV (Leave One Out Cross Validation)</strong></h3>
+                              <p dir="ltr">In this method, we perform training on the whole dataset but leaves only one data-point of the available dataset and then iterates for each data-point. In&nbsp;<a href="https://www.geeksforgeeks.org/loocvleave-one-out-cross-validation-in-r-programming/" rel="noreferrer noopener">LOOCV</a>, the model is trained on&nbsp;<img class="ql-img-inline-formula quicklatex-auto-format" title="Rendered by QuickLaTeX.com" src="https://quicklatex.com/cache3/ad/ql_cafb7d699fa0cf4ef7eb3d778b597bad_l3.svg" alt="n-1   " width="59" height="18" />&nbsp;samples and tested on the one omitted sample, repeating this process for each data point in the dataset. It has some advantages as well as disadvantages also.</p>
+                              <p dir="ltr"><strong>An advantage</strong>&nbsp;of using this method is that we make use of all data points and hence it is low bias.</p>
+                              <div id="GFG_AD_Desktop_InContent_ATF_336x280">&nbsp;</div>
+                              <p dir="ltr">The major<strong>&nbsp;drawback&nbsp;</strong>of this method is that it leads to&nbsp;<strong>higher variation&nbsp;</strong>in the testing model as we are testing against one data point. If the data point is an outlier it can lead to higher variation. Another drawback is it&nbsp;<strong>takes a lot of execution time</strong>&nbsp;as it iterates over &lsquo;the number of data points&rsquo; times.</p>
+                              <h3><strong>3. Stratified Cross-Validation</strong></h3>
+                              <p dir="ltr">It is a technique used in machine learning to ensure that each fold of the cross-validation process maintains the same class distribution as the entire dataset. This is particularly important when dealing with imbalanced datasets, where certain classes may be underrepresented. In this method,</p>
+                              <ol>
+                                <li value="1">The dataset is divided into k folds while maintaining the proportion of classes in each fold.</li>
+                                <li value="2">During each iteration, one-fold is used for testing, and the remaining folds are used for training.</li>
+                                <li value="3">The process is repeated k times, with each fold serving as the test set exactly once.</li>
+                              </ol>
+                              <p dir="ltr"><a href="https://www.geeksforgeeks.org/stratified-k-fold-cross-validation/" rel="noreferrer noopener">Stratified Cross-Validation&nbsp;</a>is essential when dealing with classification problems where maintaining the balance of class distribution is crucial for the model to generalize well to unseen data.</p>
+                              <h3><strong>4. K-Fold Cross Validation</strong></h3>
+                              <p dir="ltr">In&nbsp;<a href="https://www.geeksforgeeks.org/k-fold-cross-validation-in-r-programming/" rel="noreferrer noopener">K-Fold Cross Validation</a>, we split the dataset into k number of subsets (known as folds) then we perform training on the all the subsets but leave one(k-1) subset for the evaluation of the trained model. In this method, we iterate k times with a different subset reserved for testing purpose each time.</p>
+                              <h3>Multiple Regression:</h3>
+                              <p><strong>Definition:</strong> Multiple Regression is an extension of simple linear regression, a statistical method used to model the relationship between a dependent variable and two or more independent variables. In simple linear regression, we have one independent variable predicting the dependent variable, while in multiple regression, we have multiple independent variables.</p>
+                              <p><strong>Equation:</strong> The general form of the multiple regression equation is:</p>
+                              <p><span class="math math-inline"><span class="katex"><span class="katex-mathml">�=�0+�1�1+�2�2+&hellip;+����+�</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">Y</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mord mathnormal">&beta;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">&beta;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">&beta;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="minner">&hellip;</span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">&beta;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">ϵ</span></span></span></span></span></p>
+                              <ul>
+                                <li><span class="math math-inline"><span class="katex"><span class="katex-mathml">�</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">Y</span></span></span></span></span> is the dependent variable.</li>
+                                <li><span class="math math-inline"><span class="katex"><span class="katex-mathml">�0</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">&beta;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span> is the intercept.</li>
+                                <li><span class="math math-inline"><span class="katex"><span class="katex-mathml">�1,�2,&hellip;,��</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">&beta;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">&beta;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="minner">&hellip;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">&beta;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span> are the coefficients for the independent variables <span class="math math-inline"><span class="katex"><span class="katex-mathml">�1,�2,&hellip;,��</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="minner">&hellip;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span>.</li>
+                                <li><span class="math math-inline"><span class="katex"><span class="katex-mathml">�</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">ϵ</span></span></span></span></span> is the error term.</li>
+                              </ul>
+                              <p><strong>Key Concepts:</strong></p>
+                              <ul>
+                                <li>
+                                  <p><strong>Interpretation of Coefficients:</strong></p>
+                                  <ul>
+                                    <li>Each coefficient (<span class="math math-inline"><span class="katex"><span class="katex-mathml">�</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">&beta;</span></span></span></span></span>) represents the change in the dependent variable for a one-unit change in the corresponding independent variable, holding other variables constant.</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <p><strong>Assumptions:</strong></p>
+                                  <ul>
+                                    <li>Multiple regression assumes linearity, independence of errors, homoscedasticity, and normally distributed errors.</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <p><strong>Model Evaluation:</strong></p>
+                                  <ul>
+                                    <li>Evaluation metrics include <span class="math math-inline"><span class="katex"><span class="katex-mathml">�2</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> (proportion of variance explained), adjusted <span class="math math-inline"><span class="katex"><span class="katex-mathml">�2</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>, and analysis of variance (ANOVA).</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <p><strong>Multicollinearity:</strong></p>
+                                  <ul>
+                                    <li>Multicollinearity occurs when independent variables are highly correlated, potentially leading to unstable coefficient estimates.</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                              <p><strong>Implementation in Python (Scikit-Learn):</strong></p>
+                              <div class="bg-black rounded-md">
+                                <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">python<span class="" data-state="closed"><button class="flex gap-1 items-center">Copy code</button></span></div>
+                                <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LinearRegression
+                                    <span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+                                    <span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> mean_squared_error, r2_score
+      
+                                    <span class="hljs-comment"># Load your dataset and prepare features (X) and target variable (y)</span>
+                                    X, y = load_your_dataset()
+      
+                                    <span class="hljs-comment"># Split the data into training and testing sets</span>
+                                    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>, random_state=<span class="hljs-number">42</span>)
+      
+                                    <span class="hljs-comment"># Create a multiple regression model</span>
+                                    model = LinearRegression()
+      
+                                    <span class="hljs-comment"># Train the model</span>
+                                    model.fit(X_train, y_train)
+      
+                                    <span class="hljs-comment"># Make predictions on the testing set</span>
+                                    y_pred = model.predict(X_test)
+      
+                                    <span class="hljs-comment"># Evaluate the model</span>
+                                    mse = mean_squared_error(y_test, y_pred)
+                                    r2 = r2_score(y_test, y_pred)
+      
+                                    <span class="hljs-built_in">print</span>(<span class="hljs-string">f'Mean Squared Error: <span class="hljs-subst">{mse}</span>'</span>)
+                                    <span class="hljs-built_in">print</span>(<span class="hljs-string">f'R-squared: <span class="hljs-subst">{r2}</span>'</span>)
+                                  </code></div>
+                              </div>
+                              <h3>Decision Tree:</h3>
+                              <p><strong>Definition:</strong> A Decision Tree is a tree-like model used for both classification and regression tasks. It breaks down a dataset into smaller and smaller subsets based on decision rules inferred from the features.</p>
+                              <p><strong>Key Concepts:</strong></p>
+                              <ul>
+                                <li>
+                                  <p><strong>Nodes and Leaves:</strong></p>
+                                  <ul>
+                                    <li>Nodes represent decision points based on features, and leaves represent the predicted outcomes.</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <p><strong>Splitting Criteria:</strong></p>
+                                  <ul>
+                                    <li>Decision trees split the data based on criteria such as Gini impurity (for classification) or mean squared error (for regression).</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <p><strong>Decision Rules:</strong></p>
+                                  <ul>
+                                    <li>Each path from the root node to a leaf node represents a decision rule based on feature conditions.</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <p><strong>Pruning:</strong></p>
+                                  <ul>
+                                    <li>Decision trees can be prone to overfitting. Pruning involves removing branches that do not significantly improve predictive accuracy.</li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <p><strong>Interpretability:</strong></p>
+                                  <ul>
+                                    <li>Decision trees are easy to understand and interpret, making them suitable for exploratory data analysis.</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                              <p><strong>Implementation in Python (Scikit-Learn):</strong></p>
+                              <div class="bg-black rounded-md">
+                                <div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">python<span class="" data-state="closed"><button class="flex gap-1 items-center">Copy code</button></span></div>
+                                <div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> DecisionTreeClassifier, DecisionTreeRegressor
+                                    <span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split
+                                    <span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score, mean_squared_error
+      
+                                    <span class="hljs-comment"># Load your dataset and prepare features (X) and target variable (y)</span>
+                                    X, y = load_your_dataset()
+      
+                                    <span class="hljs-comment"># Split the data into training and testing sets</span>
+                                    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>, random_state=<span class="hljs-number">42</span>)
+      
+                                    <span class="hljs-comment"># Create a decision tree classifier (for classification)</span>
+                                    classifier = DecisionTreeClassifier()
+      
+                                    <span class="hljs-comment"># Create a decision tree regressor (for regression)</span>
+                                    regressor = DecisionTreeRegressor()
+      
+                                    <span class="hljs-comment"># Train the model</span>
+                                    classifier.fit(X_train, y_train)
+                                    regressor.fit(X_train, y_train)
+      
+                                    <span class="hljs-comment"># Make predictions on the testing set</span>
+                                    y_pred_classifier = classifier.predict(X_test)
+                                    y_pred_regressor = regressor.predict(X_test)
+      
+                                    <span class="hljs-comment"># Evaluate the models</span>
+                                    accuracy = accuracy_score(y_test, y_pred_classifier)
+                                    mse = mean_squared_error(y_test, y_pred_regressor)
+      
+                                    <span class="hljs-built_in">print</span>(<span class="hljs-string">f'Classification Accuracy: <span class="hljs-subst">{accuracy}</span>'</span>)
+                                    <span class="hljs-built_in">print</span>(<span class="hljs-string">f'Mean Squared Error (Regression): <span class="hljs-subst">{mse}</span>'</span>)
+                                  </code></div>
+                              </div>
+                              <p>These examples provide a basic overview of Multiple Regression and Decision Trees. Depending on your specific problem and dataset, you may need to fine-tune model parameters, handle feature engineering, and choose between different algorithms to achieve optimal results.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

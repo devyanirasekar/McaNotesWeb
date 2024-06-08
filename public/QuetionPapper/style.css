@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+
+.container2{
+    background-color:hsl(268, 58%, 22%);
+    margin: 10px;
+    border-radius: 20px;
+
+}
+.cont2text{
+    text-align: center;
+    padding-top: 60px;
+    color: white;
+}
+.container21{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+.BG2{
+    background-color: #D83F31;
+}
+
+.innerContainer1{
+    text-align: center;
+    justify-content: center;
+   align-items: center;
+   height: 250px;
+   width: 200px;
+   padding: 10px;
+   margin: 20px;
+   border: 1px solid white;
+   border-radius: 20px;
+   background-color: #D4E7C5;
+   box-shadow: 30px 40px 40px rgba(0,0,0,2);
+}
+.shadow{
+    box-shadow: 30px 40px 40px rgba(0,0,0,0.5);
+    background-color: #bbbbbb;
+}
+.img1{
+    padding-right: 18px;
+    height: 150px;
+    width: 200px;
+}
+.img2{
+    padding-right: 18px;
+    height: 150px;
+    width: 200px;
+}
+.img3{
+    padding-top: 4px;
+    padding-right: 18px;
+    height: 150px;
+    width: 200px;
+}
+.img4{
+    padding-right: 18px;
+    padding-bottom: 12px;
+    height: 150px;
+    width: 200px;
+}
+.img5{
+    height: 150px;
+    width: 200px;
+}
+.downButton{
+    position: absolute;
+    margin-left: -56px;
+    text-decoration: none;
+    background-color:hsl(268, 58%, 22%);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 120px;
+    height: 40px;
+    margin-bottom: 1px;
+}
+.downButton:hover{
+    background-color: white;
+    color: hsl(268, 58%, 22%);
+    font-size: medium;
+}
+
+
+---------------------------------
+
+
+body {
+    font-family: "Montserrat", sans-serif;;
+    font-size: .938rem;
+    font-weight: 500px;
+    background-color: hsl(268, 58%, 22%);
+  }
+  /* nav */
+  .logo{
+      height: 4rem;
+      width: 4rem;
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+      color: orangered;
+  }
+  .notes_text{
+      color: antiquewhite;
+  }
+  .nav-container{
+    background-color:hsl(268, 58%, 22%);
+      justify-content: space-between;
+      display: flex;
+      box-shadow: 0px 0.01px 10px rgba(255,255,255,255);
+     
+  }
+  
+  .list{
+      list-style: none;
+      display: flex;  
+      margin-right: 0px; 
+  }
+      
+  .list a{
+      text-decoration: none;
+  }
+  .list a:hover{
+      text-decoration: none;
+  
+  }
+  .listno{
+      margin-bottom: 2rem;
+      margin-right: 5rem;
+      margin-top: 1rem;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      color: whitesmoke;
+      border:  1px solid hsl(268, 58%, 22%);
+  
+     
+  }
+  
+  .list li{
+      margin-bottom: 2rem;
+      margin-right: 5rem;
+      margin-top: 1rem;
+      padding: 10px;
+      font-weight: bold;
+  }
+  #download{
+      margin-top: 1rem;
+      padding: 10px;
+      background-color: white;
+      color: black;
+      border: 1px solid white;
+      border-radius: 5px;
+  }
+  #download:hover{
+      border: 2px solid white;
+      background-color:hsl(268, 58%, 22%) ;
+      color: white;
+      cursor: pointer;
+  }
+  
+  
+  .listno:hover{
+      border:  1px solid hsl(252, 100%, 87%);
+      border-radius: 5px;
+      color: black;
+      background-color: white;
+  }
+  .toggle{
+      color:#fff; 
+      display: none;
+  }
+  .drop-list{
+      display: none;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: white;
+      width: 200px;
+      height: 300px;
+      
+  }
+  /* nav over */
+
+  
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+
+.footer{
+    background-color:hsl(268, 58%, 22%);
+    border:  1px solid whitesmoke;
+    border-radius: 10px 10px 0px 0px;
+    padding: 70px 0;
+
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/* Notes page css */
+.noteContainer{
+    height: 100%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+/* Notespage css End */
+
+/* footer responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+@media (max-width:480px){ 
+
+
+    .main_area{
+    
+        height: 500px;
+    }
+    .cartoon img{
+        position: absolute;
+        margin-top: 170px;
+        height: 350px;
+    
+    }
+    .description{
+        position: absolute;
+        font-size:medium;
+        margin-top: 40px;
+        margin-left: 2px;
+        margin-right: 2px;
+        text-align: center;
+
+        width: fit-content;
+        
+    }
+    .container2{
+        flex-direction: column;
+          
+    }
+    .container{
+
+        padding: 10px;
+    }
+
+    .footer-col{
+        width: 50%;
+        
+    }
+    .webLogo h2{
+        align-items: center;
+        margin-left: 2px;
+    }
+    .list-diplay{
+        display: none;
+    }
+    .toggle{
+        display: block;
+        margin-right: 10px;
+    }
+     /* dropdown */
+    .dropDown{
+        z-index: 1;
+        margin-top: -40px;
+        margin-right: 19px;
+        position: absolute;
+        right: 0px;
+    }
+   
+     .drop-list.open{
+        display: block;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: white;
+        width: 200px;
+        height: 300px;
+        
+    }
+    
+    
+    .drop-list a{
+        text-decoration: none;
+    }
+    .drop-list li{
+        margin-left: 40px;
+        margin-right: 40px;
+        color: black;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    .drop-list li:hover{
+        background-color:hsl(268, 58%, 22%);
+        color: white;
+        
+    }
+     #download{
+        font-weight: bold;
+        background-color:orangered;
+        color: white;
+
+    }
+   .list li{
+    margin-right: 1rem;
+   } 
+}

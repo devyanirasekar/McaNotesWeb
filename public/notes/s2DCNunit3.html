@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 DCN unit-3</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit-3</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong><h2>Multiplexing</h2></strong></p>
+        <p>&nbsp;</p>
+        <p><a href="https://www.geeksforgeeks.org/multiplexing-channel-sharing-in-computer-network/"><strong><u>Multiplexing</u></strong></a>&nbsp;is the sharing of a medium or bandwidth. It is the process in which multiple signals coming from multiple sources are combined and transmitted over a single communication/physical line.<br />&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Types of Multiplexing&nbsp;</strong><br />There are Three types of Multiplexing :</p>
+        <ol>
+          <li>Frequency Division Multiplexing (FDM)</li>
+          <li>Time-Division Multiplexing (TDM)</li>
+          <li>Wavelength Division Multiplexing (WDM)</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol>
+          <li><strong>Frequency Division Multiplexing :</strong></li>
+        </ol>
+        <p>Frequency division multiplexing is defined as a type of multiplexing where the bandwidth of a single physical medium is divided into a number of smaller, independent frequency channels.<br />&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Frequency Division Multiplexing is used in radio and television transmission.</p>
+        <p>In FDM, we can observe a lot of inter-channel cross-talk, due to the fact that in this type of multiplexing the bandwidth is divided into frequency channels. In order to prevent the inter-channel cross talk, unused strips of bandwidth must be placed between each channel. These unused strips between each channel are known as guard bands.<br />&nbsp;</p>
+        <p>&nbsp;</p>
+        <ol start="2">
+          <li><strong> Time Division Multiplexing :</strong></li>
+        </ol>
+        <p>Time-division multiplexing is defined as a type of multiplexing wherein FDM, instead of sharing a portion of the bandwidth in the form of channels, in TDM, time is shared. Each connection occupies a portion of time in the link.</p>
+        <p>In Time Division Multiplexing, all signals operate with the same frequency (bandwidth) at different times.</p>
+        <p>&nbsp;</p>
+        <p>There are two types of Time Division Multiplexing :</p>
+        <ol>
+          <li>Synchronous Time Division Multiplexing</li>
+          <li>Statistical (or Asynchronous) Time Division Multiplexing</li>
+        </ol>
+        <p><strong>Synchronous TDM :</strong></p>
+        <p>Synchronous TDM is a type of Time Division Multiplexing where the input frame already has a slot in the output frame. Time slots are grouped into frames. One frame consists of one cycle of time slots.&nbsp;</p>
+        <p>Synchronous TDM is not efficient because if the input frame has no data to send, a slot remains empty in the output frame.</p>
+        <p>In synchronous TDM, we need to mention the synchronous bit at the beginning of each frame.</p>
+        <p>&nbsp;</p>
+        <p><strong>Statistical TDM :</strong></p>
+        <p>Statistical TDM is a type of Time Division Multiplexing where the output frame collects data from the input frame till it is full, not leaving an empty slot like in Synchronous TDM.</p>
+        <p>In statistical TDM, we need to include the address of each particular data in the slot that is being sent to the output frame.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Statistical TDM is a more efficient type of time-division multiplexing as the channel capacity is fully utilized and improves the bandwidth efficiency.&nbsp;</p>
+        <ol start="3">
+          <li><strong> Wavelength Division Multiplexing :</strong></li>
+        </ol>
+        <p>Wavelength Division Multiplexing (WDM) is a multiplexing technology used to increase the capacity of optical fiber by transmitting multiple optical signals simultaneously over a single optical fiber, each with a different wavelength. Each signal is carried on a different wavelength of light, and the resulting signals are combined onto a single optical fiber for transmission. At the receiving end, the signals are separated by their wavelengths, demultiplexed and routed to their respective destinations.</p>
+        <p>WDM can be divided into two categories: Dense Wavelength Division Multiplexing (DWDM) and Coarse Wavelength Division Multiplexing (CWDM).</p>
+        <p>&nbsp;<strong>DWDM</strong>&nbsp;is used to multiplex a large number of optical signals onto a single fiber, typically up to 80 channels with a spacing of 0.8 nm or less between the channels.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>CWDM</strong>&nbsp;is used for lower-capacity applications, typically up to 18 channels with a spacing of 20 nm between the channels.</p>
+        <p>WDM has several advantages over other multiplexing technologies such as Time Division Multiplexing (TDM). WDM allows for higher data rates and capacity, lower power consumption, and reduced equipment complexity. WDM is also flexible, allowing for easy upgrades and expansions to existing networks.</p>
+        <p>WDM is used in a wide range of applications, including telecommunications, cable TV, internet service providers, and data centers. It enables the transmission of large amounts of data over long distances with high speed and efficiency.</p>
+        <p>Wavelength Division Multiplexing is used on fiber optics to increase the capacity of a single fiber. It is an analog multiplexing technique. Optical signals from the different sources are combined to form a wider band of light with the help of multiplexers. At the receiving end, the De-multiplexer separates the signals to transmit them to their respective destinations.&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1><strong>Error Detection</strong></h1>
+        <p><strong>Error</strong>&nbsp;is a condition when the receiver&rsquo;s information does not match the sender&rsquo;s information. During transmission, digital signals suffer from noise that can introduce errors in the binary bits traveling from sender to receiver. That means a 0 bit may change to 1 or a 1 bit may change to 0.&nbsp;</p>
+        <p>Data (Implemented either at the Data link layer or Transport Layer of the OSI Model) may get scrambled by noise or get corrupted whenever a message is transmitted. To prevent such errors, error-detection codes are added as extra data to digital messages. This helps in detecting any errors that may have occurred during message transmission.</p>
+        <h2><strong>Types of Errors</strong></h2>
+        <h3><strong>Single-Bit Error</strong></h3>
+        <p>A single-bit error refers to a type of data transmission error that occurs when one bit (i.e., a single binary digit) of a transmitted data unit is altered during transmission, resulting in an incorrect or corrupted data unit.</p>
+        <p>&nbsp;</p>
+        <p><em>Single-Bit Error</em></p>
+        <h3><strong>Multiple-Bit Error</strong></h3>
+        <p>A multiple-bit error is an error type that arises when more than one bit in a data transmission is affected. Although multiple-bit errors are relatively rare when compared to single-bit errors, they can still occur, particularly in high-noise or high-interference digital environments.</p>
+        <p>&nbsp;</p>
+        <h3><strong>Burst Error</strong></h3>
+        <p>When several consecutive bits are flipped mistakenly in digital transmission, it creates a burst error. This error causes a sequence of consecutive incorrect values.</p>
+        <p>&nbsp;</p>
+        <p><em>Burst Error</em></p>
+        <h3><strong>Checksum</strong></h3>
+        <h3><strong>To detect errors, a common technique is to introduce redundancy bits that provide additional information. Various techniques for error detection include::</strong><strong>&nbsp;Checksum</strong></h3>
+        <p>Checksum error detection is a method used to identify errors in transmitted data. The process involves dividing the data into equally sized segments and using a 1&rsquo;s complement to calculate the sum of these segments. The calculated sum is then sent along with the data to the receiver. At the receiver&rsquo;s end, the same process is repeated and if all zeroes are obtained in the sum, it means that the data is correct.</p>
+        <h4><strong><em>Checksum &ndash; Operation at Sender&rsquo;s Side</em></strong></h4>
+        <ul>
+          <li>Firstly, the data is divided into k segments each of m bits.</li>
+          <li>On the sender&rsquo;s end, the segments are added using 1&rsquo;s complement arithmetic to get the sum. The sum is complemented to get the checksum.</li>
+          <li>The checksum segment is sent along with the data segments.</li>
+        </ul>
+        <h4><strong><em>Checksum &ndash; Operation at Receiver&rsquo;s Side</em></strong></h4>
+        <ul>
+          <li>At the receiver&rsquo;s end, all received segments are added using 1&rsquo;s complement arithmetic to get the sum. The sum is complemented.</li>
+          <li>If the result is zero, the received data is accepted; otherwise discarded.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h4><strong><em>Disadvantages</em></strong></h4>
+        <ul>
+          <li>If one or more bits of a segment are damaged and the corresponding bit or bits of opposite value in a second segment are also damaged.</li>
+        </ul>
+        <h3><strong>Cyclic Redundancy Check (CRC)</strong></h3>
+        <ul>
+          <li>Unlike the checksum scheme, which is based on addition, CRC is based on binary division.</li>
+          <li>In CRC, a sequence of redundant bits, called cyclic redundancy check bits, are appended to the end of the data unit so that the resulting data unit becomes exactly divisible by a second, predetermined binary number.</li>
+          <li>At the destination, the incoming data unit is divided by the same number. If at this step there is no remainder, the data unit is assumed to be correct and is therefore accepted.</li>
+          <li>A remainder indicates that the data unit has been damaged in transit and therefore must be rejected.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;</strong>&nbsp;<br />&nbsp;&nbsp;</p>
+        <p>&nbsp;</p>
+        <h4><strong><em>Advantages:</em></strong></h4>
+        <p><strong>Increased Data Reliability:</strong>&nbsp;Error detection ensures that the data transmitted over the network is reliable, accurate, and free from errors. This ensures that the recipient receives the same data that was transmitted by the sender.</p>
+        <p><strong>Improved Network Performance:&nbsp;</strong>Error detection mechanisms can help to identify and isolate network issues that are causing errors. This can help to improve the overall performance of the network and reduce downtime.</p>
+        <p><strong>Enhanced Data Security:&nbsp;</strong>Error detection can also help to ensure that the data transmitted over the network is secure and has not been tampered with.</p>
+        <h4><strong><em>Disadvantages:</em></strong></h4>
+        <p><strong>Overhead</strong>:<strong>&nbsp;</strong>Error detection requires additional resources and processing power, which can lead to increased overhead on the network. This can result in slower network performance and increased latency.</p>
+        <p>False Positives<strong>:&nbsp;</strong>Error detection mechanisms can sometimes generate false positives, which can result in unnecessary retransmission of data. This can further increase the overhead on the network.</p>
+        <p>Limited Error Correction<strong>:</strong>&nbsp;Error detection can only identify errors but cannot correct them. This means that the recipient must rely on the sender to retransmit the data, which can lead to further delays and increased network overhead.</p>
+        <p>&nbsp;</p>
+        <p><strong>Vertical Redundancy Check&nbsp;</strong>is also known as Parity Check. In this method, a redundant bit also called parity bit is added to each data unit. This method includes even parity and odd parity. Even parity means the total number of 1s in data is to be even and odd parity means the total number of 1s in data is to be odd.&nbsp;<strong>Example &ndash;</strong>&nbsp;If the source wants to transmit data unit 1100111 using even parity to the destination. The source will have to pass through Even Parity Generator.&nbsp;<br />&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><em>Even parity VRC</em></p>
+        <p>Parity generator will count number of 1s in data unit and will add parity bit. In the above example, number of 1s in data unit is 5, parity generator appends a parity bit 1 to this data unit making the total number of 1s even i.e 6 which is clear from above figure. Data along with parity bit is then transmitted across the network. In this case, 11001111 will be transmitted. At the destination, This data is passed to parity checker at the destination. The number of 1s in data is counted by parity checker. If the number of 1s count out to be odd, e.g. 5 or 7 then destination will come to know that there is some error in the data. The receiver then rejects such an erroneous data unit.</p>
+        <p>&nbsp;<strong>Advantages :</strong></p>
+        <ul>
+          <li>VRC can detect all single bit error.</li>
+          <li>It can also detect burst errors but only in those cases where number of bits changed is odd, i.e. 1, 3, 5, 7, &hellip;&hellip;.etc.</li>
+          <li>VRC is simple to implement and can be easily incorporated into different communication protocols and systems.</li>
+          <li>It is efficient in terms of computational complexity and memory requirements.</li>
+          <li>VRC can help improve the reliability of data transmission and reduce the likelihood of data corruption or loss due to errors.</li>
+          <li>VRC can be combined with other error detection and correction techniques to improve the overall error handling capabilities of a system.</li>
+        </ul>
+        <p><strong>Disadvantages :</strong>&nbsp;</p>
+        <ul>
+          <li>The major disadvantage of using this method for error detection is that it is not able to detect burst error if the number of bits changed is even, i.e. 2, 4, 6, 8, &hellip;&hellip;.etc.&nbsp;</li>
+          <li><strong>Example &ndash;&nbsp;</strong>If the original data is 1100111. After adding VRC, data unit that will be transmitted is 11001111. Suppose on the way 2 bits are 01011111. When this data will reach the destination, parity checker will count number of 1s in data and that comes out to be even i.e. 8. So, in this case, parity is not changed, it is still even. Destination will assume that there is no error in data even though data is erroneous.</li>
+          <li>VRC is not capable of correcting errors, only detecting them. This means that it can identify errors, but it cannot fix them.</li>
+          <li>VRC is not suitable for applications that require high levels of error detection and correction, such as mission-critical systems or safety-critical applications.</li>
+          <li>VRC is limited in its ability to detect and correct errors in large blocks of data, as the probability of errors increases with the size of the data block.</li>
+          <li>VRC requires additional overhead bits to be added to the data stream, which can increase the bandwidth and storage requirements of the system.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1><strong>Longitudinal Redundancy Check (LRC)/2-D Parity Check</strong></h1>
+        <p>&nbsp;</p>
+        <p><a href="https://practice.geeksforgeeks.org/problems/what-is-lrc"><u>Longitudinal Redundancy Check (LRC)</u></a>&nbsp;is also known as 2-D parity check. In this method, data which the user want to send is organised into tables of rows and columns. A block of bit is divided into table or matrix of rows and columns. In order to detect an error, a redundant bit is added to the whole block and this block is transmitted to receiver. The receiver uses this redundant row to detect error. After checking the data for errors, receiver accepts the data and discards the redundant row of bits.</p>
+        <p><strong>Example :</strong><br />If a block of 32 bits is to be transmitted, it is divided into matrix of four rows and eight columns which as shown in the following figure :</p>
+        <p>&nbsp;</p>
+        <p><em><br /></em><strong><em>Figure:&nbsp;</em></strong><em>LRC</em></p>
+        <p>In this matrix of bits, a parity bit (odd or even) is calculated for each column. It means 32 bits data plus 8 redundant bits are transmitted to receiver. Whenever data reaches at the destination, receiver uses LRC to detect error in data.</p>
+        <p><strong>Advantage :</strong><br />LRC is used to detect burst errors.</p>
+        <p><strong>Example :</strong>&nbsp;Suppose 32 bit data plus LRC that was being transmitted is hit by a burst error of length 5 and some bits are corrupted as shown in the following figure :</p>
+        <p>&nbsp;</p>
+        <p><strong><em>Figure :</em></strong><em>&nbsp;Burst error &amp; LRC</em></p>
+        <p>The LRC received by the destination does not match with newly corrupted LRC. The destination comes to know that the data is erroneous, so it discards the data.</p>
+        <p><strong>Disadvantage :</strong><br />The main problem with LRC is that, it is not able to detect error if two bits in a data unit are damaged and two bits in exactly the same position in other data unit are also damaged.</p>
+        <p><strong>Example :</strong>&nbsp;If data 110011 010101 is changed to 010010110100.</p>
+        <p>&nbsp;</p>
+        <p><strong><em>Figure :</em></strong><em>&nbsp;Two bits at same bit position damaged in 2 data units</em></p>
+        <p>In this example 1st and 6th bit in one data unit is changed . Also the 1st and 6th bit in second unit is changed.</p>
+        <p>&nbsp;</p>
+        <p>Error Correction</p>
+        <p>Error Correction codes are used to detect and correct the errors when data is transmitted from the sender to the receiver.</p>
+        <p>Error Correction can be handled in two ways:</p>
+        <ul>
+          <li><strong>Backward error correction:</strong>Once the error is discovered, the receiver requests the sender to retransmit the entire data unit.</li>
+          <li><strong>Forward error correction:</strong>In this case, the receiver uses the error-correcting code which automatically corrects the errors.</li>
+        </ul>
+        <p>A single additional bit can detect the error, but cannot correct it.</p>
+        <p>For correcting the errors, one has to know the exact position of the error. For example, If we want to calculate a single-bit error, the error correction code will determine which one of seven bits is in error. To achieve this, we have to add some additional redundant bits.</p>
+        <p>Suppose r is the number of redundant bits and d is the total number of the data bits. The number of redundant bits r can be calculated by using the formula:</p>
+        <p>2<sup>r</sup>&gt;=d+r+1</p>
+        <p>The value of r is calculated by using the above formula. For example, if the value of d is 4, then the possible smallest value that satisfies the above relation would be 3.</p>
+        <p>To determine the position of the bit which is in error, a technique developed by R.W Hamming is Hamming code which can be applied to any length of the data unit and uses the relationship between data units and redundant units.</p>
+        <h2>Hamming Code</h2>
+        <p><strong>Parity bits:</strong>&nbsp;The bit which is appended to the original data of binary bits so that the total number of 1s is even or odd.</p>
+        <p><strong>Even parity:</strong>&nbsp;To check for even parity, if the total number of 1s is even, then the value of the parity bit is 0. If the total number of 1s occurrences is odd, then the value of the parity bit is 1.</p>
+        <p><strong>Odd Parity:</strong>&nbsp;To check for odd parity, if the total number of 1s is even, then the value of parity bit is 1. If the total number of 1s is odd, then the value of parity bit is 0.</p>
+        <h3>Algorithm of Hamming code:</h3>
+        <ul>
+          <li>An information of 'd' bits are added to the redundant bits 'r' to form d+r.</li>
+          <li>The location of each of the (d+r) digits is assigned a decimal value.</li>
+          <li>The 'r' bits are placed in the positions 1,2,.....2<sup>k-1</sup>.</li>
+          <li>At the receiving end, the parity bits are recalculated. The decimal value of the parity bits determines the position of an error.</li>
+        </ul>
+        <h2>Relationship b/w Error position &amp; binary number.</h2>
+        <p>&nbsp;</p>
+        <p>Let's understand the concept of Hamming code through an example:</p>
+        <p>Suppose the original data is 1010 which is to be sent</p>
+        <p><strong>Total number of data bits 'd'</strong>&nbsp;= 4</p>
+        <p><strong>Number of redundant bits r :</strong>&nbsp;2<sup>r</sup>&nbsp;&gt;= d+r+1</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2<sup>r</sup>&gt;= 4+r+1</p>
+        <p>Therefore, the value of r is 3 that satisfies the above relation.</p>
+        <p><strong>Total number of bits = d+r = 4+3 = 7;</strong></p>
+        <h2>Determining the position of the redundant bits</h2>
+        <p>The number of redundant bits is 3. The three bits are represented by r1, r2, r4. The position of the redundant bits is calculated with corresponds to the raised power of 2. Therefore, their corresponding positions are&nbsp;<strong>1, 2</strong><strong><sup>1</sup></strong><strong>, 2</strong><strong><sup>2</sup></strong>.</p>
+        <ol>
+          <li>The&nbsp;position&nbsp;of&nbsp;r1&nbsp;=&nbsp;1</li>
+          <li>The&nbsp;position&nbsp;of&nbsp;r2&nbsp;=&nbsp;2</li>
+          <li>The&nbsp;position&nbsp;of&nbsp;r4&nbsp;=&nbsp;4</li>
+        </ol>
+        <p>Representation of Data on the addition of parity bits:</p>
+        <p>&nbsp;</p>
+        <h2>Determining the Parity bits</h2>
+        <h3>Determining the r1 bit</h3>
+        <p>The r1 bit is calculated by performing a parity check on the bit positions whose binary representation includes 1 in the first position.</p>
+        <p>&nbsp;</p>
+        <p>We observe from the above figure that the bit positions that includes 1 in the first position are 1, 3, 5, 7. Now, we perform the even-parity check at these bit positions. The total number of 1 at these bit positions corresponding to r1 is&nbsp;<strong>even, therefore, the value of the r1 bit is 0</strong>.</p>
+        <h3>Determining r2 bit</h3>
+        <p>The r2 bit is calculated by performing a parity check on the bit positions whose binary representation includes 1 in the second position.</p>
+        <p>&nbsp;</p>
+        <p>We observe from the above figure that the bit positions that includes 1 in the second position are&nbsp;<strong>2, 3, 6, 7</strong>. Now, we perform the even-parity check at these bit positions. The total number of 1 at these bit positions corresponding to r2 is&nbsp;<strong>odd, therefore, the value of the r2 bit is 1</strong>.</p>
+        <h3>Determining r4 bit</h3>
+        <p>The r4 bit is calculated by performing a parity check on the bit positions whose binary representation includes 1 in the third position.</p>
+        <p>&nbsp;</p>
+        <p>We observe from the above figure that the bit positions that includes 1 in the third position are&nbsp;<strong>4, 5, 6, 7</strong>. Now, we perform the even-parity check at these bit positions. The total number of 1 at these bit positions corresponding to r4 is&nbsp;<strong>even, therefore, the value of the r4 bit is 0</strong>.</p>
+        <p><strong>Data transferred is given below:</strong></p>
+        <p>&nbsp;</p>
+        <p>Suppose the 4<sup>th</sup>&nbsp;bit is changed from 0 to 1 at the receiving end, then parity bits are recalculated.</p>
+        <h3>R1 bit</h3>
+        <p>The bit positions of the r1 bit are 1,3,5,7</p>
+        <p>&nbsp;</p>
+        <p>We observe from the above figure that the binary representation of r1 is 1100. Now, we perform the even-parity check, the total number of 1s appearing in the r1 bit is an even number. Therefore, the value of r1 is 0.</p>
+        <h3>R2 bit</h3>
+        <p>The bit positions of r2 bit are 2,3,6,7.</p>
+        <p>&nbsp;</p>
+        <p>We observe from the above figure that the binary representation of r2 is 1001. Now, we perform the even-parity check, the total number of 1s appearing in the r2 bit is an even number. Therefore, the value of r2 is 0.</p>
+        <h3>R4 bit</h3>
+        <p>The bit positions of r4 bit are 4,5,6,7.</p>
+        <p>&nbsp;</p>
+        <p>We observe from the above figure that the binary representation of r4 is 1011. Now, we perform the even-parity check, the total number of 1s appearing in the r4 bit is an odd number. Therefore, the value of r4 is 1.</p>
+        <ul>
+          <li><em>The binary representation of redundant bits, i.e., r4r2r1 is 100, and its corresponding decimal value is 4. Therefore, the error occurs in a 4</em><em><sup>th</sup></em><em>bit position. The bit value must be changed from 1 to 0 to correct the error.</em></li>
+        </ul>
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

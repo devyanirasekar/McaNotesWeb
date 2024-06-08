@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 CLOUD COMPUTING Unit-5</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p>Contiguous Memory Allocation</p>
+        <p>Contiguous memory allocation is a classical memory allocation model. Here, a system assigns consecutive memory blocks (that is, memory blocks having consecutive addresses) to a process.</p>
+        <p>Contiguous memory allocation is one of the oldest memory allocation methods. Here&rsquo;s how it works: when a process needs to execute, memory is requested by the process. The size of the process is compared with the amount of contiguous main memory available to execute the process.</p>
+        <p>If sufficient contiguous memory is found, the memory is allocated and the process starts its execution. Otherwise, the process is added to a queue of waiting processes until sufficient free contiguous memory is available.</p>
+        <p>Contiguous memory allocation can be implemented in operating systems with the help of two registers, known as the base and limit registers.</p>
+        <p>When a process is executing in main memory, its base register contains the starting address of the memory location where the process is executing, while the amount of bytes consumed by the process is stored in the limit register.</p>
+        <p>A process does not directly refer to the actual address for a corresponding memory location. Instead, it uses a relative address with respect to its base register. All addresses referred by a program are considered as virtual addresses. The CPU generates the logical or virtual address, which is converted into an actual address with the help of the memory management unit (MMU).</p>
+        <p>The base address register is used for address translation by the MMU. Thus, a physical address is calculated as follows:</p>
+        <p>Physical Address = Base register address + Logical address/Virtual address</p>
+        <p>The address of any memory location referenced by a process is checked to ensure that it does not refer to an address of a neighboring process. This processing security is handled by the underlying operating system.</p>
+        <h3>Benefits and Disadvantages of Contiguous Memory Allocation</h3>
+        <p>Another way to understand continuous memory allocation is to contrast it with its opposite method: non-contiguous memory allocation. In non-contiguous memory allocation, memory does not have to be assigned in contiguous blocks of addresses.</p>
+        <p>In contrast to non-contiguous memory allocation, contiguous memory allocation has some distinct benefits. It tends to be faster to execute, easier for the operating system to handle, and often involves less overhead.</p>
+        <p>However, there are drawbacks to contiguous memory allocation, as well. One of the main ones is that memory can be wasted this way, if the smaller amounts of memory are not utilized due to the need for contiguous memory blocks. Also, processes may wait longer for execution, because the contiguous block is not readily accessible.</p>
+        <h3>Stack and Heap Allocation</h3>
+        <p>Contiguous memory allocation is also interesting in the context of various memory allocation techniques. For example, experts often contrast two types of memory allocation known as &ldquo;stack allocation&rdquo; and &ldquo;heap allocation.&rdquo;</p>
+        <p>In stack allocation, memory allocation is pre-arranged and implemented during compiling, where heap allocation is done later at runtime.</p>
+        <p>It's important to note that stack allocation often takes the form of contiguous memory allocation, where the memory allocation is assigned in blocks. By contrast, in heap allocation, contiguous memory allocation is difficult, because the system has to find, not just sufficient memory, but also memory that is in a large enough contiguous block. As a result, heap allocation is often non-contiguous memory allocation.</p>
+        <p>Experts also talk about static and dynamic memory allocation methods, and how to implement those using either contiguous or non-contiguous memory allocation methods.</p>
+        <p><strong>Cloud Relocating</strong></p>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <p><strong>Problem</strong></p>
+              </td>
+              <td>
+                <p>There are circumstances under which redirecting cloud service activity or relocating an entire cloud service implementation is required or preferable. However, diverting service activity or relocating a cloud service implementation can cause outage, thereby disrupting the availability of the cloud service.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>Solution</strong></p>
+              </td>
+              <td>
+                <p>A system can be established whereby cloud service redirection or relocation is carried out at runtime by temporarily creating a duplicate implementation before the original implementation is deactivated or removed.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>Application</strong></p>
+              </td>
+              <td>
+                <p>Virtualization technology is used by the system to enable the duplication and migration of the cloud service implementation across different locations in realtime.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p><strong>Mechanisms</strong></p>
+              </td>
+              <td>
+                <p>Cloud Storage Device, Cloud Usage Monitor, Hypervisor, Live VM Migration, Pay-Per-Use Monitor, Resource Replication, SLA Management System, SLA Monitor, Virtual Infrastructure Manager (VIM), Virtual Server, Virtual Switch</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3><strong>Problem</strong></h3>
+        <p>A cloud service can become unavailable due to a number of reasons, such as:</p>
+        <ul>
+          <li>The cloud service encounters more runtime usage demand than it has processing capacity to handle.</li>
+          <li>The cloud service implementation needs to undergo a maintenance update that mandates a temporary outage.</li>
+          <li>The cloud service implementation needs to be permanently migrated to a new physical server host.</li>
+        </ul>
+        <p>Cloud service consumer requests are rejected if a cloud service becomes unavailable, which can potentially result in exception conditions. Rendering the cloud service temporarily unavailable to cloud consumers is not preferred even if the outage is planned.</p>
+        <h3><strong>Solution</strong></h3>
+        <p>A system is established by which a pre-defined event triggers the duplication or migration of a cloud service implementation at runtime, thereby avoiding any disruption in service for cloud consumers.</p>
+        <p>An alternative to scaling cloud services in or out with redundant implementations, cloud service activity can be temporarily diverted to another hosting environment at runtime by adding a duplicate implementation onto a new host. Cloud service consumer requests can similarly be temporarily redirected to a duplicate implementation when the original implementation needs to undergo a maintenance outage. The relocation of the cloud service implementation and any cloud service activity can also be permanent to accommodate cloud service migrations to new physical server hosts.</p>
+        <h3><strong>Application</strong></h3>
+        <p>A key aspect to the underlying architecture is that the system ensures that the new cloud service implementation is successfully receiving and responding to cloud service consumer requests&nbsp;<em>before</em>&nbsp;the original cloud service implementation is deactivated or removed.</p>
+        <p>A common approach is to employ the live VM migration component to move the entire virtual server instance hosting the cloud service. The automated scaling listener and/or the load balancer mechanisms can be used to trigger a temporary redirection of cloud service consumer requests in</p>
+        <p>response to scaling and workload distribution requirements. In this case either mechanism can contact the VIM to initiate the live VM migration process.</p>
+        <p>The steps involved in applying the Non-Disruptive Service Relocation pattern are illustrated in&nbsp;Figures 4.41&nbsp;through&nbsp;4.43.</p>
+        <p>&nbsp;</p>
+        <p>Figure 4.41&nbsp;An example of a scaling-based application of the Non-Disruptive Service Relocation pattern (Part I).</p>
+        <p>&nbsp;</p>
+        <p>Figure 4.42&nbsp;An example of a scaling-based application of the Non-Disruptive Service Relocation pattern (Part II).</p>
+        <p>&nbsp;</p>
+        <p>Figure 4.43&nbsp;An example of a scaling-based application of the Non-Disruptive Service Relocation pattern (Part III).</p>
+        <ol>
+          <li>The automated scaling listener monitors the workload for a cloud service.</li>
+          <li>As the workload increases, a pre-defined threshold within the cloud service is reached.</li>
+          <li>The automated scaling listener signals the VIM to initiate the relocation.</li>
+          <li>The VIM signals both the origin and destination hypervisors to carry out a runtime relocation via the use of a live VM migration program.</li>
+          <li>A second copy of the virtual server and its hosted cloud service are created via the destination hypervisor on Physical Server B.</li>
+          <li>The state of both virtual server instances is synchronized.</li>
+          <li>The first virtual server instance is removed from Physical Server A after it is confirmed that cloud service consumer requests are being successfully exchanged with the cloud service on Physical Server B.</li>
+          <li>Cloud service consumer requests are only sent to the cloud service on Physical Server B from hereon.</li>
+        </ol>
+        <p>Depending on the location of the virtual server&rsquo;s disks and configuration, this migration can happen in one of two ways:</p>
+        <ul>
+          <li>If the virtual server disks are stored on a local storage device or on non-shared remote storage devices attached to the source host, then a copy of the virtual server disks is created on the destination host (either on a local or remote shared/non-shared storage device). After the copy has been created, both virtual server instances are synchronized and virtual server files are subsequently removed from the origin host.</li>
+          <li>If the virtual server&rsquo;s files are stored on a remote storage device shared between origin and destination hosts, there is no need to create the copy of virtual server disks. In this case, the ownership of the virtual server is simply transferred from the origin to the destination physical server host, and the virtual server&rsquo;s state is automatically synchronized.</li>
+        </ul>
+        <h3><strong>Mechanisms</strong></h3>
+        <ul>
+          <li><em>Cloud Storage Device</em>&ndash; This mechanism is fundamental to the Non-Disruptive Service Relocation pattern in how it provides the storage required to host data pertaining to the virtual servers in a central location.</li>
+          <li><em>Cloud Usage Monitor</em>&ndash; Cloud usage monitors are used to continuously track IT resource usage and activity of the system established by the Non-Disruptive Service Relocation pattern.</li>
+          <li><em>Hypervisor</em>&ndash; The hypervisor is associated with this pattern in how it is used to host the virtual servers that are hosting the cloud services that need to be relocated. It is further used to transfer a virtual server&rsquo;s ownership and runtime, including CPU and memory state, from one hypervisor to another.</li>
+          <li><em>Live VM Migration</em>&ndash; This mechanism is responsible for transferring the ownership and runtime information of a virtual server from one hypervisor to another.</li>
+          <li><em>Pay-Per-Use Monitor</em>&ndash; The pay-per-use monitor is used to continuously collect the service usage costs of the IT resources at both their source and destination locations.</li>
+          <li><em>Resource Replication</em>&ndash; The resource replication mechanism is used to instantiate the shadow copy of the cloud service at its destination.</li>
+          <li><em>SLA Management System</em>&ndash; The SLA management system is responsible for acquiring SLA information from the SLA monitor, in order to obtain cloud service availability assurances both during and after the cloud service has been copied or relocated.</li>
+          <li><em>SLA Monitor</em>&ndash; This monitoring mechanism collects the aforementioned information required by the SLA management system.</li>
+          <li><em>Virtual Infrastructure Manager (VIM)</em>&ndash; This mechanism is used to initiate relocation, which can be automated in response to a threshold being reached or monitoring event.</li>
+          <li><em>Virtual Server</em>&ndash; Virtual servers generally host the cloud services at the source and destination locations.</li>
+          <li><em>Virtual Switch</em>&ndash; The virtual switch mechanism keeps virtual servers connected to and accessible over the network.</li>
+        </ul>
+        <p><strong>Technologies and the processes required when deploying web services</strong></p>
+        <p>You can use the workbench to create Web services that expose database operations (SQL SELECT and DML statements, XQuery expressions, or calls to stored procedures) to client applications.</p>
+        <h2>About this task</h2>
+        <p>Web services accept XML messages or URL-encoded parameter strings as requests for database operations. (In the rest of this documentation, XML messages and URL-encoded parameter strings are both referred to as "messages," except where a distinction between the two is necessary.) Web services return results and result sets in XML messages. For operations that perform SQL inserts, updates, and deletes, Web services return a count of the number of new, changed, or deleted rows.</p>
+        <p>A Web service performs the following actions when it receives a message that contains a request:</p>
+        <ol>
+          <li>Looks in the message to determine the requested database operation.</li>
+          <li>Extracts the input parameters from the message.</li>
+          <li>Prepares and executes the statement.</li>
+          <li>Retrieves the result of the operation.</li>
+          <li>Generates the output XML message that contains the result.</li>
+          <li>Sends the output message to the requesting client application.</li>
+        </ol>
+        <p>You have the option of configuring XSL transformations on input and output messages.</p>
+        <p>XML messages that request an operation and XML messages that return the results of an operation are tagged according to a default XML schema that the workbench generates for each operation. This default schema performs the following functions:</p>
+        <ul>
+          <li>Maps input and output parameters to XML tags</li>
+          <li>Maps columns to XML tags</li>
+          <li>Maps SQL data types to XML data types</li>
+          <li>Maps Web service operations to XML tags</li>
+          <li>Provides the general structure of input and output messages</li>
+        </ul>
+        <p>After you develop a Web service, with one click you can deploy it to a Web server. The workbench deploys Web services as Java&trade; Platform, Enterprise Edition (Java EE) Web Archive (WAR) files. You can also use the workbench to generate deployable files only or artifacts for DataPower&reg; and then deploy them yourself.</p>
+        <ul>
+          <li><a href="https://www.ibm.com/docs/en/SS62YD_4.1.1/com.ibm.datatools.dsws.tooling.ui.doc/topics/rdswssupwebsvrdbs.html"><strong><u>Supported Web servers, SOAP engines, and databases</u></strong></a><br />You can deploy Web services to several types of Web servers, use a number of different SOAP engines, and access DB2&reg; and Informix&reg; databases.</li>
+          <li><a href="https://www.ibm.com/docs/en/SS62YD_4.1.1/com.ibm.datatools.dsws.tooling.ui.doc/topics/rdswsbindings.html"><strong><u>Supported message protocols</u></strong></a><br />Client applications can access Web services by sending messages that use the SOAP/HTTP or SOAP/JMS protocols, or three REST-like message protocols.</li>
+          <li><a href="https://www.ibm.com/docs/en/SS62YD_4.1.1/com.ibm.datatools.dsws.tooling.ui.doc/topics/cdswssupnatxml.html"><strong><u>Support for the DB2 native XML data type in Web service operations</u></strong></a><br />Operations in Web services can refer to DB2 columns that use the native XML data type.</li>
+          <li><a href="https://www.ibm.com/docs/en/SS62YD_4.1.1/com.ibm.datatools.dsws.tooling.ui.doc/topics/rdswssupdattyp.html"><strong><u>Mapping of SQL and JDBC data types to XML data types</u></strong></a><br />The data type of a parameter or column of a result set in a message is specified using XML data types.</li>
+          <li><a href="https://www.ibm.com/docs/en/SS62YD_4.1.1/com.ibm.datatools.dsws.tooling.ui.doc/topics/tdswsdevwebsrcdatsqlstp.html"><strong><u>Developing Web services with the workbench</u></strong></a><br />Developing Web services involves creating and adding operations to them, optionally configuring XSL transformations of the request messages and result messages for your operations, and deploying the Web services to Web servers for testing.</li>
+          <li><a href="https://www.ibm.com/docs/en/SS62YD_4.1.1/com.ibm.datatools.dsws.tooling.ui.doc/topics/tdswsdepwebsrv.html"><strong><u>Deploying, undeploying, and testing Web services</u></strong></a><br />After you develop a Web service, with one click you can deploy it to a Web server. The workbench deploys Web services as Java Platform, Enterprise Edition (Java EE) Web Archive (WAR) files. You can also simply generate deployable files or artifacts for DataPower and deploy them yourself. You can use the Web Services Explorer or the Data Web Service Test Client to test your Web service after it has been deployed.</li>
+          <li><a href="https://www.ibm.com/docs/en/SS62YD_4.1.1/com.ibm.datatools.dsws.tooling.ui.doc/topics/tdswsworf.html"><strong><u>Migrating Web applications that were developed for the Web Object Runtime Framework (WORF)</u></strong></a><br />You can migrate Web applications that were developed for the Web Object Runtime Framework (WORF).</li>
+        </ul>
+        <p><strong>Deploying a web service from inside and outside a cloud architecture</strong></p>
+        <p>In cloud computing, we have access to a shared pool of computer resources (servers, storage, programs, and so on) in the cloud. You simply need to request additional resources when you require them. Getting resources up and running quickly is a breeze thanks to the clouds. It is possible to release resources that are no longer necessary. This method allows you to just pay for what you use. Your cloud provider is in charge of all upkeep.</p>
+        <h2><strong>What is a Cloud Deployment Model?</strong></h2>
+        <p>Cloud Deployment Model functions as a virtual computing environment with a deployment architecture that varies depending on the amount of data you want to store and who has access to the infrastructure.</p>
+        <h2><strong>Types of Cloud Computing Deployment Models</strong></h2>
+        <p>The cloud deployment model identifies the specific type of cloud environment based on ownership, scale, and access, as well as the cloud&rsquo;s nature and purpose. The location of the servers you&rsquo;re utilizing and who controls them are defined by a cloud deployment model. It specifies how your cloud infrastructure will look, what you can change, and whether you will be given services or will have to create everything yourself. Relationships between the infrastructure and your users are also defined by cloud deployment types.&nbsp;<a href="https://www.geeksforgeeks.org/types-of-cloud/"><u>Different types of cloud</u></a>&nbsp;computing deployment models are described below.</p>
+        <ul>
+          <li><a href="https://www.geeksforgeeks.org/difference-between-public-cloud-and-private-cloud/"><u>Public Cloud</u></a></li>
+          <li>Private Cloud</li>
+          <li><a href="https://www.geeksforgeeks.org/public-cloud-vs-private-cloud-vs-hybrid-cloud/"><u>Hybrid Cloud</u></a></li>
+          <li>Community Cloud</li>
+          <li><a href="https://www.geeksforgeeks.org/overview-of-multi-cloud/"><u>Multi-Cloud</u></a></li>
+        </ul>
+        <h3><strong>Public Cloud&nbsp;</strong></h3>
+        <p>The public cloud makes it possible for anybody to access systems and services. The public cloud may be less secure as it is open to everyone.&nbsp;The public cloud is one in which cloud infrastructure services are provided over the internet to the general people or major industry groups.&nbsp;The infrastructure in this cloud model is owned by the entity that delivers the cloud services, not by the consumer.&nbsp;It is a type of cloud hosting that allows customers and users to easily access systems and services. This form of cloud computing is an excellent example of cloud hosting, in which service providers supply services to a variety of customers.&nbsp;In this arrangement, storage backup and retrieval services are given for free, as a subscription, or on a per-user basis. For example, Google App Engine etc.</p>
+        <p>&nbsp;</p>
+        <p><em>Public Cloud&nbsp;</em></p>
+        <h4><strong>Advantages of the Public Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Minimal Investment:&nbsp;</strong>Because it is a pay-per-use service, there is no substantial upfront fee, making it excellent for enterprises that require immediate access to resources.</li>
+          <li><strong>No setup cost:</strong>The entire infrastructure is fully subsidized by the cloud service providers, thus there is no need to set up any hardware.</li>
+          <li><strong>Infrastructure Management is not required:&nbsp;</strong>Using the public cloud does not necessitate infrastructure management.</li>
+          <li><strong>No maintenance:&nbsp;</strong>The maintenance work is done by the service provider (not users).</li>
+          <li><strong>Dynamic Scalability:</strong>To fulfill your company&rsquo;s needs, on-demand resources are accessible.&nbsp;</li>
+        </ul>
+        <h4><strong>Disadvantages of the Public Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Less secure:&nbsp;</strong>Public cloud is less secure as resources are public so there is no guarantee of high-level security.</li>
+          <li><strong>Low customization:&nbsp;</strong>It is accessed by many public so it can&rsquo;t be customized according to personal requirements.&nbsp;</li>
+        </ul>
+        <h3><strong>Private Cloud&nbsp;</strong></h3>
+        <p>The private cloud deployment model is the exact opposite of the public cloud deployment model. It&rsquo;s a one-on-one environment for a single user (customer). There is no need to share your hardware with anyone else.&nbsp;The distinction between&nbsp;<a href="https://www.geeksforgeeks.org/difference-between-public-cloud-and-private-cloud/"><u>private and public clouds</u></a>&nbsp;is in how you handle all of the hardware. It is also called the &ldquo;internal cloud&rdquo; &amp; it refers to the ability to access systems and services within a given border or organization. The cloud platform is implemented in a cloud-based secure environment that is protected by powerful firewalls and under the supervision of an organization&rsquo;s IT department.&nbsp;The private cloud gives greater flexibility of control over cloud resources.</p>
+        <p>&nbsp;</p>
+        <p><em>Private Cloud&nbsp;</em></p>
+        <h4><strong>Advantages of the Private Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Better Control:&nbsp;</strong>You are the sole owner of the property. You gain complete command over service integration, IT operations, policies, and user behavior.&nbsp;</li>
+          <li><strong>Data Security and Privacy:</strong>It&rsquo;s suitable for storing corporate information to which only authorized staff have access. By segmenting resources within the same infrastructure, improved access and security can be achieved.</li>
+          <li><strong>Supports Legacy Systems:</strong>This approach is designed to work with legacy systems that are unable to access the public cloud.&nbsp;</li>
+          <li><strong>Customization:&nbsp;</strong>Unlike a public cloud deployment, a private cloud allows a company to tailor its solution to meet its specific needs.</li>
+        </ul>
+        <h4><strong>Disadvantages of the Private Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Less scalable:&nbsp;</strong>Private clouds are scaled within a certain range as there is less number of clients.</li>
+          <li><strong>Costly:</strong>Private clouds are more costly as they provide personalized facilities.</li>
+        </ul>
+        <h3><strong>Hybrid Cloud&nbsp;</strong></h3>
+        <p>By bridging the public and private worlds with a layer of proprietary software, hybrid cloud computing gives the best of both worlds. With a hybrid solution, you may host the app in a safe environment while taking advantage of the public cloud&rsquo;s cost savings. Organizations can move data and applications between different clouds using a combination of two or more cloud deployment methods, depending on their needs.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><em>Hybrid Cloud&nbsp;</em></p>
+        <h4><strong>Advantages of the Hybrid Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Flexibility and control:&nbsp;</strong>Businesses with more flexibility can design personalized solutions that meet their particular needs.</li>
+          <li><strong>Cost:</strong>Because public clouds provide scalability, you&rsquo;ll only be responsible for paying for the extra capacity if you require it.</li>
+          <li><strong>Security:&nbsp;</strong>Because data is properly separated, the chances of data theft by attackers are considerably reduced.&nbsp;</li>
+        </ul>
+        <h4><strong>Disadvantages of the Hybrid Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Difficult to manage:&nbsp;</strong>Hybrid clouds are difficult to manage as it is a combination of both public and private cloud. So, it is complex.</li>
+          <li><strong>Slow data transmission:&nbsp;</strong>Data transmission in the hybrid cloud takes place through the public cloud so latency occurs.</li>
+        </ul>
+        <h3><strong>Community Cloud</strong></h3>
+        <p>It allows systems and services to be accessible by a group of organizations. It is a distributed system that is created by integrating the services of different clouds to address the specific needs of a community, industry, or business. The infrastructure of the community could be shared between the organization which has shared concerns or tasks. It is generally managed by a third party or by the combination of one or more organizations in the community.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><em>Community Cloud</em></p>
+        <h4><strong>Advantages of the Community Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Cost Effective:&nbsp;</strong>It is cost-effectivebecause the cloud is shared by multiple organizations or communities.</li>
+          <li><strong>Security:</strong>Community cloud provides better security.</li>
+          <li><strong>Shared resources:&nbsp;</strong>It allows you to share resources, infrastructure, etc. with multiple organizations.</li>
+          <li><strong>Collaboration and data sharing:&nbsp;</strong>It is suitable for both collaboration and data sharing.</li>
+        </ul>
+        <h4><strong>Disadvantages of the Community Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Limited Scalability:&nbsp;</strong>Community cloud is relatively less scalable as many organizations share the same resources according to their collaborative interests.&nbsp;</li>
+          <li><strong>Rigid in customization:&nbsp;</strong>As the data and resources are shared among different organizations according to their mutual interests if an organization wants some changes according to their needs they cannot do so because it will have an impact on other organizations.</li>
+        </ul>
+        <h3><strong>Multi-Cloud&nbsp;</strong></h3>
+        <p>We&rsquo;re talking about employing&nbsp;<a href="https://www.geeksforgeeks.org/overview-of-multi-cloud/"><u>multiple cloud providers</u></a>&nbsp;at the same time under this paradigm, as the name implies. It&rsquo;s similar to the hybrid cloud deployment approach, which combines public and private cloud resources. Instead of merging private and public clouds, multi-cloud uses many public clouds.&nbsp;Although public cloud providers provide numerous tools to improve the reliability of their services, mishaps still occur. It&rsquo;s quite rare that two distinct clouds would have an incident at the same moment. As a result, multi-cloud deployment improves the high availability of your services even more.&nbsp;</p>
+        <p>&nbsp;</p>
+        <h4><strong>Advantages of the Multi-Cloud Model</strong></h4>
+        <ul>
+          <li>You can mix and match the best features of each cloud provider&rsquo;s services to suit the demands of your apps, workloads, and business by choosing different cloud providers.&nbsp;</li>
+          <li><strong>Reduced Latency:</strong>To reduce latency and improve user experience, you can choose cloud regions and zones that are close to your clients.&nbsp;</li>
+          <li><strong>High availability of service:</strong>It&rsquo;s quite rare that two distinct clouds would have an incident at the same moment. So, the multi-cloud deployment improves the high availability of your services.&nbsp;</li>
+        </ul>
+        <h4><strong>Disadvantages of the Multi-Cloud Model</strong></h4>
+        <ul>
+          <li><strong>Complex:&nbsp;</strong>The combination of many clouds makes the system complex and bottlenecks may occur.</li>
+          <li><strong>Security issue:&nbsp;</strong>Due to the complex structure, there may be loopholes to which a hacker can take advantage hence, makes the data insecure.</li>
+        </ul>
+        <h2><strong>What is the Right Choice for Cloud Deployment Model?</strong></h2>
+        <p>As of now, no such approach fits picking a cloud deployment model. We will always consider the best cloud deployment model as per our requirements. Here are some factors which should be considered before choosing the best deployment model.</p>
+        <ul>
+          <li>Cost: Cost is an important factor for the cloud deployment model as it tells how much amount you want to pay for these things.</li>
+          <li>Scalability: Scalability tells about the current activity status and how much we can scale it.</li>
+          <li>Easy to use: It tells how much your resources are trained and how easily can you manage these models.</li>
+          <li>Compliance: Compliance tells about the laws and regulations which impact the implementation of the model.</li>
+          <li>Privacy: Privacy tells about what data you gather for the model.</li>
+        </ul>
+        <p>Each model has some advantages and some disadvantages, and the selection of the best is only done on the basis of your requirement. If your requirement changes, you can switch to any other model.</p>
+        <h2><strong>Overall Analysis of Cloud Deployment Models</strong></h2>
+        <p>The overall Analysis of these models with respect to different factors is described below.</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <p><strong>Factors</strong></p>
+              </td>
+              <td>
+                <p><strong>Public &nbsp; &nbsp; Cloud</strong></p>
+              </td>
+              <td>
+                <p><strong>Private Cloud</strong></p>
+              </td>
+              <td>
+                <p><strong>Community Cloud</strong></p>
+              </td>
+              <td>
+                <p><strong>Hybrid Cloud</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Initial Setup</p>
+              </td>
+              <td>
+                <p>Easy</p>
+              </td>
+              <td>
+                <p>Complex, requires a professional team to setup</p>
+              </td>
+              <td>
+                <p>Complex, requires a professional team to setup</p>
+              </td>
+              <td>
+                <p>Complex, requires a professional team to setup</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Scalability and Flexibility</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+              <td>
+                <p>Fixed&nbsp;</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Cost-Comparison</p>
+              </td>
+              <td>
+                <p>Cost-Effective</p>
+              </td>
+              <td>
+                <p>Costly</p>
+              </td>
+              <td>
+                <p>Distributed cost among members</p>
+              </td>
+              <td>
+                <p>Between public and private cloud</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Reliability</p>
+              </td>
+              <td>
+                <p>Low</p>
+              </td>
+              <td>
+                <p>Low</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Data Security</p>
+              </td>
+              <td>
+                <p>Low</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Data Privacy</p>
+              </td>
+              <td>
+                <p>Low</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+              <td>
+                <p>High</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;</strong></p>
+        <p>cloud economics</p>
+        <p>&nbsp;</p>
+        <p><strong>Cloud economics</strong>&nbsp;is the study of cloud computing&rsquo;s costs and benefits and the economic principles that underpin them. As a discipline, it explores key questions for businesses: What is the return on investment (ROI) of migrating to the cloud or switching current cloud providers? And what is the total cost of ownership (TCO) of a cloud solution versus a traditional on-premises solution?</p>
+        <p>When individual businesses understand the economics of cloud computing, they can optimize their investments and obtain the greatest value for their organization.</p>
+        <p>Cloud economics involves&nbsp;two primary principles: economies of scale and global reach.&nbsp;Through economies of scale, cloud providers save organizations money because they purchase computing resources in massive quantities at lower costs. When companies utilize these shared resources, they avoid the substantial up-front CAPEX costs of purchasing their own expensive infrastructure. And with a pay-as-you-go pricing model, companies pay only for the resources they actively use, scaling up or down as needed.</p>
+        <p>The global reach of cloud computing also brings substantial savings. When servers no longer need to be housed on premises&mdash;they can be located and accessed from anywhere in the world&mdash;companies can dramatically reduce labor costs. Their IT teams no longer need to devote time to deploying and maintaining complex hardware on site.</p>
+        <p>By deploying consistent infrastructure and operations across IT environments, IT teams can unlock additional operational savings, as well as reduce complexity and IT silos.</p>
+        <p>Beyond the tremendous efficiencies and cost savings of cloud computing, there is another economic benefit:&nbsp;<a href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/cloud-foundation/vmware-harnessing-the-hybrid-cloud-vmware-trend-brief.pdf"><u>business agility</u></a>. Companies that utilize cloud computing resources can deploy applications faster and ramp up storage and computing power on demand. This IT agility allows businesses to respond to market changes and customer demands more quickly, leading to faster revenue growth.</p>
+        <p>Making the business case for cloud economics</p>
+        <p>Before making the leap to cloud, businesses should analyze the economic pros and cons in depth to get a detailed picture of specific costs and savings. Will it lead to long-term savings and efficiencies? The answers will vary depending on the organizational needs and circumstances and on the cloud solution being considered. The goal is to avoid a cloud adoption strategy that drives up cost, complexity and staffing resources.</p>
+        <p>When exploring cloud economics for their company, IT and finance managers can follow a basic process to determine cloud computing ROI and TCO, and use those estimates to help make their case to executives. The process should include these three elements:</p>
+        <ul>
+          <li><strong>Benchmarking</strong>:&nbsp;Calculate the cost of operating your current data center, including capital costs over the equipment lifespan, labor costs and any other maintenance and operational costs, from licenses and software to spare parts.</li>
+          <li><strong>Cloud costs</strong>:&nbsp;Estimate the costs of the cloud infrastructure you&rsquo;re considering (<a href="https://www.vmware.com/in/topics/glossary/content/public-cloud.html"><u>public cloud</u></a>,&nbsp;<a href="https://www.vmware.com/in/topics/glossary/content/private-cloud.html"><u>private cloud</u></a>, hybrid cloud, etc.). You&rsquo;ll need a quote from your vendor, but look beyond this basic pricing structure to consider ongoing fees, labor and training costs, ongoing integration and testing of apps, as well as security and compliance.</li>
+          <li><strong>Migration costs</strong>:&nbsp;Determine the cost to migrate IT operations to the cloud or to switch cloud providers. These costs should include labor and expenses to integrate and test apps.</li>
+        </ul>
+        <p>With hard numbers in hand, IT managers can compare the TCO of different&nbsp;<a href="https://www.vmware.com/in/topics/glossary/content/cloud-architecture.html"><u>cloud architectures</u></a>&nbsp;and scenarios. This way they can make a stronger case for the&nbsp;<a href="https://cloud.vmware.com/cloud-economics"><u>business value of cloud adoption</u></a>&nbsp;to the decision-makers in their organization.</p>
+        <p><strong>Risk Management in Cloud Computing</strong></p>
+        <p>Before learning risk management, let us take a glance at cloud computing. Cloud computing is a technology that allows its user to access resources such as storage, memory, network, and computing; these resources are physically present at any geographical location, but can be accessed over the internet from anywhere in the globe. This advancement in technology has revolutionised the working of businesses and organisations. More and more organisations are investing in cloud deployment infrastructure rather than on-premise infrastructure. This mobilization of technology introduces new risks associated with cloud computing, which needs to be treated with foresight. To manage these risks, risk management plans are implemented by organisations. Risk management is the process of identifying, assessing, and controlling threats to an organisation's system security, capital and resources. Effective risk management means attempting to control future outcomes proactively rather than reactively. In the context of cloud computing, risk management plans are curated to deal with the risks or threats associated with the cloud security. Every business and organisation faces the risk of unexpected, harmful events that can cost the organisation capital or cause it to permanently close. Risk management allows organisations to prevent and mitigate any threats, service disruptions, attacks or compromises by quantifying the risks below the threshold of acceptable level of risks.</p>
+        <p><strong>Process of Risk Management</strong></p>
+        <p>Risk management is a cyclically executed process comprised of a set of activities for overseeing and controlling risks. Risk management follows a series of&nbsp;<strong>5 steps</strong>&nbsp;to manage risk, it drives organisations to formulate a better strategy to tackle upcoming risks. These steps are referred to as Risk Management Process and are as follows:</p>
+        <ul>
+          <li>Identify the risk</li>
+          <li>Analyze the risk</li>
+          <li>Evaluate the risk</li>
+          <li>Treat the risk</li>
+          <li>Monitor or Review the risk</li>
+        </ul>
+        <p>Now, let us briefly understand each step of the risk management process in cloud computing.</p>
+        <ol>
+          <li><strong>Identify the risk</strong>- The inception of the risk management process starts with the identification of the risks that may negatively influence an organisation's strategy or compromise cloud system security. Operational, performance, security, and privacy requirements are identified. The organisation should uncover, recognise and describe risks that might affect the working environment. Some risks in cloud computing include cloud vendor risks, operational risks, legal risks, and attacker risks.</li>
+          <li><strong>Analyze the risk</strong>- After the identification of the risk, the scope of the risk is analyzed. The likelihood and the consequences of the risks are determined. In cloud computing, the likelihood is determined as the function of the threats to the system, the vulnerabilities, and consequences of these vulnerabilities being exploited. In analysis phase, the organisation develops an understanding of the nature of risk and its potential to affect organisation goals and objectives.</li>
+          <li><strong>Evaluate the risk</strong>- The risks are further ranked based on the severity of the impact they create on information security and the probability of actualizing. The organisation then decides whether the risk is acceptable or it is serious enough to call for treatment.</li>
+          <li><strong>Treat the risk</strong>- In this step, the highest-ranked risks are treated to eliminate or modified to achieve an acceptable level. Risk mitigation strategies and preventive plans are set out to minimise the probability of negative risks and enhance opportunities. The security controls are implemented in the cloud system and are assessed by proper assessment procedures to determine if security controls are effective to produce the desired outcome.</li>
+          <li><strong>Monitor or Review the risk</strong>- Monitor the security controls in the cloud infrastructure on a regular basis including assessing control effectiveness, documenting changes to the system and the working environment. Part of the mitigation plan includes following up on risks to continuously monitor and track new and existing risks.</li>
+        </ol>
+        <p>The steps of risk management process should be executed concurrently, by individuals or teams in well-defined organisational roles, as part of the&nbsp;<strong>System Development Life Cycle</strong>&nbsp;(SDLC) process. Treating security as an addition to the system, and implementing risk management process in cloud computing independent to the SDLC is more difficult process that can incur higher cost with a lower potential to mitigate risks.</p>
+        <p><strong>Types of Risks in Cloud Computing</strong></p>
+        <p>This section involves the primary risks associated with cloud computing.</p>
+        <ol>
+          <li><strong>Data Breach</strong>- Data breach stands for unauthorized access to the confidential data of the organisation by a third party such as hackers. In cloud computing, the data of the organisation is stored outside the premise, that is at the endpoint of the cloud service&nbsp;<strong>provider(CSP)</strong>. Thus any attack to target data stored on the CSP servers may affect all of its customers.</li>
+          <li><strong>Cloud Vendor Security Risk</strong>- Every organisation takes services offered by different cloud vendors. The inefficiency of these cloud vendors to provide data security and risk mitigation directly affects the organisation's business plan and growth. Also, migrating from one vendor to another is difficult due to different interfaces and services provided by these cloud vendors.</li>
+          <li><strong>Availability</strong>- Any internet connection loss disrupts the cloud provider's services, making the services inoperative. It can happen at both the user's and the cloud service provider's end. An effective risk management plan should focus on availability of services by creating redunadancy in servers on cloud such that other servers can provide those services if one fails.</li>
+          <li><strong>Compliance</strong>- The service provider might not follow the external audit process, exposing the end user to security risks. If a data breach at the cloud service provider's end exposes personal data, the organisation may be held accountable due to improper protection and agreements.</li>
+        </ol>
+        <p>Apart from these risks, cloud computing possesses various security risks bound under 2 main categories.</p>
+        <ul>
+          <li>Internal Security Risks</li>
+          <li>External Security Risks</li>
+        </ul>
+        <p><strong>Internal Security Risks</strong></p>
+        <p>Internal security risks in cloud computing include the challenges that arise due to mismanagement by the organisation or the cloud service provide. Some internal security risks involve:</p>
+        <ol>
+          <li><strong>Misconfiguration of settings</strong>- Misconfiguration of cloud security settings, either by the organisation workforce or by the cloud service provider, exposes the risk of a data breach. Most small businesses cloud security and risk management are inadequate for protecting their cloud infrastructure.</li>
+          <li><strong>Malicious Insiders</strong>- A malicious insider is a person working in the organisation and therefore already has authorized access to the confidential data and resources of the organization. With cloud deployments, organisations lack control over the underlying infrastructure; making it very hard to detect malicious insiders.</li>
+        </ol>
+        <p><strong>External Security Risks</strong></p>
+        <p>External security risks are threats to an organisation arising from the improper handling of the resources by its users and targeted attacks by hackers. Some of the external security risks involve:</p>
+        <ol>
+          <li><strong>Unauthorized Access</strong>- The cloud-based deployment of the organisation's infrastructure is outside the network perimeter and directly accessible from the public internet. Therefore, it is easier for the attacker to get unauthorized access to the server with the compromised credentials.</li>
+          <li><strong>Accounts Hijacking</strong>- The use of a weak or repetitive password allows attackers to gain control over multiple accounts using a single stolen password. Moreover, organizations using cloud infrastructure cannot often identify and respond to such threats.</li>
+          <li><strong>Insecure APIs</strong>- The Application Programming Interfaces(APIs) provided by thecloud service provider to the user are well-documented for ease of use. A potential attacker might use this documentation to attack the data and resources of the organisation.</li>
+        </ol>
+        <p><strong>A Case Study On Amazon Web Services</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>Introduction to cloud computing</strong></p>
+        <p>Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user. The term is generally used to describe data centres available to many users over the Internet. Large clouds, predominant today, often have functions distributed over multiple locations from central servers. If the connection to the user is relatively close, it may be designated an edge server.</p>
+        <p>There are many Cloud Platforms in the market but AWS is one of the most popular clouds.</p>
+        <h2><strong>What is AWS?</strong></h2>
+        <p>Amazon Web Services (AWS) is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.</p>
+        <p>Amazon Web Services (AWS) is the world&rsquo;s most comprehensive and broadly adopted cloud platform, offering over 175 fully-featured services from data centres globally. Millions of customers &mdash; including the fastest-growing startups, largest enterprises, and leading government agencies &mdash; are using AWS to lower costs, become more agile, and innovate faster.</p>
+        <h2><strong>History of AWS</strong></h2>
+        <p>Amazon launched its first&nbsp;<a href="https://www.datamation.com/cloud-computing/what-is-cloud-service.html"><u>cloud computing service</u></a>, Simple Storage Service (S3) in March of 2006. But the idea for the&nbsp;<a href="https://www.datamation.com/cloud-computing/public-cloud.html"><u>public cloud</u></a>&nbsp;began germinating at the company several years earlier.</p>
+        <p>A popular myth says that Amazon began selling public cloud computing services because it had &ldquo;excess capacity&rdquo; from running its eCommerce website. Executives have repeatedly contradicted that story, saying that Amazon Web Services was designed from the ground up as a service for outside customers. However, the company&rsquo;s experiences with eCommerce did help lay the groundwork for AWS.</p>
+        <p>In the early 2000s, Amazon.com&rsquo;s internal development team had a problem. They were adding a lot of software engineers, but despite the growing headcount, the pace of development was staying about the same. The issue was that each developer was setting up new and unique compute, storage and database resources for each project. The IT group realized that if they could standardize those resources and simplify the process of deploying new IT infrastructure, they might be able to speed things up.</p>
+        <p>In 2003, former Amazon employee Benjamin Black and his boss Chris Pinkham&nbsp;<a href="http://blog.b3k.us/2009/01/25/ec2-origins.html"><u>wrote a paper</u></a>&nbsp;for Amazon founder and CEO Jeff Bezos. It described &ldquo;a vision for Amazon infrastructure that was completely standardized, completely automated, and relied extensively on web services for things like storage.&rdquo; In a blog post, Black explained, &ldquo;Near the end of it, we mentioned the possibility of selling virtual servers as a service.&rdquo;</p>
+        <p>That idea cropped up again that same year when Amazon executives were attending a retreat at Bezos&rsquo; house. As current AWS CEO&nbsp;<a href="https://techcrunch.com/2016/07/02/andy-jassys-brief-history-of-the-genesis-of-aws/"><u>Andy Jassy tells the story</u></a>, the group was working to identify their core competencies when they realized they had become pretty good at running IT infrastructure. They began to consider the idea of offering those IT services to other companies. The idea gained momentum, and in 2004, Black, Pinkham and their team began work on the project that eventually became AWS. After the launch of S3 in the spring of 2006, AWS followed up by taking its Simple Queue Service into production and launching its Elastic Compute Cloud (EC2) that summer. By the following year, the company amassed a reported 180,000 developers as customers.</p>
+        <p>In the years that followed, Amazon&rsquo;s cloud quickly expanded with additional services and more regions. In 2010, Netflix became the first company to&nbsp;<a href="http://phx.corporate-ir.net/phoenix.zhtml?c=176060&amp;p=irol-newsArticle&amp;ID=1423977"><u>announce publicly</u></a>&nbsp;that it would run all of its infrastructure on AWS. After that, customers began to sign up even more quickly, and AWS developed the market share that put it far ahead of all the other competitors who began to offer their own cloud computing services.</p>
+        <h2><strong>AWS Regions</strong></h2>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1><strong>Data Centre of AWS -</strong></h1>
+        <p>&nbsp;</p>
+        <h2><strong>Benefits of Amazon Web Services</strong></h2>
+        <p>&nbsp;</p>
+        <ul>
+          <li><strong>Most functionality</strong>-AWS has significantly more services, and more features within those services, than any other cloud provider&ndash;from infrastructure technologies like compute, storage, and databases&ndash;to emerging technologies, such as machine learning and artificial intelligence, data lakes and analytics, and Internet of Things. This makes it faster, easier, and more cost-effective to move your existing applications to the cloud and build nearly anything you can imagine. AWS also has the deepest functionality within those services. For example, AWS offers the widest variety of databases that are purpose-built for different types of applications so you can choose the right tool for the job to get the best cost and performance.</li>
+          <li><strong>The largest community of customers and partners</strong>-AWS has the largest and most dynamic community, with millions of active customers and tens of thousands of partners globally. Customers across virtually every industry and of every size, including startups, enterprises, and public sector organizations, are running every imaginable use case on AWS. The AWS Partner Network (APN) includes thousands of systems integrators who specialize in AWS services and tens of thousands of independent software vendors (ISVs) who adapt their technology to work on AWS.</li>
+          <li><strong>Most secure</strong>-AWS is architected to be the most flexible and secure cloud computing environment available today. Our core infrastructure is built to satisfy the security requirements for the military, global banks, and other high-sensitivity organizations. This is backed by a deep set of cloud security tools, with 230 security, compliance, and governance services and features. AWS supports 90 security standards and compliance certifications, and all 117 AWS services that store customer data offer the ability to encrypt that data.</li>
+          <li><strong>Fastest pace of innovation</strong>-With AWS, you can leverage the latest technologies to experiment and innovate more quickly. We are continually accelerating our pace of innovation to invent entirely new technologies you can use to transform your business. For example, in 2014, AWS pioneered the serverless computing space with the launch of AWS Lambda, which lets developers run their code without provisioning or managing servers. And AWS built Amazon SageMaker, a fully managed machine learning service that empowers everyday developers and scientists to use machine learning&ndash;without any previous experience.</li>
+          <li>Most proven operational expertise &mdash; AWS has unmatched experience, maturity, reliability, security, and performance that you can depend upon for your most important applications. For over 13 years, AWS has been delivering cloud services to millions of customers around the world running a wide variety of use cases. AWS has the most operational experience, at greater scale, of any cloud provider.</li>
+          <li><strong>Agility</strong>- The cloud gives you easy access to a broad range of technologies so that you can innovate faster and build nearly anything that you can imagine. You can quickly spin up resources as you need them&ndash;from infrastructure services, such as compute, storage, and databases, to the Internet of Things, machine learning, data lakes and analytics, and much more. You can deploy technology services in a matter of minutes, and get from idea to implementation several orders of magnitude faster than before. This gives you the freedom to experiment, test new ideas to differentiate customer experiences and transform your business.</li>
+          <li><strong>Elasticity&nbsp;</strong>-With cloud computing, you don&rsquo;t have to over-provision resources upfront to handle peak levels of business activity in the future. Instead, you provision the number of resources that you actually need. You can scale these resources up or down to instantly to grow and shrink capacity as your business needs change.</li>
+          <li><strong>Cost Savings</strong>-The cloud allows you to trade capital expenses (such as data centres and physical servers) for variable expenses and only pay for IT as you consume it. Plus, the variable expenses are much lower than what you would pay to do it yourself because of the economies of scale.</li>
+          <li><strong>Deploy Globally in minutes</strong>-With the cloud, you can expand to new geographic regions and deploy globally in minutes. For example, AWS has infrastructure all over the world, so you can deploy your application in multiple physical locations with just a few clicks. Putting applications in closer proximity to end users reduces latency and improves their experience.</li>
+        </ul>
+        <h2><strong>Types of cloud computing</strong></h2>
+        <p>The three main types of cloud computing include Infrastructure as a Service, Platform as a Service, and Software as a Service. Each type of cloud computing provides different levels of control, flexibility, and management so that you can select the right set of services for your needs.</p>
+        <p><strong>1.IaaS (Infrastructure as a Service)</strong>- IaaS contains the basic building blocks for cloud IT. It typically provides access to networking features, computers (virtual or on dedicated hardware), and data storage space. IaaS gives you the highest level of flexibility and management control over your IT resources. It is most similar to the existing IT resources with which many IT departments and developers are familiar.</p>
+        <p><strong>2.Platform as a Service</strong>&nbsp;-PaaS removes the need for you to manage underlying infrastructure (usually hardware and operating systems), and allows you to focus on the deployment and management of your applications. This helps you be more efficient as you don&rsquo;t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.</p>
+        <p><strong>3.Software as a Service</strong>-SaaS provides you with a complete product that is run and managed by the service provider. In most cases, people referring to SaaS are referring to end-user applications (such as web-based email). With a SaaS offering, you don&rsquo;t have to think about how the service is maintained or how the underlying infrastructure is managed. You only need to think about how you will use that particular software.</p>
+        <h2><strong>Who is using cloud computing?</strong></h2>
+        <p>Organizations of every type, size, and industry are using the cloud for a wide variety of use cases, such as data backup, disaster recovery, email, virtual desktops, software development and testing, big data analytics, and customer-facing web applications. For example, healthcare companies are using the cloud to develop more personalized treatments for patients. Financial services companies are using the cloud to power real-time fraud detection and prevention. And video game makers are using the cloud to deliver online games to millions of players around the world.</p>
+        <p>&nbsp;</p>
+        <h1><strong>Best Public Cloud Providers</strong></h1>
+        <h2><strong>Amazon Web Services</strong></h2>
+        <p>Amazon Web Services (AWS) is the undisputed market leader in cloud computing, from overall market share to most expansive cloud offering. It has vast resources, allowing it to design and execute new solutions at a dizzying pace, sometimes &mdash; or often &mdash; faster than customers can understand or incorporate them.</p>
+        <p>The company offers a complete range of IaaS and PaaS services. Among the best known are its Elastic Compute Cloud (EC2), Elastic Beanstalk, Simple Storage Service (S3), Elastic Block Store (EBS), Glacier storage, Relational Database Service (RDS), and DynamoDB NoSQL database. It also offers cloud services related to networking, analytics and machine learning, the Internet of Things (IoT), mobile services, development, cloud management, cloud security and more.</p>
+        <h2><strong>Microsoft Azure</strong></h2>
+        <p>Most market analysts put Microsoft squarely in the number two spot behind Amazon. Its cloud portfolio is exhaustive: in addition to its Azure IaaS and PaaS offerings, Microsoft also has several SaaS offerings, including its Office 365 products, the online versions of its Dynamics line of enterprise software and its online developer tools.</p>
+        <p>Naturally, Microsoft&rsquo;s long legacy in corporate IT helps it grow its cloud business. Pundits say that Microsoft has &ldquo;enterprise IT in its DNA.&rdquo; Azure is leading edge on all the newest cloud technologies, from serverless (FaaS) to microservices to containers. It is set up to handle a broad range of clients, from SMB to a larger enterprise, from multi-cloud to &mdash; especially &mdash; hybrid cloud. To fill out it's offering, it has longstanding alliances with other legacy vendors, from VMware to Oracle.</p>
+        <h2><strong>IBM Cloud</strong></h2>
+        <p>Although it hasn&rsquo;t always been considered one of the &ldquo;big three&rdquo; cloud computing vendors, IBM&rsquo;s cloud business has been coming on strong. Particularly advantageous was IBM&rsquo;s acquisition of Red Hat, which allows it to leverage Red Hat&rsquo;s OpenShift cloud platform, a PaaS solution geared for containers. The company is also strong in hybrid &mdash; befitting its customer base of large enterprise clients, which in some cases are working on a classic lift and shift migration to the cloud, for which IBM is well suited.</p>
+        <p>One of IBM&rsquo;s key cloud service is its Bluemix PaaS, which is aimed primarily at enterprise development teams. The company also a lot of enterprise software on a SaaS basis, and it sells cloud infrastructure, cloud management tools and cloud managed services.</p>
+        <h2><strong>Google Cloud Platform</strong></h2>
+        <p>While it may run third behind AWS and Azure, Google is a major contender in the cloud market. Its deep strength and data analytics and artificial intelligence is only growing, and will likely be a major force in the years ahead. Its industry-leading creations with TensorFlow and Kubernetes are examples of the sophisticated solutions that earn GCP leader status in the cloud market.</p>
+        <p>Like Amazon and Microsoft, Google offers an extensive range of IaaS and PaaS services that span computes, storage, networking, big data, machine learning, developer tools and security. Some of its best-known cloud offerings include Compute Engine, App Engine, Container Engine, Cloud Storage and BigQuery.</p>
+        <h2><strong>Oracle Cloud Infrastructure</strong></h2>
+        <p>Having invested aggressively after its initial slow start, Oracle has come a long way to earn to spot in this leader&rsquo;s list. Indeed, look to Oracle to continue to grow in the cloud sector &mdash; the company has certainly signalled its intention to be a major cloud vendor in the years ahead. It is expanding availability zones both domestically and internationally.</p>
+        <p>The Oracle cloud is generally favoured by larger enterprise and existing Oracle customers, as opposed to SMB and developers, two cohorts that have fueled AWS&rsquo;s rise. It has a strength in hybrid cloud computing, which is a good fit for larger customers that have a legacy investment in on-premise IT infrastructure and data centres. The company&rsquo;s Oracle Dedicated Region Cloud Customer solution is an on-prem offering that is a well designed, technologically advanced mirror of the cloud version. Oracle has a partnership with Microsoft Azure for those cloud functionalities it can&rsquo;t currently support.</p>
+        <h2><strong>Alibaba Cloud</strong></h2>
+        <p>The clear leader in the Asian cloud market, Singapore-based Alibaba is forecast to grow rapidly as&nbsp;<a href="https://www.arcanestrategies.com/blog/4-cloud-tips-how-to-improve-cloud-computing/"><u>cloud computing</u></a>&nbsp;continues to grow in a variety of Asian countries. Given that, Alibaba is the best fit for international customers who also want to do business in Asia, and, of course, Asian companies. It benefits from its deep strength in eCommerce, which is Alibaba&rsquo;s core business. With this deep expertise, it enables customers to access new sources of Internet-based income.</p>
+        <p>The company offers a cloud-based AI service, which will almost certainly be a major growth area in the near term future. Indeed, Alibaba is well regarded for its data solutions, with interoperability with myriad other data platforms. Again, this is a major strength for its e-commerce clients. While the company is currently largely an Asian player, it&rsquo;s entirely possible that it will expand into other geographic markets as its cloud and data offerings mature.</p>
+        <h2><strong>When to Use AWS</strong></h2>
+        <p>AWS offers something for everyone &mdash; whether you are a developer working on a hobby project or a Fortune 500 company looking to become more agile. It is the generalist of the public cloud computing market with a huge array of services available. It is often used in&nbsp;<a href="https://www.datamation.com/cloud-computing/what-is-hybrid-it.html"><u>hybrid IT</u></a>.</p>
+        <p>As the first and largest cloud provider, AWS has very mature, tested offerings. It is unlikely to go out of business anytime soon, and it is a solid choice for most cloud computing use cases.</p>
+        <p>Additionally, the company is innovating at a breathless pace, and it&rsquo;s reasonable to assume that its product and solution portfolio will expand considerably in the years ahead.</p>
+        <h2><strong>When Not to Use AWS</strong></h2>
+        <p>If AWS has a&nbsp;<a href="https://www.datamation.com/cloud-computing/does-aws-have-a-weakness.html"><u>weakness</u></a>, it is its lack of offerings for hybrid cloud deployments. Analysts say that most enterprises will be pursuing a hybrid cloud, multi-cloud strategy, and Amazon&rsquo;s competitors Microsoft Azure and IBM have an advantage in this area. Because many large organizations already use Microsoft and IBM products in their data centres, they naturally gravitate to these other providers for the public cloud portion of their hybrid clouds.</p>
+        <p>And the jury is still out on whether AWS will be the best option for emerging technologies like artificial intelligence, machine learning, the Internet of Things and containerized deployments. All of the leading vendors are competing heavily in these areas, and AWS will have to continue to innovate if it wants to retain its position as the market leader. In the technology industry, markets can shift very quickly, and being the number one provider today is no guarantee of future performance.</p>
+        <h2><strong>AWS Use Cases</strong></h2>
+        <p>Millions of customers &mdash; including the fastest-growing startups, largest enterprises, and leading government agencies &mdash; are using AWS to lower costs, become more agile, and innovate faster.</p>
+        <p>In every field, the AWS service is used. Below are some areas and some top companies use AWS.</p>
+        <ul>
+          <li>Aerospace (NASA, Maxar, ESA etc.)</li>
+          <li>Gaming (MPL, FanFight, Gammation etc.)</li>
+          <li>Education (Coursera, BYJU&rsquo;s etc.)</li>
+          <li>Telecommunication (Pinterest, Vodafone, Aircel etc.)</li>
+          <li>Entertainment (Netflix, Hotstar etc.)</li>
+          <li>Media (BBC, The Hindu, Punjab Kesri etc.)</li>
+          <li>Software (Share chat, Slack etc.)</li>
+        </ul>
+        <h2><strong>Cloud Computing Facts</strong></h2>
+        <p>&nbsp;</p>
+        <p>By now, it&rsquo;s obvious that the cloud is widely used and that people spend a great deal of money creating, managing, and upgrading their cloud computing systems, but you may be wondering&nbsp;<em>how&nbsp;</em>widely used it is and&nbsp;<em>how&nbsp;</em>much money the cloud draws. Here are some fascinating facts to wrap your mind around:</p>
+        <h2><strong>Nearly one-half of US Government agencies use the cloud.</strong></h2>
+        <p>Annually, these agencies spend&nbsp;<a href="https://www.alliedtelecom.net/facts-about-cloud-computing/"><em><u>$2 billion on creating</u></em></a>, supporting, and&nbsp;<a href="https://www.prnewswire.com/news-releases/nearly-half-of-us-state-and-local-governments-have-started-or-are-planning-cloud-projects-new-unisys-survey-shows-227798251.html"><em><u>maintaining cloud services</u></em></a>. Some experts say that the government is the largest user of the cloud in the world. Within the different branches of the government that use the cloud, commercial clouds, private clouds, and shared clouds are all used. Private clouds, specifically, are employed by the government in an attempt to maintain security and control over the cloud.</p>
+        <h2><strong>Banking produces the most activity within the cloud.</strong></h2>
+        <p>This is due in large part to the introduction of widespread mobile banking services in 2013. Additionally, the rise of crowdfunding services and money management services like PayPal have grown, driving the act of paying virtually for goods through the roof. With the rising popularity of virtual currencies like Bitcoin, this trend of&nbsp;<a href="https://www.ibm.com/services"><em><u>cloud computing for banking</u></em></a>&nbsp;is only projected to continue.</p>
+        <h2><strong>The cloud computing market is projected to reach $106 billion by 2016.</strong></h2>
+        <p>This represents a&nbsp;<a href="https://www.forbes.com/sites/louiscolumbus/2015/01/24/roundup-of-cloud-computing-forecasts-and-market-estimates-2015/"><em><u>30% growth rate from 2013</u></em></a>. This is especially stark when you take into account that the entire enterprise IT industry is only expected to experience a 5% growth rate between 2013 and 2018. Additionally, experts project that by 2018, 59% of all of the cloud&rsquo;s workload will be the result of Software-as-a-Service This represents a 41% increase since 2013.</p>
+        <h2><strong>60% of U.S. IT decision-makers trust the security of the cloud.</strong></h2>
+        <p>When it comes to storing sensitive data in the cloud, the grand majority of IT experts aren&rsquo;t concerned. Additionally,&nbsp;<a href="#219560e3db7a"><em><u>80% of enterprises</u></em></a>&nbsp;globally use the cloud to store their data. What&rsquo;s more, 82% of companies reported&nbsp;<a href="#37GhqE.S6uqa"><em><u>saving money</u></em></a>&nbsp;when they adopted the cloud, and 14% report downsizing their IT department as a result of the presence of the cloud.</p>
+        <h2><strong>Within the next five years, the public cloud will experience a 44% growth.</strong></h2>
+        <p>This is in contrast to the&nbsp;<a href="https://siliconangle.com/2014/01/27/20-cloud-computing-statistics-tc0114/"><em><u>9% growth rate</u></em></a>&nbsp;that is projected for &ldquo;on-premise&rdquo; and hard-drive-based forms of computing.</p>
+        <h2><strong>80% of companies that adopt the cloud see improvements within their IT departments within six months.</strong></h2>
+        <p>These improvements were generally in the areas of efficiency, quality, and security. Additionally, moving to the cloud helped these companies save money, cut costs, and use staff more efficiently. After adopting the cloud, upwards of 90% of IT, decision-makers saw marked improvements in at least one area of the IT department.</p>
+        <h2><strong>2014 represented the first year when the majority of workloads were on the cloud.</strong></h2>
+        <p>In 2014,&nbsp;<a href="https://www.zdnet.com/article/cisco-projects-data-center-cloud-traffic-to-triple-by-2017/"><em><u>51% of workloads</u></em></a>&nbsp;were processed via the cloud. This is compared to 49% processed in traditional IT space. Since global data center traffic is predicted to increase threefold between 2012 and 2017, this number will only continue to go up.</p>
+        <p>With these statistics in mind, it&rsquo;s clear that the future of the cloud looks bright and that companies that choose to adopt the cloud see large and almost immediate benefits. From high-level enterprise data storage to simple financial processing, the cloud is a fantastic go-to system for businesses in all industries and of all sizes. In addition to providing unparalleled security and ease of access, the cloud offers the added benefit of helping companies stay connected, access data easily, and do business in a more streamlined fashion</p>
+        <h2><strong>Why is AWS so Successful?</strong></h2>
+        <p>Amazon Web Services (AWS), the cloud platform offered by Amazon.com Inc (<a href="https://www.investopedia.com/markets/quote?tvwidgetsymbol=amzn"><u>AMZN</u></a>), has become a giant component of the e-commerce giant&rsquo;s business portfolio. In the first quarter of 2020, AWS brought in a record $10 billion of revenue, accounting for 13.5% of Amazon&rsquo;s total revenue. Having grown steadily in the 30-per cent range the past few quarters, AWS is a frontrunner to other cloud computing platforms such as competitor Microsoft Azure.</p>
+        <p>AWS is the most robust cloud offering available to date! I believe that &hellip; unfortunately &hellip; people tend to look at user-friendliness, lower or lowest cost, and even a limited amount of CSP products (easier to make up one&rsquo;s mind when there are only a few things to contend with) &hellip; to decide on what&rsquo;s best. This was the case years ago with the microprocessor revolution: Intel Vs AMD Vs Cyrus. The incumbent was the most expensive &hellip; and the competition came with not only more attractive price tags &hellip; but in some cases more speed for the price and other desirables attributes. But at the end of the day &hellip; there would always be a fantastic &ldquo;must-have&rdquo; application that would run &ldquo;buggy at best&rdquo; &hellip; you know &hellip; the app that YOU bought &hellip; just to find out later after researching online &hellip; or worse yet &hellip; you took the time to read the box off the shelf from Microcenter or Best Buy that states &ldquo;only runs on Intel processors&rdquo; &hellip; and one at a certain level of production (i7 for example). So when in doubt &hellip; or &hellip; I care to not dare the scalability Gods and endure their wrath &hellip; just go with the one that may cost a bit more &hellip; and may call for a little more patience to grasp and understand &hellip; that will give you lots of options for your company and customers &hellip; has been around the longest and still holds the lion&rsquo;s share of the market, etc, etc. Plus &hellip; AWS offers a ton of managed services and resources that allow you to focus on your business &hellip; and less on the technology!</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Case study on Azure</strong></p>
+        <p>Cloud Computing Case Study on Microsoft Azure</p>
+        <p>Pooja D Pandit,</p>
+        <p>Mumbai University,</p>
+        <p>India</p>
+        <p>Date: Aug 2021</p>
+        <p>Abstract&mdash;Cloud computing is an emerging paradigm</p>
+        <p>that provides a promise to revolutionize the way the</p>
+        <p>software development industry operates. In this paper,</p>
+        <p>we perform a thorough case study of Microsoft Azure a</p>
+        <p>popular cloud computing platform. We thoroughly study</p>
+        <p>various key concepts and features provided by this plat-</p>
+        <p>form. This study will provide researches and in-depth</p>
+        <p>understanding of various aspects of Microsoft Azure.</p>
+        <ol>
+          <li>INTRODUCTION</li>
+        </ol>
+        <p>A rapid growth in networking technologies and</p>
+        <p>newly enabled features has resulted in a tremen-</p>
+        <p>dous growth in user data and computation capa-</p>
+        <p>bility requirement for application design [1]&ndash;[8].</p>
+        <p>Cloud computing is a promising new paradigm that</p>
+        <p>provides agility, scalability and efﬁciency to the</p>
+        <p>software design methodologies of the information</p>
+        <p>technology (IT) industry. Further, its use can enable</p>
+        <p>the design and development of various new appli-</p>
+        <p>cations for wireless communication use cases [9]&ndash;</p>
+        <p>[13].</p>
+        <p>Microsoft Azure is a cloud computing platform</p>
+        <p>and infrastructure created by Microsoft for building,</p>
+        <p>deploying, and managing applications and services</p>
+        <p>through a global network of Microsoft-managed</p>
+        <p>data centers. It provides both PaaS and IaaS ser-</p>
+        <p>vices and supports many different programming</p>
+        <p>languages, tools and frameworks, including both</p>
+        <p>Microsoft-speciﬁc and third-party software and sys-</p>
+        <p>tems.</p>
+        <p>Azure Storage is massively scalable, so a user</p>
+        <p>can store and process hundreds of terabytes of</p>
+        <p>data to support the big data scenarios required by</p>
+        <p>scientiﬁc, ﬁnancial analysis and media applications.</p>
+        <p>Further, the user can store the small amounts of</p>
+        <p>data required for a small business website. Such</p>
+        <p>capabilities are also required for development of</p>
+        <p>new analytic features [14]&ndash;[16]. Wherever the user</p>
+        <p>needs fall, the users pay only for the data they store</p>
+        <p>Cloud Computing Case Study on Microsoft Azure</p>
+        <p>Pooja D Pandit,</p>
+        <p>Mumbai University,</p>
+        <p>India</p>
+        <p>Date: Aug 2021</p>
+        <p>Abstract&mdash;Cloud computing is an emerging paradigm</p>
+        <p>that provides a promise to revolutionize the way the</p>
+        <p>software development industry operates. In this paper,</p>
+        <p>we perform a thorough case study of Microsoft Azure a</p>
+        <p>popular cloud computing platform. We thoroughly study</p>
+        <p>various key concepts and features provided by this plat-</p>
+        <p>form. This study will provide researches and in-depth</p>
+        <p>understanding of various aspects of Microsoft Azure.</p>
+        <ol>
+          <li>INTRODUCTION</li>
+        </ol>
+        <p>A rapid growth in networking technologies and</p>
+        <p>newly enabled features has resulted in a tremen-</p>
+        <p>dous growth in user data and computation capa-</p>
+        <p>bility requirement for application design [1]&ndash;[8].</p>
+        <p>Cloud computing is a promising new paradigm that</p>
+        <p>provides agility, scalability and efﬁciency to the</p>
+        <p>software design methodologies of the information</p>
+        <p>technology (IT) industry. Further, its use can enable</p>
+        <p>the design and development of various new appli-</p>
+        <p>cations for wireless communication use cases [9]&ndash;</p>
+        <p>[13].</p>
+        <p>Microsoft Azure is a cloud computing platform</p>
+        <p>and infrastructure created by Microsoft for building,</p>
+        <p>deploying, and managing applications and services</p>
+        <p>through a global network of Microsoft-managed</p>
+        <p>data centers. It provides both PaaS and IaaS ser-</p>
+        <p>vices and supports many different programming</p>
+        <p>languages, tools and frameworks, including both</p>
+        <p>Microsoft-speciﬁc and third-party software and sys-</p>
+        <p>tems.</p>
+        <p>Azure Storage is massively scalable, so a user</p>
+        <p>can store and process hundreds of terabytes of</p>
+        <p>data to support the big data scenarios required by</p>
+        <p>scientiﬁc, ﬁnancial analysis and media applications.</p>
+        <p>Further, the user can store the small amounts of</p>
+        <p>data required for a small business website. Such</p>
+        <p>capabilities are also required for development of</p>
+        <p>new analytic features [14]&ndash;[16]. Wherever the user</p>
+        <p>needs fall, the users pay only for the data they store</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Execution Environment</strong></p>
+        <p><strong>The Windows Azure execution environment consists of a platform for applications and services hosted within one or more roles. The types of roles you can implement in Windows Azure are:</strong></p>
+        <ul>
+          <li><strong>Azure Compute (Web and Worker Roles)</strong>. A Windows Azure application consists of one or more hosted roles running within the Azure data centers. Typically there will be at least one Web role that is exposed for access by users of the application. The application may contain additional roles, including Worker roles that are typically used to perform background processing and support tasks for Web roles. For more detailed information see &ldquo;Overview of Creating a Hosted Service for Windows Azure&rdquo; at<a href="http://technet.microsoft.com/en-au/library/gg432976.aspx"><u>http://technet.microsoft.com/en-au/library/gg432976.aspx</u></a>and &ldquo;Building an Application that Runs in a Hosted Service&rdquo; at&nbsp;<a href="http://technet.microsoft.com/en-au/library/hh180152.aspx"><u>http://technet.microsoft.com/en-au/library/hh180152.aspx</u></a>.</li>
+          <li><strong>Virtual Machine (VM role)</strong>. This role allows you to host your own custom instance of the Windows Server 2008 R2 Enterprise or Windows Server 2008 R2 Standard operating system within a Windows Azure data center. For more detailed information see &ldquo;Creating Applications by Using a VM Role in Windows Azure&rdquo; at<a href="http://technet.microsoft.com/en-au/library/gg465398.aspx"><u>http://technet.microsoft.com/en-au/library/gg465398.aspx</u></a>.</li>
+        </ul>
+        <p><strong>Data Management</strong></p>
+        <p>Windows Azure, SQL Azure, and the associated services provide opportunities for storing and managing data in a range of ways. The following data management services and features are available:</p>
+        <ul>
+          <li><strong>Azure Storage:</strong>This provides four core services for persistent and durable data storage in the cloud. The services support a REST interface that can be accessed from within Azure-hosted or on-premises (remote) applications. For information about the REST API, see &ldquo;Windows Azure Storage Services REST API Reference&rdquo; at<a href="http://msdn.microsoft.com/en-us/library/dd179355.aspx"><u>http://msdn.microsoft.com/en-us/library/dd179355.aspx</u></a>. The four storage services are:
+            <ul>
+              <li><strong>The Azure Table Service</strong>provides a table-structured storage mechanism based on the familiar rows and columns format, and supports queries for managing the data. It is primarily aimed at scenarios where large volumes of data must be stored, while being easy to access and update. For more detailed information see &ldquo;Table Service Concepts&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/dd179463.aspx"><u>http://msdn.microsoft.com/en-us/library/dd179463.aspx</u></a>&nbsp;and &ldquo;Table Service API&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/dd179423.aspx"><u>http://msdn.microsoft.com/en-us/library/dd179423.aspx</u></a>.</li>
+              <li><strong>The Binary Large Object (BLOB) Service</strong>provides a series of containers aimed at storing text or binary data. It provides both Block BLOB containers for streaming data, and Page BLOB containers for random read/write operations. For more detailed information see &ldquo;Understanding Block Blobs and Page Blobs&rdquo; at<a href="http://msdn.microsoft.com/en-us/library/ee691964.aspx"><u>http://msdn.microsoft.com/en-us/library/ee691964.aspx</u></a>&nbsp;and &ldquo;Blob Service API&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/dd135733.aspx"><u>http://msdn.microsoft.com/en-us/library/dd135733.aspx</u></a>.</li>
+              <li><strong>The Queue Service</strong>provides a mechanism for reliable, persistent messaging between role instances, such as between a Web role and a Worker role. For more detailed information see &ldquo;Queue Service Concepts&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/dd179353.aspx"><u>http://msdn.microsoft.com/en-us/library/dd179353.aspx</u></a>&nbsp;and &ldquo;Queue Service API&rdquo; at<a href="http://msdn.microsoft.com/en-us/library/dd179363.aspx"><u>http://msdn.microsoft.com/en-us/library/dd179363.aspx</u></a>.</li>
+              <li>Windows Azure Drives provide a mechanism for applications to mount a single volume NTFS VHD as a Page BLOB, and upload and download VHDs via the BLOB. For more detailed information see &ldquo;Windows Azure Drive&rdquo; (PDF) at&nbsp;<a href="http://go.microsoft.com/?linkid=9710117"><u>http://go.microsoft.com/?linkid=9710117</u></a>.</li>
+            </ul>
+          </li>
+          <li><strong>SQL Azure Database:</strong>This is a highly available and scalable cloud database service built on SQL Server technologies, and supports the familiar T-SQL based relational database model. It can be used with applications hosted in Windows Azure, and with other applications running on-premises or hosted elsewhere. For more detailed information see &ldquo;SQL Azure Database&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/ee336279.aspx"><u>http://msdn.microsoft.com/en-us/library/ee336279.aspx</u></a>.</li>
+          <li><strong>Data Synchronization:</strong>SQL Azure Data Sync is a cloud-based data synchronization service built on Microsoft Sync Framework technologies. It provides bi-directional data synchronization and data management capabilities allowing data to be easily shared between multiple SQL Azure databases and between on-premises and SQL Azure databases. For more detailed information see &ldquo;Microsoft Sync Framework Developer Center&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/sync"><u>http://msdn.microsoft.com/en-us/sync</u></a>.</li>
+          <li><strong>Caching:&nbsp;</strong>This service provides a distributed, in-memory, low latency and high throughput application cache service that requires no installation or management, and dynamically increases and decreases the cache size automatically as required. It can be used to cache application data, ASP.NET session state information, and for ASP.NET page output caching. For more detailed information see &ldquo;Caching Service (Windows Azure AppFabric)&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/gg278356.aspx"><u>http://msdn.microsoft.com/en-us/library/gg278356.aspx</u></a>.</li>
+        </ul>
+        <p><strong>Networking Services</strong></p>
+        <p>Windows Azure provides several networking services that you can take advantage of to maximize performance, implement authentication, and improve manageability of your hosted applications. These services include the following:</p>
+        <ul>
+          <li><strong>Content Delivery Network (CDN).</strong>The CDN allows you to cache publicly available static data for applications at strategic locations that are closer (in network delivery terms) to end users. The CDN uses a number of data centers at many locations around the world, which store the data in BLOB storage that has anonymous access. These do not need to be locations where the application is actually running. For more detailed information see &ldquo;Delivering High-Bandwidth Content with the Windows Azure CDN&rdquo; at<a href="http://msdn.microsoft.com/en-us/library/ee795176.aspx"><u>http://msdn.microsoft.com/en-us/library/ee795176.aspx</u></a>.</li>
+          <li><strong>Virtual Network Connect.</strong>This service allows you to configure roles of an application running in Windows Azure and computers on your on-premises network so that they appear to be on the same network. It uses a software agent running on the on-premises computer to establish an IPsec-protected connection to the Windows Azure roles in the cloud, and provides the capability to administer, manage, monitor, and debug the roles directly. For more detailed information see &ldquo;Connecting Local Computers to Windows Azure Roles&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/gg433122.aspx"><u>http://msdn.microsoft.com/en-us/library/gg433122.aspx</u></a>.</li>
+          <li><strong>Virtual Network Traffic Manager.</strong>This is a service that allows you to set up request redirection and load balancing based on three different methods. Typically you will use Traffic Manager to maximize performance by redirecting requests from users to the instance in the closest data center using the Performance method. Alternative load balancing methods available are Failover and Round Robin. For more detailed information see &ldquo;Windows Azure Traffic Manager&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/WAZPlatformTrainingCourse_WindowsAzureTrafficManager"><u>http://msdn.microsoft.com/en-us/WAZPlatformTrainingCourse_WindowsAzureTrafficManager</u></a>.</li>
+          <li><strong>Access Control.</strong>This is a standards-based service for identity and access control that makes use of a range of identity providers (IdPs) that can authenticate users. ACS acts as a Security Token Service (STS), or token issuer, and makes it easier to take advantage of federation authentication techniques where user identity is validated in a realm or domain other than that in which the application resides. An example is controlling user access based on an identity verified by an identity provider such as Windows Live ID or Google. For more detailed information see &ldquo;Access Control Service 2.0&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/gg429786.aspx"><u>http://msdn.microsoft.com/en-us/library/gg429786.aspx</u></a>&nbsp;and &ldquo;Claims Based Identity &amp; Access Control Guide&rdquo; at&nbsp;<a href="http://claimsid.codeplex.com/"><u>http://claimsid.codeplex.com/</u></a>.</li>
+          <li><strong>Service Bus.&nbsp;</strong>This provides a secure messaging and data flow capability for distributed and hybrid applications, such as communication between Windows Azure hosted applications and on-premises applications and services, without requiring complex firewall and security infrastructures. It can use a range of communication and messaging protocols and patterns to provide delivery assurance, reliable messaging; can scale to accommodate varying loads; and can be integrated with on-premises BizTalk Server artifacts. For more detailed information see &ldquo;AppFabric Service Bus&rdquo; at&nbsp;<a href="http://msdn.microsoft.com/en-us/library/ee732537.aspx"><u>http://msdn.microsoft.com/en-us/library/ee732537.aspx</u></a></li>
+        </ul>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

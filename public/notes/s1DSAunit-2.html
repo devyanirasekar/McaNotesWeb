@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 DSA unit-2</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-2</strong></p>
+        <p>&nbsp;</p>
+        <h1 class="h1">Linked list</h1>
+        <p>In this article, we will see the introduction of linked list.</p>
+        <p>Linked list is a linear data structure that includes a series of connected nodes. Linked list can be defined as the nodes that are randomly stored in the memory. A node in the linked list contains two parts, i.e., first is the data part and second is the address part. The last node of the list contains a pointer to the null. After array, linked list is the second most used data structure. In a linked list, every link contains a connection to another link.</p>
+        <h3 class="h3">Representation of a Linked list</h3>
+        <p>Linked list can be represented as the connection of nodes in which each node points to the next node of the list. The representation of the linked list is shown below -</p>
+        <img src="https://static.javatpoint.com/ds/images/ds-linked-list.png" alt="Linked list" />
+        <p>Till now, we have been using array data structure to organize the group of elements that are to be stored individually in the memory. However, Array has several advantages and disadvantages that must be known to decide the data structure that will be used throughout the program.</p>
+        <h2 class="h2">Types of Linked list</h2>
+        <p><strong>The following are the types of linked list:</strong></p>
+        <h3 id="Singly" class="h3">Singly Linked list</h3>
+        <p>It is the commonly used linked list in programs. If we are talking about the linked list, it means it is a singly linked list. The singly linked list is a data structure that contains two parts, i.e., one is the data part, and the other one is the address part, which contains the address of the next or the successor node. The address part in a node is also known as a&nbsp;<strong>pointer</strong>.</p>
+        <p>Suppose we have three nodes, and the addresses of these three nodes are 100, 200 and 300 respectively. The representation of three nodes as a linked list is shown in the below figure:</p>
+        <p>We can observe in the above figure that there are three different nodes having address 100, 200 and 300 respectively. The first node contains the address of the next node, i.e., 200, the second node contains the address of the last node, i.e., 300, and the third node contains the NULL value in its address part as it does not point to any node. The pointer that holds the address of the initial node is known as a&nbsp;<strong><em>head pointer</em></strong>.</p>
+        <p>The linked list, which is shown in the above diagram, is known as a singly linked list as it contains only a single link. In this list, only forward traversal is possible; we cannot traverse in the backward direction as it has only one link in the list.</p>
+        <p><strong>Representation of the node in a singly linked list</strong></p>
+        <div class="codeblock">
+          <div class="dp-highlighter">
+            <div class="bar">&nbsp;</div>
+            <ol class="dp-j" start="1">
+              <li class="alt">struct&nbsp;node&nbsp;&nbsp;</li>
+              <li class="">{&nbsp;&nbsp;</li>
+              <li class="alt">&nbsp;&nbsp;&nbsp;<span class="keyword">int</span>&nbsp;data;&nbsp;&nbsp;</li>
+              <li class="">&nbsp;&nbsp;&nbsp;struct&nbsp;node&nbsp;*next;&nbsp;&nbsp;</li>
+              <li class="alt">}&nbsp;&nbsp;</li>
+            </ol>
+          </div>
+        </div>
+        <p>In the above representation, we have defined a user-defined structure named a&nbsp;<strong>node</strong>&nbsp;containing two members, the first one is data of integer type, and the other one is the pointer (next) of the node type.</p>
+        <p>To know more about a singly linked list, click on the link given below:</p>
+        <h3 id="Doubly" class="h3">Doubly linked list</h3>
+        <p>As the name suggests, the doubly linked list contains two pointers. We can define the doubly linked list as a linear data structure with three parts: the data part and the other two address part. In other words, a doubly linked list is a list that has three parts in a single node, includes one data part, a pointer to its previous node, and a pointer to the next node.</p>
+        <p>Suppose we have three nodes, and the address of these nodes are 100, 200 and 300, respectively. The representation of these nodes in a doubly-linked list is shown below:</p>
+        <p><img src="https://static.javatpoint.com/ds/images/ds-types-of-linked-list2.png" alt="Types of Linked List" /></p>
+        <p>As we can observe in the above figure, the node in a doubly-linked list has two address parts; one part stores the&nbsp;<strong><em>address of the next</em></strong>&nbsp;while the other part of the node stores the&nbsp;<strong><em>previous node's address</em></strong>. The initial node in the doubly linked list has the&nbsp;<strong>NULL</strong>&nbsp;value in the address part, which provides the address of the previous node.</p>
+        <p><strong>Representation of the node in a doubly linked list</strong></p>
+        <div class="codeblock">
+          <div class="dp-highlighter">
+            <div class="bar">&nbsp;</div>
+            <ol class="dp-j" start="1">
+              <li class="alt">struct&nbsp;node&nbsp;&nbsp;</li>
+              <li class="">{&nbsp;&nbsp;</li>
+              <li class="alt">&nbsp;&nbsp;<span class="keyword">int</span>&nbsp;data;&nbsp;&nbsp;</li>
+              <li class="">&nbsp;&nbsp;struct&nbsp;node&nbsp;*next;&nbsp;&nbsp;</li>
+              <li class="alt">&nbsp;struct&nbsp;node&nbsp;*prev;&nbsp;&nbsp;&nbsp;</li>
+              <li class="">}&nbsp;&nbsp;&nbsp;</li>
+            </ol>
+          </div>
+        </div>
+        <p>In the above representation, we have defined a user-defined structure named&nbsp;<strong><em>a node</em></strong>&nbsp;with three members, one is&nbsp;<strong>data</strong>&nbsp;of integer type, and the other two are the pointers, i.e.,&nbsp;<strong>next and prev</strong>&nbsp;of the node type. The&nbsp;<strong>next pointer</strong>&nbsp;variable holds the address of the next node, and the&nbsp;<strong>prev pointer</strong>&nbsp;holds the address of the previous node. The type of both the pointers, i.e.,&nbsp;<strong>next and prev</strong>&nbsp;is&nbsp;<strong>struct node</strong>&nbsp;as both the pointers are storing the address of the node of the&nbsp;<strong><em>struct node</em></strong>&nbsp;type.</p>
+        <p>To know more about doubly linked list, click on the link given below:</p>
+        <h3 id="Circular" class="h3">Circular linked list</h3>
+        <p>A circular linked list is a variation of a singly linked list. The only difference between the&nbsp;<strong><em>singly linked list</em></strong>&nbsp;and a&nbsp;<strong><em>circular linked</em></strong>&nbsp;list is that the last node does not point to any node in a singly linked list, so its link part contains a NULL value. On the other hand, the circular linked list is a list in which the last node connects to the first node, so the link part of the last node holds the first node's address. The circular linked list has no starting and ending node. We can traverse in any direction, i.e., either backward or forward. The diagrammatic representation of the circular linked list is shown below:</p>
+        <div class="codeblock">
+          <div class="dp-highlighter">
+            <div class="bar">&nbsp;</div>
+            <ol class="dp-j" start="1">
+              <li class="alt">struct&nbsp;node&nbsp;&nbsp;</li>
+              <li class="">{&nbsp;&nbsp;</li>
+              <li class="alt">&nbsp;&nbsp;&nbsp;<span class="keyword">int</span>&nbsp;data;&nbsp;&nbsp;</li>
+              <li class="">&nbsp;&nbsp;&nbsp;struct&nbsp;node&nbsp;*next;&nbsp;&nbsp;</li>
+              <li class="alt">}&nbsp;&nbsp;</li>
+            </ol>
+          </div>
+        </div>
+        <p>A circular linked list is a sequence of elements in which each node has a link to the next node, and the last node is having a link to the first node. The representation of the circular linked list will be similar to the singly linked list, as shown below:</p>
+        <p><img src="https://static.javatpoint.com/ds/images/ds-types-of-linked-list3.png" alt="Types of Linked List" /></p>
+        <p>To know more about the circular linked list, click on the link given below:</p>
+        <h3 id="Doubly-Circular" class="h3">Doubly Circular linked list</h3>
+        <p>The doubly circular linked list has the features of both the&nbsp;<strong><em>circular linked list</em></strong>&nbsp;and&nbsp;<strong><em>doubly linked list</em></strong>.</p>
+        <p>The above figure shows the representation of the doubly circular linked list in which the last node is attached to the first node and thus creates a circle. It is a doubly linked list also because each node holds the address of the previous node also. The main difference between the doubly linked list and doubly circular linked list is that the doubly circular linked list does not contain the NULL value in the previous field of the node. As the doubly circular linked contains three parts, i.e., two address parts and one data part so its representation is similar to the doubly linked list.</p>
+        <div class="codeblock">
+          <div class="dp-highlighter">
+            <div class="bar">&nbsp;</div>
+            <ol class="dp-j" start="1">
+              <li class="alt">struct&nbsp;node&nbsp;&nbsp;</li>
+              <li class="">{&nbsp;&nbsp;</li>
+              <li class="alt">&nbsp;&nbsp;<span class="keyword">int</span>&nbsp;data;&nbsp;&nbsp;</li>
+              <li class="">&nbsp;&nbsp;struct&nbsp;node&nbsp;*next;&nbsp;&nbsp;</li>
+              <li class="alt">&nbsp;struct&nbsp;node&nbsp;*prev;&nbsp;&nbsp;&nbsp;</li>
+              <li class="">}&nbsp;&nbsp;</li>
+            </ol>
+          </div>
+        </div>
+        <p><img src="https://static.javatpoint.com/ds/images/ds-types-of-linked-list4.png" alt="Types of Linked List" /></p>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

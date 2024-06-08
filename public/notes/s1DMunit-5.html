@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 DM unit-5</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-5</strong></p>
+        <p>&nbsp;</p>
+        <h1>Discrete Numeric Function:</h1>
+        <div style="margin: 5px 0;">
+          <p>A discrete numeric function, also known simply as a discrete function, is a mathematical function that deals with discrete values. These values are typically integers or elements from a countable set. Discrete functions are used to model and analyze situations where quantities change in a step-by-step manner, rather than continuously.</p>
+          <p>For example, the factorial function is a discrete numeric function. The factorial of a non-negative integer <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">n</span></span></span></span></span> (denoted as <span class="math math-inline"><span class="katex"><span class="katex-mathml">!</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">n</span><span class="mclose">!</span></span></span></span></span>) is the product of all positive integers less than or equal to <span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">n</span></span></span></span></span>. It is defined as:</p>
+          <p><span class="math math-inline"><span class="katex"><span class="katex-mathml">n!=n&times;(n&minus;1)&times;(n&minus;2)&times;&hellip;&times;3&times;2&times;1</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">n</span><span class="mclose">!</span><span class="mrel">=</span></span><span class="base"><span class="mord mathnormal">n</span><span class="mbin">&times;</span></span><span class="base"><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mbin">&minus;</span></span><span class="base"><span class="mord">1</span><span class="mclose">)</span><span class="mbin">&times;</span></span><span class="base"><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mbin">&minus;</span></span><span class="base"><span class="mord">2</span><span class="mclose">)</span><span class="mbin">&times;</span></span><span class="base"><span class="minner">&hellip;</span><span class="mbin">&times;</span></span><span class="base"><span class="mord">3</span><span class="mbin">&times;</span></span><span class="base"><span class="mord">2</span><span class="mbin">&times;</span></span><span class="base"><span class="mord">1</span></span></span></span></span></p>
+          <p>Discrete functions are essential in counting problems, probability, and many other areas of mathematics where quantities are inherently discrete.</p>
+        </div>
+        <h1>Generating Functions:</h1>
+        <div style="margin: 5px 0;">
+          <ol>
+            <li>
+              <p>Generating functions are a powerful tool used in combinatorics and analysis to represent sequences of numbers. They provide a formal way to encode information about a sequence into a function, making it easier to perform operations on the sequence. Generating functions are often used to solve problems related to combinatorial enumeration and recurrence relations.</p>
+              <p>The generating function for a sequence a<span class="math math-inline"><span class="katex"><span class="katex-mathml">0,a1,a2,&hellip;</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="minner">&hellip;</span></span></span></span></span> is a power series of the form:</p>
+              <p><span class="math math-inline"><span class="katex"><span class="katex-mathml">a(a)=a0+a1a+a2a2+&hellip;</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">G</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mord mathnormal">x</span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="minner">&hellip;</span></span></span></span></span></p>
+              <p>The variable a<span class="math math-inline"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">x</span></span></span></span></span> is treated as a formal variable, and the coefficients a<span class="math math-inline"><span class="katex"><span class="katex-mathml">0,a1,a2,&hellip;</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="minner">&hellip;</span></span></span></span></span> represent the terms of the sequence. There are different types of generating functions, such as ordinary generating functions and exponential generating functions, each suited for different types of problems.</p>
+              <p>Generating functions are particularly useful because they can simplify complicated combinatorial problems into algebraic manipulations. They also facilitate the use of calculus techniques for solving discrete problems.</p>
+            </li>
+          </ol>
+          <p>In summary, discrete numeric functions deal with sequences of discrete values, often integers, while generating functions provide a formal way to represent and manipulate these sequences using mathematical functions. They are valuable tools in combinatorics and discrete mathematics for solving problems related to counting, probability, and recurrence relations.</p>
+          <ol>
+            <li>
+              <p><strong>Recursive Algorithms:</strong></p>
+              <p>A recursive algorithm is an algorithm that solves a problem by solving smaller instances of the same problem. In other words, it breaks down a problem into subproblems of the same type. The algorithm calls itself during its execution, and there is typically a base case that defines the solution for the smallest instances of the problem.</p>
+            </li>
+            <li>
+              <p><strong>Linear Recurrence Relations with Constant Coefficients:</strong></p>
+              <p>A linear recurrence relation is an equation that expresses the <span class="math math-inline"><span class="katex"><span class="katex-mathml">n</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">n</span></span></span></span></span>-th term of a sequence in terms of previous terms. It has the general form:</p>
+              <p><span class="math math-inline"><span class="katex"><span class="katex-mathml">a=a1c&minus;1+c2an-1&minus;2+&hellip;+ckan&minus;k+g(n)</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mrel">=</span></span><span class="base"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">&minus;</span>1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">&minus;</span>2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="minner">&hellip;</span><span class="mbin">+</span></span><span class="base"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">k</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">&minus;</span><span class="mord mathnormal mtight">k</span></span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mbin">+</span></span><span class="base"><span class="mord mathnormal">g</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span></p>
+              <p>Here, <span class="math math-inline"><span class="katex"><span class="katex-mathml">1,2,&hellip;,</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="minner">&hellip;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">k</span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span> are constants, <span class="math math-inline"><span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span> is the <span class="math math-inline"><span class="katex"><span class="katex-mathml"></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">n</span></span></span></span></span>-th term of the sequence, and <span class="math math-inline"><span class="katex"><span class="katex-mathml">()</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">g</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span> is a function that may or may not be present. When <span class="math math-inline"><span class="katex"><span class="katex-mathml">()=0</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">g</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mrel">=</span></span><span class="base"><span class="mord">0</span></span></span></span></span>, the recurrence relation is homogeneous; otherwise, it is non-homogeneous.</p>
+              <p>When the coefficients <span class="math math-inline"><span class="katex"><span class="katex-mathml">1,2,&hellip;,</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span><span class="vlist-s">​</span></span></span></span></span><span class="mpunct">,</span><span class="minner">&hellip;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">k</span></span></span><span class="vlist-s">​</span></span></span></span></span></span></span></span></span> are constants, the recurrence relation is said to have constant coefficients.</p>
+            </li>
+            <li>
+              <p><strong>Homogeneous Solutions:</strong></p>
+              <p>In the context of linear recurrence relations, a homogeneous solution corresponds to the solution of the relation when the non-homogeneous term <span class="math math-inline"><span class="katex"><span class="katex-mathml">()</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">g</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span> is equal to zero. The solution to the homogeneous part is usually expressed in terms of roots of the characteristic equation associated with the recurrence relation.</p>
+            </li>
+            <li>
+              <p><strong>Particular Solutions:</strong></p>
+              <p>When dealing with non-homogeneous linear recurrence relations, a particular solution is a specific solution that satisfies the non-homogeneous part <span class="math math-inline"><span class="katex"><span class="katex-mathml">()</span><span class="katex-html" aria-hidden="true"><span class="base"><span class="mord mathnormal">g</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></span> of the recurrence relation. It is often found through methods such as undetermined coefficients or variation of parameters.</p>
+            </li>
+            <li>
+              <p><strong>Total Solutions:</strong></p>
+              <p>The total solution to a linear recurrence relation is the sum of the homogeneous solution and the particular solution. It represents the entire solution to the original recurrence relation, including both the contributions from the homogeneous part and the non-homogeneous part.</p>
+            </li>
+          </ol>
+          <p>In summary, when dealing with linear recurrence relations, you analyze both homogeneous and non-homogeneous aspects. The homogeneous solution captures the behavior without external influences, while the particular solution accounts for the effect of the non-homogeneous term. The total solution combines these to provide a comprehensive solution to the original recurrence relation. Recursive algorithms often involve solving recurrence relations, making these concepts important in algorithmic analysis.</p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

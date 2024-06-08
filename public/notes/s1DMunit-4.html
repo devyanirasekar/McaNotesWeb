@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 DM unit-4</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">&nbsp;
+        <p><strong>UNIT-4</strong></p>
+        <p>&nbsp;</p>
+        <h1>Graphs:</h1>
+        <div style="margin: 5px 0;">A&nbsp;<a href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/"><strong>Graph</strong></a><strong>&nbsp;</strong>is a non-linear data structure consisting of&nbsp;<strong>nodes&nbsp;</strong>and&nbsp;<strong>edges</strong>. The nodes are sometimes also referred to as vertices and the edges are lines or arcs that connect any two nodes in the graph. More formally a Graph can be defined as, A Graph consisting of a finite set of vertices(or nodes) and a set of edges that connect a pair of nodes.</div>
+        <div style="margin: 5px 0;">
+          <ol>
+            <li><strong>Undirected Graphs</strong>: A graph in which edges have no direction, i.e., the edges do not have arrows indicating the direction of traversal. Example: A social network graph where friendships are not directional.</li>
+            <li><strong>Directed Graphs</strong>: A graph in which edges have a direction, i.e., the edges have arrows indicating the direction of traversal. Example: A web page graph where links between pages are directional.</li>
+            <li><strong>Weighted Graphs:</strong>&nbsp;A graph in which edges have weights or costs associated with them. Example: A road network graph where the weights can represent the distance between two cities.</li>
+            <li><strong>Unweighted Graph</strong>s: A graph in which edges have no weights or costs associated with them. Example: A social network graph where the edges represent friendships.</li>
+            <li><strong>Complete Graphs:</strong>&nbsp;A graph in which each vertex is connected to every other vertex. Example: A tournament graph where every player plays against every other player.</li>
+            <li><strong>Bipartite Graphs:&nbsp;</strong>A graph in which the vertices can be divided into two disjoint sets such that every edge connects a vertex in one set to a vertex in the other set. Example: A job applicant graph where the vertices can be divided into job applicants and job openings.</li>
+            <li><strong>Trees</strong>: A connected graph with no cycles. Example: A family tree where each person is connected to their parents.</li>
+            <li><strong>Cycles</strong>: A graph with at least one cycle. Example: A bike-sharing graph where the cycles represent the routes that the bikes take.</li>
+            <li><strong>Sparse Graphs:</strong>&nbsp;A graph with relatively few edges compared to the number of vertices. Example: A chemical reaction graph where each vertex represents a chemical compound and each edge represents a reaction between two compounds.</li>
+            <li><strong>Dense Graph</strong>s: A graph with many edges compared to the number of vertices. Example: A social network graph where each vertex represents a person and each edge represents a friendship.</li>
+          </ol>
+          <h2><strong><u>Types of Graphs:</u></strong></h2>
+          <h3><strong>1. Finite Graphs</strong></h3>
+          <p>&nbsp;A graph is said to be finite if it has a finite number of vertices and a finite number of edges. A finite graph is a graph with a finite number of vertices and edges. In other words, both the number of vertices and the number of edges in a finite graph are limited and can be counted. Finite graphs are often used to model real-world situations, where there is a limited number of objects and relationships between the</p>
+          <div id="GFG_AD_gfg_mobile_336x280">&nbsp;</div>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/simplegraph.png" alt="" /></p>
+          <h3><strong>2. Infinite Graph:</strong>&nbsp;</h3>
+          <p>A graph is said to be infinite if it has an infinite number of vertices as well as an infinite number of edges.&nbsp;</p>
+          <div id="_GFG_ABP_Incontent_728x90">&nbsp;</div>
+          <div id="GFG_AD_InContent_Desktop_728x280" data-google-query-id="CMPus-35-IMDFdCqrAIdTqYKdw">
+            <div id="google_ads_iframe_/27823234/GFG_InContent_Desktop_728x280_0__container__"><iframe id="google_ads_iframe_/27823234/GFG_InContent_Desktop_728x280_0" tabindex="0" title="3rd party ad content" name="google_ads_iframe_/27823234/GFG_InContent_Desktop_728x280_0" width="728" height="280" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" aria-label="Advertisement" data-load-complete="true" data-google-container-id="1"></iframe></div>
+          </div>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/graph2-4.png" alt="" /></p>
+          <h3><strong>3. Trivial Graph:</strong>&nbsp;</h3>
+          <p>A graph is said to be trivial if a finite graph contains only one vertex and no edge. A trivial graph is a graph with only one vertex and no edges. It is also known as a singleton graph or a single vertex graph. A trivial graph is the simplest type of graph and is often used as a starting point for building more complex graphs. In graph theory, trivial graphs are considered to be a degenerate case and are not typically studied in detail</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/trivial-.png" alt="" /></p>
+          <div id="GFG_AD_Desktop_InContent_ATF_336x280">&nbsp;</div>
+          <h3><strong>4. Simple Graph:</strong></h3>
+          <p>A simple graph is a graph that does not contain more than one edge between the pair of vertices. A simple railway track connecting different cities is an example of a simple graph.&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/simple1.png" alt="" />&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/simple2-1.png" alt="" /></p>
+          <h3><strong>5. Multi Graph:</strong></h3>
+          <p>Any graph which contains some parallel edges but doesn&rsquo;t contain any self-loop is called a multigraph. For example a Road Map.&nbsp;</p>
+          <ul>
+            <li><strong>Parallel Edges:</strong>&nbsp;If two vertices are connected with more than one edge then such edges are called parallel edges that are many routes but one destination.</li>
+            <li><strong>Loop:</strong>&nbsp;An edge of a graph that starts from a vertex and ends at the same vertex is called a loop or a self-loop.</li>
+          </ul>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/graph-23.png" alt="" /></p>
+          <h3><strong>6. Null Graph:</strong></h3>
+          <p>A graph of order n and size zero is a graph where there are only isolated vertices with no edges connecting any pair of vertices.A null graph is a graph with no edges. In other words, it is a graph with only vertices and no connections between them. A null graph can also be referred to as an edgeless graph, an isolated graph, or a discrete graph</p>
+          <div id="GFG_AD_gfg_outstream_incontent" data-google-query-id="CMbg9u35-IMDFdKrrAId9eMK3Q">
+            <div id="google_ads_iframe_/27823234/gfg_outstream_incontent_0__container__"><iframe id="google_ads_iframe_/27823234/gfg_outstream_incontent_0" tabindex="0" title="3rd party ad content" src="https://b5b5d5ac434a8de3112d2a4a2b2d924f.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" name="" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-is-safeframe="true" aria-label="Advertisement" data-google-container-id="3" data-load-complete="true"></iframe></div>
+          </div>
+          <p><img class="image_resized" src="https://media.geeksforgeeks.org/wp-content/uploads/null-2.png" alt="" /></p>
+          <h3><strong>7. Complete Graph:</strong></h3>
+          <p>A simple graph with n vertices is called a complete graph if the degree of each vertex is n-1, that is, one vertex is attached with n-1 edges or the rest of the vertices in the graph. A complete graph is also called Full Graph.&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/complete1.png" alt="" />&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/complete2-1.png" alt="" /></p>
+          <h3><strong>8. Pseudo Graph:</strong></h3>
+          <p>A graph G with a self-loop and some multiple edges is called a pseudo graph. A pseudograph is a type of graph that allows for the existence of loops (edges that connect a vertex to itself) and multiple edges (more than one edge connecting two vertices). In contrast, a simple graph is a graph that does not allow for loops or multiple edges.&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/pseudo-2.png" alt="" /></p>
+          <h3><strong>9. Regular Graph:</strong></h3>
+          <p>A simple graph is said to be regular if all vertices of graph G are of equal degree. All complete graphs are regular but vice versa is not possible. A regular graph is a type of undirected graph where every vertex has the same number of edges or neighbors. In other words, if a graph is regular, then every vertex has the same degree.&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/regular-1.png" alt="" /></p>
+          <h3><strong>10. Bipartite Graph:</strong></h3>
+          <p>A graph G = (V, E) is said to be a bipartite graph if its vertex set V(G) can be partitioned into two non-empty disjoint subsets. V1(G) and V2(G) in such a way that each edge e of E(G) has one end in V1(G) and another end in V2(G). The partition V1 U V2 = V is called Bipartite of G. Here in the figure: V1(G)={V5, V4, V3} and V2(G)={V1, V2}&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/bipartite.png" alt="" /></p>
+          <div id="GFG_AD_gfg_outstream_incontent-1">&nbsp;</div>
+          <h3><strong>11. Labeled Graph:</strong></h3>
+          <p>If the vertices and edges of a graph are labeled with name, date, or weight then it is called a labeled graph. It is also called Weighted Graph.&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/labelled.png" alt="" /></p>
+          <h3><strong>12. Digraph Graph:</strong></h3>
+          <p>A graph G = (V, E) with a mapping f such that every edge maps onto some ordered pair of vertices (Vi, Vj) are called a Digraph. It is also called&nbsp;<em>Directed Graph</em>. The ordered pair (Vi, Vj) means an edge between Vi and Vj with an arrow directed from Vi to Vj. Here in the figure: e1 = (V1, V2) e2 = (V2, V3) e4 = (V2, V4)&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/digraph.png" alt="" /></p>
+          <h3><strong>13. Subgraph:</strong></h3>
+          <p>A graph G1 = (V1, E1) is called a subgraph of a graph G(V, E) if V1(G) is a subset of V(G) and E1(G) is a subset of E(G) such that each edge of G1 has same end vertices as in G.&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/di-and-sub-1.png" alt="" />&nbsp;</p>
+          <h3><strong>14. Connected or Disconnected Graph:</strong></h3>
+          <p>Graph G is said to be connected if any pair of vertices (Vi, Vj) of a graph G is reachable from one another. Or a graph is said to be connected if there exists at least one path between each and every pair of vertices in graph G, otherwise, it is disconnected. A null graph with n vertices is a disconnected graph consisting of n components. Each component consists of one vertex and no edge.&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/connected.png" alt="" /></p>
+          <h3><strong>15. Cyclic Graph:</strong></h3>
+          <p>A graph G consisting of n vertices and n&gt; = 3 that is V1, V2, V3- &ndash; &ndash; &ndash; Vn and edges (V1, V2), (V2, V3), (V3, V4)- &ndash; &ndash; &ndash; (Vn, V1) are called cyclic graph.&nbsp;</p>
+          <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/cyclic1.png" alt="" /></p>
+          <div id="GFG_AD_gfg_outstream_incontent-2" data-google-query-id="CPj-tO75-IMDFYKgrAIdRt0EUA">&nbsp;</div>
+          <h3><strong>16. Types of Subgraphs:</strong></h3>
+          <ul>
+            <li><strong>Vertex disjoint subgraph:</strong>&nbsp;Any two graph G1 = (V1, E1) and G2 = (V2, E2) are said to be vertex disjoint of a graph G = (V, E) if V1(G1) intersection V2(G2) = null. In the figure, there is no common vertex between G1 and G2.</li>
+            <li><strong>Edge disjoint subgraph:</strong>&nbsp;A subgraph is said to be edge-disjoint if E1(G1) intersection E2(G2) = null. In the figure, there is no common edge between G1 and G2.</li>
+          </ul>
+          <p><strong>Note:</strong>&nbsp;Edge disjoint subgraph may have vertices in common but a vertex disjoint graph cannot have a common edge, so the vertex disjoint subgraph will always be an edge-disjoint subgraph.</p>
+          <h3><strong>17. Spanning Subgraph</strong></h3>
+          <p>Consider the graph G(V,E) as shown below. A spanning subgraph is a subgraph that contains all the vertices of the original graph G that is G'(V&rsquo;,E&rsquo;) is spanning if V&rsquo;=V and E&rsquo; is a subset of E.</p>
+          <div class="wp-caption alignnone"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230212100153/sub.png" />
+            <p class="wp-caption-text">&nbsp;</p>
+          </div>
+          <p>So one of the spanning subgraph can be as shown below G'(V&rsquo;,E&rsquo;). It has all the vertices of the original graph G and some of the edges of G.</p>
+          <div class="wp-caption alignnone"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20230212101132/re.png" />
+            <p class="wp-caption-text">&nbsp;</p>
+          </div>
+          <p>This is just one of the many spanning subgraphs of graph G. We can create various other spanning subgraphs by different combinations of edges. Note that if we consider a graph G'(V&rsquo;,E&rsquo;) where V&rsquo;=V and E&rsquo;=E, then graph G&rsquo; is a spanning subgraph of graph G(V,E).</p>
+          <h3>Advantages of graphs:</h3>
+          <ol>
+            <li>Graphs can be used to model and analyze complex systems and relationships.</li>
+            <li>They are useful for visualizing and understanding data.</li>
+            <li>Graph algorithms are widely used in computer science and other fields, such as social network analysis, logistics, and transportation.</li>
+            <li>Graphs can be used to represent a wide range of data types, including social networks, road networks, and the internet.</li>
+          </ol>
+          <h3>Disadvantages of graphs:</h3>
+          <ol>
+            <li>Large graphs can be difficult to visualize and analyze.</li>
+            <li>Graph algorithms can be computationally expensive, especially for large graphs.</li>
+            <li>The interpretation of graph results can be subjective and may require domain-specific knowledge.</li>
+            <li>Graphs can be susceptible to noise and outliers, which can impact the accuracy of analysis results.</li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

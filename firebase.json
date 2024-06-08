@@ -1,0 +1,31 @@
+// {
+//   "hosting": {
+//     "site": "mca-notes-section",
+//     "public": "public",
+//     "ignore": [
+//       "firebase.json",
+//       "**/.*",
+//       "**/node_modules/**"
+//     ]
+//   }
+// }
+
+{
+  "hosting": {
+    "site": "mca-notes-section",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "database-rules.json",
+      "storage.rules",
+      "functions"
+    ],
+    "headers": [{
+      "source" : "**/*.@(js|html)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=0"
+      } ]
+    }]
+  }
+}

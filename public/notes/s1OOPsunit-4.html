@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM4 oops unit-4</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">Unit-4 :</div>
+<div style="margin: 5px 0;">
+  <h1>Polymorphism</h1>
+  <br />- A C++ virtual function is a member function in the base class that you redefine<br />in a derived class. It is declared using the virtual keyword.<br />- A &amp;#39;virtual&amp;#39; is a keyword preceding the normal declaration of a function.<br />- C++ determines which function is to be invoked at the runtime based on the<br />type of the object pointed by the base class pointer.<br />- It is used to tell the compiler to perform dynamic linkage or late binding on the<br />function.<br />- Functions are declared with a&nbsp;virtual&nbsp;keyword in base class
+</div>
+<div style="margin: 5px 0;">
+  <div>When you refer to a derived class object using a pointer or a reference<br />to the base class, you can call a virtual function for that object and<br />execute the derived class&rsquo;s version of the function.&nbsp;<br />- Virtual functions ensure that the correct function is called for an object,<br />regardless of the type of reference (or pointer) used for function call.<br />- They are mainly used to achieve&nbsp;Runtime polymorphism<br />- The resolving of function call is done at runtime.<br />- Runtime polymorphism is achieved only through a pointer (or<br />reference) of base class type.<br />- A base class pointer can point to the objects of base class as well<br />as to the objects of derived class.<br />- &nbsp;base class pointer &lsquo;base_class_objecr&rsquo; contains the address of<br />object &lsquo;derived_class_object &rsquo; of derived class.<br />- Using pointer to create base class pointer and using &amp;amp; operator<br />to hold the address of derived class objects and using late<br />binding of base class objects with method name.<br />int&nbsp;main()&nbsp;&nbsp;&nbsp;&nbsp;<br />{&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;A*&nbsp;a;&nbsp;&nbsp;&nbsp;&nbsp;//pointer&nbsp;of&nbsp;base&nbsp;class&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;B&nbsp;b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//object&nbsp;of&nbsp;derived&nbsp;class&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;a&nbsp;=&nbsp;&amp;amp;b;&nbsp;&nbsp;&nbsp;&nbsp;//&amp;amp; optr using to hold the method of address<br />&nbsp;a-&amp;gt;display();&nbsp;&nbsp;&nbsp;//Late&nbsp;Binding&nbsp;occurs&nbsp;&nbsp;&nbsp;&nbsp;<br />}&nbsp;&nbsp;</div>
+  <div>Rules for Virtual Functions<br /> The functions cannot be static<br /> You derive them using the &ldquo;virtual&rdquo; keyword<br /> Virtual functions in C++ needs to be a member of some other class (base<br />class)<br /> They can be a friend function of another class<br /> The prototype of these functions should be the same for both the base and<br />derived class<br /> Virtual functions are accessible using object pointers</div>
+  <div> Redefining the virtual function in the derived class is optional, but it needs<br />to be defined in the base class<br /> The function call resolving is done at run-time<br /> You can create a virtual destructor but not a constructor</div>
+  <div>Syntax:<br />Class Base {<br />public:<br />Virtual void print() {<br />// code<br />}<br />};<br />class Derived : public Base {<br />public:<br />void print() {<br />// code<br />}<br />};</div>
+  <div>&nbsp;</div>
+  <div>
+    <div>
+      <h1>Pure Virtual Functions and Abstract Classes in C++</h1>
+    </div>
+    <div>
+      <h3>Pure Virtual Function</h3>
+      <br />o A pure virtual function is a virtual function in C++ for which we need not to write<br />any function definition and only we have to declare it.<br />o It is declared by assigning 0 in the declaration.<br />o A virtual function is not used for performing any task. It only serves as a<br />placeholder.<br />o When the function has no definition, such function is known as &amp;quot;do-nothing&amp;quot;<br />function.<br />o The &amp;quot;do-nothing&amp;quot; function is known as a&nbsp;pure virtual function. A pure virtual<br />function is a function declared in the base class that has no definition relative<br />to the base class.<br />o A class containing the pure virtual function cannot be used to declare the<br />objects of its own, such classes are known as abstract base classes.
+    </div>
+    <div>
+      <div>The main objective of the base class is to provide the traits to the derived<br />classes and to create the base pointer used for achieving the runtime<br />polymorphism.<br />o A virtual function in C++ is a base class member function that you can redefine in a<br />derived class to achieve polymorphism.<br />o You can declare the function in the base class using the virtual keyword.&nbsp;<br />o Once you declare the function in the base class, you can use a pointer or reference to<br />call the virtual class and execute its virtual version in the derived class.<br />Pure virtual function can be defined as:<br />1. virtual&nbsp;void&nbsp;display()&nbsp;=&nbsp;0;&nbsp;&nbsp;&nbsp;<br />Let&amp;#39;s see a simple example:<br />#include &amp;lt;iostream&amp;gt;<br />using namespace std;<br />class Base{</div>
+      <div>public:</div>
+      <div>virtual void Output(){</div>
+      <div>cout &amp;lt;&amp;lt; &amp;quot;Output Base class&amp;quot; &amp;lt;&amp;lt; endl;</div>
+      <div>}</div>
+      <div>void Display(){</div>
+      <div>cout &amp;lt;&amp;lt; &amp;quot;Display Base class&amp;quot; &amp;lt;&amp;lt; endl;</div>
+      <div>}</div>
+      <div>};</div>
+      <div>class Derived : public Base{</div>
+      <div>public:</div>
+      <div>void Output(){</div>
+      <div>cout &amp;lt;&amp;lt; &amp;quot;Output Derived class&amp;quot; &amp;lt;&amp;lt; endl;</div>
+      <div>}</div>
+      <div>void Display()</div>
+      <div>{</div>
+      <div>cout &amp;lt;&amp;lt; &amp;quot;Display Derived class&amp;quot; &amp;lt;&amp;lt; endl;</div>
+      <div>}</div>
+      <div>};</div>
+      <div>int main(){</div>
+      <div>Base* bpointr;</div>
+      <div>Derived dpointr;</div>
+      <div>bpointr = &amp;amp;dpointr;</div>
+      <div>// virtual function binding</div>
+      <div>bpointr-&amp;gt;Output();</div>
+      <div>// Non-virtual function binding</div>
+      <div>bpointr-&amp;gt;Display();</div>
+      <div>}</div>
+      <div>&nbsp;</div>
+      <div>
+        <div><h3>Abstract base classes</h3><br />- A class that contains a pure virtual function is known as an abstract<br />class. In the above example, the class&nbsp;Shape&nbsp;is an abstract class.<br />- An abstract class is&nbsp;a class that is designed to be<br />specifically used as a base class.<br />- An abstract class contains at least one pure virtual<br />function. You declare a pure virtual function by using a</div>
+        <div>pure specifier ( = 0 ) in the declaration of a virtual<br />member function in the class declaration.<br />- Abstract classes are used to express broad concepts from which more<br />concrete&nbsp;classes&nbsp;can be derived.&nbsp;<br />- &nbsp;An abstract class type object cannot be created.<br />- To abstract class types, however, you can use&nbsp;pointers&nbsp;and&nbsp;references.<br />- Declare at least one pure virtual member feature when creating an abstract class.<br />The pure specifier (= 0) syntax is used to declare a virtual function.</div>
+        <div>Syntax: &nbsp; &nbsp; &nbsp;</div>
+        <div>C-lass classname //abstract class</div>
+        <div>{</div>
+        <div>//data members &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+        <div>public:</div>
+        <div>//pure virtual function</div>
+        <div>/* Other members */</div>
+        <div>};</div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

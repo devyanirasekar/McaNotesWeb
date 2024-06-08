@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 WD unit-3</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-3</strong></p>
+        <p>&nbsp;</p>
+        <h1>HTML&nbsp;<span class="color_h1">Introduction:</span></h1>
+        <div style="margin: 5px 0;">
+          <p class="intro">HTML is the standard markup language for creating Web pages.</p>
+          <hr />
+          <h2>What is HTML?</h2>
+          <ul>
+            <li>HTML stands for Hyper Text Markup Language</li>
+            <li>HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+          </ul>
+          <hr />
+          <h2>A Simple HTML Document</h2>
+          <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate htmlHigh"><span class="tagnamecolor"><span class="tagcolor">&lt;</span>!DOCTYPE<span class="attributecolor">&nbsp;html</span><span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>html<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>head<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>title<span class="tagcolor">&gt;</span></span>Page Title<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/title<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/head<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>body<span class="tagcolor">&gt;</span></span><br /><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>h1<span class="tagcolor">&gt;</span></span>My First Heading<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/h1<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>p<span class="tagcolor">&gt;</span></span>My first paragraph.<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/p<span class="tagcolor">&gt;</span></span><br /><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/body<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/html<span class="tagcolor">&gt;</span></span></div>
+            <div class="w3-code notranslate htmlHigh">&nbsp;</div>
+            <div class="w3-code notranslate htmlHigh">
+              <h2>HTML Page Structure</h2>
+              <p>Below is a visualization of an HTML page structure:</p>
+              <div class="ws-grey">&lt;html&gt;
+                <div>&lt;head&gt;
+                  <div>&lt;title&gt;Page title&lt;/title&gt;</div>
+                  &lt;/head&gt;</div>
+                <div class="ws-grey">&lt;body&gt;
+                  <div class="w3-white">
+                    <div>&lt;h1&gt;This is a heading&lt;/h1&gt;</div>
+                    <div>&lt;p&gt;This is a paragraph.&lt;/p&gt;</div>
+                    <div>&lt;p&gt;This is another paragraph.&lt;/p&gt;</div>
+                  </div>
+                  &lt;/body&gt;</div>
+                &lt;/html&gt;
+              </div>
+              <div class="ws-grey">&nbsp;</div>
+              <div class="ws-grey"><span style="font-family: aileron; font-size: 30px;">HTML Headings</span></div>
+              <div class="ws-grey">
+                <div style="margin: 5px 0;">
+                  <p>HTML headings are defined with the&nbsp;<code class="w3-codespan">&lt;h1&gt;</code>&nbsp;to&nbsp;<code class="w3-codespan">&lt;h6&gt;</code>&nbsp;tags.</p>
+                  <p><code class="w3-codespan">&lt;h1&gt;</code>&nbsp;defines the most important heading.&nbsp;<code class="w3-codespan">&lt;h6&gt;</code>&nbsp;defines the least important heading.</p>
+                  <div class="w3-example">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate htmlHigh"><span class="tagnamecolor"><span class="tagcolor">&lt;</span>h1<span class="tagcolor">&gt;</span></span>Heading 1<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/h1<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>h2<span class="tagcolor">&gt;</span></span>Heading 2<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/h2<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>h3<span class="tagcolor">&gt;</span></span>Heading 3<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/h3<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>h4<span class="tagcolor">&gt;</span></span>Heading 4<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/h4<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>h5<span class="tagcolor">&gt;</span></span>Heading 5<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/h5<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>h6<span class="tagcolor">&gt;</span></span>Heading 6<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/h6<span class="tagcolor">&gt;</span></span></div>
+                    <div class="w3-code notranslate htmlHigh">
+                      <h2>Headings Are Important</h2>
+                      <p>Search engines use the headings to index the structure and content of your web pages.</p>
+                      <p>Users often skim a page by its headings. It is important to use headings to show the document structure.</p>
+                      <p><code class="w3-codespan">&lt;h1&gt;</code>&nbsp;headings should be used for main headings, followed by&nbsp;<code class="w3-codespan">&lt;h2&gt;</code>&nbsp;headings, then the less important&nbsp;<code class="w3-codespan">&lt;h3&gt;</code>, and so on.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ws-grey">
+                <h2>HTML Documents</h2>
+                <p>All HTML documents must start with a document type declaration:&nbsp;<code class="w3-codespan">&lt;!DOCTYPE html&gt;</code>.</p>
+                <p>The HTML document itself begins with&nbsp;<code class="w3-codespan">&lt;html&gt;</code>&nbsp;and ends with&nbsp;<code class="w3-codespan">&lt;/html&gt;</code>.</p>
+                <p>The visible part of the HTML document is between&nbsp;<code class="w3-codespan">&lt;body&gt;</code>&nbsp;and&nbsp;<code class="w3-codespan">&lt;/body&gt;</code>.</p>
+                <div class="w3-example">
+                  <h3>Example</h3>
+                  <div class="w3-code notranslate htmlHigh"><span class="tagnamecolor"><span class="tagcolor">&lt;</span>!DOCTYPE<span class="attributecolor">&nbsp;html</span><span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>html<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>body<span class="tagcolor">&gt;</span></span><br /><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>h1<span class="tagcolor">&gt;</span></span>My First Heading<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/h1<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>p<span class="tagcolor">&gt;</span></span>My first paragraph.<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/p<span class="tagcolor">&gt;</span></span><br /><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/body<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/html<span class="tagcolor">&gt;</span></span></div>
+                  <div class="w3-code notranslate htmlHigh">&nbsp;</div>
+                  <div class="w3-code notranslate htmlHigh">
+                    <h2>HTML Paragraphs</h2>
+                    <p>The HTML&nbsp;<code class="w3-codespan">&lt;p&gt;</code>&nbsp;element defines a paragraph.</p>
+                    <p>A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.</p>
+                    <div class="w3-example">
+                      <h3>Example</h3>
+                      <div class="w3-code notranslate htmlHigh"><span class="tagnamecolor"><span class="tagcolor">&lt;</span>p<span class="tagcolor">&gt;</span></span>This is a paragraph.<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/p<span class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"><span class="tagcolor">&lt;</span>p<span class="tagcolor">&gt;</span></span>This is another paragraph.<span class="tagnamecolor"><span class="tagcolor">&lt;</span>/p<span class="tagcolor">&gt;</span></span></div>
+                      <div class="w3-code notranslate htmlHigh">&nbsp;</div>
+                      <div class="w3-code notranslate htmlHigh">
+                        <h2>HTML Elements</h2>
+                        <p>The HTML&nbsp;<strong>element</strong>&nbsp;is everything from the start tag to the end tag:</p>
+                        <div><span class="spes_tagname"><span class="spes_tag">&lt;</span>tagname<span class="spes_tag">&gt;</span></span>Content goes here...<span class="spes_tagname"><span class="spes_tag">&lt;</span>/tagname<span class="spes_tag">&gt;</span></span></div>
+                        <p>Examples of some HTML elements:</p>
+                        <div><span class="spes_tagname"><span class="spes_tag">&lt;h1&gt;</span></span>My First Heading<span class="spes_tagname"><span class="spes_tag">&lt;</span>/h1<span class="spes_tag">&gt;</span></span></div>
+                        <div><span class="spes_tagname"><span class="spes_tag">&lt;</span>p<span class="spes_tag">&gt;</span></span>My first paragraph.<span class="spes_tagname"><span class="spes_tag">&lt;</span>/p<span class="spes_tag">&gt;</span></span></div>
+                        <table class="ws-table-all notranslate">
+                          <tbody>
+                            <tr>
+                              <th>Start tag</th>
+                              <th>Element content</th>
+                              <th>End tag</th>
+                            </tr>
+                            <tr>
+                              <td>&lt;h1&gt;</td>
+                              <td>My First Heading</td>
+                              <td>&lt;/h1&gt;</td>
+                            </tr>
+                            <tr>
+                              <td>&lt;p&gt;</td>
+                              <td>My first paragraph.</td>
+                              <td>&lt;/p&gt;</td>
+                            </tr>
+                            <tr>
+                              <td>&lt;br&gt;</td>
+                              <td><em>none</em></td>
+                              <td><em>none</em></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 DSA unit-3</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-3</strong></p>
+        <p>&nbsp;</p>
+        <h1 class="h1">Tree Data Structure</h1>
+        <p>We read the linear data structures like an array, linked list, stack and queue in which all the elements are arranged in a sequential manner. The different data structures are used for different kinds of data.</p>
+        <p><strong>Some factors are considered for choosing the data structure:</strong></p>
+        <ul class="points">
+          <li><strong>What type of data needs to be stored</strong>?: It might be a possibility that a certain data structure can be the best fit for some kind of data.</li>
+          <li><strong>Cost of operations:</strong>&nbsp;If we want to minimize the cost for the operations for the most frequently performed operations. For example, we have a simple list on which we have to perform the search operation; then, we can create an array in which elements are stored in sorted order to perform the&nbsp;<strong><em>binary search</em></strong>. The binary search works very fast for the simple list as it divides the search space into half.</li>
+          <li><strong>Memory usage:</strong>&nbsp;Sometimes, we want a data structure that utilizes less memory.</li>
+        </ul>
+        <p><strong><em>A tree</em></strong>&nbsp;is also one of the data structures that represent hierarchical data. Suppose we want to show the employees and their positions in the hierarchical form then it can be represented as shown below:</p>
+        <p><strong><img src="https://static.javatpoint.com/ds/images/tree.png" alt="Tree" /></strong></p>
+        <p>The above tree shows the&nbsp;<strong>organization hierarchy</strong>&nbsp;of some company. In the above structure,&nbsp;<strong><em>john</em></strong>&nbsp;is the&nbsp;<strong>CEO</strong>&nbsp;of the company, and John has two direct reports named as&nbsp;<strong><em>Steve</em></strong>&nbsp;and&nbsp;<strong><em>Rohan</em></strong>. Steve has three direct reports named&nbsp;<strong><em>Lee, Bob, Ella</em></strong>&nbsp;where&nbsp;<strong><em>Steve</em></strong>&nbsp;is a manager. Bob has two direct reports named&nbsp;<strong><em>Sal</em></strong>&nbsp;and&nbsp;<strong><em>Emma</em></strong>.&nbsp;<strong>Emma</strong>&nbsp;has two direct reports named&nbsp;<strong><em>Tom</em></strong>&nbsp;and&nbsp;<strong><em>Raj</em></strong>. Tom has one direct report named&nbsp;<strong><em>Bill</em></strong>. This particular logical structure is known as a&nbsp;<strong><em>Tree</em></strong>. Its structure is similar to the real tree, so it is named a&nbsp;<strong><em>Tree</em></strong>. In this structure, the&nbsp;<strong><em>root</em></strong>&nbsp;is at the top, and its branches are moving in a downward direction. Therefore, we can say that the Tree data structure is an efficient way of storing the data in a hierarchical way.</p>
+        <p><strong>Let's understand some key points of the Tree data structure.</strong></p>
+        <ul class="points">
+          <li>A tree data structure is defined as a collection of objects or entities known as nodes that are linked together to represent or simulate hierarchy.</li>
+          <li>A tree data structure is a non-linear data structure because it does not store in a sequential manner. It is a hierarchical structure as elements in a Tree are arranged in multiple levels.</li>
+          <li>In the Tree data structure, the topmost node is known as a root node. Each node contains some data, and data can be of any type. In the above tree structure, the node contains the name of the employee, so the type of data would be a string.</li>
+          <li>Each node contains some data and the link or reference of other nodes that can be called children.</li>
+        </ul>
+        <p><strong>Some basic terms used in Tree data structure.</strong></p>
+        <p>Let's consider the tree structure, which is shown below:</p>
+        <p><img src="https://static.javatpoint.com/ds/images/tree2.png" alt="Tree" /></p>
+        <p>In the above structure, each node is labeled with some number. Each arrow shown in the above figure is known as a&nbsp;<strong><em>link</em></strong>&nbsp;between the two nodes.</p>
+        <ul class="points">
+          <li><strong>Root:</strong>&nbsp;The root node is the topmost node in the tree hierarchy. In other words, the root node is the one that doesn't have any parent. In the above structure, node numbered 1 is&nbsp;<strong>the root node of the tree.</strong>&nbsp;If a node is directly linked to some other node, it would be called a parent-child relationship.</li>
+          <li><strong>Child node:</strong>&nbsp;If the node is a descendant of any node, then the node is known as a child node.</li>
+          <li><strong>Parent:</strong>&nbsp;If the node contains any sub-node, then that node is said to be the parent of that sub-node.</li>
+          <li><strong>Sibling:</strong>&nbsp;The nodes that have the same parent are known as siblings.</li>
+          <li><strong>Leaf Node:-</strong>&nbsp;The node of the tree, which doesn't have any child node, is called a leaf node. A leaf node is the bottom-most node of the tree. There can be any number of leaf nodes present in a general tree. Leaf nodes can also be called external nodes.</li>
+          <li><strong>Internal nodes:</strong>&nbsp;A node has atleast one child node known as an&nbsp;<strong><em>internal</em></strong></li>
+          <li><strong>Ancestor node:-</strong>&nbsp;An ancestor of a node is any predecessor node on a path from the root to that node. The root node doesn't have any ancestors. In the tree shown in the above image, nodes 1, 2, and 5 are the ancestors of node 10.</li>
+          <li><strong>Descendant:</strong>&nbsp;The immediate successor of the given node is known as a descendant of a node. In the above figure, 10 is the descendant of node 5.</li>
+        </ul>
+        <h3 class="h3">Properties of Tree data structure</h3>
+        <ul class="points">
+          <li><strong>Recursive data structure:</strong>&nbsp;The tree is also known as a&nbsp;<strong><em>recursive data structure</em></strong>. A tree can be defined as recursively because the distinguished node in a tree data structure is known as a&nbsp;<strong><em>root node</em></strong>. The root node of the tree contains a link to all the roots of its subtrees. The left subtree is shown in the yellow color in the below figure, and the right subtree is shown in the red color. The left subtree can be further split into subtrees shown in three different colors. Recursion means reducing something in a self-similar manner. So, this recursive property of the tree data structure is implemented in various applications.<br /><img src="https://static.javatpoint.com/ds/images/tree3.png" alt="Tree" /></li>
+          <li><strong>Number of edges:</strong>&nbsp;If there are n nodes, then there would n-1 edges. Each arrow in the structure represents the link or path. Each node, except the root node, will have atleast one incoming link known as an edge. There would be one link for the parent-child relationship.</li>
+          <li><strong>Depth of node x:</strong>&nbsp;The depth of node x can be defined as the length of the path from the root to the node x. One edge contributes one-unit length in the path. So, the depth of node x can also be defined as the number of edges between the root node and the node x. The root node has 0 depth.</li>
+          <li><strong>Height of node x:</strong>&nbsp;The height of node x can be defined as the longest path from the node x to the leaf node.</li>
+        </ul>
+        <p>Based on the properties of the Tree data structure, trees are classified into various categories.</p>
+        <h3 class="h3">Implementation of Tree</h3>
+        <p>The tree data structure can be created by creating the nodes dynamically with the help of the pointers. The tree in the memory can be represented as shown below:</p>
+        <p>The above figure shows the representation of the tree data structure in the memory. In the above structure, the node contains three fields. The second field stores the data; the first field stores the address of the left child, and the third field stores the address of the right child.</p>
+        <p>In programming, the structure of a node can be defined as:</p>
+        <div class="codeblock">
+          <div class="dp-highlighter">
+            <div class="bar">&nbsp;</div>
+            <ol class="dp-j" start="1">
+              <li class="alt">struct&nbsp;node&nbsp;&nbsp;</li>
+              <li class="">{&nbsp;&nbsp;</li>
+              <li class="alt">&nbsp;&nbsp;<span class="keyword">int</span>&nbsp;data;&nbsp;&nbsp;</li>
+              <li class="">struct&nbsp;node&nbsp;*left;&nbsp;&nbsp;</li>
+              <li class="alt">struct&nbsp;node&nbsp;*right;&nbsp;&nbsp;&nbsp;</li>
+              <li class="">}&nbsp;&nbsp;</li>
+            </ol>
+          </div>
+        </div>
+        <p>The above structure can only be defined for the binary trees because the binary tree can have utmost two children, and generic trees can have more than two children. The structure of the node for generic trees would be different as compared to the binary tree.</p>
+        <h3 class="h3">Applications of trees</h3>
+        <p>The following are the applications of trees:</p>
+        <ul class="points">
+          <li><strong>Storing naturally hierarchical data:</strong>&nbsp;Trees are used to store the data in the hierarchical structure. For example, the file system. The file system stored on the disc drive, the file and folder are in the form of the naturally hierarchical data and stored in the form of trees.</li>
+          <li><strong>Organize data:</strong>&nbsp;It is used to organize data for efficient insertion, deletion and searching. For example, a binary tree has a logN time for searching an element.</li>
+          <li><strong>Trie:</strong>&nbsp;It is a special kind of tree that is used to store the dictionary. It is a fast and efficient way for dynamic spell checking.</li>
+          <li><strong>Heap:</strong>&nbsp;It is also a tree data structure implemented using arrays. It is used to implement priority queues.</li>
+          <li><strong>B-Tree and B+Tree:</strong>&nbsp;B-Tree and B+Tree are the tree data structures used to implement indexing in databases.</li>
+          <li><strong>Routing table:</strong>&nbsp;The tree data structure is also used to store the data in routing tables in the routers.</li>
+        </ul>
+        <h3 class="h3">Types of Tree data structure</h3>
+        <p><strong>The following are the types of a tree data structure:</strong></p>
+        <ul class="points">
+          <li><strong>General tree:</strong>&nbsp;The general tree is one of the types of tree data structure. In the general tree, a node can have either 0 or maximum n number of nodes. There is no restriction imposed on the degree of the node (the number of nodes that a node can contain). The topmost node in a general tree is known as a root node. The children of the parent node are known as&nbsp;<strong><em>subtrees</em></strong>.<br /><img src="https://static.javatpoint.com/ds/images/types-of-tree1.png" alt="Tree" /><br />There can be&nbsp;<strong><em>n</em></strong>&nbsp;number of subtrees in a general tree. In the general tree, the subtrees are unordered as the nodes in the subtree cannot be ordered.<br />Every non-empty tree has a downward edge, and these edges are connected to the nodes known as&nbsp;<strong><em>child nodes</em></strong>. The root node is labeled with level 0. The nodes that have the same parent are known as&nbsp;<strong><em>siblings</em></strong>.</li>
+          <li><strong><a href="https://www.javatpoint.com/binary-tree">Binary tree</a>:</strong>&nbsp;Here, binary name itself suggests two numbers, i.e., 0 and 1. In a binary tree, each node in a tree can have utmost two child nodes. Here, utmost means whether the node has 0 nodes, 1 node or 2 nodes.<br /><img src="https://static.javatpoint.com/ds/images/types-of-tree2.png" alt="Tree" /><br /><strong>To know more about the binary tree, click on the link given below:</strong><br /><a href="https://www.javatpoint.com/binary-tree">https://www.javatpoint.com/binary-tree</a></li>
+          <li><strong><a href="https://www.javatpoint.com/binary-search-tree">Binary Search tree</a>:</strong>&nbsp;Binary search tree is a non-linear data structure in which one node is connected to&nbsp;<strong><em>n</em></strong>&nbsp;number of nodes. It is a node-based data structure. A node can be represented in a binary search tree with three fields, i.e., data part, left-child, and right-child. A node can be connected to the utmost two child nodes in a binary search tree, so the node contains two pointers (left child and right child pointer).<br />Every node in the left subtree must contain a value less than the value of the root node, and the value of each node in the right subtree must be bigger than the value of the root node.</li>
+        </ul>
+        <p>A node can be created with the help of a user-defined data type known as&nbsp;<strong><em>struct,</em></strong>&nbsp;as shown below:</p>
+        <div class="codeblock">
+          <div class="dp-highlighter">
+            <div class="bar">&nbsp;</div>
+            <ol class="dp-j" start="1">
+              <li class="alt">struct&nbsp;node&nbsp;&nbsp;</li>
+              <li class="">{&nbsp;&nbsp;</li>
+              <li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span>&nbsp;data;&nbsp;&nbsp;</li>
+              <li class="">&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;node&nbsp;*left;&nbsp;&nbsp;</li>
+              <li class="alt">struct&nbsp;node&nbsp;*right;&nbsp;&nbsp;&nbsp;</li>
+              <li class="">}&nbsp;&nbsp;</li>
+            </ol>
+          </div>
+        </div>
+        <p>The above is the node structure with three fields: data field, the second field is the left pointer of the node type, and the third field is the right pointer of the node type.</p>
+        <p>&nbsp;</p>
+        <h1 class="h1">Binary Tree</h1>
+        <p>The Binary tree means that the node can have maximum two children. Here, binary name itself suggests that 'two'; therefore, each node can have either 0, 1 or 2 children.</p>
+        <p><strong>Let's understand the binary tree through an example.</strong></p>
+        <p><img src="https://static.javatpoint.com/ds/images/binary-tree.png" alt="Binary Tree" /></p>
+        <p>The above tree is a binary tree because each node contains the utmost two children. The logical representation of the above tree is given below:</p>
+        <p><img src="https://static.javatpoint.com/ds/images/binary-tree2.png" alt="Binary Tree" /></p>
+        <p>In the above tree, node 1 contains two pointers, i.e., left and a right pointer pointing to the left and right node respectively. The node 2 contains both the nodes (left and right node); therefore, it has two pointers (left and right). The nodes 3, 5 and 6 are the leaf nodes, so all these nodes contain&nbsp;<strong>NULL</strong>&nbsp;pointer on both left and right parts.</p>
+        <ul class="points">
+          <li>At each level of i, the maximum number of nodes is 2<sup>i</sup>.</li>
+          <li>The height of the tree is defined as the longest path from the root node to the leaf node. The tree which is shown above has a height equal to 3. Therefore, the maximum number of nodes at height 3 is equal to (1+2+4+8) = 15. In general, the maximum number of nodes possible at height h is (2<sup>0</sup>&nbsp;+ 2<sup>1</sup>&nbsp;+ 2<sup>2</sup>+&hellip;.2<sup>h</sup>) = 2<sup>h+1</sup>&nbsp;-1.</li>
+          <li>The minimum number of nodes possible at height h is equal to&nbsp;<strong>h+1</strong>.</li>
+          <li>If the number of nodes is minimum, then the height of the tree would be maximum. Conversely, if the number of nodes is maximum, then the height of the tree would be minimum.</li>
+        </ul>
+        <p>If there are 'n' number of nodes in the binary tree.</p>
+        <p><strong>The minimum height can be computed as:</strong></p>
+        <p>As we know that,</p>
+        <p>n = 2<sup>h+1</sup>&nbsp;-1</p>
+        <p>n+1 = 2<sup>h+1</sup></p>
+        <p>Taking log on both the sides,</p>
+        <p>log<sub>2</sub>(n+1) = log2(2<sup>h+1</sup>)</p>
+        <p>log<sub>2</sub>(n+1) = h+1</p>
+        <p><strong>h = log<sub>2</sub>(n+1) - 1</strong></p>
+        <p><strong>The maximum height can be computed as:</strong></p>
+        <p>As we know that,</p>
+        <p>n = h+1</p>
+        <p><strong>h= n-1</strong></p>
+        <p>&nbsp;</p>
+        <h1 class="h1">Binary Search tree</h1>
+        <p>In this article, we will discuss the Binary search tree. This article will be very helpful and informative to the students with technical background as it is an important topic of their course.</p>
+        <p>Before moving directly to the binary search tree, let's first see a brief description of the tree.</p>
+        <h3 class="h3">What is a tree?</h3>
+        <p>A tree is a kind of data structure that is used to represent the data in hierarchical form. It can be defined as a collection of objects or entities called as nodes that are linked together to simulate a hierarchy. Tree is a non-linear data structure as the data in a tree is not stored linearly or sequentially.</p>
+        <h3 class="h3">What is a Binary Search tree?</h3>
+        <p>A binary search tree follows some order to arrange the elements. In a Binary search tree, the value of left node must be smaller than the parent node, and the value of right node must be greater than the parent node. This rule is applied recursively to the left and right subtrees of the root.</p>
+        <p>Let's understand the concept of Binary search tree with an example.</p>
+        <p><img src="https://static.javatpoint.com/ds/images/binary-search-tree1.png" alt="Binary Search tree" /></p>
+        <p>In the above figure, we can observe that the root node is 40, and all the nodes of the left subtree are smaller than the root node, and all the nodes of the right subtree are greater than the root node.</p>
+        <p>Similarly, we can see the left child of root node is greater than its left child and smaller than its right child. So, it also satisfies the property of binary search tree. Therefore, we can say that the tree in the above image is a binary search tree.</p>
+        <p>Suppose if we change the value of node 35 to 55 in the above tree, check whether the tree will be binary search tree or not.</p>
+        <p><img src="https://static.javatpoint.com/ds/images/binary-search-tree2.png" alt="Binary Search tree" /></p>
+        <p>In the above tree, the value of root node is 40, which is greater than its left child 30 but smaller than right child of 30, i.e., 55. So, the above tree does not satisfy the property of Binary search tree. Therefore, the above tree is not a binary search tree.</p>
+        <h1 class="h1">B+ Tree</h1>
+        <p>B+ Tree is an extension of B Tree which allows efficient insertion, deletion and search operations.</p>
+        <p>In B Tree, Keys and records both can be stored in the internal as well as leaf nodes. Whereas, in B+ tree, records (data) can only be stored on the leaf nodes while internal nodes can only store the key values.</p>
+        <p>The leaf nodes of a B+ tree are linked together in the form of a singly linked lists to make the search queries more efficient.</p>
+        <p>B+ Tree are used to store the large amount of data which can not be stored in the main memory. Due to the fact that, size of main memory is always limited, the internal nodes (keys to access records) of the B+ tree are stored in the main memory whereas, leaf nodes are stored in the secondary memory.</p>
+        <h2 class="h2">Advantages of B+ Tree</h2>
+        <ol class="points">
+          <li>Records can be fetched in equal number of disk accesses.</li>
+          <li>Height of the tree remains balanced and less as compare to B tree.</li>
+          <li>We can access the data stored in a B+ tree sequentially as well as directly.</li>
+          <li>Keys are used for indexing.</li>
+          <li>Faster search queries as the data is stored only on the leaf nodes.</li>
+        </ol>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

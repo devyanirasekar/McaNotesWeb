@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 DSA unit-5</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-5</strong></p>
+        <p>&nbsp;</p>
+        <h1 class="h1">Graph</h1>
+        <p>A graph can be defined as group of vertices and edges that are used to connect these vertices. A graph can be seen as a cyclic tree, where the vertices (Nodes) maintain any complex relationship among them instead of having parent child relationship.</p>
+        <h2 class="h2">Definition</h2>
+        <p>A graph G can be defined as an ordered set G(V, E) where V(G) represents the set of vertices and E(G) represents the set of edges which are used to connect these vertices.</p>
+        <p>A Graph G(V, E) with 5 vertices (A, B, C, D, E) and six edges ((A,B), (B,C), (C,E), (E,D), (D,B), (D,A)) is shown in the following figure.</p>
+        <br /><img src="https://static.javatpoint.com/ds/images/graph-definition.png" alt="Graph" /><br />
+        <h2 class="h2">Directed and Undirected Graph</h2>
+        <p>A graph can be directed or undirected. However, in an undirected graph, edges are not associated with the directions with them. An undirected graph is shown in the above figure since its edges are not attached with any of the directions. If an edge exists between vertex A and B then the vertices can be traversed from B to A as well as A to B.</p>
+        <p>In a directed graph, edges form an ordered pair. Edges represent a specific path from some vertex A to another vertex B. Node A is called initial node while node B is called terminal node.</p>
+        <p>A directed graph is shown in the following figure.</p>
+        <p><br /><img src="https://static.javatpoint.com/ds/images/directed-and-undirected-graph.png" alt="Graph" /></p>
+        <h2 class="h2">Graph Terminology</h2>
+        <h3 class="h3">Path</h3>
+        <p>A path can be defined as the sequence of nodes that are followed in order to reach some terminal node V from the initial node U.</p>
+        <h3 class="h3">Closed Path</h3>
+        <p>A path will be called as closed path if the initial node is same as terminal node. A path will be closed path if V<sub>0</sub>=V<sub>N</sub>.</p>
+        <h3 class="h3">Connected Graph</h3>
+        <p>A connected graph is the one in which some path exists between every two vertices (u, v) in V. There are no isolated nodes in connected graph.</p>
+        <h3 class="h3">Complete Graph</h3>
+        <p>A complete graph is the one in which every node is connected with all other nodes. A complete graph contain n(n-1)/2 edges where n is the number of nodes in the graph.</p>
+        <h3 class="h3">Weighted Graph</h3>
+        <p>In a weighted graph, each edge is assigned with some data such as length or weight. The weight of an edge e can be given as w(e) which must be a positive (+) value indicating the cost of traversing the edge.</p>
+        <h3 class="h3">Digraph</h3>
+        <p>A digraph is a directed graph in which each edge of the graph is associated with some direction and the traversing can be done only in the specified direction.</p>
+        <h3 class="h3">Loop</h3>
+        <p>An edge that is associated with the similar end points can be called as Loop.</p>
+        <h3 class="h3">Adjacent Nodes</h3>
+        <p>If two nodes u and v are connected via an edge e, then the nodes u and v are called as neighbours or adjacent nodes.</p>
+        <h3 class="h3">Degree of the Node</h3>
+        <p>A degree of a node is the number of edges that are connected with that node. A node with degree 0 is called as isolated node.</p>
+        <h3 class="h3">Simple Path</h3>
+        <p>If all the nodes of the graph are distinct with an exception V<sub>0</sub>=V<sub>N</sub>, then such path P is called as closed simple path.</p>
+        <h3 class="h3">Cycle</h3>
+        <p>A cycle can be defined as the path which has no repeated edges or vertices except the first and last vertices.</p>
+        <h1>Kruskal&rsquo;s Algorithm-</h1>
+        <ul>
+          <li>Kruskal&rsquo;s Algorithm is a famous greedy algorithm.</li>
+          <li>It is used for finding the Minimum Spanning Tree (MST) of a given graph.</li>
+          <li>To apply Kruskal&rsquo;s algorithm, the given graph must be weighted, connected and undirected.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>The implementation of Kruskal&rsquo;s Algorithm is explained in the following steps-&nbsp;</p>
+        <p><strong><u>Step-01:</u></strong></p>
+        <ul>
+          <li>Sort all the edges from low weight to high weight.</li>
+        </ul>
+        <p><strong><u>Step-02:</u></strong></p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Take the edge with the lowest weight and use it to connect the vertices of graph.</li>
+          <li>If adding an edge creates a cycle, then reject that edge and go for the next least weight edge.</li>
+        </ul>
+        <p><strong><u>Step-03:</u></strong></p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Keep adding edges until all the vertices are connected and a Minimum Spanning Tree (MST) is obtained.</li>
+        </ul>
+        <h1>Problem-01</h1>
+        <p>Construct the minimum spanning tree (MST) for the given graph using Kruskal&rsquo;s Algorithm-&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1>Solution-</h1>
+        <ul>
+          <li>Simply draw all the vertices on the paper.</li>
+          <li>Connect these vertices using edges with minimum weights such that no cycle gets formed. <strong><u>Step-01:</u></strong></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong><u>Step-02:</u></strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong><u>Step-03:</u></strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong><u>Step-04:</u></strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong><u>Step-05:</u></strong></p>
+        <p>&nbsp;</p>
+        <p><strong><u>Step-06:</u></strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong><u>Step-07:</u></strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Since all the vertices have been connected / included in the MST, so we stop.</p>
+        <p>Weight of the MST</p>
+        <p>= Sum of all edge weights</p>
+        <p>= 10 + 25 + 22 + 12 + 16 + 14</p>
+        <p>= 99 units</p>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

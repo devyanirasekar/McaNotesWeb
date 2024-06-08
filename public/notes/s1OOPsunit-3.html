@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 oops unit-3</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-3</strong></p>
+        <p>&nbsp;</p>
+        <h1>Inheritance in C++:</h1>
+        <br />- The capability of a&nbsp;class&nbsp;to derive properties and characteristics<br />from another class is called&nbsp;Inheritance.- Inheritance is&nbsp;a feature or a process in which, newclasses are created from the existing classes.- Inheritance in C++&nbsp;is a mechanism in which one object acquires all the properties and behaviors of a parent object.- Inheritance represents the&nbsp;IS-A relationship&nbsp;which is also known as a&nbsp;parent-&lt;brchild&nbsp;relationship.- The new class created is called &ldquo;derived class&rdquo; or &ldquo;child class&rdquo;<br />and the existing class is known as the &ldquo;base class&rdquo; or &ldquo;parentclass&rdquo;. Sub Class(child):&nbsp;The class that inherits properties from another class is called Subclass or Derived Class.&nbsp;(the class that inheritsfrom another class) Super Class(parent):&nbsp;The class whose properties are inherited by<br />a subclass is called Base Class or Superclass.&nbsp;(the class being<br />inherited from)<br />Here are some examples:<br /> A car is a vehicle.<br /> Orange is a fruit.<br /> A surgeon is a doctor.<br /> A dog is an animal.
+      </div>
+      <div style="margin: 5px 0;">&nbsp;</div>
+      <div style="margin: 5px 0;">
+        <h3>Syntax:</h3>
+        &nbsp;<br />class &amp;lt;derived_class_name&amp;gt; : &amp;lt;access-specifier&amp;gt; &amp;lt;base_class_name&amp;gt;<br />{<br />//body<br />}
+      </div>
+      <div style="margin: 5px 0;">&nbsp;</div>
+      <div style="margin: 5px 0;">
+        <div>For example,</div>
+        <div>class Animal {<br />// eat() function<br />// sleep() function<br />};<br />class Dog : public Animal {<br />// bark() function<br />};</div>
+        <div>&nbsp;</div>
+        <div>Advantage of C++ Inheritance<br />Code reusability:&nbsp;Now you can reuse the members of your parent class. So, there<br />is no need to define the member again. So less code is required in the class.<br />
+          <h1>Types Of Inheritance</h1>
+          C++ supports five types of inheritance:<br />o Single inheritance<br />o Multilevel inheritance<br />o Hierarchical inheritance<br />o Multiple inheritance<br />o Hybrid inheritance
+        </div>
+        <div>&nbsp;</div>
+        <div>
+          <h2>Single Inheritance</h2>
+          <br />- Single inheritance&nbsp;is defined as the inheritance in which a derived class is<br />inherited from the only one base class.
+        </div>
+        <div>
+          <div>Where &amp;#39;A&amp;#39; is the base class, and &amp;#39;B&amp;#39; is the derived class.<br />- Syntax<br />class base_class_1</div>
+          <div>{</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;// class definition</div>
+          <div>};</div>
+          <div>class derived_class: visibility_mode base_class_1</div>
+          <div>{</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;// class definition</div>
+          <div>};</div>
+          <div>&nbsp;</div>
+          <div>
+            <h2>Multilevel Inheritance</h2>
+            <br />- Multilevel inheritance&nbsp;is a process of deriving a class from another derived<br />class.
+          </div>
+          <div>
+            <div>Syntax:</div>
+            <div>class class_A</div>
+            <div>{</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;// class definition</div>
+            <div>};</div>
+            <div>class class_B: visibility_mode class_A</div>
+            <div>{</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;// class definition</div>
+            <div>};</div>
+            <div>class class_C: visibility_mode class_B</div>
+            <div>{</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;// class definition</div>
+            <div>};</div>
+            <div>&nbsp;</div>
+            <div>
+              <h2>Hierarchical Inheritance</h2>
+              <br />- Hierarchical inheritance is defined as the process of deriving more than one<br />class from a base class.
+            </div>
+            <div>
+              <div>Syntax of Hierarchical inheritance:<br />class&nbsp;A&nbsp;&nbsp;<br />{&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;body&nbsp;of&nbsp;the&nbsp;class&nbsp;A.&nbsp;&nbsp;<br />}&nbsp;&nbsp;&nbsp;&nbsp;<br />class&nbsp;B&nbsp;:&nbsp;public&nbsp;A&nbsp;&nbsp;&nbsp;<br />{&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;body&nbsp;of&nbsp;class&nbsp;B.&nbsp;&nbsp;<br />}&nbsp;&nbsp;<br />class&nbsp;C&nbsp;:&nbsp;public&nbsp;A&nbsp;&nbsp;</div>
+              <div>{&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;body&nbsp;of&nbsp;class&nbsp;C.&nbsp;&nbsp;<br />}&nbsp;&nbsp;&nbsp;<br />class&nbsp;D&nbsp;:&nbsp;public&nbsp;A&nbsp;&nbsp;<br />{&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;body&nbsp;of&nbsp;class&nbsp;D.&nbsp;&nbsp;<br />}</div>
+              <div>&nbsp;</div>
+              <div>
+                <h2>Multiple Inheritance</h2>
+                <br />Multiple inheritance&nbsp;is the process of deriving a new class that inherits the<br />attributes from two or more classes.
+              </div>
+              <div>
+                <div>Syntax of the Derived class:<br />Syntax<br />class base_class_1<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;// class definition</div>
+                <div>};&nbsp;<br />class base_class_2<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;// class definition<br />};<br />class derived_class: visibility_mode_1 base_class_1, visibility_mode_2 base_class_2<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;// class definition<br />};</div>
+                <div>
+                  <h4>Ambiguity in multiple inheritance</h4>
+                  <br />- Ambiguity in inheritance can be defined as&nbsp;when one class is derived for two or<br />more base classes then there are chances that the base classes have functions<br />with the same name. So it will confuse derived class to choose from similar name<br />functions.<br />- If the derived class object needs to access one of the similarly named<br />member functions of the base classes then it results in ambiguity<br />because the compiler gets confused about which base&rsquo;s class member<br />function should be called.
+                </div>
+                <div>&nbsp;</div>
+                <div>
+                  <h2>Hybrid Inheritance</h2>
+                  <br />- Hybrid inheritance is a combination of more than one type of inheritance.<br />- Combining various types of inheritance like multiple, simple, and hierarchical<br />inheritance is known as hybrid inheritance.
+                </div>
+                <div>&nbsp;</div>
+                <div>Syntax<br />1. Class&nbsp;A&nbsp;&nbsp;<br />2. {&nbsp;&nbsp;<br />3. statement(s)&nbsp;&nbsp;<br />4. }:&nbsp;&nbsp;<br />5. Class&nbsp;B:&nbsp;public&nbsp;A&nbsp;&nbsp;<br />6. {&nbsp;&nbsp;<br />7. statement(s);&nbsp;&nbsp;<br />8. };&nbsp;&nbsp;<br />9. Class&nbsp;C&nbsp;&nbsp;<br />10. {&nbsp;&nbsp;<br />11. statement(s);&nbsp;&nbsp;<br />12. };&nbsp;&nbsp;<br />13. Class&nbsp;D:&nbsp;public&nbsp;B,&nbsp;public&nbsp;C&nbsp;&nbsp;<br />14. {&nbsp;&nbsp;<br />15. statement(s);&nbsp;&nbsp;<br />16. };</div>
+                <div>&nbsp;</div>
+                <div>
+                  <h1>Public, Protected and Private&nbsp; Inheritance</h1>
+                  <br />1. Public Inheritance &ndash;&nbsp;When members of the base class are derived<br />publicly, then the&nbsp;protected&nbsp;members of the base class will<br />become&nbsp;protected&nbsp;members in the derived class and&nbsp;public&nbsp;members of<br />the base class will become&nbsp;public&nbsp;members in the derived class.<br />2. Private Inheritance&nbsp;(By default ) &ndash;&nbsp;If the derived class inherits the<br />properties of the base class in&nbsp;private&nbsp;mode, then<br />both&nbsp;public&nbsp;and&nbsp;protected&nbsp;members will become&nbsp;private&nbsp;in the derived<br />class.
+                </div>
+                <div>3. Protected mode &ndash;&nbsp;If the derived class inherits the properties of the base<br />class in&nbsp;protected&nbsp;mode, then both&nbsp;public&nbsp;and&nbsp;protected&nbsp;members will<br />become&nbsp;protected&nbsp;in the derived class.<br />Syntax:<br />class Base<br />{<br />public:<br />int a;<br />protected:<br />int b;<br />private:<br />int c;<br />};<br />/* Some of the Derived classes */<br />/* First Derived Class - privately inherit the base class &amp;#39;Base&amp;#39; */<br />class Derived1:private Base<br />{<br />a is accessible - private<br />b is accessible - private<br />c is not accessible<br />};<br />/* Second Derived Class - Publicly inherit the base class &amp;#39;Base&amp;#39; */<br />class Derived2: public Base<br />{<br />a is accessible - public<br />b is accessible - protected<br />c is not accessible<br />};<br />/* Third Derived Class - protectedly inherit the base class &amp;#39;Base&amp;#39; */<br />class Derived3: protected Base<br />{<br />a is accessible - protected<br />b is accessible - protected<br />c is</div>
+                <div>&nbsp;</div>
+                <div>
+                  <h1>Derived class constructor and destructor</h1>
+                  <br />- Constructors and destructors are special member functions of classes that are used<br />to construct and destroy class objects.&nbsp;- &nbsp;Construction may involve memory allocation and initialization for objects.- Destruction may involve cleanup and deallocation of memory for objects.- Derived classes do not inherit or overload constructors or destructors fromtheir base classes, but they do call the constructor and destructor of baseclasses.- The data members and member functions of base class comes<br />automatically in derived class based on the access specifier but thedefinition of these members exists in base class only.- So when we create an object of derived class, all of the members of derived class must be initialized but the inherited members in derived class can only be initialized by the base class&rsquo;s constructor as the&nbsp;definition of these members exists in base class only.
+                </div>
+                <div>&nbsp;</div>
+                <div>
+                  <div>Derived class constructor Syntax:<br />class A<br />{<br />public:<br />A() {<br />//constructor body<br />}<br />};<br />class B: public A {<br />public:<br />B(): A() {<br />//constructor body<br />}<br />};<br />Derived class destructor syntax:<br />class A<br />{<br />public:<br />~A() {<br />//constructor body</div>
+                  <div>}<br />};<br />class B: public A {<br />public:<br />~B(): A() {<br />//constructor body<br />}<br />};</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

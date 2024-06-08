@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 CS unit-5</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit 5</strong></p>
+        <p>&nbsp;</p>
+        <h3>1. Malicious Software: Viruses and Related Threats</h3>
+        <ul>
+          <li><strong>Viruses:</strong> Programs designed to replicate and spread by attaching themselves to other programs or files. They often have malicious payloads.</li>
+          <li><strong>Worms:</strong> Self-replicating programs that spread across networks without requiring a host file.</li>
+          <li><strong>Trojan Horses:</strong> Programs that appear harmless but contain malicious code. They trick users into installing them.</li>
+          <li>
+            <h4>Viruses:</h4>
+            <ul>
+              <li><strong>Propagation:</strong> Viruses often spread through infected files, email attachments, or malicious websites.</li>
+              <li><strong>Payloads:</strong> They may have destructive payloads, such as data corruption, or stealthy payloads, such as information theft.</li>
+              <li><strong>Polymorphic Viruses:</strong> Change their appearance to avoid detection.</li>
+            </ul>
+            <h4>Worms:</h4>
+            <ul>
+              <li><strong>Network Spread:</strong> Worms exploit network vulnerabilities to spread rapidly.</li>
+              <li><strong>Self-Replication:</strong> They independently propagate without the need for a host file.</li>
+            </ul>
+            <h4>Trojan Horses:</h4>
+            <ul>
+              <li><strong>Deceptive Nature:</strong> Trojans disguise themselves as legitimate software to trick users into installing them.</li>
+              <li><strong>Backdoors:</strong> They may create backdoors for remote attackers to gain unauthorized access.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+
+        <h3>2. Virus Countermeasures</h3>
+        <ul>
+          <li><strong>Antivirus Software:</strong> Programs designed to detect, prevent, and remove malicious software.</li>
+          <li><strong>Regular Updates:</strong> Keeping antivirus software and operating systems up-to-date to protect against the latest threats.</li>
+          <li><strong>User Education:</strong> Training users to be cautious about email attachments, downloads, and suspicious links.</li>
+          <li>
+            <h4>Antivirus Software:</h4>
+            <ul>
+              <li><strong>Signature-Based Detection:</strong> Identifies known malware patterns.</li>
+              <li><strong>Heuristic Analysis:</strong> Detects previously unseen threats based on behavioral patterns.</li>
+              <li><strong>Real-Time Protection:</strong> Constantly monitors for malicious activity.</li>
+            </ul>
+            <h4>Regular Updates:</h4>
+            <ul>
+              <li><strong>Virus Definitions:</strong> Regularly updating antivirus databases to recognize new threats.</li>
+              <li><strong>Software Patches:</strong> Keeping operating systems and software up-to-date to patch security vulnerabilities.</li>
+            </ul>
+            <h4>User Education:</h4>
+            <ul>
+              <li><strong>Awareness Programs:</strong> Educating users about safe online practices.</li>
+              <li><strong>Email Hygiene:</strong> Teaching caution regarding email attachments and links.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3>3. Distributed Denial of Service (DDoS) Attacks</h3>
+        <ul>
+          <li><strong>DDoS Attacks:</strong> Overwhelming a target system or network with a flood of traffic, rendering it unavailable to users.</li>
+          <li><strong>Botnets:</strong> Networks of compromised computers (zombies) used to launch coordinated DDoS attacks.</li>
+          <li><strong>Mitigation:</strong> Employing techniques such as traffic filtering, rate limiting, and the use of content delivery networks (CDNs) to protect against DDoS attacks.</li>
+          <li>
+            <h4>DDoS Attacks:</h4>
+            <ul>
+              <li><strong>Volume-Based Attacks:</strong> Flooding the target with a high volume of traffic.</li>
+              <li><strong>Protocol-Based Attacks:</strong> Exploiting vulnerabilities in network protocols.</li>
+              <li><strong>Application Layer Attacks:</strong> Overwhelming web applications with requests.</li>
+            </ul>
+            <h4>Botnets:</h4>
+            <ul>
+              <li><strong>Command and Control Servers (C&amp;C):</strong> Coordinating the actions of compromised systems.</li>
+              <li><strong>Zombies:</strong> Infected computers acting as part of the botnet.</li>
+            </ul>
+            <h4>Mitigation:</h4>
+            <ul>
+              <li><strong>Traffic Filtering:</strong> Identifying and blocking malicious traffic.</li>
+              <li><strong>Rate Limiting:</strong> Restricting the number of requests from a single source.</li>
+              <li><strong>Content Delivery Networks (CDNs):</strong> Distributing content across multiple servers to absorb traffic.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3>4. Firewalls: Firewall Design Principles</h3>
+        <ul>
+          <li><strong>Firewall:</strong> A network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</li>
+          <li><strong>Design Principles:</strong> Determining which traffic is allowed or blocked based on security policies.</li>
+          <li><strong>Stateful Inspection:</strong> Examining the context of communication to make decisions based on the state of the connection.</li>
+          <li>
+            <h4>Design Principles:</h4>
+            <ul>
+              <li><strong>Default-Deny Policy:</strong> Blocking all traffic by default and allowing only what is explicitly permitted.</li>
+              <li><strong>Stateful Inspection:</strong> Examining the context of each connection to make informed decisions.</li>
+              <li><strong>Application Layer Filtering:</strong> Filtering traffic based on application protocols.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3>5. Trusted Systems</h3>
+        <ul>
+          <li><strong>Trusted Systems:</strong> Systems that meet specific security criteria and can be relied upon to enforce security policies.</li>
+          <li><strong>Trusted Computing Base (TCB):</strong> The set of hardware, software, and firmware that is critical to maintaining security.</li>
+          <li><strong>Evaluation Assurance Level (EAL):</strong> A numeric scale used to indicate the level of trustworthiness of security functions.</li>
+          <li>
+            <h4>Trusted Systems:</h4>
+            <ul>
+              <li><strong>Security Labels:</strong> Assigning labels to data and systems based on their sensitivity.</li>
+              <li><strong>Multilevel Security:</strong> Managing information at multiple security levels on a single system.</li>
+            </ul>
+            <h4>Trusted Computing Base (TCB):</h4>
+            <ul>
+              <li><strong>Security Kernel:</strong> The core of the TCB responsible for enforcing security policies.</li>
+              <li><strong>Reference Monitor:</strong> A security mechanism ensuring that every access is authorized.</li>
+            </ul>
+            <h4>Evaluation Assurance Level (EAL):</h4>
+            <ul>
+              <li><strong>Scale Levels:</strong> Ranging from EAL1 (functionally tested) to EAL7 (formally verified design).</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3>6. Common Criteria for Information Technology Security Evaluation</h3>
+        <ul>
+          <li><strong>Common Criteria (CC):</strong> An international standard (ISO/IEC 15408) for evaluating and certifying the security features of IT products.</li>
+          <li><strong>Security Target (ST):</strong> A document that defines the security requirements for a specific IT product.</li>
+          <li><strong>Protection Profiles (PP):</strong> Documents that specify security requirements for a particular type of IT product.</li>
+          <li>
+            <h4>Common Criteria (CC):</h4>
+            <ul>
+              <li><strong>International Standard:</strong> ISO/IEC 15408 for evaluating and certifying the security features of IT products.</li>
+              <li><strong>Collaborative Framework:</strong> Used by multiple countries to establish a common baseline for security evaluation.</li>
+            </ul>
+            <h4>Security Target (ST):</h4>
+            <ul>
+              <li><strong>Document Definition:</strong> Specifies the security requirements for a specific IT product.</li>
+              <li><strong>Scope and Environment:</strong> Describes the intended use and security environment.</li>
+            </ul>
+            <h4>Protection Profiles (PP):</h4>
+            <ul>
+              <li><strong>Document Specification:</strong> Specifies security requirements for a particular type of IT product.</li>
+              <li><strong>Tailoring:</strong> Allows adjustments based on the specific needs of the product.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

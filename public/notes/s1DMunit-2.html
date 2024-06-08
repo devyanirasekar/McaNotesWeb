@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 DM unit-2</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+      <p><strong>UNIT-2</strong></p>
+        <p>&nbsp;</p>
+        <p>A proposition is the basic building block of logic. It is defined as a declarative sentence that is either True or False, but not both. The&nbsp;<strong>Truth Value</strong>&nbsp;of a proposition is True(denoted as T) if it is a true statement, and False(denoted as F) if it is a false statement. For Example,</p>
+        <ol>
+          <li>The sun rises in the East and sets in the West.</li>
+          <li>1 + 1 = 2</li>
+          <li>'b' is a vowel.</li>
+        </ol>
+        <p>All of the above sentences are propositions, where the first two are Valid(True) and the third one is Invalid(False). Some sentences that do not have a truth value or may have more than one truth value are not propositions. For Example,</p>
+        <ol>
+          <li>What time is it?</li>
+          <li>Go out and play.</li>
+          <li>x + 1 = 2.</li>
+        </ol>
+        <p>The above sentences are not propositions as the first two do not have a truth value, and the third one may be true or false. To represent propositions,&nbsp;propositional variables&nbsp;are used. By Convention, these variables are represented by small alphabets such as&nbsp;a,b,c,d. The area of logic which deals with propositions is called&nbsp;propositional calculus&nbsp;or&nbsp;propositional logic. It also includes producing new propositions using existing ones. Propositions constructed using one or more propositions are called&nbsp;compound propositions. The propositions are combined together using&nbsp;Logical Connectives&nbsp;or&nbsp;Logical Operators.</p>
+        <p>Example 1. All the following declarative sentences are propositions.</p>
+        <ol>
+          <li>Washington, D.C., is the capital of the United States of America.</li>
+          <li>Toronto is the capital of Canada.</li>
+          <li>1 + 1 = 2.</li>
+          <li>2 + 2 = 3.</li>
+        </ol>
+        <p>Propositions 1 and 3 are true, whereas 2 and 4 are false.</p>
+        <p>Some sentences that are not propositions are given in Example 2.</p>
+        <p>Example 2 Consider the following sentences.</p>
+        <ol>
+          <li>What time is it?</li>
+          <li>Read this carefully.</li>
+          <li>x + 1 = 2.</li>
+          <li>x + y = z.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Sentences 1 and 2 are not propositions because they are not declarative sentences. Sentences 3 and 4 are not propositions because they are neither true nor false. Note that each of sentences 3 and 4 can be turned into a proposition if we assign values to the variables.</p>
+        <p>A&nbsp;propositional function&nbsp;or a&nbsp;predicate&nbsp;is a sentence expressed in a way that would assume the value of&nbsp;<a href="https://en.wikipedia.org/wiki/Logical_truth">true</a>&nbsp;or&nbsp;<a href="https://en.wikipedia.org/wiki/False_(logic)">false</a>, except that within the sentence there is a&nbsp;variable&nbsp;(<em>x</em>) that is not defined or specified (thus being a&nbsp;<a href="https://en.wikipedia.org/wiki/Free_variable">free variable</a>), which leaves the statement undetermined. The sentence may contain several such variables (e.g.&nbsp;<em>n</em>&nbsp;variables, in which case the function takes&nbsp;<em>n</em>&nbsp;arguments).</p>
+        <p>As a&nbsp;mathematical function,&nbsp;<em>A</em>(<em>x</em>) or&nbsp;<em>A</em>(<em>x</em><sub>1</sub>,&nbsp;<em>x</em><sub>2</sub>, ...,&nbsp;<em>x</em><em><sub>n</sub></em>), the propositional function is abstracted from&nbsp;predicates&nbsp;or propositional forms. As an example, consider the predicate scheme, "x is hot". The substitution of any entity for&nbsp;<em>x</em>&nbsp;will produce a specific proposition that can be described as either true or false, even though "<em>x</em>&nbsp;is hot" on its own has no value as either a true or false statement. However, when a value is assigned to&nbsp;<em>x</em>&nbsp;, such as&nbsp;lava, the function then has the value&nbsp;<em>true</em>; while one assigns to&nbsp;<em>x</em>&nbsp;a value like&nbsp;ice, the function then has the value&nbsp;<em>false</em>.</p>
+        <p>DEFINITION 1 Let p be a proposition. The negation of p, denoted by￢p (also denoted by p), is the statement &ldquo;It is not the case that p.&rdquo; The proposition ￢p is read &ldquo;not p.&rdquo; The truth value of the negation of p, ￢p, is the opposite of the truth value of p.</p>
+        <p>EXAMPLE 3<strong>&nbsp;</strong>Find the negation of the proposition &ldquo;Michael&rsquo;s PC runs Linux&rdquo; and express this in simple English.</p>
+        <p><em>Solution: </em>The negation is &ldquo;It is not the case that Michael&rsquo;s PC runs Linux.&rdquo; This negation can be more simply expressed as &ldquo;Michael&rsquo;s PC does not run Linux.&rdquo;</p>
+        <p>&nbsp;</p>
+        <p>EXAMPLE 4<strong>&nbsp;</strong>Find the negation of the proposition &ldquo;Vandana&rsquo;s smartphone has at least 32GB of memory&rdquo; and express this in simple English.</p>
+        <p><em>Solution: </em>The negation is &ldquo;It is not the case that Vandana&rsquo;s smartphone has at least 32GB of memory.&rdquo; This negation can also be expressed as &ldquo;Vandana&rsquo;s smartphone does not have at least 32GB of memory&rdquo; or even more simply as &ldquo;Vandana&rsquo;s smartphone has less than 32GB of memory.&rdquo;</p>
+        <p>&nbsp;</p>
+        <p>The Truth Table for the Negation of a Proposition.</p>
+        <p>&nbsp;</p>
+        <table>
+          <tbody>
+            <tr>
+              <td width="61">
+                <p><strong><em>p</em></strong></p>
+              </td>
+              <td width="66">
+                <p><strong>￢</strong><strong><em>p</em></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>Table displays the truth table for the negation of a proposition p. This table has a row for each of the two possible truth values of a proposition p. Each row shows the truth value of ￢p corresponding to the truth value of p for this row.</p>
+        <p>The negation of a proposition can also be considered the result of the operation of the negation operator on a proposition. The negation operator constructs a new proposition &nbsp;from a single existing proposition. We will now introduce the logical operators that are used to form new propositions from two or more existing propositions. These logical operators are also called connectives.</p>
+        <p>DEFINITION 2 Let p and q be propositions. The conjunction of p and q, denoted by p &and; q, is the proposition &ldquo;p and q.&rdquo; The conjunction p &and; q is true when both p and q are true and is false otherwise.</p>
+        <p>The truth table of p &and; q. This table has a row for each of the four possible combinations of truth values of p and q. The four rows correspond to the pairs of truth values TT, TF, FT, and FF, where the first truth value in the pair is the truth value of p and the second truth value is the truth value of q.</p>
+        <p>The<strong>&nbsp;</strong>Truth Table for the Conjunction of Two Propositions..</p>
+        <p>&nbsp;</p>
+        <table>
+          <tbody>
+            <tr>
+              <td width="61">
+                <p><strong><em>p</em></strong></p>
+              </td>
+              <td width="66">
+                <p><strong>q</strong></p>
+              </td>
+              <td width="66">
+                <p><strong>p &and; q</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>Note that in logic the word &ldquo;but&rdquo; sometimes is used instead of &ldquo;and&rdquo; in a conjunction. For example, the statement &ldquo;The sun is shining, but it is raining&rdquo; is another way of saying &ldquo;The sun is shining and it is raining.&rdquo; (In natural language, there is a subtle difference in meaning between &ldquo;and&rdquo; and &ldquo;but&rdquo;; we will not be concerned with this nuance here.)</p>
+        <p>EXAMPLE 5 Find the conjunction of the propositions p and q where p is the proposition &ldquo;Rebecca&rsquo;s PC has more than 250 GB free hard disk space&rdquo; and q is the proposition&nbsp;&ldquo;The processor in Rebecca&rsquo;s PC runs faster than 3.4 GHz.&rdquo;</p>
+        <p>Solution: The conjunction of these propositions, p &and; q, is the proposition &ldquo;Rebecca&rsquo;s PC has more than 250 GB free hard disk space, and the processor in Rebecca&rsquo;s PC runs faster than 3.4 GHz.&rdquo; This conjunction can be expressed more simply as &ldquo;Rebecca&rsquo;s PC has more than 250 GB free hard disk space, and its processor runs faster than 3.4 GHz.&rdquo; For this conjunction to be true, both conditions&nbsp;given must be true. It is false, when one or both of these conditions are false.</p>
+        <p>DEFINITION 3 Let <em>p </em>and <em>q </em>be propositions. The <em>disjunction </em>of <em>p </em>and <em>q</em>, denoted by <em>p </em>&or; <em>q</em>, is the proposition &ldquo;<em>p </em>or <em>q</em>.&rdquo; The disjunction <em>p </em>&or; <em>q </em>is false when both <em>p </em>and <em>q </em>are false and is true otherwise. Table 3 displays the truth table for <em>p </em>&or; <em>q</em>.</p>
+        <p>The Truth Table for the Disjunction of Two Propositions.</p>
+        <p>&nbsp;</p>
+        <table>
+          <tbody>
+            <tr>
+              <td width="61">
+                <p><strong><em>p</em></strong></p>
+              </td>
+              <td width="66">
+                <p><strong>q</strong></p>
+              </td>
+              <td width="66">
+                <p><strong>p </strong><strong>&or;</strong><strong>&nbsp;q</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+              <td width="66">
+                <p>T</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="61">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+              <td width="66">
+                <p>F</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>The use of the connective or in a disjunction corresponds to one of the two ways the word</p>
+        <p>or is used in English, namely, as an inclusive or. A disjunction is true when at least one of the two propositions is true. For instance, the inclusive or is being used in the statement</p>
+        <p>&ldquo;Students who have taken calculus or computer science can take this class.&rdquo;</p>
+        <p>Here, we mean that students who have taken both calculus and computer science can take the class, as well as the students who have taken only one of the two subjects. On the other hand,we are using the exclusive or when we say&ldquo; Students who have taken calculus or computer science, but not both, can enroll in this class.&rdquo; Here, we mean that students who have taken both calculus and a computer science course cannot take the class. Only those who have taken exactly one of the two courses can take the class.</p>
+        <p>Similarly, when a menu at a restaurant states, &ldquo;Soup or salad comes with an entr&eacute;e,&rdquo; the restaurant almost always means that customers can have either soup or salad, but not both. Hence, this is an exclusive, rather than an inclusive, or.</p>
+        <p>EXAMPLE 6 What is the disjunction of the propositions p and q where p and q are the same propositions as in the above Example?</p>
+        <p>Solution: The disjunction of p and q, p &or; q, is the proposition &ldquo;Rebecca&rsquo;s PC has at least 250 GB free hard disk space, or the processor in Rebecca&rsquo;s PC runs faster than 3.4 GHz.&rdquo; This proposition is true when Rebecca&rsquo;s PC has at least &nbsp;250 GB free hard disk space, when the</p>
+        <p>PC&rsquo;s processor runs faster than 3.4 GHz, and when both conditions are true. It is false when both of these conditions are false, that is, when Rebecca&rsquo;s PC has &nbsp;less than 250 GB free hard disk space and the processor in her PC runs at 3.4 GHz or slower.</p>
+        <p>DEFINITION 4 Let p and q be propositions. The exclusive or of p and q, denoted by p &oplus;&nbsp;q, is the proposition that is true when exactly one of p and q is true and is false otherwise.</p>
+        <p>&nbsp;</p>
+        <p>The Truth Table for the Exclusive Or of Two Propositions.</p>
+        <table>
+          <tbody>
+            <tr>
+              <td width="49">
+                <p><strong>p</strong></p>
+              </td>
+              <td width="53">
+                <p><strong>q</strong></p>
+              </td>
+              <td width="51">
+                <p><strong><em>p </em></strong>&oplus;<strong>&nbsp;</strong><strong><em>q</em></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="49">
+                <p>T</p>
+              </td>
+              <td width="53">
+                <p>T</p>
+              </td>
+              <td width="51">
+                <p>F</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="49">
+                <p>T</p>
+              </td>
+              <td width="53">
+                <p>F</p>
+              </td>
+              <td width="51">
+                <p>T</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="49">
+                <p>F</p>
+              </td>
+              <td width="53">
+                <p>T</p>
+              </td>
+              <td width="51">
+                <p>T</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="49">
+                <p>F</p>
+              </td>
+              <td width="53">
+                <p>F</p>
+              </td>
+              <td width="51">
+                <p>F</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>Conditional Statements</p>
+        <p>We will discuss several other important ways in which propositions can be combined.</p>
+        <p>DEFINITION 5 Let p and q be propositions. The conditional statement p &rarr;&nbsp;q is the proposition &ldquo;if p, then q.&rdquo; The conditional statement p &rarr;&nbsp;q is false when p is true and q is false, and true otherwise.</p>
+        <p>In the conditional statement p &rarr;&nbsp;q, p is called the hypothesis (or antecedent or premise)</p>
+        <p>and q is called the conclusion (or consequence).</p>
+        <p>The statement p &rarr;&nbsp;q is called a conditional statement because p &rarr;&nbsp;q asserts that q is true on the condition that p holds. A conditional statement is also called an implication. The truth table for the conditional statement p &rarr;&nbsp;q is shown in Table 5. Note that the statement p &rarr;&nbsp;q is true when both p and q are true and when p is false (no matter what truth value q has). Because conditional statements play such an essential role in mathematical reasoning, a variety of terminology is used to express p &rarr;&nbsp;q. You will encounter most if not all of the following ways to express this conditional statement:</p>
+        <p>&ldquo;if p, then q&rdquo; &ldquo;p implies q&rdquo;</p>
+        <p>&ldquo;if p, q&rdquo; &ldquo;p only if q&rdquo;</p>
+        <p>&ldquo;p is sufficient for q&rdquo; &ldquo;a sufficient condition for q is p&rdquo;</p>
+        <p>&nbsp;&ldquo;q if p&rdquo; &ldquo;q whenever p&rdquo;</p>
+        <p>&ldquo;q when p&rdquo; &ldquo;q is necessary for p&rdquo;</p>
+        <p>&ldquo;a necessary condition for p is q&rdquo; &ldquo;q follows from p&rdquo;</p>
+        <p>&ldquo;q unless ￢p&rdquo; q unless p is false</p>
+        <p>A useful way to understand the truth value of a conditional statement is to think of an obligation or a contract. For example, the pledge many politicians make when running for office is</p>
+        <p>&ldquo;If I am elected, then I will lower taxes.&rdquo;</p>
+        <p>If the politician is elected, voters would expect this politician to lower taxes. Furthermore, if the politician is not elected, then voters will not have any expectation that this person will lower taxes, although the person may have sufficient influence to cause those in power to lower taxes. It is only when the politician is elected but does not lower taxes that voters can say that the politician has broken the campaign pledge. This last scenario corresponds to the case when p is true but q is false in p &rarr;&nbsp;q.</p>
+        <p>Similarly, consider a statement that a professor might make:</p>
+        <p>&ldquo;If you get 100% on the final, then you will get an A.&rdquo;</p>
+        <p>If you manage to get a 100% on the final, then you would expect to receive an A. If you do not get 100% you may or may not receive an A depending on other factors. However, if you do get 100%, but the professor does not give you an A, you will feel cheated. Of the various ways to express the conditional statement p &rarr;&nbsp;q, the two that seem to cause the most confusion are &ldquo;p only if q&rdquo; and &ldquo;q unless ￢p.&rdquo; Consequently, we will provide some guidance for clearing up this confusion.</p>
+        <p>To remember that &ldquo;p only if q&rdquo; expresses the same thing as &ldquo;if p, then q,&rdquo; note that &ldquo;p only if q&rdquo; says that p cannot be true when q is not true. That is, the statement is false if p is true, but q is false. When p is false, q may be either true or false, because the statement says nothing about the truth value of q. Be careful not to use &ldquo;q only if p&rdquo; to express p &rarr;&nbsp;q because this is incorrect. To see this, note that the true values of &ldquo;q only if p&rdquo; and p &rarr;&nbsp;q are different when p and q have different truth values.</p>
+        <p>To remember that &ldquo;q unless ￢p&rdquo; expresses the same conditional statement as &ldquo;if p, then q,&rdquo; note that &ldquo;q unless ￢p&rdquo; means that if ￢p is false, then q must be true. That is, the statement &ldquo;q unless ￢p&rdquo; is false when p is true but q is false, but it is true otherwise. Consequently, &ldquo;q unless ￢p&rdquo; and p &rarr;&nbsp;q always have the same truth value.</p>
+        <p>We illustrate the translation between conditional statements and English statements in Example 7.</p>
+        <p>EXAMPLE 7 Let p be the statement &ldquo;Maria learns discrete mathematics&rdquo; and q the statement &ldquo;Maria will find a good job.&rdquo; Express the statement p &rarr;&nbsp;q as a statement in English.</p>
+        <p>Solution: From the definition of conditional statements, we see that when p is the statement &ldquo;Maria learns discrete mathematics&rdquo; and q is the statement &ldquo;Maria will find a good job,&rdquo; p &rarr;&nbsp;q represents the statement</p>
+        <p>&ldquo;If Maria learns discrete mathematics, then she will find a good job.&rdquo;</p>
+        <p>There are many other ways to express this conditional statement in English. Among the most natural of these are:</p>
+        <p>&ldquo;Maria will find a good job when she learns discrete mathematics.&rdquo;</p>
+        <p>&ldquo;For Maria to get a good job, it is sufficient for her to learn discrete mathematics.&rdquo;</p>
+        <p>And</p>
+        <p>&ldquo;Maria will find a good job unless she does not learn discrete mathematics.&rdquo;</p>
+        <p>&nbsp;</p>
+        <p>Note that the way we have defined conditional statements is more general than the meaning attached to such statements in the English language. For instance, the conditional statement in Example 7 and the statement</p>
+        <p>&ldquo;If it is sunny, then we will go to the beach.&rdquo;</p>
+        <p>&nbsp;are statements used in normal language where there is a relationship between the hypothesis and the conclusion. Further, the first of these statements is true unless Maria learns discrete mathematics, but she does not get a good job, and the second is true unless it is indeed sunny, but we do not go to the beach. On the other hand, the statement</p>
+        <p>&nbsp;&ldquo;If Juan has a smartphone, then 2 + 3 = 5&rdquo;</p>
+        <p>is true from the definition of a conditional statement, because its conclusion is true. (The truth value of the hypothesis does not matter then.) The conditional statement</p>
+        <p>&ldquo;If Juan has a smartphone, then 2 + 3 = 6&rdquo;</p>
+        <p>is true if Juan does not have a smartphone, even though 2 + 3 = 6 is false. We would not use these last two conditional statements in natural language (except perhaps in sarcasm), because there is no relationship between the hypothesis and the conclusion in either statement. In mathematical reasoning, we consider conditional statements of a more general sort than we use in English. The mathematical concept of a conditional statement is independent of a cause-and effect relationship between hypothesis and conclusion. Our definition of a conditional statement specifies its truth values; it is not based on English usage. Propositional language is an artificial language; we only parallel English usage to make it easy to use and remember.</p>
+        <p>The if-then construction used in many programming languages is different from that used in logic. Most programming languages contain statements such as if p then S, where p is a proposition and S is a program segment (one or more statements to be executed).When execution of a program encounters such a statement, S is executed if p is true, but S is not executed if p is false, as illustrated in Example 8.</p>
+        <p>EXAMPLE 8 What is the value of the variable x after the statement</p>
+        <p>if 2 + 2 = 4 then x := x + 1</p>
+        <p>if x = 0 before this statement is encountered? (The symbol := stands for assignment. The statement x := x + 1 means the assignment of the value of x + 1 to x.)</p>
+        <p>Solution: Because 2 + 2 = 4 is true, the assignment statement x := x + 1 is executed. Hence, x has the value 0 + 1 = 1 after this statement is encountered.</p>
+        <p>&nbsp;</p>
+        <p>CONVERSE, CONTRAPOSITIVE, AND INVERSE We can form some new conditional statements starting with a conditional statement p &rarr;&nbsp;q. In particular, there are three related conditional statements that occur so often that they have special names. The proposition q &rarr;&nbsp;p is called the converse of p &rarr;&nbsp;q. The contrapositive of p &rarr;&nbsp;q is the proposition ￢q &rarr;￢p. The proposition ￢p &rarr;￢q is called the inverse of p &rarr;&nbsp;q. We will see that of these three conditional statements formed from p &rarr;&nbsp;q, only the contrapositive always has the same truth value as p &rarr;&nbsp;q.</p>
+        <p>We first show that the contrapositive, ￢q &rarr;￢p, of a conditional statement p &rarr;&nbsp;q always has the same truth value as p &rarr;&nbsp;q. To see this, note that the contrapositive is false only when ￢p is false and ￢q is true, that is, only when p is true and q is false.We now show that neither the converse, q &rarr;&nbsp;p, nor the inverse, ￢p &rarr;￢q, has the same truth value as p &rarr;&nbsp;q for all possible truth values of p and q. Note that when p is true and q is false, the original conditional statement is false, but the converse and the inverse are both true.</p>
+        <p>When two compound propositions always have the same truth value we call them equivalent, so that a conditional statement and its contrapositive are equivalent. The converse and the inverse of a conditional statement are also equivalent, as the reader can verify, but neither is equivalent to the original conditional statement. &nbsp;Take note that one of the most common logical errors is to assume that the converse or the inverse of a conditional statement is equivalent to this conditional statement.</p>
+        <p>We illustrate the use of conditional statements in Example 9.</p>
+        <p>EXAMPLE 9 What are the contrapositive, the converse, and the inverse of the conditional statement</p>
+        <p>&ldquo;The home team wins whenever it is raining?&rdquo;</p>
+        <p>Solution: Because &ldquo;q whenever p&rdquo; is one of the ways to express the conditional statement</p>
+        <p>p &rarr;&nbsp;q, the original statement can be rewritten as</p>
+        <p>&ldquo;If it is raining, then the home team wins.&rdquo;</p>
+        <p>Consequently, the contrapositive of this conditional statement is</p>
+        <p>&ldquo;If the home team does not win, then it is not raining.&rdquo;</p>
+        <p>The converse is</p>
+        <p>&ldquo;If the home team wins, then it is raining.&rdquo;</p>
+        <p>The inverse is</p>
+        <p>&ldquo;If it is not raining, then the home team does not win.&rdquo;</p>
+        <p>Only the contrapositive is equivalent to the original statement.</p>
+        <p>&nbsp;</p>
+        <p>BICONDITIONALS We now introduce another way to combine propositions that expresses that two propositions have the same truth value.</p>
+        <p>DEFINITION 6 Let p and q be propositions. The biconditional statement p &harr;&nbsp;q is the proposition &ldquo;p if and only if q.&rdquo; The biconditional statement p &harr;&nbsp;q is true when p and q have the same truth values, and is false otherwise. Biconditional statements are also called bi-implications.</p>
+        <p>The truth table for p &harr;&nbsp;q is shown in Table 6. Note that the statement p &harr;&nbsp;q is true when both the conditional statements p &rarr;&nbsp;q and q &rarr;&nbsp;p are true and is false otherwise. That is why we use the words &ldquo;if and only if&rdquo; to express this logical connective and why it is symbolically written by combining the symbols&rarr;and&larr;. There are some other common ways to express p &harr;&nbsp;q:</p>
+        <p>&ldquo;p is necessary and sufficient for q&rdquo;</p>
+        <p>&ldquo;if p then q, and conversely&rdquo;</p>
+        <p>&ldquo;p iff q.&rdquo;</p>
+        <p>The last way of expressing the biconditional statement p &harr;&nbsp;q uses the abbreviation &ldquo;iff&rdquo; for &ldquo;if and only if.&rdquo; Note that p &harr;&nbsp;q has exactly the same truth value as (p &rarr;&nbsp;q) &and;&nbsp;(q &rarr;&nbsp;p).</p>
+        <p>The Truth Table for the Biconditional p &harr;&nbsp;q.</p>
+        <table>
+          <tbody>
+            <tr>
+              <td width="43">
+                <p>p</p>
+              </td>
+              <td width="42">
+                <p>Q</p>
+              </td>
+              <td width="54">
+                <p>p &harr;&nbsp;q</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="43">
+                <p>T</p>
+              </td>
+              <td width="42">
+                <p>T</p>
+              </td>
+              <td width="54">
+                <p>T</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="43">
+                <p>T</p>
+              </td>
+              <td width="42">
+                <p>F</p>
+              </td>
+              <td width="54">
+                <p>F</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="43">
+                <p>F</p>
+              </td>
+              <td width="42">
+                <p>T</p>
+              </td>
+              <td width="54">
+                <p>F</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="43">
+                <p>F</p>
+              </td>
+              <td width="42">
+                <p>F</p>
+              </td>
+              <td width="54">
+                <p>T</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>EXAMPLE 10 Let p be the statement &ldquo;You can take the flight,&rdquo; and let q be the statement &ldquo;You buy a ticket.&rdquo; Then p &harr;&nbsp;q is the statement</p>
+        <p>&ldquo;You can take the flight if and only if you buy a ticket.&rdquo;</p>
+        <p>This statement is true if p and q are either both true or both false, that is, if you buy a ticket and can take the flight or if you do not buy a ticket and you cannot take the flight. It is false when p and q have opposite truth values, that is, when you do not buy a ticket, but you can take the flight (such as when you get a free trip) and when you buy a ticket but you cannot take the flight (such as when the airline bumps you).</p>
+        <p>Switching Circuits:</p>
+        <p>Switching Theory allows us to understand the operation and relationship between Boolean Algebra and two-level logic functions with regards to&nbsp;<em>Digital Logic Gates</em>. Switching theory can be used to further develop the theoretical knowledge and concepts of digital circuits when viewed as an interconnection of input elements producing an output state or condition.</p>
+        <p>Digital logic gates whose inputs and output can switch between two distinct logical values of&nbsp;0&nbsp;and&nbsp;1, can be defined mathematically simply by using Boolean Algebra. But we can also represent the two digital logic states of HIGH or LOW, &ldquo;1&rdquo; or &ldquo;0&rdquo;, &ldquo;ON&rdquo; or &ldquo;OFF&rdquo;, as well as TRUE or FALSE.</p>
+        <p>These logical states can be presented using electromechanical contacts in the form of switches or relays as a logic circuit element. The implementation of switching functions in digital logic circuits is nothing new, but it can give us a better understanding of how a single digital logic gate works.</p>
+        <p>Digital logic gates are the basic building blocks from which all digital electronic circuits and microprocessor based systems are made. They can be interconnected together to form either&nbsp;<em>combinational logic circuits</em>&nbsp;which are fully dependent on any external input signals applied to it, or&nbsp;<em>sequential logic circuits</em>&nbsp;which are dependent on its present stable state, feedback of its output, as well as any external input signals that may trigger a switching event.</p>
+        <p>The Switching Theory of a Switch</p>
+        <p>You may think that a switch is, well a switch, that can be used to turn a lighting load &ldquo;ON&rdquo; or &ldquo;OFF&rdquo;. But a switch can also be a complex mechanical or electromechanical element used to control the flow of a signal through it in either direction, making it a bilateral device. Consider the circuit shown.</p>
+        <p>The Switching Theory of a Normally-open Switch</p>
+        <p>&nbsp;</p>
+        <p>Here in this simple example, the lamp (L) is connected to the battery supply,&nbsp;V<sub>S</sub>&nbsp;via the normally-open switch,&nbsp;S<sub>1</sub>.</p>
+        <p>Thus if switch&nbsp;S<sub>1</sub>&nbsp;is not-pressed and therefore open, no current (I) flows so the lamp will be &ldquo;OFF&rdquo; and not illuminated. Likewise, if switch&nbsp;S<sub>1</sub>&nbsp;is pressed closing it, then current flows around the circuit and the lamp (L) will be &ldquo;ON&rdquo; and illuminated. Under normal steady state conditions the switch is permanently &ldquo;open&rdquo; so the lamp is &ldquo;OFF&rdquo;.</p>
+        <p>We can use switching algebra to describe the operation of the circuit containing the switch,&nbsp;S<sub>1</sub>. For example, if we label the normally-open switch as a variable with the letter &ldquo;A&ldquo;, then when the switch is open, that is &ldquo;A&rdquo; is not-pressed, we can define the value of &ldquo;A&rdquo; as being &ldquo;0&rdquo;. Again, when the switch is closed, that is &ldquo;A&rdquo; is pressed, we can define the value of &ldquo;A&rdquo; as being &ldquo;1&rdquo;. This switching algebra theory is true for ALL normally-open switch configurations.</p>
+        <p>Switching Truth Table</p>
+        <p>&nbsp;</p>
+        <p>We can develope this switching theory idea further by saying when the lamp is &ldquo;ON&rdquo; (illuminated), its switching alegebra variable will be &ldquo;1&rdquo;, and when the lamp is &ldquo;OFF&rdquo; (not illuminated), its switching algebra variable will be &ldquo;0&rdquo;.</p>
+        <p>Thus, when the switch is pressed (activated) the lamp is &ldquo;ON&rdquo;, so &ldquo;A&rdquo; = 1 and &ldquo;L&rdquo; = 1, and when the switch is not-pressed (unactivated) the lamp is &ldquo;OFF&rdquo;, so &ldquo;A&rdquo; = 0 and &ldquo;L&rdquo; = 0. Therefore we can correctly say that for the switching theory of the lamp,&nbsp;L&nbsp;=&nbsp;A&nbsp;as shown in the truth table.</p>
+        <p>The type of switch used in the above example is called a&nbsp;<em>normally-open, make-contact switch</em>&nbsp;as the have to physically make it for the switch to be considered closed (A = 1). But there is another type of switch arrangement which is the exact opposite in operation of the switch above called a&nbsp;<em>normally-closed, break-contact switch</em>&nbsp;which is constantly closed.</p>
+        <p>The Switching Theory of Series Switches</p>
+        <p>We have seen that the lamp (L) circuit above can be controlled using a single switch,&nbsp;S<sub>1</sub>&nbsp;and when&nbsp;S<sub>1</sub>&nbsp;is closed (pressed) current flows around the circuit and the lamp is &ldquo;ON&rdquo;. But what if we added a second switch in series with&nbsp;S<sub>1</sub>, how would that affect the switching function of the circuit and the illumination of the lamp.</p>
+        <p>The Switching Theory of Series Switches</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>The switching circuit consists of two switches in series with a voltage source,&nbsp;V<sub>S</sub>&nbsp;and the lamp. To distinquish the operation of each individual switch, we shall label switch,&nbsp;S<sub>1</sub>&nbsp;with the letter &ldquo;A&ldquo;, and label switch,&nbsp;S<sub>2</sub>&nbsp;with the letter &ldquo;B&ldquo;. Thus when either switch is open, that is not-pressed, we can define the value of &ldquo;A&rdquo; as being &ldquo;0&rdquo; and &ldquo;B&rdquo; as also being &ldquo;0&rdquo;.</p>
+        <p>Likewise, when either switch is closed or pressed, we can define the value of &ldquo;A&rdquo; as being &ldquo;1&rdquo; or &ldquo;B&rdquo; as being &ldquo;1&rdquo;. That is the logical level &ldquo;1&rdquo; corresponds to the supply voltage value, and will be positive. Whereas the logic level &ldquo;0&rdquo; corresponds to the voltage value of zero voltage, or ground.</p>
+        <p>As there are two switches, S<sub>1</sub>&nbsp;and S<sub>2</sub>, or &ldquo;A&rdquo; and &ldquo;B&rdquo;, then we can see that there are four possible combinations of the Boolean variables &ldquo;A&rdquo; and &ldquo;B&rdquo; to illuminate the lamp. For example, &ldquo;A&rdquo; is open and &ldquo;B&rdquo; is closed, or &ldquo;A&rdquo; is closed and &ldquo;B&rdquo; is open, or both &ldquo;A&rdquo; and &ldquo;B&rdquo; are open or closed at the same time. Then we can define these operations in the following switching theory truth table.</p>
+        <p>Series Switch Truth Table</p>
+        <p>&nbsp;</p>
+        <p>The truth table shows that the lamp will only be &ldquo;ON&rdquo; and illuminated when BOTH switch,&nbsp;A&nbsp;AND switch,&nbsp;B&nbsp;are pressed and closed as pressing only one switch on its own will not cause current to flow.</p>
+        <p>This proves that when two switches&nbsp;S<sub>1</sub>&nbsp;and&nbsp;S<sub>2</sub>&nbsp;are connected in series, the only condition that will allow current (I) to flow and make the lamp illuminate is when both switches are closed giving the boolean expression of: L = A and B.</p>
+        <p>In Boolean Algebra terms, this expression is that of the&nbsp;AND&nbsp;function which is denoted by a single dot or full stop symbol, (.) between the variables giving us the Boolean expression of:&nbsp;L = A.B.</p>
+        <p>Thus when switches are connected together in series their switching theory and operation is the same as for the digital logic &ldquo;AND&rdquo; gate because if both inputs are &ldquo;1&rdquo;, then the output is &ldquo;1&rdquo;, otherwise the output is &ldquo;0&rdquo; as shown.</p>
+        <p>Digital Logic AND Gate</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Thus if input &ldquo;A&rdquo; is AND&rsquo;ed with input &ldquo;B&rdquo; it produces output &ldquo;Q&rdquo;. In switching terms, the AND function is referred to as the Boolean Algebra multiplication function.</p>
+        <p>The Switching Theory of Parallel Switches</p>
+        <p>If we now connect switches,&nbsp;S<sub>1</sub>&nbsp;and&nbsp;S<sub>2</sub>&nbsp;together in parallel as shown, how would is arrangement affect the switching function of the circuit and the illumination of the lamp.</p>
+        <p>The Switching Theory of Parallel Switches</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>The switching circuit now consists of the two switches in parallel with the voltage source,&nbsp;V<sub>S</sub>&nbsp;and the lamp. As before, when either switch is open, that is not-pressed, we can define the value of &ldquo;A&rdquo; as being &ldquo;0&rdquo; and &ldquo;B&rdquo; as also being &ldquo;0&rdquo;. Likewise, when either switch is closed or pressed, we can define the value of &ldquo;A&rdquo; as being &ldquo;1&rdquo; or &ldquo;B&rdquo; as being &ldquo;1&rdquo;.</p>
+        <p>As before, with two switches, S<sub>1</sub>&nbsp;and S<sub>2</sub>, or &ldquo;A&rdquo; and &ldquo;B&rdquo;, there are four possible combinations of the Boolean variables &ldquo;A&rdquo; and &ldquo;B&rdquo; required to illuminate the lamp. The corresponding states are: &ldquo;A&rdquo; is open and &ldquo;B&rdquo; is closed, or &ldquo;A&rdquo; is closed and &ldquo;B&rdquo; is open, both &ldquo;A&rdquo; and &ldquo;B&rdquo; are open, or both closed at the same time. Then we can define these switching operations in the following switching theory truth table.</p>
+        <p>Parallel Switch Truth Table</p>
+        <p>&nbsp;</p>
+        <p>The truth table shows that the lamp will only be &ldquo;ON&rdquo; and illuminated when EITHER switch,&nbsp;A&nbsp;OR switch,&nbsp;B&nbsp;are pressed and closed as pressing either switch will cause current to flow because there will always be a conducting path available for the lamp through whichever closed switch.</p>
+        <p>This therefore proves that when two switches&nbsp;S<sub>1</sub>&nbsp;and&nbsp;S<sub>2</sub>&nbsp;are connected together in parallel, the switching condition that allows current (I) to flow and make the lamp illuminate is when any one of the switches, or both are closed. This gives the boolean expression of: L = A or B.</p>
+        <p>In Boolean Algebra terms, this expression is that of the&nbsp;OR&nbsp;function which is denoted by a addition or plus sign, (+) between the variables giving us the Boolean expression of:&nbsp;L = A+B.</p>
+        <p>Thus when switches are connected together in parallel their switching theory and operation is the same as for the digital logic &ldquo;OR&rdquo; gate because if both inputs are &ldquo;0&rdquo;, then the output is &ldquo;0&rdquo;, otherwise the output is &ldquo;1&rdquo; as shown.</p>
+        <p>Digital Logic OR Gate</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Thus if input &ldquo;A&rdquo; is OR&rsquo;ed with input &ldquo;B&rdquo; it produces output &ldquo;Q&rdquo;, and in switching terms, the OR function is referred to as the Boolean Algebra logical addition function.</p>
+        <p>Switching Theory of a Boolean Function</p>
+        <p><em>Switching Theory</em>&nbsp;can be used to implement Boolean expressions as well as digital logic gates. Ad we have seen above, in switch contact terms, the boolean expression using a dot (.) is interpreted as a series connection for Boolean multiplication, while a plus sign (+) is interpreted as a pair of parallel branches for Boolean addition.</p>
+        <p>Switching Theory Example No1</p>
+        <p>Implement the following Boolean function of&nbsp;Q = A(B+C)&nbsp;using switches to illuminate a lamp (or LED). Also show the equivalent digital logic circuit.</p>
+        <p>Switch Implementation</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Logic Gate Implementation</p>
+        <p>&nbsp;</p>
+        <p>Indempotent Law of Switches</p>
+        <p>Thus far we have seen how to connect two switches together either in series or parallel to illuminate a lamp. But what if the two switches representing a Boolean AND function or an OR function (operations of multiplication and sum) are of the same single Boolean variable,&nbsp;A. In Boolean Algebra there are various laws and theroems which can be used to define the mathematics of logic circuits. One such theorem is known by the name of&nbsp;<em>indempotent law</em>.</p>
+        <p>Idempotent laws used in switching theory states that AND-ing or OR-ing a variable with itself will produce the original variable. For example variable &ldquo;A&rdquo; AND&rsquo;ed with &ldquo;A&rdquo; will give &ldquo;A&rdquo;, likewise variable &ldquo;A&rdquo; OR&rsquo;ed with &ldquo;A&rdquo; will give &ldquo;A&rdquo;, allowing us to simplify our switching circuits and we can demonstrate this below.</p>
+        <p>Indempotent Law of AND Function</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Indempotent Law of OR Function</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>We have seen here in this tutorial that switching theory techniques can be used to realise Boolean expressions and digital logic gate circuits using simple &ldquo;ON/OFF&rdquo; switches.</p>
+        <p>The representation of &ldquo;AND&rdquo; and &ldquo;OR&rdquo; functions using normally-open switches are easy to construct, easy to understand, and form the basic building blocks for most combinational logic circuits.</p>
+        <p>Thus given any Boolean expression or logic function, it is possible to use switching theory to implement it, after all, logic design is about using switches or electromechanical devices such as relays.</p>
+        <p>&nbsp;</p>
+        <p>Partial Order Set</p>
+        <p>A relation <em>R </em>on a set <em>S </em>is called a <em>partial ordering </em>or <em>partial order </em>if it is reflexive, antisymmetric, and transitive. A set <em>S </em>together with a partial ordering <em>R </em>is called a <em>partially ordered set</em>, or <em>poset</em>, and is denoted by <em>(S,R)</em>. Members of <em>S </em>are called <em>elements </em>of the poset.</p>
+        <p>&nbsp;</p>
+        <p>EXAMPLE 1 Show that the &ldquo;greater than or equal&rdquo; relation (&ge;) is a partial ordering on the set of integers.</p>
+        <p><em>Solution: </em>Because <em>a </em>&ge; <em>a </em>for every integer <em>a</em>, &ge; is reflexive. If <em>a </em>&ge; <em>b </em>and <em>b </em>&ge; <em>a</em>, then <em>a </em>= <em>b</em>. Hence, &ge; is antisymmetric. Finally, &ge; is transitive because <em>a </em>&ge; <em>b </em>and <em>b </em>&ge; <em>c </em>imply that <em>a </em>&ge; <em>c</em>. It follows that &ge; is a partial ordering on the set of integers and (Z, &ge;) is a poset.</p>
+        <p>&nbsp;</p>
+        <p>EXAMPLE 2 The divisibility relation | is a partial ordering on the set of positive integers, because it is reflexive, antisymmetric, and transitive. We see that (Z+<em>&nbsp;</em>|) is a poset. Recall that (Z+ denotes the set of positive integers.)</p>
+        <p>&nbsp;</p>
+        <p>EXAMPLE 3 Show that the inclusion relation &sube;&nbsp;is a partial ordering on the power set of a set <em>S</em>.</p>
+        <p><em>Solution: </em>Because <em>A </em>&sube;&nbsp;<em>A </em>whenever <em>A </em>is a subset of <em>S,</em>&nbsp;&sube;&nbsp;is reflexive. It is antisymmetric &nbsp;because <em>A </em>&sube;&nbsp;<em>B </em>and <em>B </em>&sube;&nbsp;<em>A </em>imply that <em>A </em>= <em>B</em>. Finally, &sube;&nbsp;is transitive, because <em>A </em>&sube;&nbsp;<em>B </em>and <em>B </em>&sube;&nbsp;<em>C </em>imply that <em>A </em>&sube;&nbsp;<em>C</em>. Hence, &sube;&nbsp;is a partial ordering on <em>P(S)</em>, and <em>(P (S),</em>&nbsp;&sube;<em>) </em>is a poset.</p>
+        <p>&nbsp;</p>
+        <p>EXAMPLE 4 Let <em>R </em>be the relation on the set of people such that <em>x R y </em>if <em>x </em>and <em>y </em>are people and <em>x </em>is older than <em>y</em>. Show that <em>R </em>is not a partial ordering.</p>
+        <p><em>Solution: </em>Note that <em>R </em>is antisymmetric because if a person <em>x </em>is older than a person <em>y</em>, then <em>y </em>is not older than <em>x</em>. That is, if <em>x R y</em>, then <em>y R x</em>. The relation <em>R </em>is transitive because if person <em>x </em>is older than person <em>y </em>and <em>y </em>is older than person <em>z</em>, then <em>x </em>is older than <em>z</em>. That is, if <em>x R y </em>and <em>y R z</em>, then <em>x R z</em>. However, <em>R </em>is not reflexive, because no person is older than himself or herself. That is, <em>x</em>&nbsp;<em>R x </em>for all people <em>x</em>. It follows that <em>R </em>is not a partial ordering.</p>
+        <p>&nbsp;</p>
+        <p>In different posets different symbols such as &le;, &sube;, and |, are used for a partial ordering. However, we need a symbol that we can use when we discuss the ordering relation in anarbitrary poset. Customarily, the notation <em>a </em>&nbsp;&nbsp;&nbsp;&nbsp;<em>b </em>is used to denote that <em>(a, b) </em>&isin;&nbsp;<em>R </em>in an arbitrary poset <em>(S,R)</em>. This notation is used because the &ldquo;less than or equal to&rdquo; relation on the set of real numbers is the most familiar example of a partial ordering and the symbol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is similar to the &le; symbol. (Note that the symbol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is used to denote the relation in <em>any </em>poset, not just the &ldquo;less than or equals&rdquo; relation.) The notation <em>a </em>&nbsp;&nbsp;&nbsp;&nbsp;<em>b </em>denotes that <em>a </em>&lt; <em>b</em>, but <em>a </em>= <em>b</em>. Also, we say &ldquo;<em>a </em>is less than <em>b</em>&rdquo; or &ldquo;<em>b </em>is greater than <em>a</em>&rdquo; if <em>a &nbsp;&nbsp;&nbsp;&nbsp;b</em>.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Hasse Diagrams</strong></p>
+        <p>Many edges in the directed graph for a finite poset do not have to be shown because they must be present. For instance, consider the directed graph for the partial ordering {(a, b) | a &le; b} on the set {1, 2, 3, 4}, shown in Figure (a). Because this relation is a partial ordering, it is reflexive, and its directed graph has loops at all vertices. Consequently, we do not have to show these loops because they must be present; in Figure (b) loops are not shown. Because a partial ordering is transitive, we do not have to show those edges that must be present because of transitivity. For example, in Figure (c) the edges (1, 3), (1, 4), and (2, 4) are not shown because they must be present. If we assume that all edges are pointed &ldquo;upward&rdquo; (as they are drawn in the figure), we do not have to show the directions of the edges; Figure (c) does not show directions.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Constructing the Hasse Diagram for </strong><strong><em>(</em></strong><strong>{</strong><strong>1</strong><strong><em>, </em></strong><strong>2</strong><strong><em>, </em></strong><strong>3</strong><strong><em>, </em></strong><strong>4</strong><strong>}</strong><strong><em>,</em></strong><strong>&le;</strong><strong><em>)</em></strong><strong>.</strong></p>
+        <p>&nbsp;</p>
+        <p>In general, we can represent a finite poset <em>(S, &nbsp;</em>&nbsp;&nbsp;<em>) </em>using this procedure: Start with the directed graph for this relation. Because a partial ordering is reflexive, a loop <em>(a, a) </em>is present at every vertex <em>a</em>. Remove these loops. Next, remove all edges that must be in the partial ordering because of the presence of other edges and transitivity. That is, remove all edges <em>(x, y) </em>for which there is an element <em>z </em>&isin;&nbsp;<em>S </em>such that <em>x &nbsp;</em>&nbsp;&nbsp;&nbsp;<em>z </em>and <em>z &nbsp;&nbsp;&nbsp;</em>&nbsp;<em>x</em>. Finally, arrange each edge so that its initial vertex is below its terminal vertex (as it is drawn on paper). Remove all the arrows on the directed edges, because all edges point &ldquo;upward&rdquo; toward their terminal vertex. These steps are well defined, and only a finite number of steps need to be carried out for a finite poset. When all the steps have been taken, the resulting diagram contains sufficient information to find the partial ordering, as we will explain later. The resulting diagram is called the Hasse diagram of (S, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;), named after the twentieth-century German mathematician Helmut Hasse who made extensive use of them.</p>
+        <p>Let (S, &nbsp;&nbsp;&nbsp;&nbsp;) be a poset. We say that an element y &isin;&nbsp;S covers an element x &isin;&nbsp;S if x &nbsp;y and there is no element z &isin;&nbsp;S such that x &nbsp;z &nbsp;y. The set of pairs (x, y) such that y covers x is called the covering relation of (S, &nbsp;&nbsp;&nbsp;&nbsp;). From the description of the Hasse diagram of a poset, we see that the edges in the Hasse diagram of (S, &nbsp;&nbsp;) are upwardly pointing edges corresponding to the pairs in the covering relation of (S, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;). Furthermore, we can recover a poset from its covering relation, because it is the reflexive transitive closure of its covering relation. This tells us that we can construct a partial ordering from its Hasse diagram.</p>
+        <p>&nbsp;</p>
+        <p>EXAMPLE &nbsp;Draw the Hasse diagram representing the partial ordering {(a, b) |a divides b} on</p>
+        <p>{1, 2, 3, 4, 6, 8, 12}.</p>
+        <p>Solution: Begin with the digraph for this partial order, as shown in Figure (a). Remove all loops, as shown in Figure (b). Then delete all the edges implied by the transitive property. These are (1, 4), (1, 6), (1, 8), (1, 12), (2, 8), (2, 12), and (3, 12). Arrange all edges to point upward, and delete all arrows to obtain the Hasse diagram. The resulting Hasse diagram is shown in Figure (c).</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Constructing the Hasse Diagram of </strong><strong><em>(</em></strong><strong>{</strong><strong>1</strong><strong><em>, </em></strong><strong>2</strong><strong><em>, </em></strong><strong>3</strong><strong><em>, </em></strong><strong>4</strong><strong><em>, </em></strong><strong>6</strong><strong><em>, </em></strong><strong>8</strong><strong><em>, </em></strong><strong>12</strong><strong>}</strong><strong><em>, </em></strong><strong>|</strong><strong><em>)</em></strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Maximal and Minimal Elements</strong></p>
+        <p>Elements of posets that have certain extremal properties are important for many applications. An element of a poset is called maximal if it is not less than any element of the poset. That is, a is maximal in the poset (S, &nbsp;&nbsp;&nbsp;&nbsp;) if there is no b &isin;&nbsp;S such that a ≺&nbsp;b. Similarly, an element of a poset is called minimal if it is not greater than any element of the poset. That is, a is minimal if there is no element b &isin;&nbsp;S such that b ≺&nbsp;a. Maximal and minimal elements are easy to spot using a Hasse diagram. They are the &ldquo;top&rdquo; and &ldquo;bottom&rdquo; elements in the diagram.</p>
+        <p>&nbsp;</p>
+        <p>EXAMPLE &nbsp;Which elements of the poset ({2, 4, 5, 10, 12, 20, 25}, |) are maximal, and which are minimal?</p>
+        <p>Solution: The Hasse diagram in Figure &nbsp;for this poset shows that the maximal elements are 12, 20, and 25, and the minimal elements are 2 and 5. As this example shows, a poset can have more than one maximal element and more than one minimal element.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Sometimes there is an element in a poset that is greater than every other element. Such an</p>
+        <p>element is called the greatest element. That is, a is the greatest element of the poset (S, &nbsp;&nbsp;&nbsp;) if b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a for all b &isin;&nbsp;S. The greatest element is unique when it exists. Likewise, an element is called the least element if it is less than all the other elements in the poset. That is, a is the least element of (S, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) if a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b for all b &isin;&nbsp;S. The least element is unique when it exists.</p>
+        <p>&nbsp;</p>
+        <p>Sometimes it is possible to find an element that is greater than or equal to all the elements</p>
+        <p>in a subset A of a poset (S, _). If u is an element of S such that a _ u for all elements a &isin;&nbsp;A,</p>
+        <p>then u is called an upper bound of A. Likewise, there may be an element less than or equal to all the elements in A. If l is an element of S such that l _ a for all elements a &isin;&nbsp;A, then l is</p>
+        <p>called a lower bound of A.</p>
+        <p>&nbsp;</p>
+        <p>EXAMPLE &nbsp;Find the lower and upper bounds of the subsets {a, b, c}, {j, h}, and {a, c, d, f } in the poset with the Hasse diagram shown in Figure.</p>
+        <p>Solution: The upper bounds of {a, b, c} are e, f, j, and h, and its only lower bound is a. There</p>
+        <p>are no upper bounds of {j, h}, and its lower bounds are a, b, c, d, e, and f . The upper ounds</p>
+        <p>of {a, c, d, f } are f , h, and j , and its lower bound is a.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>FIGURE The Hasse Diagram of a Poset.</p>
+        <p>&nbsp;</p>
+        <p>The element x is called the least upper bound of the subset A if x is an upper bound that is less than every other upper bound of A. Because there is only one such element, if it exists, it makes sense to call this element the least upper bound [see Exercise 42(a)]. That is, x is the least upper bound of A if a _ x whenever a &isin;&nbsp;A, and x _ z whenever z is an upper bound of A. Similarly, the element y is called the greatest lower bound of A if y is a lower bound of A and z _ y whenever z is a lower bound of A. The greatest lower bound of A is unique if it exists. The greatest lower bound and least upper bound of a subset A are denoted by glb(A) and lub(A), respectively.</p>
+        <p>&nbsp;</p>
+        <p>Example: Find the greatest lower bound and the least upper bound of the sets {3, 9, 12} and {1, 2, 4, 5, 10}, if they exist, in the poset (Z+, |).</p>
+        <p>&nbsp;</p>
+        <p>Lattices</p>
+        <p>A partially ordered set in which every pair of elements has both a least upper bound and a greatest lower bound is called a lattice. Lattices have many special properties. Furthermore, lattices are used in many different applications such as models of information flow and play an important role in Boolean algebra.</p>
+        <p>EXAMPLE &nbsp;Determine whether the posets represented by each of the Hasse diagrams in Figure are lattices.</p>
+        <p>Solution: The posets represented by the Hasse diagrams in (a) and (c) are both lattices because in each poset every pair of elements has both a least upper bound and a greatest lower bound, as the reader should verify. On the other hand, the poset with the Hasse diagram shown in (b) is not a lattice, because the elements b and c have no least upper bound. To see this, note that each of the elements d, e, and f is an upper bound, but none of these three elements precedes the other two with respect to the ordering of this poset.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Example: Is the poset (Z+ , |) a lattice?</p>
+        <p>Example: Determine whether (P (S),&sube;) is a lattice where S is a set.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

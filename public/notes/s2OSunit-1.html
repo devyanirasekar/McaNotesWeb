@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 OS unit-1</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><b>UNIT-1</b></p>
+        <p><strong>&nbsp;</strong></p>
+        <h1>Introduction to OS</h1>
+        <p>An <strong>Operating System</strong> can be defined as an <strong>interface between user and hardware</strong>. It is responsible for the execution of all the processes, Resource Allocation, <a href="https://www.javatpoint.com/cpu-full-form">CPU</a> management, File Management and many other tasks.</p>
+      
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Operating system goals: </strong></p>
+        <p><strong>&nbsp;</strong></p>
+       
+        <p><strong>&nbsp;</strong></p>
+        <h1>Structure of a Computer System</h1>
+        <p>Computer system can be divided into four components</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Hardware &ndash; provides basic computing resources</li>
+        </ul>
+        <p>CPU, memory, I/O devices</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Operating system</li>
+        </ul>
+        <p>Controls and coordinates use of hardware among various applications and users</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Application programs &ndash; define the ways in which the system resources are used to solve the computing problems of the users Word processors, compilers, web browsers, database systems, video games</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Users : People, machines, other computers</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;</strong></p>
+        <h1>OS Definition</h1>
+        <p><strong>&nbsp;</strong></p>
+        <ul>
+          <li><strong>OS is a resource allocator </strong>Manages all resources.</li>
+        </ul>
+        <p>Decides between conflicting requests for efficient and fair resource use.</p>
+        <ul>
+          <li><strong>OS is a control program </strong></li>
+        </ul>
+        <p>Controls execution of programs to prevent errors and improper use of the computer.</p>
+        <p><strong><u>Operating </u></strong><strong><u>system performs the following functions:</u></strong></p>
+        <p><strong>Booting </strong></p>
+        <p>Booting is a process of starting the computer operating system starts the computer to work. It checks the computer and makes it ready to work.</p>
+        <p><strong>Memory Management </strong></p>
+        <p>It is also an important function of operating system. The memory cannot be managed without operating system. Different programs and data execute in memory at one time. if there is no operating system, the programs may mix with each other. The system will not work properly.</p>
+        <p><strong>Loading and Execution </strong></p>
+        <p>A program is loaded in the memory before it can be executed. Operating system provides the facility to load programs in memory easily and then execute it.</p>
+        <p><strong>Data security </strong></p>
+        <p>Data is an important part of computer system. The operating system protects the data stored on the computer from illegal use, modification or deletion.</p>
+        <p><strong>Disk Management </strong></p>
+        <p>Operating system manages the disk space. It manages the stored files and folders in a proper way.</p>
+        <p><strong>Process Management </strong></p>
+        <p>CPU can perform one task at one time. if there are many tasks, operating system decides which task should get the CPU. <strong>Device Controlling </strong></p>
+        <p>operating system also controls all devices attached to computer. The hardware devices are controlled with the help of small software called device drivers..</p>
+        <p><strong>Providing interface </strong></p>
+        <p>It is used in order that user interface acts with a computer mutually. User interface controls how you input data and instruction and how information is displayed on screen. The operating system offers two types of the interface to the user:</p>
+        <p>Graphical-line interface: It interacts with of visual environment to communicate with the computer. It uses windows, icons, menus and other graphical objects to issues commands.</p>
+        <p>Command-line interface: It provides an interface to communicate with the computer by typing commands.</p>
+        <p>&nbsp;</p>
+        <p><strong>Computer architecture</strong> means construction/design of a computer. A computer system may be organized in different ways. Some computer systems have single processor and others have multiprocessors. So based on the processors used in computer systems, they are categorized into the following systems.</p>
+        <ol>
+          <li>Single-processor system</li>
+          <li>Multiprocessor system</li>
+          <li>Clustered Systems:</li>
+          <li><strong>Single-Processor</strong> <strong>Systems</strong>:</li>
+        </ol>
+        <p>Some computers use only one processor such as microcomputers (or personal computers PCs). On a single-processor system, there is only one CPU that performs all the activities in the computer system. However, most of these systems have other special purpose processors, such as I/O processors that move data quickly among different components of the computers. These processors execute only a limited system programs and do not run the user program. Sometimes they are managed by the operating system. Similarly, PCs contain a special purpose microprocessor in the keyboard, which converts the keystrokes into computer codes to be sent to the CPU. The use of special purpose microprocessors is common in microcomputer. But it does not mean that this system is multiprocessor. A system that has only one general-purpose CPU, is considered as single- processor system.</p>
+        <ol start="2">
+          <li><strong>Multiprocessor Systems: </strong></li>
+        </ol>
+        <p>In multiprocessor system, two or more processors work together. In this system, multiple programs (more than one program) are executed on different processors at the same time. This type of processing is known as multiprocessing. Some operating systems have features of multiprocessing.</p>
+        <p>UNIX is an example of multiprocessing operating system. Some versions of Microsoft Windows also support multiprocessing.</p>
+        <p>Multiprocessor system is also known as parallel system. Mostly the processors of multiprocessor system share the common system bus, clock, memory and peripheral devices. This system is very fast in data processing.</p>
+        <p><strong>Types of Multiprocessor Systems: </strong></p>
+        <p>The multiprocessor systems are further divided into two types;&nbsp;</p>
+        <p>(i). Asymmetric multiprocessing system</p>
+        <p>(ii)&nbsp; Symmetric multiprocessing system</p>
+        <p><strong>Asymmetric Multiprocessing System(AMS):</strong></p>
+        <p>The multiprocessing system, in which each processor is assigned a specific task, is known as Asymmetric Multiprocessing System. For example, one processor is dedicated for handling user's requests, one processor is dedicated for running application program, and one processor is dedicated for running image processing and so on. In this system, one processor works as master processor, while other processors work as slave processors. The master processor controls the operations of system. It also schedules and distributes tasks among the slave processors. The slave processors perform the predefined tasks.</p>
+        <p>&nbsp;</p>
+        <p><strong>Symmetric Multiprocessing System(SMP): </strong></p>
+        <p>The multiprocessing system, in which multiple processors work together on the same task, is known as Symmetric Multiprocessing System. In this system, each processor can perform all types of tasks. All processors are treated equally and no master-slave relationship exists between the processors.</p>
+        <p>For example, different processors in the system can communicate with each other. Similarly, an I/O can be processed on any processor. However, I/O must be controlled to ensure that the data reaches the appropriate processor. Because all the processors share the same memory, so the input data given to the processors and their results must be separately controlled. Today all modern operating systems including Windows and Linux provide support for SMP.</p>
+        <p>It must be noted that in the same computer system, the asymmetric multiprocessing and symmetric multiprocessing technique can be used through different operating systems.</p>
+        <ol start="3">
+          <li><strong>Clustered Systems: </strong></li>
+        </ol>
+        <p>Clustered system is another form of multiprocessor system. This system also contains multiple processors but it differs from multiprocessor system. The clustered system consists of two or more individual systems that are coupled together. In clustered system, individual systems (or clustered computers) share the same storage and are linked together ,via Local Area Network (LAN).</p>
+        <p>A layer of cluster software runs on the cluster nodes. Each node can monitor one or more of the other nodes over the LAN. If the monitored machine fails due to some technical fault (or due to other reason), the monitoring machine can take ownership of its storage. The monitoring machine can also restart the applications that were running on the failed machine. The users of the applications see only an interruption of service.</p>
+        <p>&nbsp;</p>
+        <p><strong>Types of Clustered Systems: </strong></p>
+        <p>Like multiprocessor systems, clustered system can also be of two types</p>
+        <p>&nbsp;(i). Asymmetric Clustered System</p>
+        <p>(ii). Symmetric Clustered System</p>
+        <p>(i). &nbsp;&nbsp;&nbsp;&nbsp; <strong>Asymmetric Clustered System:</strong></p>
+        <p>In asymmetric clustered system, one machine is in hot-standby mode while the other machine is running the application. The hot-standby host machine does nothing. It only monitors the active server. If the server fails, the hot-standby machine becomes the active server.</p>
+        <p>(ii). &nbsp;&nbsp;&nbsp; <strong>Symmetric Clustered System: </strong></p>
+        <p>In symmetric clustered system, multiple hosts (machines) run the applications. They also monitor each other. This mode is more efficient than asymmetric system, because it uses all the available hardware. This mode is used only if more than one application be available to run.</p>
+       
+        <p><strong>&nbsp;</strong></p>
+        <h2>OS Services</h2>
+        <ul>
+          <li>One set of operating-system services provides functions that are helpful to the user:</li>
+          <li><strong>User interface</strong> - Almost all operating systems have a user interface</li>
+        </ul>
+        <p>(UI)</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Varies between Command-Line (CLI), Graphics User Interface (GUI), Batch</p>
+        <ul>
+          <li><strong>Program execution</strong> - The system must be able to load a program into memory and to run that program, end execution, either normally or abnormally (indicating error)</li>
+          <li><strong>I/O operations</strong> - A running program may require I/O, which may involve a file or an I/O device</li>
+          <li><strong>File-system manipulation</strong> - The file system is of particular interest. Obviously, programs need to read and write files and directories, create and delete them, search them, list file Information, permission management.</li>
+          <li>One set of operating-system services provides functions that are helpful to the user (Cont):</li>
+        </ul>
+        <p>o <strong>Communications</strong> &ndash; Processes may exchange information, on the same computer or between computers over a network</p>
+        <ul>
+          <li>Communications may be via shared memory or through message passing (packets moved by the OS) o <strong>Error detection</strong> &ndash; OS needs to be constantly aware of possible errors</li>
+          <li>May occur in the CPU and memory hardware, in I/O devices, in user program</li>
+          <li>For each type of error, OS should take the appropriate action to ensure correct and consistent computing</li>
+          <li>Debugging facilities can greatly enhance the user&rsquo;s and programmer&rsquo;s abilities to efficiently use the system</li>
+          <li>Another set of OS functions exists for ensuring the efficient operation of the system itself via resource sharing</li>
+          <li><strong>Resource allocation</strong> - When multiple users or multiple jobs running concurrently, resources must be allocated to each of them
+            <ul>
+              <li>Many types of resources - Some (such as CPU cycles, main memory, and file storage) may have special allocation code, others (such as I/O devices) may have general request and release code</li>
+            </ul>
+          </li>
+          <li><strong>Accounting </strong>- To keep track of which users use how much and what kinds of computer resources</li>
+          <li><strong>Protection and security</strong> - The owners of information stored in a multiuser or networked computer system may want to control use of that information, concurrent processes should not interfere with each other
+            <ul>
+              <li>Protection involves ensuring that all access to system resources is controlled</li>
+              <li>Security of the system from outsiders requires user authentication, extends to defending external I/O devices from invalid access attempts</li>
+              <li>If a system is to be protected and secure, precautions must be instituted throughout it. A chain is only as strong as its weakest link.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</p>
+        <h2>System Call</h2>
+        <p><strong>&nbsp;</strong></p>
+        <ul>
+          <li>Programming interface to the services provided by the OS</li>
+          <li>Typically written in a high-level language (C or C++)</li>
+          <li>Mostly accessed by programs via a high-level Application</li>
+        </ul>
+        <p>Program Interface (API) rather than direct system call use</p>
+        <ul>
+          <li>Three most common APIs are Win32 API for Windows, POSIX API for POSIX- based systems (including virtually all versions of UNIX, Linux, and Mac OS X), and Java API for the Java virtual machine (JVM)</li>
+        </ul>
+        <p>Example</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>System call sequence to copy the contents of one file to another file</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Typically, a number associated with each system call</li>
+        </ul>
+        <p>o System-call interface maintains a table indexed according to these numbers</p>
+        <ul>
+          <li>The system call interface invokes intended system call in OS kernel and returns status of the system call and any return values</li>
+          <li>The caller need know nothing about how the system call is implemented
+            <ul>
+              <li>Just needs to obey API and understand what OS will do as a result call</li>
+              <li>Most details of OS interface hidden from programmer by API</li>
+              <li>Managed by run-time support library (set of functions built into libraries included with compiler)</li>
+            </ul>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h3>Types of System Calls</h3>
+        <ol>
+          <li>Process control</li>
+          <li>File management</li>
+          <li>Device management</li>
+          <li>Information maintenance</li>
+          <li>Communications</li>
+        </ol>
+        <h3>Process control</h3>
+        <p>A running needs to halt its execution either normally or abnormally.</p>
+        <p>If a system call is made to terminate the running program, a dump of memory is sometimes taken and an error message generated which can be diagnosed by a debugger</p>
+        <ul>
+          <li>end, abort</li>
+          <li>load, execute</li>
+          <li>create process, terminate process</li>
+          <li>get process attributes, set process attributes</li>
+          <li>wait for time</li>
+          <li>wait event, signal event</li>
+          <li>allocate and free memory</li>
+        </ul>
+        <h3>File management</h3>
+        <p>OS provides an API to make these system calls for managing files o create file, delete file</p>
+        <ul>
+          <li>open, close file</li>
+          <li>read, write, reposition</li>
+          <li>get and set file attributes</li>
+        </ul>
+        <h3>Device management</h3>
+        <p>Process requires several resources to execute, if these resources are available, they will be granted and control retuned to user process. Some are physical such as video card and other such as file. User program request the device and release when finished</p>
+        <ul>
+          <li>request device, release device</li>
+          <li>read, write, reposition</li>
+          <li>get device attributes, set device attributes</li>
+          <li>logically attach or detach devices</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3>Information maintenance</h3>
+        <p>System calls exist purely for transferring information between the user program and OS. It can return information about the system, such as the number of current users, the version number of the operating system, the amount of free memory or disk space and so on.</p>
+        <ul>
+          <li>get time or date, set time or date</li>
+          <li>get system data, set system data</li>
+          <li>get and set process, file, or device attributes</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>Communications </strong></p>
+        <h3>Two common models of communication</h3>
+        <p><strong>Message-passing model</strong>, information is exchanged through an inter process- communication facility provided by the OS.</p>
+        <p><strong>Shared-memory model</strong>, processes use map memory system calls to gain access to regions of memory owned by other processes.</p>
+        <ul>
+          <li>create, delete communication connection</li>
+          <li>send, receive messages</li>
+          <li>transfer status information</li>
+          <li>attach and detach remote devices</li>
+        </ul>
+        
+        
+        <p>Examples of Windows and Unix System Calls</p>
+        <p>&nbsp;</p>
+       
+        <h3>System Programs</h3>
+        <p>System programs provide a convenient environment for program development and execution. The can be divided into:</p>
+        <ol>
+          <li>File manipulation</li>
+          <li>Status information</li>
+          <li>File modification</li>
+          <li>Programming language support</li>
+          <li>Program loading and execution&nbsp;</li>
+          <li>Communications</li>
+          <li>Application programs</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Most users&rsquo; view of the operation system is defined by system programs, not the actual system calls provide a convenient environment for program development and execution</p>
+        <p>Some of them are simply user interfaces to system calls; others are considerably more complex</p>
+        <p><strong>File management</strong> - Create, delete, copy, rename, print, dump, list, and generally manipulate files and directories</p>
+        <h4>Status information</h4>
+        <p>Some ask the system for info - date, time, amount of available memory, disk space, number of users Others provide detailed performance, logging, and debugging information</p>
+        <p>Typically, these programs format and print the output to the terminal or other output devices Some systems implement a registry - used to store and retrieve configuration information</p>
+        <h4>File modification</h4>
+        <p>Text editors to create and modify files</p>
+        <p>Special commands to search contents of files or perform transformations of the text&nbsp;</p>
+        <p><strong>Programming-language support</strong> - Compilers, assemblers, debuggers and interpreters sometimes provided</p>
+        <p><strong>Program loading and execution</strong>- Absolute loaders, relocatable loaders, linkage editors, and overlay- loaders, debugging systems for higher-level and machine language</p>
+        <p><strong>Communications </strong>- Provide the mechanism for creating virtual connections among processes, users, and computer systems</p>
+        Allow users to send messages to one another&rsquo;s screens, browse web pages, send electronic-mail messages, log in remotely, transfer files from one machine to another
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

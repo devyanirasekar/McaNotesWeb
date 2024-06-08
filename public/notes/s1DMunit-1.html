@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 DM unit-1</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+      <p><strong>UNIT-1</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>Sets</strong></p>
+        <p>A set is an unordered collection of objects, which are called the &lsquo;elements&rsquo; of the set</p>
+        <ul>
+          <li>a &isin;A means that &lsquo;a&rsquo; is an&nbsp;<em>element</em>&nbsp;of A (A is the set)</li>
+          <li>sets are equal&nbsp;<em>if and only if</em>they have the same elements</li>
+          <li>order and repetition don&rsquo;t matter for sets</li>
+          <li>note that a set doesn&rsquo;t equal its elements, i.e. {a} &ne; a</li>
+        </ul>
+        <p><strong>Cardinality</strong></p>
+        <p>The cardinality of a set is the number of elements in the set</p>
+        <ul>
+          <li>cardinality is denoted by |A|</li>
+        </ul>
+        <p>For example if A={1,2,3,4,5,6} then |A|=6</p>
+        <p><strong>Empty set</strong></p>
+        <ul>
+          <li>the empty set is denoted by {} or &empty;</li>
+        </ul>
+        <p><strong>Universal set</strong></p>
+        <p>The universal set is the set containing all elements of all sets needed to discuss a topic</p>
+        <ul>
+          <li>denoted by&nbsp;<em>U</em></li>
+          <li>g.&nbsp;<em>U</em>might be ℝ in Calculus, or ℂ in algebra</li>
+        </ul>
+        <p><strong>Basic notation</strong></p>
+        <p>The following format is used to indicate a set</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <p>S = {&nbsp;<em>x</em>&nbsp;&isin;&nbsp;<em>A</em></p>
+              </td>
+              <td>
+                <p>&hellip; }</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Which is read as &ldquo;<em>x</em>&nbsp;is an element of&nbsp;<em>A</em>&nbsp;(x &isin;&nbsp;A) such that (|) some property is true (&hellip;).</p>
+        <p>For example,&nbsp;S = { x &isin;&nbsp;ℤ | &ndash;2 &lt; x &lt; 5 }&nbsp;which is equal to&nbsp;{ &ndash;1, 0, 1, 2, 3, 4 }.</p>
+        <p><strong>Venn diagrams</strong></p>
+        <ul>
+          <li>when solving a problem using Venn diagrams, you&nbsp;<strong>must state</strong>what each of the subsets means before you draw the diagram</li>
+          <li>note that often you can use inclusion-exclusion principle (covered later) rather than Venn Diagrams</li>
+        </ul>
+        <p><strong>Subset</strong></p>
+        <p><em>A</em>&nbsp;is a subset of&nbsp;<em>B</em>&nbsp;if and only if every element of A is also an element of B</p>
+        <ul>
+          <li>A &sube;B indicates that A is a subset of the set B</li>
+          <li>A is the&nbsp;<em>proper</em>subset of B, A &sub;&nbsp;B, if A &sube;&nbsp;B but A &ne; B</li>
+        </ul>
+        <p>The following properties are useful:</p>
+        <ul>
+          <li>if A = B then A &sube;B and B &sube;&nbsp;A</li>
+          <li>if A &sub;B then A &sube;&nbsp;B</li>
+          <li>if A &sube;B and B &sube;&nbsp;A then A = B (this is used to prove that two sets are equal)</li>
+          <li>A is a proper subset of B if it is a subset of B and B has&nbsp;<em>at least one</em>element that is not also in A</li>
+        </ul>
+        <p><strong>The subset relationship only exists between two sets, i.e. for A </strong><strong>&sube;</strong><strong>&nbsp;B, A must be a set.</strong></p>
+        <p><strong>Proving A is a subset of B</strong></p>
+        <ol>
+          <li>Show that any element of A is also an element of B</li>
+          <li>&ldquo;Let&nbsp;<em>x</em>&isin;&nbsp;LHS&rdquo; and work to show that x &isin;&nbsp;RHS also.</li>
+          <li>&ldquo;Thus we have shown that any element of the LHS is also an element of the RHS, therefore LHS &sube;RHS&rdquo;</li>
+        </ol>
+        <p><strong>Proving A is a proper subset of B</strong></p>
+        <ol>
+          <li>Prove A &sube;B as above</li>
+          <li>Then find one or more example of an element that is in B but not in A</li>
+        </ol>
+        <p><strong>Proving A = B</strong></p>
+        <ol>
+          <li>Show A &sube;B and B &sube;&nbsp;A, i.e. two iterations of the process above</li>
+        </ol>
+        <p><strong>Power set</strong></p>
+        <p>The power set of a set is the set of all subsets of the set.</p>
+        <ul>
+          <li>given a set&nbsp;<em>A</em>, then power set of&nbsp;<em>A</em>is the set of all of the subsets of the set S</li>
+          <li>the power set of S is denoted by&nbsp;<strong>P</strong>(<em>S</em>)</li>
+        </ul>
+        <p>For example,</p>
+        <p>P({ 0, 1, 2 }) = {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&empty;,</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ 0 }, { 1 }, { 2 },</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ 0, 1 }, { 1, 2 },</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ 0, 1, 2 },</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+        <p><strong>Note</strong>: For a&nbsp;<em>set</em>&nbsp;<em>X</em>,&nbsp;<em>X</em>&nbsp;&isin;&nbsp;<strong>P</strong>(S) and&nbsp;<em>X</em>&nbsp;&sube;&nbsp;<em>S</em>&nbsp;mean the same thing</p>
+        <p><strong>Cardinality of a power set</strong></p>
+        <p>If |&nbsp;<em>A</em>&nbsp;| =&nbsp;<em>n</em>&nbsp;then |&nbsp;<strong>P</strong>(<em>A</em>) | = 2<em><sup>n</sup></em></p>
+        <p>Or, in English, the size of the power set is equal to 2<em><sup>n</sup></em>&nbsp;where n is the number of elements in the set.</p>
+        <p><strong>Set algebra</strong></p>
+        <p><strong>Union</strong></p>
+        <p>The union of the sets&nbsp;<em>A</em>&nbsp;and&nbsp;<em>B</em>&nbsp;is the set that contains the elements that are either in&nbsp;<em>A</em>&nbsp;or in&nbsp;<em>B</em>, or in both.</p>
+        <ul>
+          <li>denoted by&nbsp;<em>A</em>&cup;&nbsp;<em>B</em></li>
+        </ul>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <p><em>A</em>&nbsp;&cup;&nbsp;<em>B</em>&nbsp;= {&nbsp;<em>x</em></p>
+              </td>
+              <td>
+                <p><em>x</em>&nbsp;&isin;&nbsp;<em>A</em>&nbsp;or&nbsp;<em>x</em>&nbsp;&isin;&nbsp;<em>B</em>&nbsp;}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Intersection</strong></p>
+        <p>The set containing elements that in both A and B</p>
+        <ul>
+          <li><em>A</em>&cap;&nbsp;<em>B</em></li>
+        </ul>
+        <p><strong>Disjoint sets</strong></p>
+        <p>Two sets are disjoint if their intersection is the empty set (i.e. they have no elements in common)</p>
+        <p><strong>Set difference</strong></p>
+        <p>The difference of&nbsp;<em>A</em>&nbsp;and&nbsp;<em>B</em>,&nbsp;<em>A</em>&nbsp;&ndash;&nbsp;<em>B</em>, is the set containing elements in&nbsp;<em>A</em>&nbsp;but not in&nbsp;<em>B</em>.</p>
+        <ul>
+          <li>Note that&nbsp;<em>A</em>&ndash;&nbsp;<em>B</em>&nbsp;&ne;&nbsp;<em>B</em>&nbsp;&ndash;&nbsp;<em>A</em></li>
+          <li>Note that&nbsp;<em>A</em>&cap;&nbsp;= A &ndash; B</li>
+        </ul>
+        <p><strong>Complement</strong></p>
+        <p>The complement of A is . &nbsp;=&nbsp;<em>U</em>&nbsp;&ndash;&nbsp;<em>A</em>&nbsp;is the set of elements in&nbsp;<em>U</em>&nbsp;but not in&nbsp;<em>A</em>.</p>
+        <p>&nbsp;</p>
+        <p><strong>Laws of set algebra</strong></p>
+        <ol>
+          <li>Commutative laws: A &cup;B = B &cup;&nbsp;A and A &cap; B = B &cap; A</li>
+          <li>Associative laws: A &cup;(B &cup;&nbsp;C) = (A &cup;&nbsp;B) &cup;&nbsp;C and A &cap; (B &cap; C) = (A &cap; B) &cap; C</li>
+          <li>Distribute laws: A &cap; (B &cup;C) = (A &cap; B) &cup;&nbsp;(A &cap; C) and A &cup;&nbsp;(B &cap; C) = (A &cup;&nbsp;B) &cap; (A &cup;&nbsp;C)</li>
+          <li>Idempotent laws: A &cup;A = A and A &cap; A = A</li>
+          <li>Double complement laws: ()<sup>c</sup>= A</li>
+          <li>De Morgan&rsquo;s laws: = &nbsp;&cap; &nbsp;and &nbsp;&nbsp;= &cup;&nbsp;</li>
+          <li>Identity laws: A &cup;&empty;&nbsp;= A and A &cap;&nbsp;<em>U</em>&nbsp;= A</li>
+          <li>Domination laws: A &cup;<em>U</em>&nbsp;=&nbsp;<em>U</em>&nbsp;and A &cap; &empty;&nbsp;= &empty;</li>
+          <li>Intersection and union with complement: A &cap; = &empty;&nbsp;and A &cup; &nbsp;=&nbsp;<em>U</em></li>
+          <li>Alternative representation for set difference: A &ndash; B = A &cap;</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Proof of De Morgan&rsquo;s laws:</p>
+        <p>De Morgan's law of Intersection can be mathematically proved using the following steps:</p>
+        <p>Let G = (A &cap; B)' and H = A' U B'</p>
+        <p>Let an element y belong to G. y &isin;&nbsp;G.</p>
+        <p>&rArr; y &isin; (A &cap; B)'</p>
+        <p>&rArr; y &notin; (A &cap; B)</p>
+        <p>&rArr; y &notin; A or y &notin; B</p>
+        <p>&rArr; y &isin; A' or y &isin; B'</p>
+        <p>&rArr; y &isin; A' U B'</p>
+        <p>&rArr; y &isin; G</p>
+        <p>This implies that G ⸦ H ...(1)</p>
+        <p>If z is an arbitrary element of H then z &isin;&nbsp;H</p>
+        <p>&rArr; z &isin; A' U B'</p>
+        <p>&rArr; z &isin; A' or z &isin; B'</p>
+        <p>&rArr; z &notin; A or z &notin; B</p>
+        <p>&rArr; z &notin; (A &cap; B)</p>
+        <p>&rArr; z &isin; (A &cap; B)'</p>
+        <p>&rArr; z &isin; H</p>
+        <p>Therefore, H ⸦ G ...(2)</p>
+        <p>Now when we combine (1) and (2) we can say that G = H or (A &cap; B)&rsquo; = A&rsquo; &cup; B&rsquo;. Hence, we have successfully proved the law.</p>
+        <p>&nbsp;</p>
+        <p>Cartesian Product</p>
+        <p>The&nbsp;Cartesian product&nbsp;of two sets, A and B, consists of all the ordered pairs that can be constructed with the first element coming from the first set, A, and the second element coming from the second set, B.&nbsp;</p>
+        <p>Example: if A={a,b,c} and B={1,2,3} Then Cartesian product of A and B denoted by AXB will be</p>
+        <p>AXB={(a,1),(a,2),(a,3),(b,1),(b,2),(b,3),(c,1),(c,2),(c,3)}</p>
+        <p>And BXA=={(1,a),(2,a),(3,a),(1,b),(2,b),(3,b),(1,c),(2,c),(3,c)}</p>
+        <p>Note that AXB&ne;BXA</p>
+        <p>&nbsp;</p>
+        <p>Relations</p>
+        <p>A relation defines the relationship between two different sets. If two sets are considered, the relation between them will be established if there is a connection between the elements of two or more non-empty sets.</p>
+        <p>In the morning assembly at schools, students are supposed to stand in a queue in ascending order of the heights of all the students. This defines an ordered relation between the students and their heights.</p>
+        <p>Therefore, we can say,</p>
+        <p><strong>&lsquo;A set of ordered pairs is defined as a relation.&rsquo;</strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>This mapping depicts a relation from set A into set B. A relation from A to B is a subset of A x B. The ordered pairs are (1,c),(2,n),(5,a),(7,n). For defining a relation, we use the notation where,</p>
+        <p>set {1, 2, 5, 7} represents the domain.</p>
+        <p>set {a, c, n} represents the range.</p>
+        <p>&nbsp;</p>
+        <p>Relations on a Set</p>
+        <p>Relations from a set A to itself are of special interest.</p>
+        <p>A relation on the set A is a relation from A to A. In other words a relation on a set A is a subset of A x A.</p>
+        <p>Example: Let A be the set {1,2,3,4}. Which ordered pairs are in the relation R={(a,b)|a divides b}?</p>
+        <p>Solution: Because (a,b) is in R if and only a and b are positive integer not exceeding 4 such that a divides b, we see that</p>
+        <p>R={(1,1),(1,2),(1,3),(1,4),(2,2),(2,4),(3,3),(4,4)}</p>
+        <p>&nbsp;</p>
+        <p>Problem: Consider these relations on the set of integers:</p>
+        <p>R<sub>1</sub>={(a,b) | a &le; b)}</p>
+        <p>R<sub>2</sub>={(a,b) | a &gt; b)}</p>
+        <p>R<sub>3</sub>={(a,b) | a = b or a = -b)}</p>
+        <p>R<sub>4</sub>={(a,b) | a = b)}</p>
+        <p>R<sub>5</sub>={(a,b) | a = b + 1)}</p>
+        <p>R<sub>6</sub>={(a,b) | a + b = 3)}</p>
+        <p>Which of the relations contain each of the pairs (1,1), (1,2), (2,1), (1,-1) and (2,2)?</p>
+        <p>&nbsp;</p>
+        <p>Representing Relations Using Matrices:</p>
+        <p>&nbsp;&nbsp;A relation between finite sets can be represented using a zero-one matrix. &nbsp;Suppose R is a relation from A = {a<sub>1</sub>&nbsp;, a<sub>2</sub>&nbsp;, &hellip;, a<sub>m</sub>} to B = {b<sub>1</sub>&nbsp;, b<sub>2</sub>&nbsp;, &hellip;, b<sub>n</sub>&nbsp;}. &nbsp;The elements of the two sets can be listed in any particular arbitrary order. When A = B, we use the same ordering. &nbsp;The relation R is represented by the matrix M<sub>R</sub>&nbsp;= [m<sub>ij</sub>], where &nbsp;</p>
+        <p>&nbsp;</p>
+        <p>The matrix representing R has a 1 as its (i,j) entry when a<sub>i</sub>&nbsp;is related to b<sub>j</sub>&nbsp;and a 0 if a<sub>i</sub>&nbsp;is not related to b<sub>j</sub>.</p>
+        <p>&nbsp;</p>
+        <p>Example: Suppose that A = {1,2,3} and B = {1,2}. Let R be the relation from A to B containing (a,b) if a &isin;&nbsp;A, b &isin;&nbsp;B, and a &gt; b. What is the matrix representing R (assuming the ordering of elements is the same as the increasing numerical order)? Solution: Because R = {(2,1), (3,1),(3,2)}, the matrix is</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Properties of Relations</p>
+        <p>A relation R on a set A is called reflexive if (a,a) ∊ R for every element a&nbsp;∊&nbsp;A</p>
+        <p>Example: The following relations on the integers are reflexive:</p>
+        <p>R1 = {(a,b) | a &le; b},</p>
+        <p>R3 = {(a,b) | a = b or a = &minus;b},</p>
+        <p>R4 = {(a,b) | a = b}.</p>
+        <p>The following relations are not reflexive:</p>
+        <p>R2 = {(a,b) | a &gt; b} (note that 3 ≯&nbsp;3),</p>
+        <p>R5 = {(a,b) | a = b + 1} (note that 3 &ne;3 + 1),</p>
+        <p>R6 = {(a,b) | a + b &le; 3} (note that 4 + 4 ≰&nbsp;3)</p>
+        <p>&nbsp;</p>
+        <p>A relation R is symmetric if and only if (b,a) ∊&nbsp;R whenever (a,b) ∊&nbsp;R for all a,b ∊&nbsp;A.</p>
+        <p>Written symbolically, R is symmetric if and only if</p>
+        <p>&forall;a&forall;b [(a,b) ∊R ⟶&nbsp;(b,a) ∊&nbsp;R]</p>
+        <p>Example: The following relations on the integers are symmetric:</p>
+        <p>R3 = {(a,b) | a = b or a = &minus;b},</p>
+        <p>R4 = {(a,b) | a = b},</p>
+        <p>R6 = {(a,b) | a + b &le; 3}.</p>
+        <p>The following are not symmetric:</p>
+        <p>R1 = {(a,b) | a &le; b} (note that 3 &le; 4, but 4 ≰&nbsp;3),</p>
+        <p>R2 = {(a,b) | a &gt; b} (note that 4 &gt; 3, but 3 ≯&nbsp;4),</p>
+        <p>R5 = {(a,b) | a = b + 1} (note that 4 = 3 + 1, but 3 &ne;4 + 1).</p>
+        <p>&nbsp;</p>
+        <p>A relation R on a set A is called antisymmetric when &forall; a,b ∊ A, (a,b) ∊ R and (b,a) ∊ R implies a=b</p>
+        <p>Example: The following relations on the integers are antisymmetric:</p>
+        <p>R1 = {(a,b) | a &le; b},</p>
+        <p>R2 = {(a,b) | a &gt; b}</p>
+        <p>R4 = {(a,b) | a = b},</p>
+        <p>R5 = {(a,b) | a = b + 1}.</p>
+        <p>&nbsp;</p>
+        <p>A relation R on a set A is called transitive if whenever (a,b) ∊ R and (b,c) ∊ R then (a,c) ∊ R, &forall; a, b, c ∊ A.</p>
+        <p>Example: The following relations on the integers are transitive:</p>
+        <p>R1 = {(a,b) | a &le; b},</p>
+        <p>R2 = {(a,b) | a &gt; b}</p>
+        <p>R3 = {(a,b) | a = b or a = &minus;b},</p>
+        <p>R4 = {(a,b) | a = b}.</p>
+        <p>&nbsp;</p>
+        <p>A relation on set A is called an equivalence relation if it is reflexive, symmetric and transitive.</p>
+        <p>&nbsp;</p>
+        <p>Example: Let R be the relation on the set of real numbers such that (a,b) ∊ R if and only if a-b is an integer. Prove R is an equivalence relation.</p>
+        <p>Solution: As a-a=0 is an integer for all real numbers a, (a,a) ∊ R for all real numbers a. Hence, R is reflexive. Now, suppose that (a,b) ∊ R. Then a-b is an integer, so b-a is also an integer. Hence, (b,a) ∊ R. It follows that R is symmetric. If (a,b) ∊ R and (b,c) ∊ R then a-b and b-c are integers. Therefore, a-c = (a-b)+(b-c) is also an integer. &nbsp;Hence (a,c) ∊ R. Thus, R is transitive. Consequently R is an equivalence relation.</p>
+        <p>&nbsp;</p>
+        <p>Problem: Suppose that R is the relation on the set of strings of English letters such that (a,b) ∊ R if and only if l(a) = l(b), where l(x) is the length of the string x. Show that R is an equivalence relation.</p>
+        <p>&nbsp;</p>
+        <p>Problem: Show that &ldquo;divides&rdquo; relation is on the set of positive integers is not an equivalence relation.</p>
+        <p>&nbsp;</p>
+        <p>Problem: Let R be the relation on the set of real numbers such that (a,b) ∊ R if and only if a and b are real numbers that differ by less than 1, that is |a-b|&lt;1. Show that R is not an equivalence relation.</p>
+        <p>&nbsp;</p>
+        <p>Functions:</p>
+        <p>Let A and B be two nonempty sets. A function f from A to B is an assignment of exactly one element of B to each element of A. We write f(a) = b if b is an unique element of B assigned by the function f to the element a of A. if f is a function from A to B, we write f: A &rarr; B.</p>
+        <p>A function f: A &rarr; B can also be defined in terms of a relation from A to B. A relation from A to B that contains one, and only one, ordered pair (a,b) for every element a ∊ A, defines a function f from A to B. This function is defined by the assignment f(a) = b, where (a,b) is the unique ordered pair in the relation that has a as its first element.</p>
+        <p>If f is a function from A to B, we say that A is the domain of f and B is the codomain of f. if f(a) = b, we say that b is the image of a and a is a preimage of b. The range of f is the set of all images of elements of A. Also, if f is a function from A to B, we say that f maps A to B.</p>
+        <p>&nbsp;</p>
+        <p>One-to-One Functions: A function f is said to be one-to-one, or injective, if and only if f(a)=F(b) implies that a = b for all a and b in the domain of f. A function is said to be injective if it is one-to-one.</p>
+        <p>a 1</p>
+        <p>b 2</p>
+        <p>c 3</p>
+        <p>d 4</p>
+        <p>5</p>
+        <p>A One-to-One Function</p>
+        <p>&nbsp;</p>
+        <p>Onto Functions: A function f from A to B is called onto, of surjective, if and only if for every element b ∊ B there is an element a ∊ A with f(a) = b. A function is called surjective if it is onto.</p>
+        <p>&nbsp;</p>
+        <p>a 1</p>
+        <p>b 2</p>
+        <p>c 3</p>
+        <p>d 4</p>
+        <p>5</p>
+        <p>A Onto Function</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>One-to-One Correspondence Function: The function f is a one-to-one correspondence, or a bijection, it is both one-to-one and onto.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>a 1</p>
+        <p>b 2</p>
+        <p>c 3</p>
+        <p>d 4</p>
+        <p>A One-to-One and onto Function</p>
+        <p>&nbsp;</p>
+        <p>Inverse Function: An&nbsp;<strong>inverse function</strong>&nbsp;or an anti function is defined as a function, which can reverse into another function. In simple words, if any function &ldquo;f&rdquo; takes x to y then, the inverse of &ldquo;f&rdquo; will take y to x. If the function is denoted by &lsquo;f&rsquo; or &lsquo;F&rsquo;, then the inverse function is denoted by f<sup>-1</sup>&nbsp;or F<sup>-1</sup>.</p>
+        <p>If f and g are inverse functions, then f(x) = y if and only if g(y) = x</p>
+        <p>If you consider functions, f and g are inverse, f(g(x)) = g(f(x)) = x. A function that consists of its inverse fetches the original value.</p>
+        <p>Example: f(x) = 2x + 5 = y</p>
+        <p>Then, g(y) = (y-5)/2 = x is the inverse of f(x).</p>
+        <p>&nbsp;</p>
+        <p>Compositions of Functions</p>
+        <p>Consider functions, f: A &rarr; B and g: B &rarr; C. The composition of f with g is a function from A into C defined by (gof) (x) = g [f(x)] and is defined by gof.</p>
+        <p>&nbsp; &nbsp; &nbsp; To find the composition of f and g, first find the image of x under f and then find the image of f (x) under g.</p>
+        <p><strong>Example:</strong></p>
+        <p>Let&nbsp;X&nbsp;=&nbsp;{1,&nbsp;2,&nbsp;3}&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;=&nbsp;{a,&nbsp;b}&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Z&nbsp;=&nbsp;{5,&nbsp;6,&nbsp;7}.&nbsp;&nbsp;</p>
+        <p>Consider the function f = {(1, a), (2, a), (3, b)} and g = {(a, 5), (b, 7)} as in figure. Find the composition of gof.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Solution:</strong>&nbsp;The composition function gof is shown in fig:</p>
+        <p>&nbsp;</p>
+        <p>(gof) (1) = g[f(1)] = g(a) = 5, &nbsp;</p>
+        <p>(gof) (2) = g[f(2)] = g(a) = 5,</p>
+        <p>(gof) (3) = g[f(3)] = g(b) = 7</p>
+        <p>Problem: Let f and g be the functions from the set of integers to the set of integers defined by f(x)=2x + 3 and g(x)=3x + 2. What is the composition of f and g? What is the composition of g and f?</p>
+        <p>&nbsp;</p>
+        <p>If&nbsp;<em>���</em>&nbsp;is any set, then&nbsp;&nbsp;&chi;<sub>A</sub>(x)&nbsp;is the characteristic function defined by</p>
+        <p>&nbsp;</p>
+        <p>Example: if A={a,e,i,o,u} then the characteristic function is defined by 1 when a character is vowel and 0 otherwise.</p>
+        <p>&nbsp;</p>
+        <p><strong>Mathematical Induction</strong>&nbsp;is a mathematical technique which is used to prove a statement, a formula or a theorem is true for every natural number.</p>
+        <p>The technique involves two steps to prove a statement, as stated below &minus;</p>
+        <p><strong>Step 1(Base step)</strong>&nbsp;&minus; It proves that a statement is true for the initial value.</p>
+        <p><strong>Step 2(Inductive step)</strong>&nbsp;&minus; It proves that if the statement is true for the n<sup>th</sup>&nbsp;iteration (or number&nbsp;<em>n</em>), then it is also true for&nbsp;<em>(n+1)</em><em><sup>th</sup></em>&nbsp;iteration ( or number&nbsp;<em>n+1</em>).</p>
+        <p>How to Do It</p>
+        <p><strong>Step 1</strong>&nbsp;&minus; Consider an initial value for which the statement is true. It is to be shown that the statement is true for n = initial value.</p>
+        <p><strong>Step 2</strong>&nbsp;&minus; Assume the statement is true for any value of&nbsp;<em>n = k</em>. Then prove the statement is true for&nbsp;<em>n = k+1</em>. We actually break&nbsp;<em>n = k+1</em>&nbsp;into two parts, one part is&nbsp;<em>n = k</em>&nbsp;(which is already proved) and try to prove the other part.</p>
+        <p>Problem 1</p>
+        <p>3<em><sup>n</sup></em>&minus;1&nbsp;is a multiple of 2 for n = 1, 2, ...</p>
+        <p><strong>Solution</strong></p>
+        <p><strong>Step 1</strong>&nbsp;&minus; For&nbsp;<em>n</em>=1,3<sup>1</sup>&minus;1=3&minus;1=2&nbsp;which is a multiple of 2</p>
+        <p><strong>Step 2</strong>&nbsp;&minus; Let us assume&nbsp;3<em><sup>n</sup></em>&minus;1is true for&nbsp;<em>n</em>=<em>k</em>, Hence,&nbsp;3<em><sup>k</sup></em>&minus;1&nbsp;is true (It is an assumption)</p>
+        <p>We have to prove that&nbsp;3<em><sup>k</sup></em><sup>+1</sup>&minus;1&nbsp;is also a multiple of 2</p>
+        <p>3<em><sup>k</sup></em><sup>+1</sup>&minus;1=3&times;3<em><sup>k</sup></em>&minus;1=(2&times;3<em><sup>k</sup></em>)+(3<em><sup>k</sup></em>&minus;1)</p>
+        <p>The first part&nbsp;(2&times;3<em><sup>k</sup></em>)&nbsp;is certain to be a multiple of 2 and the second part&nbsp;(3<em><sup>k</sup></em>&minus;1)&nbsp;is also true as our previous assumption.</p>
+        <p>Hence,&nbsp;3<em><sup>k</sup></em><sup>+1</sup>&ndash;1 is a multiple of 2.</p>
+        <p>So, it is proved that&nbsp;3<em><sup>n</sup></em>&ndash;1&nbsp;&nbsp;is a multiple of 2.</p>
+        <p>&nbsp;</p>
+        <p>Problem 2</p>
+        <p>1+3+5+...+(2<em>n</em>&minus;1)=<em>n</em><sup>2 </sup>&nbsp;for&nbsp;<em>n</em>=1,2,&hellip;.</p>
+        <p><strong>Solution</strong></p>
+        <p><strong>Step 1</strong>&nbsp;&minus; For&nbsp;<em>n</em>=1,1=1<sup>2</sup>, Hence, step 1 is satisfied.</p>
+        <p><strong>Step 2</strong>&nbsp;&minus; Let us assume the statement is true for&nbsp;<em>n</em>=<em>k</em>.</p>
+        <p>Hence,&nbsp;1+3+5+⋯+(2<em>k</em>&minus;1)=<em>k</em><sup>2</sup>&nbsp;is true (It is an assumption)</p>
+        <p>We have to prove that&nbsp;1+3+5+...+(2(<em>k</em>+1)&minus;1)=(<em>k</em>+1)<sup>2</sup>&nbsp;also holds</p>
+        <p>1+3+5+⋯+(2(<em>k</em>+1)&minus;1)</p>
+        <p>=1+3+5+⋯+(2<em>k</em>+2&minus;1)</p>
+        <p>=1+3+5+⋯+(2<em>k</em>+1)</p>
+        <p>=1+3+5+⋯+(2<em>k</em>&minus;1)+(2<em>k</em>+1)</p>
+        <p>=<em>k</em><sup>2</sup>+(2<em>k</em>+1)</p>
+        <p>=(<em>k</em>+1)<sup>2</sup></p>
+        <p>So,&nbsp;1+3+5+⋯+(2(<em>k</em>+1)&minus;1)=(<em>k</em>+1)<sup>2</sup>&nbsp;hold which satisfies the step 2.</p>
+        <p>Hence,&nbsp;1+3+5+⋯+(2<em>n</em>&minus;1)=<em>n</em><sup>2</sup>&nbsp;is proved.</p>
+       
+        <p>&nbsp;</p>
+        <p>Assignment Questions</p>
+        <ol>
+          <li>What are set, cardinality, subset, and power set?</li>
+          <li>State and prove De Morgan&rsquo;s law.</li>
+          <li>Let A = R &ndash; {3}, B = R &ndash; {1}. Let&nbsp;be defined by&nbsp;&nbsp;</li>
+        </ol>
+        <p>Show that f is bijective.</p>
+        <p>&nbsp;</p>
+        <ol start="4">
+          <li>Prove 1+3+5+...+(2n&minus;1) = n<sup>2</sup>for&nbsp;n=1,2, &hellip; using mathematical induction.</li>
+          <li>What is equivalence relation? Give example</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

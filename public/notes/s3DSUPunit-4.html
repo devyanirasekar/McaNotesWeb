@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 DSUP unit-4</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit 4</strong></p>
+        <p>&nbsp;</p>
+        <h1>Python Pandas DataFrame:</h1>
+        <div style="margin: 5px 0;">
+          <p><strong>Pandas DataFrame</strong>&nbsp;is two-dimensional size-mutable, potentially heterogeneous tabular data structure with labeled axes (rows and columns). A Data frame is a two-dimensional data structure, i.e., data is aligned in a tabular fashion in rows and columns. Pandas DataFrame consists of three principal components, the&nbsp;<strong>data</strong>,&nbsp;<strong>rows</strong>, and&nbsp;<strong>columns</strong>.</p>
+          <div id="GFG_AD_gfg_mobile_336x280">&nbsp;</div>
+          <p><img class="alignnone size-full wp-image-819624" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/finallpandas.png" alt="" width="800" height="495" /></p>
+          <p>We will get a brief insight on all these basic operation which can be performed on Pandas DataFrame :</p>
+          <ul>
+            <li>Creating a DataFrame</a></li>
+            <li>Dealing with Rows and Columns</a></li>
+            <li>Indexing and Selecting Data</a></li>
+            <li>Working with Missing Data</a></li>
+            <li>Iterating over rows and columns</a></li>
+          </ul>
+          <div class="Basics">
+            <h2><a name="Basics"></a>Creating a Pandas DataFrame</h2>
+            <p>In the real world, a Pandas DataFrame will be created by loading the datasets from existing storage, storage can be SQL Database, CSV file, and Excel file. Pandas DataFrame can be created from the lists, dictionary, and from a list of dictionary etc. Dataframe can be created in different ways here are some ways by which we create a dataframe:</p>
+            <p><strong>Creating a dataframe using List</a>:</strong>&nbsp;DataFrame can be created using a single list or a list of lists.</p>
+            <div class="noIdeBtnDiv">
+              <div class="responsive-tabs-wrapper">
+                <div class="responsive-tabs responsive-tabs--enabled">
+                  <ul class="responsive-tabs__list" role="tablist">
+                    <li id="tablist1-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist1-panel1">Python3</li>
+                  </ul>
+                  <div id="tablist1-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist1-tab1">
+                    <div id="GFG_AD_Desktop_InContent_ATF_336x280">&nbsp;</div>
+                    <div>
+                      <div id="highlighter_260423" class="syntaxhighlighter nogutter  python3">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="code">
+                                <div class="container">
+                                  <div class="line number1 index0 alt2"><code class="python3 comments"># import pandas as pd</code></div>
+                                  <div class="line number2 index1 alt1"><code class="python3 keyword">import</code> <code class="python3 plain">pandas as pd</code></div>
+                                  <div class="line number3 index2 alt2">&nbsp;</div>
+                                  <div class="line number4 index3 alt1"><code class="python3 comments"># list of strings</code></div>
+                                  <div class="line number5 index4 alt2"><code class="python3 plain">lst </code><code class="python3 keyword">=</code> <code class="python3 plain">[</code><code class="python3 string">'Geeks'</code><code class="python3 plain">, </code><code class="python3 string">'For'</code><code class="python3 plain">, </code><code class="python3 string">'Geeks'</code><code class="python3 plain">, </code><code class="python3 string">'is'</code><code class="python3 plain">, </code></div>
+                                  <div class="line number6 index5 alt1"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'portal'</code><code class="python3 plain">, </code><code class="python3 string">'for'</code><code class="python3 plain">, </code><code class="python3 string">'Geeks'</code><code class="python3 plain">]</code></div>
+                                  <div class="line number7 index6 alt2">&nbsp;</div>
+                                  <div class="line number8 index7 alt1"><code class="python3 comments"># Calling DataFrame constructor on list</code></div>
+                                  <div class="line number9 index8 alt2"><code class="python3 plain">df </code><code class="python3 keyword">=</code> <code class="python3 plain">pd.DataFrame(lst)</code></div>
+                                  <div class="line number10 index9 alt1"><code class="python3 functions">print</code><code class="python3 plain">(df)</code></div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p><strong>Output:</strong><br /><img class="alignnone size-full wp-image-756787" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/df_from_list1.png" alt="" width="126" height="300" /><br />&nbsp;<br /><strong><a href="https://www.geeksforgeeks.org/python-create-a-pandas-dataframe-from-a-dict-of-equal-length-lists/" target="_blank" rel="noopener">Creating DataFrame from dict of ndarray/lists</a>:</strong>&nbsp;To create DataFrame from dict of narray/list, all the narray must be of same length. If index is passed then the length index should be equal to the length of arrays. If no index is passed, then by default, index will be range(n) where n is the array length.</p>
+            <div class="noIdeBtnDiv">
+              <div class="responsive-tabs-wrapper">
+                <div class="responsive-tabs responsive-tabs--enabled">
+                  <ul class="responsive-tabs__list" role="tablist">
+                    <li id="tablist2-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist2-panel1">Python3</li>
+                  </ul>
+                  <div id="tablist2-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist2-tab1">
+                    <div>
+                      <div id="highlighter_613125" class="syntaxhighlighter nogutter  python3">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="code">
+                                <div class="container">
+                                  <div class="line number1 index0 alt2"><code class="python3 comments"># Python code demonstrate creating </code></div>
+                                  <div class="line number2 index1 alt1"><code class="python3 comments"># DataFrame from dict narray / lists </code></div>
+                                  <div class="line number3 index2 alt2"><code class="python3 comments"># By default addresses.</code></div>
+                                  <div class="line number4 index3 alt1">&nbsp;</div>
+                                  <div class="line number5 index4 alt2"><code class="python3 keyword">import</code> <code class="python3 plain">pandas as pd</code></div>
+                                  <div class="line number6 index5 alt1">&nbsp;</div>
+                                  <div class="line number7 index6 alt2"><code class="python3 comments"># intialise data of lists.</code></div>
+                                  <div class="line number8 index7 alt1"><code class="python3 plain">data </code><code class="python3 keyword">=</code> <code class="python3 plain">{</code><code class="python3 string">'Name'</code><code class="python3 plain">:[</code><code class="python3 string">'Tom'</code><code class="python3 plain">, </code><code class="python3 string">'nick'</code><code class="python3 plain">, </code><code class="python3 string">'krish'</code><code class="python3 plain">, </code><code class="python3 string">'jack'</code><code class="python3 plain">],</code></div>
+                                  <div class="line number9 index8 alt2"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'Age'</code><code class="python3 plain">:[</code><code class="python3 value">20</code><code class="python3 plain">, </code><code class="python3 value">21</code><code class="python3 plain">, </code><code class="python3 value">19</code><code class="python3 plain">, </code><code class="python3 value">18</code><code class="python3 plain">]}</code></div>
+                                  <div class="line number10 index9 alt1">&nbsp;</div>
+                                  <div class="line number11 index10 alt2"><code class="python3 comments"># Create DataFrame</code></div>
+                                  <div class="line number12 index11 alt1"><code class="python3 plain">df </code><code class="python3 keyword">=</code> <code class="python3 plain">pd.DataFrame(data)</code></div>
+                                  <div class="line number13 index12 alt2">&nbsp;</div>
+                                  <div class="line number14 index13 alt1"><code class="python3 comments"># Print the output.</code></div>
+                                  <div class="line number15 index14 alt2"><code class="python3 functions">print</code><code class="python3 plain">(df)</code></div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p><strong>Output:</strong><br /><img class="alignnone size-full wp-image-688564" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/df2-1.png" alt="" width="199" height="222" /></p>
+          </div>
+          <p>&nbsp;<br />For more details refer to&nbsp;<a href="https://www.geeksforgeeks.org/creating-a-pandas-dataframe/" target="_blank" rel="noopener">Creating a Pandas DataFrame</a></p>
+          <h2><a href="https://www.geeksforgeeks.org/dealing-with-rows-and-columns-in-pandas-dataframe/" target="_blank" rel="noopener" name="Basics1">Dealing with Rows and Columns</a></h2>
+          <p>A Data frame is a two-dimensional data structure, i.e., data is aligned in a tabular fashion in rows and columns. We can perform basic operations on rows/columns like selecting, deleting, adding, and renaming.</p>
+          <p><strong><a href="https://www.geeksforgeeks.org/how-to-select-multiple-columns-in-a-pandas-dataframe/" target="_blank" rel="noopener">Column Selection</a>:</strong>&nbsp;In Order to select a column in Pandas DataFrame, we can either access the columns by calling them by their columns name.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist3-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist3-panel1">Python3</li>
+                </ul>
+                <div id="tablist3-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist3-tab1">
+                  <div id="GFG_AD_gfg_outstream_incontent" data-google-query-id="CNqF0a-6-IMDFU6trAIdoNgKLQ">&nbsp;</div>
+                  <div>
+                    <div id="highlighter_65539" class="syntaxhighlighter nogutter  python3">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python3 comments"># Import pandas package</code></div>
+                                <div class="line number2 index1 alt1"><code class="python3 keyword">import</code> <code class="python3 plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python3 comments"># Define a dictionary containing employee data</code></div>
+                                <div class="line number5 index4 alt2"><code class="python3 plain">data </code><code class="python3 keyword">=</code> <code class="python3 plain">{</code><code class="python3 string">'Name'</code><code class="python3 plain">:[</code><code class="python3 string">'Jai'</code><code class="python3 plain">, </code><code class="python3 string">'Princi'</code><code class="python3 plain">, </code><code class="python3 string">'Gaurav'</code><code class="python3 plain">, </code><code class="python3 string">'Anuj'</code><code class="python3 plain">],</code></div>
+                                <div class="line number6 index5 alt1"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'Age'</code><code class="python3 plain">:[</code><code class="python3 value">27</code><code class="python3 plain">, </code><code class="python3 value">24</code><code class="python3 plain">, </code><code class="python3 value">22</code><code class="python3 plain">, </code><code class="python3 value">32</code><code class="python3 plain">],</code></div>
+                                <div class="line number7 index6 alt2"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'Address'</code><code class="python3 plain">:[</code><code class="python3 string">'Delhi'</code><code class="python3 plain">, </code><code class="python3 string">'Kanpur'</code><code class="python3 plain">, </code><code class="python3 string">'Allahabad'</code><code class="python3 plain">, </code><code class="python3 string">'Kannauj'</code><code class="python3 plain">],</code></div>
+                                <div class="line number8 index7 alt1"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'Qualification'</code><code class="python3 plain">:[</code><code class="python3 string">'Msc'</code><code class="python3 plain">, </code><code class="python3 string">'MA'</code><code class="python3 plain">, </code><code class="python3 string">'MCA'</code><code class="python3 plain">, </code><code class="python3 string">'Phd'</code><code class="python3 plain">]}</code></div>
+                                <div class="line number9 index8 alt2">&nbsp;</div>
+                                <div class="line number10 index9 alt1"><code class="python3 comments"># Convert the dictionary into DataFrame </code></div>
+                                <div class="line number11 index10 alt2"><code class="python3 plain">df </code><code class="python3 keyword">=</code> <code class="python3 plain">pd.DataFrame(data)</code></div>
+                                <div class="line number12 index11 alt1">&nbsp;</div>
+                                <div class="line number13 index12 alt2"><code class="python3 comments"># select two columns</code></div>
+                                <div class="line number14 index13 alt1"><code class="python3 functions">print</code><code class="python3 plain">(df[[</code><code class="python3 string">'Name'</code><code class="python3 plain">, </code><code class="python3 string">'Qualification'</code><code class="python3 plain">]])</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br /><img class="alignnone size-full wp-image-715108" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/df_col1.png" alt="" width="251" height="232" /><br />&nbsp;<br /><strong><a href="https://www.geeksforgeeks.org/python-pandas-extracting-rows-using-loc/" target="_blank" rel="noopener">Row Selection</a>:</strong>&nbsp;Pandas provide a unique method to retrieve rows from a Data frame.&nbsp;<code><a href="https://www.geeksforgeeks.org/python-pandas-extracting-rows-using-loc/" target="_blank" rel="noopener">DataFrame.loc[]</a></code>&nbsp;method is used to retrieve rows from Pandas DataFrame. Rows can also be selected by passing integer location to an&nbsp;<a href="https://www.geeksforgeeks.org/python-extracting-rows-using-pandas-iloc/" target="_blank" rel="noopener">iloc[]</a>&nbsp;function.<br /><br /><strong>Note:</strong>&nbsp;We&rsquo;ll be using&nbsp;<a href="https://media.geeksforgeeks.org/wp-content/uploads/nba.csv"><code>nba.csv</code></a>&nbsp;file in below examples.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist4-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist4-panel1">Python3</li>
+                </ul>
+                <div id="tablist4-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist4-tab1">
+                  <div>
+                    <div id="highlighter_683106" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python comments"># importing pandas package</code></div>
+                                <div class="line number2 index1 alt1"><code class="python keyword">import</code> <code class="python plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python comments"># making data frame from csv file</code></div>
+                                <div class="line number5 index4 alt2"><code class="python plain">data </code><code class="python keyword">=</code> <code class="python plain">pd.read_csv(</code><code class="python string">"nba.csv"</code><code class="python plain">, index_col </code><code class="python keyword">=</code><code class="python string">"Name"</code><code class="python plain">)</code></div>
+                                <div class="line number6 index5 alt1">&nbsp;</div>
+                                <div class="line number7 index6 alt2"><code class="python comments"># retrieving row by loc method</code></div>
+                                <div class="line number8 index7 alt1"><code class="python plain">first </code><code class="python keyword">=</code> <code class="python plain">data.loc[</code><code class="python string">"Avery Bradley"</code><code class="python plain">]</code></div>
+                                <div class="line number9 index8 alt2"><code class="python plain">second </code><code class="python keyword">=</code> <code class="python plain">data.loc[</code><code class="python string">"R.J. Hunter"</code><code class="python plain">]</code></div>
+                                <div class="line number10 index9 alt1">&nbsp;</div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python functions">print</code><code class="python plain">(first, </code><code class="python string">"\n\n\n"</code><code class="python plain">, second)</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br />As shown in the output image, two series were returned since there was only one parameter both of the times.<br /><img class="alignnone size-full wp-image-526757" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/out1-22.jpg" alt="" width="409" height="383" /><br />For more Details refer to&nbsp;<a href="https://www.geeksforgeeks.org/dealing-with-rows-and-columns-in-pandas-dataframe/" target="_blank" rel="noopener">Dealing with Rows and Columns</a><br />&nbsp;</p>
+          <h2><a href="https://www.geeksforgeeks.org/indexing-and-selecting-data-with-pandas/" target="_blank" rel="noopener" name="Basics2">Indexing and Selecting Data</a></h2>
+          <p>Indexing in pandas means simply selecting particular rows and columns of data from a DataFrame. Indexing could mean selecting all the rows and some of the columns, some of the rows and all of the columns, or some of each of the rows and columns. Indexing can also be known as&nbsp;<strong>Subset Selection</strong>.</p>
+          <p><strong>Indexing a Dataframe using indexing operator&nbsp;<code>[]</code>&nbsp;:</strong><br />Indexing operator is used to refer to the square brackets following an object. The&nbsp;<code><a href="https://www.geeksforgeeks.org/python-pandas-extracting-rows-using-loc/">.loc</a></code>&nbsp;and&nbsp;<code><a href="https://www.geeksforgeeks.org/python-extracting-rows-using-pandas-iloc/">.iloc</a></code>&nbsp;indexers also use the indexing operator to make selections. In this indexing operator to refer to df[].</p>
+          <h2>Selecting a single columns</h2>
+          <p>In order to select a single column, we simply put the name of the column in-between the brackets</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist5-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist5-panel1">Python3</li>
+                </ul>
+                <div id="tablist5-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist5-tab1">
+                  <div>
+                    <div id="highlighter_868819" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python comments"># importing pandas package</code></div>
+                                <div class="line number2 index1 alt1"><code class="python keyword">import</code> <code class="python plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python comments"># making data frame from csv file</code></div>
+                                <div class="line number5 index4 alt2"><code class="python plain">data </code><code class="python keyword">=</code> <code class="python plain">pd.read_csv(</code><code class="python string">"nba.csv"</code><code class="python plain">, index_col </code><code class="python keyword">=</code><code class="python string">"Name"</code><code class="python plain">)</code></div>
+                                <div class="line number6 index5 alt1">&nbsp;</div>
+                                <div class="line number7 index6 alt2"><code class="python comments"># retrieving columns by indexing operator</code></div>
+                                <div class="line number8 index7 alt1"><code class="python plain">first </code><code class="python keyword">=</code> <code class="python plain">data[</code><code class="python string">"Age"</code><code class="python plain">]</code></div>
+                                <div class="line number9 index8 alt2">&nbsp;</div>
+                                <div class="line number10 index9 alt1">&nbsp;</div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python functions">print</code><code class="python plain">(first)</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br /><img class="aligncenter size-full wp-image-788120" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/snippp.jpg" alt="" width="305" height="431" /><br />&nbsp;<br /><strong>Indexing a DataFrame using&nbsp;<code><a href="https://www.geeksforgeeks.org/python-pandas-extracting-rows-using-loc/">.loc[ ]</a></code>&nbsp;:</strong><br />This function selects data by the&nbsp;<strong>label</strong>&nbsp;of the rows and columns. The&nbsp;<code>df.loc</code>&nbsp;indexer selects data in a different way than just the indexing operator. It can select subsets of rows or columns. It can also simultaneously select subsets of rows and columns.</p>
+          <h2>Selecting a single row</h2>
+          <p>In order to select a single row using&nbsp;<code>.loc[]</code>, we put a single row label in a&nbsp;<code>.loc</code>&nbsp;function.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist6-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist6-panel1">Python3</li>
+                </ul>
+                <div id="tablist6-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist6-tab1">
+                  <div id="GFG_AD_gfg_outstream_incontent-1">&nbsp;</div>
+                  <div>
+                    <div id="highlighter_640847" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python comments"># importing pandas package</code></div>
+                                <div class="line number2 index1 alt1"><code class="python keyword">import</code> <code class="python plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python comments"># making data frame from csv file</code></div>
+                                <div class="line number5 index4 alt2"><code class="python plain">data </code><code class="python keyword">=</code> <code class="python plain">pd.read_csv(</code><code class="python string">"nba.csv"</code><code class="python plain">, index_col </code><code class="python keyword">=</code><code class="python string">"Name"</code><code class="python plain">)</code></div>
+                                <div class="line number6 index5 alt1">&nbsp;</div>
+                                <div class="line number7 index6 alt2"><code class="python comments"># retrieving row by loc method</code></div>
+                                <div class="line number8 index7 alt1"><code class="python plain">first </code><code class="python keyword">=</code> <code class="python plain">data.loc[</code><code class="python string">"Avery Bradley"</code><code class="python plain">]</code></div>
+                                <div class="line number9 index8 alt2"><code class="python plain">second </code><code class="python keyword">=</code> <code class="python plain">data.loc[</code><code class="python string">"R.J. Hunter"</code><code class="python plain">]</code></div>
+                                <div class="line number10 index9 alt1">&nbsp;</div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python functions">print</code><code class="python plain">(first, </code><code class="python string">"\n\n\n"</code><code class="python plain">, second)</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br />As shown in the output image, two series were returned since there was only one parameter both of the times.<br /><img class="aligncenter size-full wp-image-784680" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/index10.png" alt="" width="289" height="351" /><br />&nbsp;<br /><strong>Indexing a DataFrame using&nbsp;<code><a href="https://www.geeksforgeeks.org/python-extracting-rows-using-pandas-iloc/">.iloc[ ]</a></code>&nbsp;:</strong><br />This function allows us to retrieve rows and columns by position. In order to do that, we&rsquo;ll need to specify the positions of the rows that we want, and the positions of the columns that we want as well. The&nbsp;<code>df.iloc&nbsp;</code>indexer is very similar to&nbsp;<code>df.loc&nbsp;</code>but only uses integer locations to make its selections.</p>
+          <h2>Selecting a single row</h2>
+          <p>In order to select a single row using&nbsp;<code>.iloc[]</code>, we can pass a single integer to&nbsp;<code>.iloc[]</code>&nbsp;function.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist7-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist7-panel1">Python3</li>
+                </ul>
+                <div id="tablist7-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist7-tab1">
+                  <div>
+                    <div id="highlighter_318548" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python keyword">import</code> <code class="python plain">pandas as pd</code></div>
+                                <div class="line number2 index1 alt1">&nbsp;</div>
+                                <div class="line number3 index2 alt2"><code class="python comments"># making data frame from csv file</code></div>
+                                <div class="line number4 index3 alt1"><code class="python plain">data </code><code class="python keyword">=</code> <code class="python plain">pd.read_csv(</code><code class="python string">"nba.csv"</code><code class="python plain">, index_col </code><code class="python keyword">=</code><code class="python string">"Name"</code><code class="python plain">)</code></div>
+                                <div class="line number5 index4 alt2">&nbsp;</div>
+                                <div class="line number6 index5 alt1">&nbsp;</div>
+                                <div class="line number7 index6 alt2"><code class="python comments"># retrieving rows by iloc method </code></div>
+                                <div class="line number8 index7 alt1"><code class="python plain">row2 </code><code class="python keyword">=</code> <code class="python plain">data.iloc[</code><code class="python value">3</code><code class="python plain">] </code></div>
+                                <div class="line number9 index8 alt2">&nbsp;</div>
+                                <div class="line number10 index9 alt1">&nbsp;</div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python functions">print</code><code class="python plain">(row2)</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br /><img class="aligncenter size-full wp-image-783694" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/pandas7.png" alt="" width="263" height="171" /><br />&nbsp;<br />For more Details refer</p>
+          <ul>
+            <li><a href="https://www.geeksforgeeks.org/indexing-and-selecting-data-with-pandas/" target="_blank" rel="noopener">Indexing and Selecting Data with Pandas</a></li>
+            <li><a href="https://www.geeksforgeeks.org/boolean-indexing-in-pandas/" target="_blank" rel="noopener">Boolean Indexing in Pandas</a></li>
+          </ul>
+          <p>&nbsp;</p>
+          <h2><a href="https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/" target="_blank" rel="noopener" name="Basics3">Working with Missing Data</a></h2>
+          <p>Missing Data can occur when no information is provided for one or more items or for a whole unit. Missing Data is a very big problem in real life scenario. Missing Data can also refer to as NA(Not Available) values in pandas.</p>
+          <p><strong>Checking for missing values using&nbsp;<code>isnull()</code>&nbsp;and&nbsp;<code>notnull() :</code></strong><br />In order to check missing values in Pandas DataFrame, we use a function&nbsp;<code>isnull()</code>&nbsp;and&nbsp;<code>notnull()</code>. Both function help in checking whether a value is&nbsp;<code>NaN</code>&nbsp;or not. These function can also be used in Pandas Series in order to find null values in a series.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist8-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist8-panel1">Python3</li>
+                </ul>
+                <div id="tablist8-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist8-tab1">
+                  <div>
+                    <div id="highlighter_771896" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python comments"># importing pandas as pd</code></div>
+                                <div class="line number2 index1 alt1"><code class="python keyword">import</code> <code class="python plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python comments"># importing numpy as np</code></div>
+                                <div class="line number5 index4 alt2"><code class="python keyword">import</code> <code class="python plain">numpy as np</code></div>
+                                <div class="line number6 index5 alt1">&nbsp;</div>
+                                <div class="line number7 index6 alt2"><code class="python comments"># dictionary of lists</code></div>
+                                <div class="line number8 index7 alt1"><code class="python functions">dict</code> <code class="python keyword">=</code> <code class="python plain">{</code><code class="python string">'First Score'</code><code class="python plain">:[</code><code class="python value">100</code><code class="python plain">, </code><code class="python value">90</code><code class="python plain">, np.nan, </code><code class="python value">95</code><code class="python plain">],</code></div>
+                                <div class="line number9 index8 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Second Score'</code><code class="python plain">: [</code><code class="python value">30</code><code class="python plain">, </code><code class="python value">45</code><code class="python plain">, </code><code class="python value">56</code><code class="python plain">, np.nan],</code></div>
+                                <div class="line number10 index9 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Third Score'</code><code class="python plain">:[np.nan, </code><code class="python value">40</code><code class="python plain">, </code><code class="python value">80</code><code class="python plain">, </code><code class="python value">98</code><code class="python plain">]}</code></div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python comments"># creating a dataframe from list</code></div>
+                                <div class="line number13 index12 alt2"><code class="python plain">df </code><code class="python keyword">=</code> <code class="python plain">pd.DataFrame(</code><code class="python functions">dict</code><code class="python plain">)</code></div>
+                                <div class="line number14 index13 alt1">&nbsp;</div>
+                                <div class="line number15 index14 alt2"><code class="python comments"># using isnull() function&nbsp; </code></div>
+                                <div class="line number16 index15 alt1"><code class="python plain">df.isnull()</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br /><img class="alignnone size-full wp-image-794832" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/Capture1-41.png" alt="" width="292" height="148" /><br />&nbsp;<br /><strong>Filling missing values using&nbsp;<code>fillna()</code>,&nbsp;<code>replace()</code>&nbsp;and&nbsp;<code>interpolate() :</code></strong><br />In order to fill null values in a datasets, we use&nbsp;<code>fillna()</code>,&nbsp;<code>replace()</code>&nbsp;and&nbsp;<code>interpolate()</code>&nbsp;function these function replace NaN values with some value of their own. All these function help in filling a null values in datasets of a DataFrame. Interpolate() function is basically used to fill&nbsp;<code>NA</code>&nbsp;values in the dataframe but it uses various interpolation technique to fill the missing values rather than hard-coding the value.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist9-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist9-panel1">Python3</li>
+                </ul>
+                <div id="tablist9-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist9-tab1">
+                  <div id="GFG_AD_gfg_outstream_incontent-2" data-google-query-id="CLOCkbC6-IMDFceSrAIdPJsEyg">&nbsp;</div>
+                  <div>
+                    <div id="highlighter_238630" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python comments"># importing pandas as pd</code></div>
+                                <div class="line number2 index1 alt1"><code class="python keyword">import</code> <code class="python plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python comments"># importing numpy as np</code></div>
+                                <div class="line number5 index4 alt2"><code class="python keyword">import</code> <code class="python plain">numpy as np</code></div>
+                                <div class="line number6 index5 alt1">&nbsp;</div>
+                                <div class="line number7 index6 alt2"><code class="python comments"># dictionary of lists</code></div>
+                                <div class="line number8 index7 alt1"><code class="python functions">dict</code> <code class="python keyword">=</code> <code class="python plain">{</code><code class="python string">'First Score'</code><code class="python plain">:[</code><code class="python value">100</code><code class="python plain">, </code><code class="python value">90</code><code class="python plain">, np.nan, </code><code class="python value">95</code><code class="python plain">],</code></div>
+                                <div class="line number9 index8 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Second Score'</code><code class="python plain">: [</code><code class="python value">30</code><code class="python plain">, </code><code class="python value">45</code><code class="python plain">, </code><code class="python value">56</code><code class="python plain">, np.nan],</code></div>
+                                <div class="line number10 index9 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Third Score'</code><code class="python plain">:[np.nan, </code><code class="python value">40</code><code class="python plain">, </code><code class="python value">80</code><code class="python plain">, </code><code class="python value">98</code><code class="python plain">]}</code></div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python comments"># creating a dataframe from dictionary</code></div>
+                                <div class="line number13 index12 alt2"><code class="python plain">df </code><code class="python keyword">=</code> <code class="python plain">pd.DataFrame(</code><code class="python functions">dict</code><code class="python plain">)</code></div>
+                                <div class="line number14 index13 alt1">&nbsp;</div>
+                                <div class="line number15 index14 alt2"><code class="python comments"># filling missing value using fillna()&nbsp; </code></div>
+                                <div class="line number16 index15 alt1"><code class="python plain">df.fillna(</code><code class="python value">0</code><code class="python plain">)</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br /><img class="aligncenter size-full wp-image-802875" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/pd4.jpg" alt="" width="283" height="136" /><br />&nbsp;<br /><strong>Dropping missing values using&nbsp;<code>dropna()</code>&nbsp;:</strong><br />In order to drop a null values from a dataframe, we used&nbsp;<code>dropna()</code>&nbsp;function this fuction drop Rows/Columns of datasets with Null values in different ways.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist10-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist10-panel1">Python3</li>
+                </ul>
+                <div id="tablist10-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist10-tab1">
+                  <div>
+                    <div id="highlighter_198486" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python comments"># importing pandas as pd</code></div>
+                                <div class="line number2 index1 alt1"><code class="python keyword">import</code> <code class="python plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python comments"># importing numpy as np</code></div>
+                                <div class="line number5 index4 alt2"><code class="python keyword">import</code> <code class="python plain">numpy as np</code></div>
+                                <div class="line number6 index5 alt1">&nbsp;</div>
+                                <div class="line number7 index6 alt2"><code class="python comments"># dictionary of lists</code></div>
+                                <div class="line number8 index7 alt1"><code class="python functions">dict</code> <code class="python keyword">=</code> <code class="python plain">{</code><code class="python string">'First Score'</code><code class="python plain">:[</code><code class="python value">100</code><code class="python plain">, </code><code class="python value">90</code><code class="python plain">, np.nan, </code><code class="python value">95</code><code class="python plain">],</code></div>
+                                <div class="line number9 index8 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Second Score'</code><code class="python plain">: [</code><code class="python value">30</code><code class="python plain">, np.nan, </code><code class="python value">45</code><code class="python plain">, </code><code class="python value">56</code><code class="python plain">],</code></div>
+                                <div class="line number10 index9 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Third Score'</code><code class="python plain">:[</code><code class="python value">52</code><code class="python plain">, </code><code class="python value">40</code><code class="python plain">, </code><code class="python value">80</code><code class="python plain">, </code><code class="python value">98</code><code class="python plain">],</code></div>
+                                <div class="line number11 index10 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Fourth Score'</code><code class="python plain">:[np.nan, np.nan, np.nan, </code><code class="python value">65</code><code class="python plain">]}</code></div>
+                                <div class="line number12 index11 alt1">&nbsp;</div>
+                                <div class="line number13 index12 alt2"><code class="python comments"># creating a dataframe from dictionary</code></div>
+                                <div class="line number14 index13 alt1"><code class="python plain">df </code><code class="python keyword">=</code> <code class="python plain">pd.DataFrame(</code><code class="python functions">dict</code><code class="python plain">)</code></div>
+                                <div class="line number15 index14 alt2"><code class="python spaces">&nbsp;&nbsp;</code>&nbsp;</div>
+                                <div class="line number16 index15 alt1"><code class="python plain">df</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><img class="alignnone size-full wp-image-795102" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/Capture16-1.png" alt="" width="355" height="135" /><br />Now we drop rows with at least one Nan value (Null value)</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist11-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist11-panel1">Python3</li>
+                </ul>
+                <div id="tablist11-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist11-tab1">
+                  <div>
+                    <div id="highlighter_166465" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python comments"># importing pandas as pd</code></div>
+                                <div class="line number2 index1 alt1"><code class="python keyword">import</code> <code class="python plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python comments"># importing numpy as np</code></div>
+                                <div class="line number5 index4 alt2"><code class="python keyword">import</code> <code class="python plain">numpy as np</code></div>
+                                <div class="line number6 index5 alt1">&nbsp;</div>
+                                <div class="line number7 index6 alt2"><code class="python comments"># dictionary of lists</code></div>
+                                <div class="line number8 index7 alt1"><code class="python functions">dict</code> <code class="python keyword">=</code> <code class="python plain">{</code><code class="python string">'First Score'</code><code class="python plain">:[</code><code class="python value">100</code><code class="python plain">, </code><code class="python value">90</code><code class="python plain">, np.nan, </code><code class="python value">95</code><code class="python plain">],</code></div>
+                                <div class="line number9 index8 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Second Score'</code><code class="python plain">: [</code><code class="python value">30</code><code class="python plain">, np.nan, </code><code class="python value">45</code><code class="python plain">, </code><code class="python value">56</code><code class="python plain">],</code></div>
+                                <div class="line number10 index9 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Third Score'</code><code class="python plain">:[</code><code class="python value">52</code><code class="python plain">, </code><code class="python value">40</code><code class="python plain">, </code><code class="python value">80</code><code class="python plain">, </code><code class="python value">98</code><code class="python plain">],</code></div>
+                                <div class="line number11 index10 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python string">'Fourth Score'</code><code class="python plain">:[np.nan, np.nan, np.nan, </code><code class="python value">65</code><code class="python plain">]}</code></div>
+                                <div class="line number12 index11 alt1">&nbsp;</div>
+                                <div class="line number13 index12 alt2"><code class="python comments"># creating a dataframe from dictionary</code></div>
+                                <div class="line number14 index13 alt1"><code class="python plain">df </code><code class="python keyword">=</code> <code class="python plain">pd.DataFrame(</code><code class="python functions">dict</code><code class="python plain">)</code></div>
+                                <div class="line number15 index14 alt2">&nbsp;</div>
+                                <div class="line number16 index15 alt1"><code class="python comments"># using dropna() function&nbsp; </code></div>
+                                <div class="line number17 index16 alt2"><code class="python plain">df.dropna()</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br /><img class="alignnone size-full wp-image-795114" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/Capture17-1.png" alt="" width="369" height="67" /><br />For more Details refer to&nbsp;<a href="https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/" target="_blank" rel="noopener">Working with Missing Data in Pandas</a><br />&nbsp;</p>
+          <h2><a name="Basics4"></a>Iterating over rows and columns</h2>
+          <p>Iteration is a general term for taking each item of something, one after another. Pandas DataFrame consists of rows and columns so, in order to iterate over dataframe, we have to iterate a dataframe like a dictionary.</p>
+          <p><strong>Iterating over rows :</strong><br />In order to iterate over rows, we can use three function&nbsp;<code>iteritems()</code>,&nbsp;<code>iterrows()</code>,&nbsp;<code>itertuples()&nbsp;</code>. These three function will help in iteration over rows.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist12-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist12-panel1">Python3</li>
+                </ul>
+                <div id="tablist12-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist12-tab1">
+                  <div>
+                    <div id="highlighter_619601" class="syntaxhighlighter nogutter  python3">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python3 comments"># importing pandas as pd</code></div>
+                                <div class="line number2 index1 alt1"><code class="python3 keyword">import</code> <code class="python3 plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2"><code class="python3 spaces">&nbsp;</code>&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python3 comments"># dictionary of lists</code></div>
+                                <div class="line number5 index4 alt2"><code class="python3 functions">dict</code> <code class="python3 keyword">=</code> <code class="python3 plain">{</code><code class="python3 string">'name'</code><code class="python3 plain">:[</code><code class="python3 string">"aparna"</code><code class="python3 plain">, </code><code class="python3 string">"pankaj"</code><code class="python3 plain">, </code><code class="python3 string">"sudhir"</code><code class="python3 plain">, </code><code class="python3 string">"Geeku"</code><code class="python3 plain">],</code></div>
+                                <div class="line number6 index5 alt1"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'degree'</code><code class="python3 plain">: [</code><code class="python3 string">"MBA"</code><code class="python3 plain">, </code><code class="python3 string">"BCA"</code><code class="python3 plain">, </code><code class="python3 string">"M.Tech"</code><code class="python3 plain">, </code><code class="python3 string">"MBA"</code><code class="python3 plain">],</code></div>
+                                <div class="line number7 index6 alt2"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'score'</code><code class="python3 plain">:[</code><code class="python3 value">90</code><code class="python3 plain">, </code><code class="python3 value">40</code><code class="python3 plain">, </code><code class="python3 value">80</code><code class="python3 plain">, </code><code class="python3 value">98</code><code class="python3 plain">]}</code></div>
+                                <div class="line number8 index7 alt1">&nbsp;</div>
+                                <div class="line number9 index8 alt2"><code class="python3 comments"># creating a dataframe from a dictionary </code></div>
+                                <div class="line number10 index9 alt1"><code class="python3 plain">df </code><code class="python3 keyword">=</code> <code class="python3 plain">pd.DataFrame(</code><code class="python3 functions">dict</code><code class="python3 plain">)</code></div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python3 functions">print</code><code class="python3 plain">(df)</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><img class="alignnone size-full wp-image-796918" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/Capture12-5.png" alt="" width="183" height="143" /><br />Now we apply&nbsp;<code>iterrows()</code>&nbsp;function in order to get a each element of rows.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist13-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist13-panel1">Python3</li>
+                </ul>
+                <div id="tablist13-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist13-tab1">
+                  <div id="GFG_AD_gfg_outstream_incontent-3" data-google-query-id="CJamw966-IMDFe2lrAIdTjwJyA">&nbsp;</div>
+                  <div>
+                    <div id="highlighter_611189" class="syntaxhighlighter nogutter  python3">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python3 comments"># importing pandas as pd</code></div>
+                                <div class="line number2 index1 alt1"><code class="python3 keyword">import</code> <code class="python3 plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2"><code class="python3 spaces">&nbsp;</code>&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python3 comments"># dictionary of lists</code></div>
+                                <div class="line number5 index4 alt2"><code class="python3 functions">dict</code> <code class="python3 keyword">=</code> <code class="python3 plain">{</code><code class="python3 string">'name'</code><code class="python3 plain">:[</code><code class="python3 string">"aparna"</code><code class="python3 plain">, </code><code class="python3 string">"pankaj"</code><code class="python3 plain">, </code><code class="python3 string">"sudhir"</code><code class="python3 plain">, </code><code class="python3 string">"Geeku"</code><code class="python3 plain">],</code></div>
+                                <div class="line number6 index5 alt1"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'degree'</code><code class="python3 plain">: [</code><code class="python3 string">"MBA"</code><code class="python3 plain">, </code><code class="python3 string">"BCA"</code><code class="python3 plain">, </code><code class="python3 string">"M.Tech"</code><code class="python3 plain">, </code><code class="python3 string">"MBA"</code><code class="python3 plain">],</code></div>
+                                <div class="line number7 index6 alt2"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'score'</code><code class="python3 plain">:[</code><code class="python3 value">90</code><code class="python3 plain">, </code><code class="python3 value">40</code><code class="python3 plain">, </code><code class="python3 value">80</code><code class="python3 plain">, </code><code class="python3 value">98</code><code class="python3 plain">]}</code></div>
+                                <div class="line number8 index7 alt1">&nbsp;</div>
+                                <div class="line number9 index8 alt2"><code class="python3 comments"># creating a dataframe from a dictionary </code></div>
+                                <div class="line number10 index9 alt1"><code class="python3 plain">df </code><code class="python3 keyword">=</code> <code class="python3 plain">pd.DataFrame(</code><code class="python3 functions">dict</code><code class="python3 plain">)</code></div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python3 comments"># iterating over rows using iterrows() function </code></div>
+                                <div class="line number13 index12 alt2"><code class="python3 keyword">for</code> <code class="python3 plain">i, j </code><code class="python3 keyword">in</code> <code class="python3 plain">df.iterrows():</code></div>
+                                <div class="line number14 index13 alt1"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 functions">print</code><code class="python3 plain">(i, j)</code></div>
+                                <div class="line number15 index14 alt2"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 functions">print</code><code class="python3 plain">()</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br /><img class="alignnone size-full wp-image-802664" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/pd1.jpg" alt="" width="216" height="350" /><br />&nbsp;<br /><strong>Iterating over Columns :</strong><br />In order to iterate over columns, we need to create a list of dataframe columns and then iterating through that list to pull out the dataframe columns.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist14-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist14-panel1">Python3</li>
+                </ul>
+                <div id="tablist14-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist14-tab1">
+                  <div>
+                    <div id="highlighter_884546" class="syntaxhighlighter nogutter  python3">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python3 comments"># importing pandas as pd</code></div>
+                                <div class="line number2 index1 alt1"><code class="python3 keyword">import</code> <code class="python3 plain">pandas as pd</code></div>
+                                <div class="line number3 index2 alt2"><code class="python3 spaces">&nbsp;&nbsp;</code>&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python3 comments"># dictionary of lists</code></div>
+                                <div class="line number5 index4 alt2"><code class="python3 functions">dict</code> <code class="python3 keyword">=</code> <code class="python3 plain">{</code><code class="python3 string">'name'</code><code class="python3 plain">:[</code><code class="python3 string">"aparna"</code><code class="python3 plain">, </code><code class="python3 string">"pankaj"</code><code class="python3 plain">, </code><code class="python3 string">"sudhir"</code><code class="python3 plain">, </code><code class="python3 string">"Geeku"</code><code class="python3 plain">],</code></div>
+                                <div class="line number6 index5 alt1"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'degree'</code><code class="python3 plain">: [</code><code class="python3 string">"MBA"</code><code class="python3 plain">, </code><code class="python3 string">"BCA"</code><code class="python3 plain">, </code><code class="python3 string">"M.Tech"</code><code class="python3 plain">, </code><code class="python3 string">"MBA"</code><code class="python3 plain">],</code></div>
+                                <div class="line number7 index6 alt2"><code class="python3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python3 string">'score'</code><code class="python3 plain">:[</code><code class="python3 value">90</code><code class="python3 plain">, </code><code class="python3 value">40</code><code class="python3 plain">, </code><code class="python3 value">80</code><code class="python3 plain">, </code><code class="python3 value">98</code><code class="python3 plain">]}</code></div>
+                                <div class="line number8 index7 alt1"><code class="python3 spaces">&nbsp;</code>&nbsp;</div>
+                                <div class="line number9 index8 alt2"><code class="python3 comments"># creating a dataframe from a dictionary </code></div>
+                                <div class="line number10 index9 alt1"><code class="python3 plain">df </code><code class="python3 keyword">=</code> <code class="python3 plain">pd.DataFrame(</code><code class="python3 functions">dict</code><code class="python3 plain">)</code></div>
+                                <div class="line number11 index10 alt2">&nbsp;</div>
+                                <div class="line number12 index11 alt1"><code class="python3 functions">print</code><code class="python3 plain">(df)</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><img class="alignnone size-full wp-image-796918" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/Capture12-5.png" alt="" width="183" height="143" /><br />Now we iterate through columns in order to iterate through columns we first create a list of dataframe columns and then iterate through list.</p>
+          <div class="noIdeBtnDiv">
+            <div class="responsive-tabs-wrapper">
+              <div class="responsive-tabs responsive-tabs--enabled">
+                <ul class="responsive-tabs__list" role="tablist">
+                  <li id="tablist15-tab1" class="responsive-tabs__list__item responsive-tabs__list__item--active" tabindex="0" role="tab" aria-controls="tablist15-panel1">Python3</li>
+                </ul>
+                <div id="tablist15-panel1" class="tabcontent responsive-tabs__panel responsive-tabs__panel--active" role="tabpanel" aria-hidden="false" aria-labelledby="tablist15-tab1">
+                  <div>
+                    <div id="highlighter_217759" class="syntaxhighlighter nogutter  python">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="code">
+                              <div class="container">
+                                <div class="line number1 index0 alt2"><code class="python comments"># creating a list of dataframe columns</code></div>
+                                <div class="line number2 index1 alt1"><code class="python plain">columns </code><code class="python keyword">=</code> <code class="python functions">list</code><code class="python plain">(df)</code></div>
+                                <div class="line number3 index2 alt2">&nbsp;</div>
+                                <div class="line number4 index3 alt1"><code class="python keyword">for</code> <code class="python plain">i </code><code class="python keyword">in</code> <code class="python plain">columns:</code></div>
+                                <div class="line number5 index4 alt2">&nbsp;</div>
+                                <div class="line number6 index5 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments"># printing the third element of the column</code></div>
+                                <div class="line number7 index6 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python functions">print</code> <code class="python plain">(df[i][</code><code class="python value">2</code><code class="python plain">])</code></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><strong>Output:</strong><br /><img class="alignnone size-full wp-image-802580" title="Click to enlarge" src="https://media.geeksforgeeks.org/wp-content/uploads/Capture55.jpg" alt="" width="92" height="55" /><br />&nbsp;<br />For more Details refer to&nbsp;<a href="https://www.geeksforgeeks.org/iterating-over-rows-and-columns-in-pandas-dataframe/" target="_blank" rel="noopener">Iterating over rows and columns in Pandas DataFrame</a></p>
+          <p>DataFrame Methods:</p>
+          <figure class="table">
+            <table>
+              <tbody>
+                <tr>
+                  <td>FUNCTION</td>
+                  <td>DESCRIPTION</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-series-index/">index()</a></td>
+                  <td>Method returns index (row labels) of the DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-insert/">insert()</a></td>
+                  <td>Method inserts a column into a DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-add/">add()</a></td>
+                  <td>Method returns addition of dataframe and other, element-wise (binary operator add)</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-sub/">sub()</a></td>
+                  <td>Method returns subtraction of dataframe and other, element-wise (binary operator sub)</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-mul/">mul()</a></td>
+                  <td>Method returns multiplication of dataframe and other, element-wise (binary operator mul)</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-div/">div()</a></td>
+                  <td>Method returns floating division of dataframe and other, element-wise (binary operator truediv)</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-series-unique/">unique()</a></td>
+                  <td>Method extracts the unique values in the dataframe</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-nunique/">nunique()</a></td>
+                  <td>Method returns count of the unique values in the dataframe</td>
+                </tr>
+                <tr>
+                  <td>value_counts()</td>
+                  <td>Method counts the number of times each unique value occurs within the Series</td>
+                </tr>
+                <tr>
+                  <td>columns()</td>
+                  <td>Method returns the column labels of the DataFrame</td>
+                </tr>
+                <tr>
+                  <td>axes()</td>
+                  <td>Method returns a list representing the axes of the DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-isnull-and-notnull/">isnull()</a></td>
+                  <td>Method creates a Boolean Series for extracting rows with null values</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-isnull-and-notnull/">notnull()</a></td>
+                  <td>Method creates a Boolean Series for extracting rows with non-null values</td>
+                </tr>
+                <tr>
+                  <td>between()</td>
+                  <td>Method extracts rows where a column value falls in between a predefined range</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-isin/">isin()</a></td>
+                  <td>Method extracts rows from a DataFrame where a column value exists in a predefined collection</td>
+                </tr>
+                <tr>
+                  <td>dtypes()</td>
+                  <td>Method returns a Series with the data type of each column. The result&rsquo;s index is the original DataFrame&rsquo;s columns</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-astype/">astype()</a></td>
+                  <td>Method converts the data types in a Series</td>
+                </tr>
+                <tr>
+                  <td>values()</td>
+                  <td>Method returns a Numpy representation of the DataFrame i.e. only the values in the DataFrame will be returned, the axes labels will be removed</td>
+                </tr>
+                <tr>
+                  <td>sort_values()-&nbsp;<a href="https://www.geeksforgeeks.org/python-pandas-dataframe-sort_values-set-1/">Set1</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-pandas-dataframe-sort_values-set-2/">Set2</a></td>
+                  <td>Method sorts a data frame in Ascending or Descending order of passed Column</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-sort_index/">sort_index()</a></td>
+                  <td>Method sorts the values in a DataFrame based on their index positions or labels instead of their values but sometimes a data frame is made out of two or more data frames and hence later index can be changed using this method</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-extracting-rows-using-loc/">loc[]</a></td>
+                  <td>Method retrieves rows based on index label</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-extracting-rows-using-pandas-iloc/">iloc[]</a></td>
+                  <td>Method retrieves rows based on index position</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-ix/">ix[]</a></td>
+                  <td>Method retrieves DataFrame rows based on either index label or index position. This method combines the best features of the .loc[] and .iloc[] methods</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-rename/">rename()</a></td>
+                  <td>Method is called on a DataFrame to change the names of the index labels or column names</td>
+                </tr>
+                <tr>
+                  <td>columns()</td>
+                  <td>Method is an alternative attribute to change the coloumn name</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-delete-rows-columns-from-dataframe-using-pandas-drop/">drop()</a></td>
+                  <td>Method is used to delete rows or columns from a DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-pop/">pop()</a></td>
+                  <td>Method is used to delete rows or columns from a DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-sample/">sample()</a></td>
+                  <td>Method pulls out a random sample of rows or columns from a DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-nsmallest/">nsmallest()</a></td>
+                  <td>Method pulls out the rows with the smallest values in a column</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-nlargest/">nlargest()</a></td>
+                  <td>Method pulls out the rows with the largest values in a column</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-df-size-df-shape-and-df-ndim/">shape()</a></td>
+                  <td>Method returns a tuple representing the dimensionality of the DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-df-size-df-shape-and-df-ndim/">ndim()</a></td>
+                  <td>Method returns an &lsquo;int&rsquo; representing the number of axes / array dimensions.<br />Returns 1 if Series, otherwise returns 2 if DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-dropna/">dropna()</a></td>
+                  <td>Method allows the user to analyze and drop Rows/Columns with Null values in different ways</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-fillna-to-replace-null-values-in-dataframe/">fillna()</a></td>
+                  <td>Method manages and let the user replace NaN values with some value of their own</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-rank/">rank()</a></td>
+                  <td>Values in a Series can be ranked in order with this method</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-filtering-data-with-pandas-query-method/">query()</a></td>
+                  <td>Method is an alternate string-based syntax for extracting a subset from a DataFrame</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-difference-between-pandas-copy-and-copying-through-variables/">copy()</a></td>
+                  <td>Method creates an independent copy of a pandas object</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-duplicated/">duplicated()</a></td>
+                  <td>Method creates a Boolean Series and uses it to extract rows that have duplicate values</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-drop_duplicates/">drop_duplicates()</a></td>
+                  <td>Method is an alternative option to identifying duplicate rows and removing them through filtering</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-set_index/">set_index()</a></td>
+                  <td>Method sets the DataFrame index (row labels) using one or more existing columns</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-reset_index/">reset_index()</a></td>
+                  <td>Method resets index of a Data Frame. This method sets a list of integer ranging from 0 to length of data as index</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.geeksforgeeks.org/python-pandas-dataframe-where/">where()</a></td>
+                  <td>Method is used to check a Data Frame for one or more condition and return the result accordingly. By default, the rows not satisfying the condition are filled with NaN value</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

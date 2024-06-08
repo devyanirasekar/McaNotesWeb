@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 CS unit-1</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit 1</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>Cyber Security</strong></p>
+        <p><strong>The OSI Security Architecture:</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>ITU-T4 Recommendation X.800, Security Architecture for OSI, defines such a systematic approach.5 The OSI security architecture is useful to managers as a way of organizing the task of providing security. Furthermore, because this architecture was developed as an international standard, computer and communications vendors have developed security features for their products and services that relate to this structured definition of services and mechanisms. For our purposes, the OSI security architecture provides a useful, if abstract, overview of many of the concepts that this book deals with. The OSI security architecture focuses on security attacks, mechanisms, and services. These can be defined briefly as</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Security attack: </strong>Any action that compromises the security of information owned by an organization.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Security mechanism: </strong>A process (or a device incorporating such a process) that is designed to detect, prevent, or recover from a security attack.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;<strong>Security service: </strong>A processing or communication service that enhances the security of the data processing systems and the information transfers of an organization. The services are intended to counter security attacks, and they make use of one or more security mechanisms to provide the service.</p>
+        <p>&nbsp;</p>
+        <p><strong>Security attack: </strong></p>
+        <p>A useful means of classifying security attacks, used both in X.800 and RFC 4949, is in terms of <em>passive attacks </em>and <em>active attacks</em>.</p>
+        <p><strong>A passive attack</strong>&nbsp;attempts to learn or make use of information from the system but does not affect system resources.</p>
+        <p><strong>An active attack</strong>&nbsp;attempts to alter system resources or affect their operation.</p>
+        <p>&nbsp;</p>
+        <p><strong>Passive Attacks</strong></p>
+        <p>Passive attacks (Figure 1.2a) are in the nature of <strong>eavesdropping on, or monitoring of, transmissions. </strong>The goal of the opponent is to obtain information that is being transmitted. <strong>Two types</strong>&nbsp;of passive attacks are the release of message contents and traffic analysis.</p>
+        <p>The <strong>release of message contents </strong>is easily understood. A telephone conversation, an electronic mail message, and a transferred file may contain sensitive or confidential information. We would like to prevent an opponent from learning the contents of these transmissions.</p>
+        <p>&nbsp;</p>
+        <p>A <strong>second type of passive attack</strong>, <strong>traffic analysis</strong>, is subtler. Suppose that we had a way of masking the contents of messages or other information traffic so that opponents, even if they captured the message, could not extract the information from the message. The common technique for masking contents is encryption. If we had encryption protection in place, an opponent still might be able to observe the pattern of these messages. The opponent could determine the location and identity of communicating hosts and could observe the frequency and length of messages</p>
+        <p>being exchanged. This information might be useful in guessing the nature of the communication that was taking place.</p>
+        <p><strong>Passive attacks are very difficult to detect, because they do not involve any alteration of the data. Typically, the message traffic is sent and received in an </strong>apparently normal fashion, and neither the sender nor the receiver is aware that a third party has read the messages or observed the traffic pattern. However, it is feasible to prevent the success of these attacks, usually by means of encryption. Thus, the emphasis in dealing with passive attacks is on prevention rather than detection.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Active Attack</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>Active attacks (Figure 1.2b) involve some modification of the data stream or the creation of a false stream and can be subdivided into four categories: masquerade, replay, modification of messages, and denial of service.</strong></p>
+        <p>&nbsp;</p>
+        <p>A <strong>masquerade </strong>takes place when one entity pretends to be a different entity (path 2 of Figure 1.2b is active). A masquerade attack usually includes one of the other forms of active attack. For example, authentication sequences can be captured and replayed after a valid authentication sequence has taken place, thus enabling an authorized entity with few privileges to obtain extra privileges by impersonating an entity that has those privileges.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Replay </strong>involves the passive capture of a data unit and its subsequent retransmission to produce an unauthorized effect (paths 1, 2, and 3 active).</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Modification of messages </strong>simply means that some portion of a legitimate message is altered, or that messages are delayed or reordered, to produce an unauthorized effect (paths 1 and 2 active). For example, a message meaning &ldquo;Allow John Smith to read confidential file accounts&rdquo; is modified to mean &ldquo;Allow Fred Brown to read confidential file accounts.&rdquo;</p>
+        <p>&nbsp;</p>
+        <p>The <strong>denial of service </strong>prevents or inhibits the normal use or management of communications facilities (path 3 active). This attack may have a specific target; for example, an entity may suppress all messages directed to a particular destination (e.g., the security audit service). Another form of service denial is the disruption of an entire network&mdash;either by disabling the network or by overloading it with messages so as to degrade performance.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Active attacks present the opposite characteristics of passive attacks. Whereas passive attacks are difficult to detect, measures are available to prevent their success. On the other hand, it is quite difficult to prevent active attacks absolutely because of the wide variety of potential physical, software, and network vulnerabilities. Instead, the goal is to detect active attacks and to recover from any disruption or delays caused by them. If the detection has a deterrent effect, it also may contribute to prevention.</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Security Services</strong></p>
+        <p>X.800 defines a security service as a service that is provided by a protocol layer of communicating open systems and that ensures adequate security of the systems or of data transfers. Perhaps a clearer definition is found in RFC 4949, which provides the following definition: A processing or communication service that is provided by a system to give a specific kind of protection to system resources; security services implement security policies and are implemented by security mechanisms.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Authentication:</strong></p>
+        <p>The <strong>authentication </strong>service is concerned with assuring that a communication is authentic.</p>
+        <p>In the case of a single message, such as a warning or alarm signal, the function of the authentication service is to assure the recipient that the message is from the source that it claims to be from. In the case of an ongoing interaction, such as the connection of a terminal to a host, two aspects are involved. First, at the time of connection initiation, the service assures that the two entities are authentic (i.e., that each is the entity that it claims to be). Second, the service must assure that the connection is not interfered with in such a way that a third party can masquerade as one of the two legitimate parties for the purposes of unauthorized transmission or reception.</p>
+        <p>Two specific authentication services are defined in X.800:</p>
+        <p>■■&nbsp;<strong>Peer entity authentication: </strong>Provides for the corroboration of the identity of a peer entity in an association. Two entities are considered peers if they implement the same protocol in different systems (e.g., two TCP modules in two</p>
+        <p>communicating systems). Peer entity authentication is provided for use at the establishment of or during the data transfer phase of a connection. It attempts to provide confidence that an entity is not performing either a masquerade or an unauthorized replay of a previous connection.</p>
+        <p>■■&nbsp;<strong>Data origin authentication: </strong>Provides for the corroboration of the source of a data unit. It does not provide protection against the duplication or modification of data units. This type of service supports applications like electronic mail, where there are no prior interactions between the communicating entities.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Access Control</strong></p>
+        <p>In the context of network security, <strong>access control </strong>is the ability to limit and control the access to host systems and applications via communications links. To achieve this, each entity trying to gain access must first be identified, or authenticated, so that access rights can be tailored to the individual.</p>
+        <p>&nbsp;</p>
+        <p><strong>Data Confidentiality</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Confidentiality </strong>is the protection of transmitted data from passive attacks. With respect to the content of a data transmission, several levels of protection can be identified. The broadest service protects all user data transmitted between two users over a period of time. For example, when a TCP connection is set up between two systems, this broad protection prevents the release of any user data transmitted over the TCP connection. Narrower forms of this service can also be defined, including the protection of a single message or even specific fields within a message. These refinements are less useful than the broad approach and may even be more complex and expensive to implement. The other aspect of confidentiality is the protection of traffic flow from analysis. This requires that an attacker not be able to observe the source and destination, frequency, length, or other characteristics of the traffic on a communications facility.</p>
+        <p>&nbsp;</p>
+        <p><strong>Data Integrity</strong></p>
+        <p>As with confidentiality, <strong>integrity </strong>can apply to a stream of messages, a single message, or selected fields within a message. Again, the most useful and straightforward approach is total stream protection.</p>
+        <p>A connection-oriented integrity service deals with a stream of messages and assures that messages are received as sent with no duplication, insertion, modification, reordering, or replays. The destruction of data is also covered under this service. Thus, the connection-oriented integrity service addresses both message stream modification and denial of service. On the other hand, a connectionless integrity service deals with individual messages without regard to any larger context and generally provides protection against message modification only.</p>
+        <p>We can make a distinction between service with and without recovery. Because the integrity service relates to active attacks, we are concerned with detection rather than prevention. If a violation of integrity is detected, then the service may simply report this violation, and some other portion of software or human intervention is required to recover from the violation. Alternatively, there are mechanisms available to recover from the loss of integrity of data, as we will review subsequently. The incorporation of automated recovery mechanisms is typically the more attractive alternative.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Nonrepudiation</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Nonrepudiation </strong>prevents either sender or receiver from denying a transmitted message. Thus, when a message is sent, the receiver can prove that the alleged sender in fact sent the message. Similarly, when a message is received, the sender can prove that the alleged receiver in fact received the message.</p>
+        <p>&nbsp;</p>
+        <p><strong>Security Mechanism:</strong></p>
+        <p>The mechanisms are divided into those that are implemented in a specific protocol layer, such as TCP or an application-layer protocol, and those that are not specific to any particular protocol layer or security service.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>A Model for Internetwork Security </strong></p>
+        <p>&nbsp;</p>
+        <p>A model for much of what we will be discussing is captured, in very general terms, in Figure 1.5. A message is to be transferred from one party to another across some sort of Internet service. The two parties, who are the <em>principals </em>in this transaction, must cooperate for the exchange to take place. A logical information channel is established by defining a route through the Internet from source to destination and by the cooperative use of communication protocols (e.g., TCP/IP) by the two principals.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Security aspects come into play when it is necessary or desirable to protect the information transmission from an opponent who may present a threat to confidentiality, authenticity, and so on. All of the techniques for providing security have two components:</p>
+        <ol>
+          <li>A security-related transformation on the information to be sent. Examples include the encryption of the message, which scrambles the message so that it is unreadable by the opponent, and the addition of a code based on the contents of the message, which can be used to verify the identity of the sender.</li>
+        </ol>
+        <p><strong>&nbsp;</strong></p>
+        <ol start="2">
+          <li>Some secret information shared by the two principals and, it is hoped, unknown to the opponent. An example is an encryption key used in conjunction with the transformation to scramble the message before transmission and unscramble it on reception.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>A trusted third party may be needed to achieve secure transmission. For example, a third party may be responsible for distributing the secret information to the two principals while keeping it from any opponent. Or a third party may be needed to arbitrate disputes between the two principals concerning the authenticity of a message transmission.</p>
+        <p>&nbsp;</p>
+        <p><strong>This general model shows that there are four basic tasks in designing a Particular security service:</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <ol>
+          <li>Design an algorithm for performing the security-related transformation. The algorithm should be such that an opponent cannot defeat its purpose.</li>
+          <li>Generate the secret information to be used with the algorithm.</li>
+          <li>Develop methods for the distribution and sharing of the secret information.</li>
+          <li>Specify a protocol to be used by the two principals that make use of the security algorithm and the secret information to achieve a particular security service.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Most readers are familiar with the concerns caused by the existence of hackers who attempt to penetrate systems that can be accessed over a network. The hacker can be someone who, with no malign intent, simply gets satisfaction from breaking and entering a computer system. The intruder can be a disgruntled employee who wishes to do damage or a criminal who seeks to exploit computer assets for financial gain (e.g., obtaining credit card numbers or performing illegal money transfers).</p>
+        <p>Another type of unwanted access is the placement in a computer system of logic that exploits vulnerabilities in the system and that can affect application programs as well as utility programs, such as editors and compilers. Programs can present two kinds of threats:</p>
+        <ol>
+          <li><strong>Information access threats: </strong>Intercept or modify data on behalf of users who should not have access to that data.</li>
+          <li><strong>Service threats: </strong>Exploit service flaws in computers to inhibit use by legitimate users.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Viruses and worms are two examples of software attacks. Such attacks can be introduced into a system by means of a disk that contains the unwanted logic concealed in otherwise useful software. They also can be inserted into a system across a network; this latter mechanism is of more concern in network security.</p>
+        <p>The <strong>security mechanisms </strong>needed to cope with unwanted access fall into two broad categories (see Figure 1.6). The first category might be termed a gatekeeper function. It includes password-based login procedures that are designed to deny</p>
+        <p>Access to all but authorized users and screening logic that is designed to detect and reject worms, viruses, and other similar attacks. Once either an unwanted user or unwanted software gains access, the second line of defense consists of a variety of internal controls that monitor activity and analyze stored information in an attempt to detect the presence of unwanted intruders.</p>
+        <p>&nbsp;</p>
+        <p><strong>Internet Standards:</strong></p>
+        <p>&nbsp;</p>
+        <p>Many of the security techniques and applications described in this book have been specified as standards. Additionally, standards have been developed to cover management practices and the overall architecture of security mechanisms and services.</p>
+        <p>Throughout this book, we describe the most important standards in use or being developed for various aspects of cryptography and network security. Various organizations have been involved in the development or promotion of these standards. The most important (in the current context) of these organizations are as follows.</p>
+        <p>&nbsp;</p>
+        <p>■■&nbsp;<strong>National Institute of Standards and Technology: </strong>NIST is a U.S. federal agency that deals with measurement science, standards, and technology related to U.S. government use and to the promotion of U.S. private-sector innovation. Despite its national scope, NIST <strong>Federal Information Processing Standards</strong>&nbsp;<strong>(FIPS) </strong>and <strong>Special Publications (SP) </strong>have a worldwide impact.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Internet Society:</strong></p>
+        <p>ISOC is a professional membership society with worldwide organizational and individual membership. It provides leadership in addressing issues that confront the future of the Internet and is the organization home for the groups responsible for Internet infrastructure standards, including the Internet Engineering Task Force (IETF) and the Internet Architecture Board (IAB). These organizations develop Internet standards and related specifications, all of which are published as <strong>Requests for Comments (RFCs)</strong>.</p>
+        <p>&nbsp;</p>
+        <p><strong>Symmetric Encryption:</strong></p>
+        <p>Symmetric encryption, also referred to as conventional encryption, secret-key, or single-key encryption, was the only type of encryption in use prior to the development of public-key encryption in the late 1970s.1 It remains by far the most widely used of the two types of encryption.</p>
+        <p>&nbsp;</p>
+        <p>It is important to note that the security of symmetric encryption depends on the secrecy of the key, not the secrecy of the algorithm. That is, it is assumed that it is impractical to decrypt a message on the basis of the ciphertext <em>plus </em>knowledge of the encryption/decryption algorithm. In other words, we do not need to keep the algorithm secret; we need to keep only the key secret. This feature of symmetric encryption is what makes it feasible for widespread use. The fact that the algorithm need not be kept secret means that manufacturers can and have developed low-cost chip implementations of data encryption algorithms. These chips are widely available and incorporated into a number of products. With the use of symmetric encryption, the principal security problem is maintaining the secrecy of the key.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Symmetric Encryption Principles:</strong></p>
+        <p>&nbsp;</p>
+        <p>A <strong>symmetric encryption </strong>scheme has five ingredients (Figure 2.1):</p>
+        <p>&nbsp;</p>
+        <p>■■&nbsp;<strong>Plaintext: </strong>This is the original message or data that is fed into the algorithm as input.</p>
+        <p>&nbsp;</p>
+        <p>■■&nbsp;<strong>Encryption algorithm: </strong>The <strong>encryption </strong>algorithm performs various substitutions and transformations on the plaintext.</p>
+        <p>&nbsp;</p>
+        <p>■■&nbsp;<strong>Secret key: </strong>The secret key is also input to the algorithm. The exact substitutions and transformations performed by the algorithm depend on the key.</p>
+        <p>&nbsp;</p>
+        <p>■■&nbsp;<strong>Ciphertext: </strong>This is the scrambled message produced as output. It depends on the plaintext and the secret key. For a given message, two different keys will produce two different ciphertexts.</p>
+        <p>&nbsp;</p>
+        <p>■■&nbsp;<strong>Decryption algorithm: </strong>This is essentially the encryption algorithm run in reverse. It takes the ciphertext and the same secret key and produces the original plaintext.</p>
+        <p>&nbsp;</p>
+        <p>There are two requirements for secure use of symmetric encryption:</p>
+        <p><strong>&nbsp;</strong></p>
+        <ol>
+          <li>We need a strong encryption algorithm. At a minimum, we would like the algorithm to be such that an opponent who knows the algorithm and has access to one or more ciphertexts would be unable to decipher the ciphertext or figure out the key. This requirement is usually stated in a stronger form: The opponent should be unable to decrypt ciphertext or discover the key even if he or she is in possession of a number of ciphertexts together with the plaintext that produced each ciphertext.</li>
+        </ol>
+        <p><strong>&nbsp;</strong></p>
+        <ol start="2">
+          <li>Sender and receiver must have obtained copies of the secret key in a secure fashion and must keep the key secure. If someone can discover the key andknows the algorithm, all communication using this key is readable.</li>
+        </ol>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

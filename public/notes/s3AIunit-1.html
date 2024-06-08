@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 AI unit-1</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><b>UNIT-1</b></p>
+        <p><strong>&nbsp;</strong></p>
+        <div style="margin: 5px 0;">
+            <p><h1>INTRODUCTION OF AI</h1></p>
+            <p><h2>What is AI ?</h2></p>
+            <p>Rich and Knight: &ldquo;the study of how to make computers do things which, at the moment, people do better&rdquo;.</p>
+            <p>&nbsp;</p>
+            <p>Artificial intelligence (AI) is a wide-ranging branch of computer science concerned with building smart machines capable of performing tasks that typically require human intelligence.</p>
+            <p>What are the four types of Artificial Intelligence?</p>
+            <ol>
+              <li>Reactive Machines</li>
+              <li>Limited Memory</li>
+              <li>Theory of Mind</li>
+              <li>Self-Awareness</li>
+            </ol>
+            <p><h4>1.Reactive Machines</h4></p>
+            <p>A reactive machine follows the most basic of AI principles and, as its name implies, is capable of only using its intelligence to perceive and react to the world in front of it. A reactive machine cannot store a memory and as a result cannot rely on past experiences to inform decision making in real-time.</p>
+            <p>Perceiving the world directly means that reactive machines are designed to complete only a limited number of specialized duties. Intentionally narrowing a reactive machine&rsquo;s worldview is not any sort of cost-cutting measure, however, and instead means that this type of AI will be more trustworthy and reliable &mdash; it will react the same way to the same stimuli every time.</p>
+            <p><h4>2.Limited Memory</h4></p>
+            <p>Limited memory artificial intelligence has the ability to store previous data and predictions when gathering information and weighing potential decisions &mdash; essentially looking into the past for clues on what may come next. Limited memory artificial intelligence is more complex and presents greater possibilities than reactive machines.</p>
+            <ol>
+              <li>Reinforcement learning</li>
+              <li>Long Short Term Memory (LSTM),</li>
+              <li>Evolutionary Generative Adversarial Networks (E-GAN)</li>
+            </ol>
+            <p>&nbsp;</p>
+            <p><h4>3.Theory of Mind</h4></p>
+            <p>Theory of Mind is just that &mdash; theoretical. We have not yet achieved the technological and scientific capabilities necessary to reach this next level of artificial intelligence. capabilities necessary to reach this next level of artificial intelligence.&nbsp;</p>
+            <p><h4>4.Self-Awareness</h4></p>
+            <p>Once Theory of Mind can be established in artificial intelligence, sometime well into the future, the final step will be for AI to become self-aware. This kind of artificial intelligence possesses human-level consciousness and understands its own existence in the world, as well as the presence and emotional state of others. It would be able to understand what others may need based on not just what they communicate to them but how they communicate it. &nbsp;</p>
+            <p>What are Examples of Artificial Intelligence?</p>
+            <ol>
+              <li>Siri, Alexa and other smart assistants</li>
+              <li>Self-driving cars</li>
+              <li>Robo-advisors</li>
+              <li>Conversational bots</li>
+              <li>Email spam filters</li>
+              <li>Netflix's recommendations</li>
+            </ol>
+            <p>Foundations of Artificial Intelligence</p>
+            <ul>
+              <li>Action Planning: Theory and Practice</li>
+              <li>Fast planning systems (proven at int. competition)</li>
+              <li>Applications at airports and for lift systems</li>
+              <li>Theoretical results (see new Russell/Norvig)</li>
+              <li>Qualitative Temporal-Spatial Reasoning &ndash; Theory and reasoning algorithms</li>
+              <li>Application in qualitative layout description</li>
+              <li>SFB</li>
+              <li>RoboCup</li>
+              <li>World champion three times</li>
+              <li>Autonomous table soccer</li>
+              <li>RoboCup Rescue</li>
+            </ul>
+            <p>(Multi-Agent-System for disaster relief)</p>
+            <p>&nbsp;</p>
+            <p>A Brief History of Artificial Intelligence</p>
+            <p>Here&rsquo;s a brief timeline of the past six decades of how AI evolved from its inception.</p>
+            <p>1956 - John McCarthy coined the term &lsquo;artificial intelligence&rsquo; and had the first AI conference.</p>
+            <p>1969 - Shakey was the first general-purpose mobile robot built. It is now able to do things with a purpose vs. just a list of instructions.</p>
+            <p>1997 - Supercomputer &lsquo;<u>Deep Blue</u>&rsquo; was designed, and it defeated the world champion chess player in a match. It was a massive milestone by IBM to create this large computer.</p>
+            <p>2002 - The first commercially successful robotic vacuum cleaner was created.&nbsp;</p>
+            <p>2005 - 2019 - Today, we have speech recognition, robotic process automation (RPA), a dancing robot, smart homes, and other innovations make their debut.</p>
+            <p>2020 - Baidu releases the LinearFold AI algorithm to medical and scientific and medical teams developing a vaccine during the early stages of the SARS-CoV-2 (COVID-19) pandemic. The algorithm can predict the RNA sequence of the virus in only 27 seconds, which is 120 times faster than other methods.</p>
+            <p>Agents and Environments</p>
+            <p>&nbsp;An agent is anything that can be viewed as previewing in through sensor and acting upon that environments through actuators.</p>
+            <p>&nbsp;</p>
+            <p>Application Area</p>
+            <ul>
+              <li>Customers Help Desk</li>
+              <li>Web Browser Intelligence</li>
+              <li>Which Website Visited</li>
+              <li>Bookmarks</li>
+            </ul>
+            <p>Nature of Environments&nbsp;</p>
+            <p>&nbsp;To design a rational agent. We must specify the task environments. An environment in artificial intelligence is the surrounding of the agent. The agent takes input from the environment through sensors and delivers the output to the environment through actuators. There are several types of environments:</p>
+            <ul>
+              <li>Deterministic vs Stochastic</li>
+              <li>Episodic vs Sequential</li>
+              <li>Static vs Dynamic</li>
+              <li>Discrete vs Continuous</li>
+              <li>Single-agent vs Multi-agent</li>
+              <li>Fully Observable vs Partially Observable</li>
+            </ul>
+            <p>Deterministic vs Stochastic :</p>
+            <p>When a uniqueness in the agent&rsquo;s current state completely determines the next state of the agent, the environment is said to be deterministic .The stochastic environment is random in nature which is not unique and cannot be completely determined by the agent.</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Examples:</p>
+            <ol>
+              <li>Chess &ndash; there would be only a few possible moves for a coin at the current state and these moves can be determined .</li>
+              <li>Self Driving Cars &ndash; the actions of a self-driving car are not unique, it varies time to time.</li>
+            </ol>
+            <p>Episodic vs&nbsp; Sequential :</p>
+            <p>&nbsp;In Episodic task environment, each of the agents action is divided into an atomic incidents or episodes. There is no dependency between current and previous incident. In each incident agent receives input from environment and then performs corresponding action.</p>
+            <p>Example: Consider an example of Pick and Place robot, which is used to detect defective parts from conveyer belt. Here, every time robot (agent) will make decision on current part i.e. there is no dependency between current and previous decision.</p>
+            <p>Static vs Dynamic :</p>
+            <ol>
+              <li>An environment that keeps constantly changing itself when the agent is up with some action is said to be dynamic.</li>
+              <li>A roller coaster ride is dynamic as it is set in motion and the environment keeps changing every instant.</li>
+              <li>An idle environment with no change in its state is called a static environment.</li>
+              <li>An empty house is static as there&rsquo;s no change in the surroundings when an agent enters.</li>
+            </ol>
+            <p>Discrete vs Continuous :</p>
+            <ol>
+              <li>If an environment consists of a finite number of actions that can be deliberated in the environment to obtain the output, it is said to be a discrete environment.</li>
+              <li>The game of chess is discrete as it has only a finite number of moves. The number of moves might vary with every game, but still, it&rsquo;s finite.</li>
+              <li>The environment in which the actions performed cannot be numbered i.e.. is not discrete, is said to be continuous.</li>
+              <li>Self-driving cars are an example of continuous environments as their actions are driving, parking, etc. which cannot be numbered.</li>
+            </ol>
+            <p>Single-agent vs Multi-agent :</p>
+            <ol>
+              <li>An environment consisting of only one agent is said to be a single-agent environment.</li>
+              <li>A person left alone in a maze is an example of the single-agent system.</li>
+              <li>An environment involving more than one agent is a multi-agent environment.</li>
+              <li>The game of football is multi-agent as it involves 11 players in each team.</li>
+            </ol>
+            <p>Fully Observable vs Partially Observable :</p>
+            <ol>
+              <li>When an agent sensor is capable to sense or access the complete state of an agent at each point in time, it is said to be a fully observable environment else it is partially observable.</li>
+              <li>Maintaining a fully observable environment is easy as there is no need to keep track of the history of the surrounding.</li>
+              <li>An environment is called unobservable when the agent has no sensors in all environments.</li>
+            </ol>
+            <p>&nbsp;&nbsp;&nbsp; Examples:&nbsp;</p>
+            <ol>
+              <li>Chess &ndash; the board is fully observable, so are the opponent&rsquo;s moves.</li>
+              <li>Driving &ndash; the environment is partially observable because what&rsquo;s around the corner is not known.</li>
+            </ol>
+            <p>Structure of agents</p>
+            <p>Artificial intelligence is defined as the study of rational agents. A rational agent could be anything that makes decisions, as a person, firm, machine, or software. It carries out an action with the best outcome after considering past and current percepts(agent&rsquo;s perceptual inputs at a given instance). An AI system is composed of an agent and its environment. The agents act in their environment. The environment may contain other agents.&nbsp;</p>
+            <p>An agent is anything that can be viewed as :&nbsp;</p>
+            <ul>
+              <li>perceiving its environment through sensors and</li>
+              <li>acting upon that environment through actuators</li>
+            </ul>
+            <p>Note: Every agent can perceive its own actions (but not always the effects)</p>
+            <p>Agent = Architecture + Agent Program</p>
+            <p>&nbsp;</p>
+            <p>Types of Agents</p>
+            <p>Agents can be grouped into five classes based on their degree of perceived intelligence and capability :</p>
+            <ol>
+              <li>Simple Reflex Agents</li>
+              <li>Model-Based Reflex Agents</li>
+              <li>Goal-Based Agents</li>
+              <li>Utility-Based Agents</li>
+              <li>Learning Agent</li>
+            </ol>
+            <p>Simple Reflex Agents :</p>
+            <ol>
+              <li>Example of computer representation implementing agents using rule.</li>
+              <li>Works on the basis of precision.</li>
+              <li>Simple reflex agents ignore the rest of the percept history and act only on the basis of the current percept.</li>
+            </ol>
+            <p>Example:</p>
+            <p>Car-in-front &ndash;is breaking then initiate breaking&nbsp;</p>
+            <p>Problems with Simple reflex agents are :&nbsp;</p>
+            <ol>
+              <li>Very limited intelligence.</li>
+              <li>No knowledge of non-perceptual parts of the state.</li>
+              <li>Usually too big to generate and store.</li>
+              <li>If there occurs any change in the environment, then the collection of rules need to be updated.</li>
+            </ol>
+            <p>&nbsp;</p>
+            <p>Model-Based Reflex Agents:</p>
+            <ol>
+              <li>To handed partial observability.</li>
+              <li>There is an internal state to maintain the precesion sequence</li>
+              <li>It keeps track of the current stack of the world using an internal model.</li>
+            </ol>
+            <p>&nbsp;</p>
+            <p>Goal-Based Agents :</p>
+            <ol>
+              <li>The agent need some sort of goal information that describe situation that are destructive
+                <ul>
+                  <li>Generate possible sequence of action  Assess in goal in each resulting date  Predict resulting state.</li>
+                  <li>Choose an action that will achieve the goal</li>
+                </ul>
+              </li>
+            </ol>
+            <p>Example : Search Ch3 to Ch0</p>
+            <ul>
+              <li>We can reprogram the agent simply by changing the goal.</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>Utility-Based Agents :</p>
+            <p>1.Differences preference for different goals</p>
+            <ol start="2">
+              <li>In some application we need to make quantitative comparison of state based utility.</li>
+            </ol>
+            <p>&nbsp;</p>
+            <p>Learning Agent :</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It can be divided into four conceptual components.</p>
+            <ol>
+              <li>Learning element: It is responsible for making improvements by learning from the environment</li>
+            </ol>
+            <p>&nbsp;</p>
+            <ol start="2">
+              <li>Critic: The learning element takes feedback from critics which describes how well the agent is doing with respect to a fixed performance standard.</li>
+            </ol>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <ol start="3">
+              <li>Performance element: It is responsible for selecting external action</li>
+            </ol>
+            <p>&nbsp;</p>
+            Problem Generator: This component is responsible for suggesting actions that will lead to new and informative experiences. &nbsp;
+          </div>
+        <p>What Is Artificial Intelligence?</p>
+        <p>Artificial Intelligence (AI) is the machine-displayed intelligence that simulates human behavior or thinking and can be trained to solve specific problems. AI is a combination of <a href="https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-machine-learning">Machine Learning</a> techniques and <a href="https://www.simplilearn.com/tutorials/deep-learning-tutorial/what-is-deep-learning">Deep Learning</a>. <a href="https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/types-of-artificial-intelligence">Types</a> <a href="https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/types-of-artificial-intelligence">of artificial intelligence</a> models are trained using vast volumes of data have the ability to make intelligent decisions.</p>
+        <table width="693">
+          <tbody>
+            <tr>
+              <td width="332">
+                <p>1. AI in Astronomy</p>
+                <p>Artificial Intelligence can be very useful to solve complex universe problems. AI technology can be helpful for understanding the universe such as how it works, origin, etc.</p>
+              </td>
+              <td width="361">
+                <p>2. AI in Healthcare</p>
+                <p>In the last, five to ten years, AI becoming more advantageous for the healthcare industry and going to have a significant impact on this industry. Healthcare Industries are applying AI to make a better and faster diagnosis than humans. AI can help doctors with diagnoses and can inform when patients are worsening so that medical help can reach to the patient before hospitalization.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="332">
+                <p>3. AI in Gaming</p>
+                <p>AI can be used for gaming purpose. The AI machines can play strategic games like chess, where the machine needs to think of a large number of possible places.</p>
+              </td>
+              <td width="361">
+                <p>4. AI in Finance</p>
+                <p>AI and finance industries are the best matches for each other. The finance industry is implementing automation, chatbot, adaptive intelligence, algorithm trading, and machine learning into financial processes.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="332">
+                <p>5. AI in Data Security</p>
+                <p>The security of data is crucial for every company and cyber-attacks are growing very rapidly in the digital world. AI can be used to make your data more safe and secure. Some examples such as AEG bot, AI2 Platform,are used to determine software bug and cyber-attacks in a better way</p>
+              </td>
+              <td width="361">
+                <p>6. AI in Social Media</p>
+                <p>Social Media sites such as Facebook, Twitter, and Snapchat contain billions of user profiles, which need to be stored and managed in a very efficient way. AI can organize and manage massive amounts of data. AI can analyze lots of data to identify the latest trends, hashtag, and requirement of different users.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="332">
+                <p>7. AI in Travel &amp; Transport</p>
+                <p>AI is becoming highly demanding for travel industries. AI is capable of doing various travel related works such as from making travel arrangement to suggesting the hotels, flights, and best routes to the customers. Travel industries are using AI-powered chatbots which can make human-like interaction with customers for better and fast response.</p>
+              </td>
+              <td width="361">
+                <p>8. AI in Automotive Industry</p>
+                <p>Some Automotive industries are using AI to provide virtual assistant to their user for better performance. Such as Tesla has introduced TeslaBot, an intelligent virtual assistant.</p>
+                <p>Various Industries are currently working for developing self-driven cars which can make your journey more safe and secure.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="332">
+                <p>9. AI in Robotics:</p>
+                <p>Artificial Intelligence has a remarkable role in Robotics. Usually, general robots are programmed such that they can perform some</p>
+                <p>repetitive task, but with the help of AI</p>
+              </td>
+              <td width="361">
+                <p>10. AI in Entertainment</p>
+                <p>We are currently using some AI based applications in our daily life with some entertainment services such as Netflix or Amazon. With the help of ML/AI algorithms, these services show the recommendations for programs or shows</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ol>
+          <li>Machine Learning</li>
+        </ol>
+        <p>It is one of the applications of AI where machines are not explicitly programmed to perform certain tasks; rather, they learn and improve from experience automatically. Deep Learning is a subset of machine learning based on artificial neural networks for predictive analysis. There are various machine learning algorithms, such as Unsupervised Learning, Supervised Learning, and Reinforcement Learning. In Unsupervised Learning, the algorithm does not use classified information to act on it without any guidance. In Supervised Learning, it deduces a function from the training data, which consists of a set of an input object and the desired output. Reinforcement learning is used by machines to take suitable actions to increase the reward to find the best possibility which should be taken in to account.</p>
+        <ol start="2">
+          <li>NLP (Natural Language Processing)</li>
+        </ol>
+        <p>It is the interactions between computers and human language where the computers are programmed to process natural languages. Machine Learning is a reliable technology for Natural Language Processing to obtain meaning from human languages. In NLP, the audio of a human talk is captured by the machine. Then the audio-to-text conversation occurs, and then the text is processed where the data is converted into audio. Then the machine uses the audio to respond to humans. Applications of Natural Language Processing can be found in IVR (Interactive Voice Response) applications used in call centres, language translation applications like Google Translate and word processors such as Microsoft Word to check the accuracy of grammar in text. However, the nature of human languages makes Natural Language Processing difficult because of the rules which are involved in the passing of information using natural language, and they are not easy for the computers to understand. So NLP uses algorithms to recognize and abstract the rules of the natural languages where the unstructured data from the human languages can be converted to a format that is understood by the computer. Moreover, NLP can also be found in content optimization such as paraphrasing applications, which helps to improve the readability of complex text.</p>
+        <ol start="3">
+          <li>Automation and Robotics</li>
+        </ol>
+        <p>The purpose of Automation is to get the monotonous and repetitive tasks done by machines which also improve productivity and in receiving cost-effective and more efficient results. Many organizations use machine learning, neural networks, and graphs in automation. Such automation can prevent fraud issues while financial transactions online by using CAPTCHA technology. Robotic process automation is programmed to perform high volume repetitive tasks which can adapt to the change in different circumstances.</p>
+        <ol start="4">
+          <li>Machine Vision</li>
+        </ol>
+        <p>Machines can capture visual information and then analyze it. Here cameras are used to capture the visual information, the analogue to digital conversion is used to convert the image to digital data, and digital signal processing is employed to process the data. Then the resulting data is fed to a computer. In machine vision, two vital aspects are sensitivity, which is the ability of the machine to perceive impulses that are weak and resolution, the range to which the machine can distinguish the objects. The usage of machine vision can be found in signature identification, pattern recognition, and medical image analysis, etc.</p>
+        <p>What is pattern recognition?</p>
+        <p>Pattern recognition is the use of machine learning algorithms to identify patterns. It classifies data based on statistical information or knowledge gained from patterns and their&nbsp; representation.</p>
+        <p>In this technique, labeled training data is used to train pattern recognition systems. A label is attached to a specific input value that is used to produce a pattern-based output. In the absence of labeled data, other computer algorithms may be employed to find unknown patterns.</p>
+        <p>Features of pattern recognition</p>
+        <p>Pattern recognition has the following features:</p>
+        <p>∙ It has great precision in recognizing patterns.</p>
+        <p>∙ It can recognize unfamiliar objects.</p>
+        <p>∙ It can recognize objects accurately from various angles.</p>
+        <p>∙ It can recover patterns in instances of missing data.</p>
+        <p>∙ A pattern recognition system can discover patterns that are partly hidden.</p>
+        <p>How pattern recognition works</p>
+        <p>Pattern recognition is achieved by utilizing the concept of learning. Learning enables the pattern recognition system to be trained and to become adaptable to provide more accurate results. A section of the dataset is used for training the</p>
+        <p>system while the rest is used for testing it.</p>
+        <p>The following image shows how data is used for training and testing.</p>
+        <p>The training set contains images or data used for training or building the model.</p>
+        <p>Training rules&nbsp; are used to provide the criteria for output decisions.</p>
+        <p>Training algorithms are used to match a given input data with a corresponding output decision. The algorithms and rules are then applied to facilitate training. The system uses the&nbsp; information collected from the data to generate results.</p>
+        <p>The testing set is used to validate the accuracy of the system. The testing data is used to check whether the accurate output is attained after the system has been trained. This data represents approximately 20% of the entire data in the pattern</p>
+        <p>recognition system.</p>
+        <p>The pattern recognition process works in five main phases as shown in the image below:</p>
+        <p>These phases can be explained as follows:</p>
+        <ol>
+          <li>Sensing: In this phase, the pattern recognition system</li>
+        </ol>
+        <p>converts the input data into analogous data.</p>
+        <ol start="2">
+          <li>Segmentation: This phase ensures that the sensed objects</li>
+        </ol>
+        <p>are isolated.</p>
+        <ol start="3">
+          <li>Feature extraction: This phase computes the features or properties of the objects andsends them for further classification.</li>
+          <li>Classification: In this phase, the sensed objects are categorized or placed in groupsor cases.</li>
+          <li>Post-processing: Here, further considerations are made before adecision is made. Applications of pattern recognition</li>
+        </ol>
+        <p>Pattern recognition can be applied in the following areas:</p>
+        <p>∙ Image analysis: Pattern recognition is used in digital image analysis to automatically study images to gather meaningful information from them. It</p>
+        <p>gives machines the recognition&nbsp; intelligence needed for image processing.</p>
+        <p>∙ Seismic analysis: Seismic analysis involves studying how natural events like earthquakes affect rocks, buildings, and soils. Pattern recognition is used for discovering and interpreting patterns&nbsp; in seismic events.</p>
+        <p>∙ Healthcare: Pattern recognition is used in the healthcare sector to improve health services. Data of patients is stored and used by medical practitioners for further analysis. This technique is also used to recognize objects or damages in human bodies.</p>
+        <p>∙ Fingerprint identification: This process is used for identifying fingerprints in computer and smartphone devices. Modern smartphones have a fingerprint identification feature that allows you to gain access to your phone after verifying</p>
+        <p>your fingerprint.</p>
+        <p>∙ Computer vision: It is used in computer applications to extract useful features from image samples. It has been applied in computer vision to perform various tasks such as <u>object recognition </u>and <u>medical imaging</u>.</p>
+        <h1><strong>Constraint Satisfaction Problems in Artificial Intelligence</strong></h1>
+        <p>Constraint satisfaction problems are problems in Artificial Intelligence which concern themselves with strictly the goal state. They take advantage of general state representation.</p>
+        <p>Intuition</p>
+        <p>States &mdash; represent them as a vector of feature values (a set of k variables), each variable has a domain of unique values. The state is specified by assigning values to all the variables, and a partial state is the assignment of a value to some of the variables</p>
+        <p>Goal &mdash; conditions on the vector of feature values</p>
+        <p>To solve a CSP we find a set of values for the features to satisfy the conditions.</p>
+        <p>A formal definition:</p>
+        <p>A CSP consists of</p>
+        <p>A set of variables V1, &hellip;Vn;</p>
+        <p>A(finite)domain of values Domain[Vi] ;</p>
+        <p>A set of constraints C1, &hellip;, Cm</p>
+        <p>Each constraint has a scope or a set of variables that can be operated on.</p>
+        <p>The goal is to satisfy the constraint by assigning the right values. A CSP is cannot be satisfied if no solution exists.</p>
+        <p>A CSP problem can be defined as a search problem where the initial state is an empty assignment to a variable, the function is assigning values to variables and the goal test is to see if the assignments are correct(no constraint violations) and complete.</p>
+        <p>Backtracking Search</p>
+        <p>Since CSPs do not require finding a path to a goal, they just require the correct configurations to the goal. We can solve these best by backtracking from the goal or reverse engineering the problem.</p>
+        <p>Method:</p>
+        <p>Find partial assignments</p>
+        <p>Decide on a value for one variable at a time (order agnostic)</p>
+        <p>If a constraint fails just reject it Implementation:</p>
+        <p>You can complete backtracking recursively. If the variables are set, then terminate the recursion Else:</p>
+        <p>Pick an unassigned variable V and assign it a value</p>
+        <ol start="2">
+          <li>Test the constraints of V and all other variables that were assigned</li>
+          <li>If a constraint fails than return, else keep recursing.</li>
+        </ol>
+        <p>Constraint Propagation</p>
+        <p>There might be variables that have no possible values, but backtracking does not detect this until it tries to assign them a value.</p>
+        <p>We can look ahead at the unassigned variables trying to detect the failures.</p>
+        <p>Propagation has to be applied to the search and almost if not all every nodes in the tree.</p>
+        <p>Since propagation is an inference, it takes a lot long to calculate the next step.</p>
+        <p>We can propagate using two ways:</p>
+        <p>Forward Checking and Generalized Arc Consistency.</p>
+        <p>Forward Checking:</p>
+        <p>When instantiating a variable V, do the following for all constraints C that have only one not instantiated variable X remaining:</p>
+        <p>Check all the values of X;</p>
+        <p>Prune those values that violate C.</p>
+        <p>Then backtrack again.</p>
+        <p>As we backtrack, we have to restore the values that were pruned.</p>
+        <p>Properties:</p>
+        <p>CSP problems are NP-complete (nondeterministic polynomial time) in that they find a solution in polynomial time and that can be tested.</p>
+        <p>The worst case run time is exponential. Forward checking is often 100 times faster since it solves for sub problems but it can do much worse.</p>
+        <p>Decrease time complexity:</p>
+        <p>You can also decrease the time by dynamically choosing the ordering of a variables using a heuristic.</p>
+        <p>Select the variable that is involved in the largest number of constraints on other unassigned variables.</p>
+        <p>If a variable has only one value left, we propagate its consequences immediately.</p>
+        <p>Generalized Arc Consistency</p>
+        <p>The goal is to remove a value d on a variable V that is not consistent with assignments to other variables. d is said to be Arc Inconsistent. We can remove d from the domain of the variable as the value does not produce a solution.</p>
+        <p>For example.</p>
+        <p>Given C(X,Y) where we want X &gt; Y</p>
+        <p>Dom[X] = (2, 7, 13) Dom[Y] =(4, 11, 19)</p>
+        <p>We remove 2 from domain of X and 19 from domain of Y</p>
+        <p>So that X &gt; Y.</p>
+        <p>All constraints must be GAC at every node of the search space. We do this by removing these inconsistent variables. Every time we assign a value to a variable, we check all the constraints and remove the inconsistent variables. We have to do this until everything is consistent.</p>
+        <p>Properties</p>
+        <p>When all constraints are consistent:</p>
+        <p>Each domain has a single value, at least a domain is empty, some may have more than one value that needs to be solved that have to be reduced.</p>
+        <p>The complexity is O(cd&sup3;)</p>
+        <p>With higher order constraints:</p>
+        <p>The complexity is O(d^k * T(c)) where T is the number of forbidden values.</p>
+        <p>Conclusions</p>
+        <p>Plain backtracking offers the advantage of checking a constraint when it has zero unassigned variables</p>
+        <p>Forward Checking checks a constraint only when it has one unassigned variables</p>
+        <p>GAC checks all constraints, leading to removing more incorrect values. (During the initial state, the preprocessing, directly, and during search)</p>
+        <p>GAC does not find a solution unless we do search while we enforce GAC.</p>
+        <p>Thus constraint satisfaction problems can be improved using GAC, checking and backtracking.</p>
+        <p>What Is Natural Language Understanding (NLU)?</p>
+        <p>Natural Language Understanding (NLU) is the ability of a computer to understand human language. You can use it for many applications, such as chatbots, voice</p>
+        <p>assistants, and automated translation services.</p>
+        <p>The most basic form of NLU is parsing, which takes text written in natural language</p>
+        <p>and converts it into a structured format that computers can understand.</p>
+        <p>For example, the words "hello world" would be converted into their respective parts of speech (nouns and verbs), while "I am hungry" would be split into two sentences:</p>
+        <p>"I am" and "hungry."</p>
+        <p>Parsing is only one part of NLU; other tasks include sentiment analysis, entity</p>
+        <p>recognition, and semantic role labeling.</p>
+        <p>How Does Natural Language Understanding Work?</p>
+        <p>Natural language understanding is taking a natural language input, like a sentence or paragraph, and processing it to produce an output. It's often used in consumer-facing applications like web search engines and chatbots, where users interact with the</p>
+        <p>application using plain language.</p>
+        <p>You can break down the process into three stages:</p>
+        <ul>
+          <li>Tokenization: The first stage of NLU involves splitting a given input into individual words or tokens. It includes punctuation, other symbols, and words from all languages.</li>
+          <li>Lexical Analysis: Next, the tokens are placed into a dictionary that includes their part of speech (for example, whether they're nouns or verbs). It also includes identifying phrases that should be placed in a separate database for later use.</li>
+          <li>Syntactic Analysis: The tokens are analyzed for their grammatical structure. It includes identifying each word's roles and whether there's any ambiguity between multiple interpretations of those roles.</li>
+        </ul>
+        <p>How does semantic analysis work? Explain advantage and disadvantages of semantic analysis.</p>
+        <p>How Does Semantic Analysis Work?</p>
+        <p>The semantic analysis method begins with a language-independent step of analyzing the set of words in the text to understand their meanings. This step is termed &lsquo;lexical semantics&lsquo; and refers to fetching the dictionary definition for the words in the text. Subsequently, words or elements are parsed. Each element is designated a grammatical role, and the whole structure is processed to cut down on any confusion caused by ambiguous words having multiple meanings.</p>
+        <p>Upon parsing, the analysis then proceeds to the interpretation step, which is critical for artificial intelligence algorithms. For example, the word &lsquo;Blackberry&rsquo; could refer to a fruit, a company, or its products, along with several other meanings. Moreover, context is equally important while processing the language, as it takes into account the environment of the sentence and then attributes the correct meaning to it.</p>
+        <p>For example, &lsquo;Blackberry is known for its sweet taste&rsquo; may directly refer to the fruit, but &lsquo;I got a blackberry&rsquo; may refer to a fruit or a Blackberry product. As such, context is vital in semantic analysis and requires additional information to assign a correct meaning to the whole sentence or language.</p>
+        <p>Technically, semantic analysis involves:</p>
+        <ul>
+          <li>Data processing.</li>
+          <li>Defining features, parameters, and characteristics of processed data</li>
+          <li>Data representation</li>
+          <li>Defining grammar for data analysis</li>
+          <li>Assessing semantic layers of processed data</li>
+          <li>Performing semantic analysis based on the linguistic formalism</li>
+        </ul>
+        <h2>Advantages</h2>
+        <ul>
+          <li>In LSA, the concept in question, as well as all related documents, are</li>
+        </ul>
+        <p>likely to be represented in the same way.</p>
+        <ul>
+          <li>The original semantic structure of the space, as well as its original dimensions, are recovered using LSA analysis. LSA analysis' new dimensions provide a more accurate representation of documents</li>
+        </ul>
+        <p>and queries.</p>
+        <ul>
+          <li>LSA can help remove some "noise" from data by using a reduced representation. The noise is data that can be described as</li>
+        </ul>
+        <p>uncommon and insignificant uses of certain terms.</p>
+        <ul>
+          <li>By definition, LSA factors are orthogonal, so data is placed in the reduced space in a way that reflects the correlations in their use across documents and aids retrieval.</li>
+        </ul>
+        <h2>Disadvantages</h2>
+        <ul>
+          <li>LSA vectors necessitate a lot of storage. Although there have been many advancements in electronic storage media, the loss of sparsity</li>
+        </ul>
+        <p>due to large data continues to be a more serious implication.</p>
+        <ul>
+          <li>LSA performs well for long documents due to the small number of context vectors used to describe each document. However, because of the large size of the data, additional storage space and computing</li>
+        </ul>
+        <p>time are required, reducing LSA's efficiency. <a href="https://www.ijedr.org/papers/IJEDR1502143.pdf">(source)</a></p>
+        <p>What are the concepts of understanding?</p>
+        <p>Artificial Intelligence includes the simulation process of human intelligence by machines and special computer systems. The examples of artificial intelligence include learning, reasoning and self-correction. Applications of AI include speech recognition, expert systems, and image recognition and machine vision.</p>
+        <p>Machine learning is the branch of artificial intelligence, which deals with systems and algorithms that can learn any new data and data patterns.</p>
+        <p>Let us focus on the Venn diagram mentioned below for understanding machine learning and deep learning concepts.</p>
+        <p>Machine learning includes a section of machine learning and deep learning is a part of machine learning. The ability of program which follows machine learning concepts is to improve its performance of observed data. The main motive of data transformation is to improve its knowledge in order to achieve better results in the future, provide output closer to the desired output for that particular system. Machine learning includes &ldquo;pattern recognition&rdquo; which includes the ability to recognize the patterns in data.</p>
+        <p>The patterns should be trained to show the output in desirable manner.</p>
+        <p>Machine learning can be trained in two different ways &minus;</p>
+        <ul>
+          <li>Supervised training</li>
+          <li>Unsupervised training</li>
+        </ul>
+        <h1>Supervised Learning</h1>
+        <p>Supervised learning or supervised training includes a procedure where the training set is given as input to the system wherein, each example is labeled with a desired output value. The training in this type is performed using minimization of a particular loss function, which represents the output error with respect to the desired output system.</p>
+        <p>After completion of training, the accuracy of each model is measured with respect to disjoint examples from training set, also called the validation set.</p>
+        <p>The best example to illustrate &ldquo;Supervised learning&rdquo; is with a bunch of photos given with information included in them. Here, the user can train a model to recognize new photos.</p>
+        <h1>Unsupervised Learning</h1>
+        <p>In unsupervised learning or unsupervised training, include training examples, which are not labeled by the system to which class they belong. The system looks for the data, which share common characteristics, and changes them based on internal knowledge features.This type of learning algorithms are basically used in clustering problems.</p>
+        <p>The best example to illustrate &ldquo;Unsupervised learning&rdquo; is with a bunch of photos with no information included and user trains model with classification and clustering. This type of training algorithm works with assumptions as no information is given.</p>
+        <p>Unification Algorithm:</p>
+        <p>What is Unification?</p>
+        <ul>
+          <li>Unification is the process of finding a substitute that makes two separate logical atomic expressions identical. The substitution process is necessary for unification.</li>
+          <li>It accepts two literals as input and uses substitution to make them identical.</li>
+          <li>Let &Psi;1 and &Psi;2 be two atomic sentences, and be a unifier such that &Psi;1𝜎 = &Psi;2𝜎, then UNIFY(&Psi;1, &Psi;2)can be written.</li>
+          <li>Example: Find the MGU for Unify{King(x), King(John)}  Let &Psi;1 = King(x), &Psi;2 = King(John),</li>
+        </ul>
+        <p>Algorithm: Unify(&Psi;1, &Psi;2)</p>
+        <p>Step. 1: If &Psi;1 <strong>or </strong>&Psi;2 <strong>is </strong>a variable <strong>or </strong>constant, <strong>then</strong>:</p>
+        <ol>
+          <li>If &Psi;1 <strong>or </strong>&Psi;2 are identical, <strong>then return </strong></li>
+          <li>Else <strong>if </strong>&Psi;1 <strong>is </strong>a variable,
+            <ol>
+              <li><strong>then if </strong>&Psi;1 occurs <strong>in </strong>&Psi;2, <strong>then return </strong>FAILURE</li>
+              <li>Else <strong>return </strong>{ (&Psi;2/ &Psi;1)}.</li>
+            </ol>
+          </li>
+          <li>Else <strong>if </strong>&Psi;2 <strong>is </strong>a variable,
+            <ol>
+              <li>If &Psi;2 occurs <strong>in </strong>&Psi;1 <strong>then return </strong>FAILURE,</li>
+              <li>Else <strong>return </strong>{( &Psi;1 / &Psi;2)}.</li>
+            </ol>
+          </li>
+          <li>Else <strong>return </strong></li>
+        </ol>
+        <p>Step.2: If the initial Predicate symbol <strong>in </strong>&Psi;1 <strong>and </strong>&Psi;2 are <strong>not </strong>same,</p>
+        <p><strong>then return </strong>FAILURE.</p>
+        <p>Step. 3: IF &Psi;1 <strong>and </strong>&Psi;2 have a different number <strong>of </strong>arguments, <strong>then</strong></p>
+        <p><strong>return </strong>FAILURE.</p>
+        <p>Step. 4: Set Substitution <strong>set</strong>(SUBST) to NIL.</p>
+        <p>Step. 5: For i=1 to the number <strong>of </strong>elements <strong>in </strong>&Psi;1.</p>
+        <ol>
+          <li>Call Unify <strong>function with </strong>the ith element <strong>of </strong>&Psi;1 <strong>and </strong>ith</li>
+        </ol>
+        <p>element <strong>of </strong>&Psi;2, <strong>and </strong>put the result <strong>into </strong>S.</p>
+        <ol>
+          <li>If S = failure <strong>then </strong>returns Failure</li>
+          <li>If S &ne; NIL <strong>then do</strong>,
+            <ol start="2">
+              <li>Apply S to the remainder <strong>of </strong>both L1 <strong>and </strong></li>
+            </ol>
+          </li>
+        </ol>
+        <p>What is knowledge representation?</p>
+        <p>Humans are best at understanding, reasoning, and interpreting knowledge. Human knows things, which is knowledge and as per their knowledge they perform various actions in the real world. <strong>But how machines do all these things comes under knowledge representation and reasoning</strong>. Hence we can describe Knowledge representation as following:</p>
+        <ul>
+          <li>Knowledge representation and reasoning (KR, KRR) is the part of Artificial intelligence which concerned with AI agents thinking and how thinking contributes to intelligent behavior of agents.</li>
+          <li>It is responsible for representing information about the real world so that a computer can understand and can utilize this knowledge to solve the complex real world problems such as diagnosis a medical condition or communicating with humans in natural language.</li>
+          <li>It is also a way which describes how we can represent knowledge in artificial intelligence. Knowledge representation is not just storing data into some database, but it also enables an intelligent machine to learn from that knowledge and experiences so that it can behave intelligently like a human.</li>
+        </ul>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

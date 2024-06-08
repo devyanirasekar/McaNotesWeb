@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 AI unit-3</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p>Unit-3</p>
+        <p>&nbsp;</p>
+        <p><h1>Knowledge Representation Using Predicate Logic:</h1></p>
+        <p>Knowledge representation is a crucial aspect of artificial intelligence (AI) systems as it involves organizing information in a way that a computer can utilize to solve complex problems. Predicate logic is one of the formalisms used for knowledge representation in AI.</p>
+        <p>Predicate logic is an extension of propositional logic that allows for the representation of relationships and properties among objects. It introduces predicates, which are functions or relations that take one or more arguments and return a truth value (either true or false). Here's how knowledge representation using predicate logic works:</p>
+        <ol>
+          <li>
+            <p><strong>Basic Elements:</strong></p>
+            <ul>
+              <li><strong>Constants:</strong> Represent specific objects in the domain. For example, "John" or "Car1".</li>
+              <li><strong>Variables:</strong> Represent placeholders for objects. For example, "x" or "y".</li>
+              <li><strong>Predicates:</strong> Represent relationships or properties. They are denoted by uppercase letters. For example, "IsHuman(x)" or "IsParent(x, y)".</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Atomic Sentences:</strong></p>
+            <ul>
+              <li>Basic statements or facts in predicate logic are called atomic sentences.</li>
+              <li>Example: IsHuman(John), IsParent(Mary, Bob).</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Logical Connectives:</strong></p>
+            <ul>
+              <li><strong>Conjunction (&and;):</strong> Connects two predicates with "and." Example: IsHuman(x) &and; IsParent(x, y).</li>
+              <li><strong>Disjunction (&or;):</strong> Connects two predicates with "or." Example: IsHuman(x) &or; IsAnimal(x).</li>
+              <li><strong>Negation (&not;):</strong> Negates a predicate. Example: &not;IsHuman(x).</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Quantifiers:</strong></p>
+            <ul>
+              <li><strong>Universal Quantifier (&forall;):</strong> Indicates "for all" or "for every." Example: &forall;x IsHuman(x) &rarr; HasTwoLegs(x).</li>
+              <li><strong>Existential Quantifier (&exist;):</strong> Indicates "there exists." Example: &exist;x IsParent(x, y).</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Implication (&rarr;):</strong></p>
+            <ul>
+              <li>Represents a conditional relationship. Example: IsParent(x, y) &rarr; IsHuman(x).</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Complex Sentences:</strong></p>
+            <ul>
+              <li>Combining elements, logical connectives, and quantifiers, complex sentences can be formed to represent intricate relationships and rules in a domain.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Example:</strong></p>
+            <ul>
+              <li>Let's represent the statement "All humans are mortal" using predicate logic.
+                <ul>
+                  <li>&forall;x IsHuman(x) &rarr; IsMortal(x).</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>In AI, predicate logic is used to model knowledge about a domain in a precise and structured manner. Knowledge bases can be built by representing information using predicate logic, enabling reasoning systems to draw inferences, make decisions, and solve problems. This logical formalism provides a foundation for knowledge representation and manipulation in various AI applications.</p>
+        <p>&nbsp;</p>
+        <h1 class="h1">What is Unification?</h1>
+        <ul class="points">
+          <li>Unification is a process of making two different logical atomic expressions identical by finding a substitution. Unification depends on the substitution process.</li>
+          <li>It takes two literals as input and makes them identical using substitution.</li>
+          <li>Let &Psi;<sub>1</sub>&nbsp;and &Psi;<sub>2</sub>&nbsp;be two atomic sentences and 𝜎 be a unifier such that,&nbsp;<strong>&Psi;<sub>1</sub>𝜎 = &Psi;<sub>2</sub>𝜎</strong>, then it can be expressed as&nbsp;<strong>UNIFY(&Psi;<sub>1</sub>, &Psi;<sub>2</sub>)</strong>.</li>
+          <li><strong>Example: Find the MGU for Unify{King(x), King(John)}</strong></li>
+        </ul>
+        <p>Let &Psi;<sub>1</sub>&nbsp;= King(x), &Psi;<sub>2</sub>&nbsp;= King(John),</p>
+        <p><strong>Substitution &theta; = {John/x}</strong>&nbsp;is a unifier for these atoms and applying this substitution, and both expressions will be identical.</p>
+        <ul class="points">
+          <li>The UNIFY algorithm is used for unification, which takes two atomic sentences and returns a unifier for those sentences (If any exist).</li>
+          <li>Unification is a key component of all first-order inference algorithms.</li>
+          <li>It returns fail if the expressions do not match with each other.</li>
+          <li>The substitution variables are called Most General Unifier or MGU.</li>
+        </ul>
+        <p><strong>E.g.</strong>&nbsp;Let's say there are two different expressions,&nbsp;<strong>P(x, y), and P(a, f(z))</strong>.</p>
+        <p>In this example, we need to make both above statements identical to each other. For this, we will perform the substitution.</p>
+        <p>P(x, y)......... (i)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; P(a, f(z))......... (ii)</p>
+        <ul class="points">
+          <li>Substitute x with a, and y with f(z) in the first expression, and it will be represented as&nbsp;<strong>a/x</strong>&nbsp;and f(z)/y.</li>
+          <li>With both the substitutions, the first expression will be identical to the second expression and the substitution set will be:&nbsp;<strong>[a/x, f(z)/y]</strong>.</li>
+        </ul>
+        <h2 class="h2">Conditions for Unification:</h2>
+        <p><strong>Following are some basic conditions for unification:</strong></p>
+        <ul class="points">
+          <li>Predicate symbol must be same, atoms or expression with different predicate symbol can never be unified.</li>
+          <li>Number of Arguments in both expressions must be identical.</li>
+          <li>Unification will fail if there are two similar variables present in the same expression.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h2 class="h2">Unification Algorithm:</h2>
+        <p><strong>Algorithm: Unify(&Psi;<sub>1</sub>, &Psi;<sub>2</sub>)</strong></p>
+        <div class="codeblock">
+          <pre>Step. 1: If &Psi;<sub>1</sub> or &Psi;<sub>2</sub> is a variable or constant, then:
+          a) If &Psi;<sub>1</sub> or &Psi;<sub>2</sub> are identical, then return NIL. 
+          b) Else if &Psi;<sub>1</sub>is a variable, 
+              a. then if &Psi;<sub>1</sub> occurs in &Psi;<sub>2</sub>, then return FAILURE
+              b. Else return { (&Psi;<sub>2</sub>/ &Psi;<sub>1</sub>)}.
+          c) Else if &Psi;<sub>2</sub> is a variable, 
+              a. If &Psi;<sub>2</sub> occurs in &Psi;<sub>1</sub> then return FAILURE,
+              b. Else return {( &Psi;<sub>1</sub>/ &Psi;<sub>2</sub>)}. 
+          d) Else return FAILURE. 
+      Step.2: If the initial Predicate symbol in &Psi;<sub>1</sub> and &Psi;<sub>2</sub> are not same, then return FAILURE.
+      Step. 3: IF &Psi;<sub>1</sub> and &Psi;<sub>2</sub> have a different number of arguments, then return FAILURE.
+      Step. 4: Set Substitution set(SUBST) to NIL. 
+      Step. 5: For i=1 to the number of elements in &Psi;<sub>1</sub>. 
+          a) Call Unify function with the ith element of &Psi;<sub>1</sub> and ith element of &Psi;<sub>2</sub>, and put the result into S.
+          b) If S = failure then returns Failure
+          c) If S &ne; NIL then do,
+              a. Apply S to the remainder of both L1 and L2.
+              b. SUBST= APPEND(S, SUBST). 
+      Step.6: Return SUBST. <br /><br /> <p>&nbsp;</p><h1>Resolution in Propositional Logic and Predicate Logic:</h1></pre>
+          <p>Resolution is a fundamental inference rule used in both propositional logic and predicate logic to derive new logical statements from existing ones. It is a technique employed in automated reasoning and is crucial for tasks such as theorem proving and knowledge representation. Let's explore how resolution works in both propositional and predicate logic:</p>
+          <h3>Resolution in Propositional Logic:</h3>
+          <ol>
+            <li>
+              <p><strong>Basic Idea:</strong></p>
+              <ul>
+                <li>Resolution is used to establish the truth or falsity of a statement by combining clauses (disjunctions of literals) in a logical way.</li>
+                <li>It relies on the fact that if A &or; B is true and &not;B &or; C is true, then A &or; C must also be true.</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>Resolution Rule:</strong></p>
+              <ul>
+                <li>Given two clauses, if there exists a pair of complementary literals (one positive, one negative), they can be resolved to produce a new clause.</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>Example:</strong></p>
+              <ul>
+                <li>Consider the clauses:
+                  <ul>
+                    <li>Clause 1: P &or; Q</li>
+                    <li>Clause 2: &not;P &or; R</li>
+                  </ul>
+                </li>
+                <li>Resolution on P yields the new clause: Q &or; R.</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>Resolution Refutation:</strong></p>
+              <ul>
+                <li>In automated reasoning, resolution is often used for refutation. If the resolution process leads to the empty clause (a clause with no literals), then the original set of clauses is inconsistent.</li>
+              </ul>
+            </li>
+          </ol>
+          <h3>Resolution in Predicate Logic:</h3>
+          <ol>
+            <li>
+              <p><strong>Extension to Predicate Logic:</strong></p>
+              <ul>
+                <li>In predicate logic, resolution is an extension of the propositional resolution, allowing for the handling of quantifiers and predicates.</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>Skolemization:</strong></p>
+              <ul>
+                <li>Before applying resolution in predicate logic, it's common to convert the statements into a prenex normal form. Skolemization is often used to eliminate existential quantifiers by introducing Skolem functions.</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>Resolution Rule in Predicate Logic:</strong></p>
+              <ul>
+                <li>Resolution in predicate logic extends the resolution rule in propositional logic to handle predicates, variables, and quantifiers.</li>
+                <li>Given two clauses with complementary literals, resolution can be applied by unifying the literals and resolving the clauses.</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>Example:</strong></p>
+              <ul>
+                <li>Consider the clauses:
+                  <ul>
+                    <li>Clause 1: IsHuman(x) &or; IsAnimal(y)</li>
+                    <li>Clause 2: &not;IsAnimal(z)</li>
+                  </ul>
+                </li>
+                <li>Resolution on IsAnimal(y) and &not;IsAnimal(z) yields the new clause: IsHuman(x).</li>
+              </ul>
+            </li>
+            <li>
+              <p><strong>Universal and Existential Quantifiers:</strong></p>
+              <ul>
+                <li>Resolution in predicate logic considers the implications of both universal (&forall;) and existential (&exist;) quantifiers, making it more expressive than propositional logic.</li>
+              </ul>
+            </li>
+          </ol>
+          <p>In AI, resolution-based methods are used for various tasks, including automated theorem proving, knowledge representation, and logical reasoning. The application of resolution allows AI systems to derive new information from existing knowledge, making it a powerful tool for logical inference.</p>
+          <p>&nbsp;</p>
+          <p><h1> Question Answering and Natural Deduction:</h1></p>
+          <div class="flex-1 overflow-hidden">
+            <div class="react-scroll-to-bottom--css-esclm-79elbk h-full">
+              <div class="react-scroll-to-bottom--css-esclm-1n7m0yu">
+                <div class="flex flex-col pb-9 text-sm">
+                  <div class="w-full text-token-text-primary" data-testid="conversation-turn-7">
+                    <div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+                      <div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
+                        <div class="relative flex w-full flex-col lg:w-[calc(100%-115px)] agent-turn">
+                          <div class="flex-col gap-1 md:gap-3">
+                            <div class="flex flex-grow flex-col max-w-full">
+                              <div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="69c77403-0661-4670-99dd-f6f35daac912">
+                                <div class="markdown prose w-full break-words dark:prose-invert light">
+                                    <p>&nbsp;</p>
+                                  <p><strong>Question Answering in AI:</strong></p>
+                                  <p>Question answering (QA) in AI refers to the task of designing systems that can understand and respond to questions posed in natural language. QA systems can range from simple fact-based systems to more complex ones that require reasoning and understanding of context. Here's an overview of how QA works in AI:</p>
+                                  <ol>
+                                    <li>
+                                      <p><strong>Text Understanding:</strong></p>
+                                      <ul>
+                                        <li>QA systems typically start by analyzing and understanding a given text or set of documents. This involves natural language processing (NLP) techniques, such as parsing, semantic analysis, and entity recognition.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Question Analysis:</strong></p>
+                                      <ul>
+                                        <li>The system then analyzes the structure and semantics of the question. It identifies key entities, relationships, and the type of information the question is seeking.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Information Retrieval:</strong></p>
+                                      <ul>
+                                        <li>Based on the analysis, the QA system retrieves relevant information from the text or knowledge base. This can involve searching for specific facts or finding passages that contain relevant information.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Reasoning and Inference:</strong></p>
+                                      <ul>
+                                        <li>In more advanced QA systems, reasoning and inference may be required to derive the correct answer. This involves understanding relationships between entities, drawing conclusions, and synthesizing information.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Answer Generation:</strong></p>
+                                      <ul>
+                                        <li>Finally, the system generates a concise and accurate answer to the question. The answer can be extracted directly from the information retrieved or inferred based on the system's understanding of the context.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Example:</strong></p>
+                                      <ul>
+                                        <li>For a question like "Who is the president of the United States?", a QA system would analyze the question, retrieve the current president's name from a reliable source, and provide the answer.</li>
+                                      </ul>
+                                    </li>
+                                  </ol>
+                                  <p>&nbsp;</p>
+                                  <p><strong>Natural Deduction in AI:</strong></p>
+                                  <p>Natural deduction is a formal system of logic that is used to represent and analyze reasoning. It provides a set of rules for making inferences and proving the validity of logical arguments. In the context of AI, natural deduction can be employed for tasks such as automated theorem proving and logical reasoning. Here's a brief explanation of how natural deduction works:</p>
+                                  <ol>
+                                    <li>
+                                      <p><strong>Introduction and Elimination Rules:</strong></p>
+                                      <ul>
+                                        <li>Natural deduction involves rules for introducing and eliminating logical connectives such as &and; (conjunction), &or; (disjunction), &rarr; (implication), and &forall; (universal quantification).</li>
+                                        <li>Introduction rules explain how to introduce a connective into a logical context, while elimination rules explain how to eliminate or use a connective in a proof.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Assumptions and Discharge:</strong></p>
+                                      <ul>
+                                        <li>Natural deduction allows the introduction of assumptions in a proof. These assumptions can be discharged, meaning they are assumed only temporarily and are later discharged when the proof is completed.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Proof Trees:</strong></p>
+                                      <ul>
+                                        <li>Proofs in natural deduction are often represented using proof trees. Each node in the tree corresponds to a logical statement, and the edges represent the application of introduction or elimination rules.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Example:</strong></p>
+                                      <ul>
+                                        <li>To prove A &and; B, one might start by assuming A and then proving B under that assumption. The conjunction introduction rule is then applied to combine A and B.</li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <p><strong>Automated Theorem Proving:</strong></p>
+                                      <ul>
+                                        <li>In AI, natural deduction principles are applied in automated theorem proving systems. These systems use algorithms to manipulate logical statements, apply deduction rules, and check the validity of logical arguments.</li>
+                                      </ul>
+                                    </li>
+                                  </ol>
+                                  <p>Both question answering and natural deduction play important roles in AI, with question answering focusing on understanding and responding to natural language queries, and natural deduction contributing to logical reasoning and automated theorem proving. These approaches are complementary in building intelligent systems that can reason and interact effectively with human-like understanding.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="mt-1 flex justify-start gap-3 empty:hidden">&nbsp;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full pt-2 md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:w-[calc(100%-.5rem)]">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

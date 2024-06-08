@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 oops unit-2</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-2</strong></p>
+        <p>&nbsp;</p>
+        <h1>Overloading:</h1>
+        <br />- Creating two or more members that have the same name but are different<br />in number or type of parameter is known as&nbsp;overloading.<br />- Same class name and methods names but different parameters in called as Method<br />overloading.<br />- When a single Object has multiple behaviours.<br />- Overloading is that in which a Single Object has a same name and Provides Many<br />Functions.<br />- There are two types of overloading in C++: Operator overloading and Function<br />overloading.
+      </div>
+      <div style="margin: 5px 0;">
+        <div>1)Operator Overloading<br />- Operator overloading&nbsp;is a compile-time polymorphism in which the<br />operator is overloaded to provide special meaning to the user-defined data type.<br />- To assign more than one operation on some operator known as operator<br />overloading.<br />- we can change the way operators work for user-defined types like<br />objects and structures. This is known as&nbsp;operator overloading.&nbsp;<br />- &nbsp;Operator overloading is used to overload or redefines most of the operators<br />available in C++.<br />- It is used to perform the operation on the user-defined data type.<br />- For example, C++ provides the ability to add the variables of the user-defined data<br />type that is applied to the built-in data types.<br />- Two type of operator overloading in C++,<br />a) Unary Operator Overloading<br />b) Binary Operator Overloading</div>
+        <div>- Operator function, you can write operator () in two way-<br />1)Class Function<br />2)Friend Function<br />- Operator that cannot be overloaded are as follows:<br />o Scope operator (::)<br />o Sizeof</div>
+        <div>o member selector(.)<br />o member pointer selector(*)<br />o ternary operator(?:)</div>
+        <div>Syntax of Operator Overloading</div>
+        <div>class className {<br />... .. ...<br />public<br />returnType operator symbol (arguments) {<br />... .. ...<br />}<br />... .. ...<br />};<br />Here,<br /> returnType&nbsp;is the return type of the function.<br /> operator&nbsp;is a keyword.<br /> symbol&nbsp;is the operator we want to overload. Like:&nbsp;+,&nbsp;&amp;lt;,&nbsp;-,&nbsp;++, etc.<br /> arguments&nbsp;is the arguments passed to the function.</div>
+        <div>&nbsp;</div>
+        <div>
+          <div>Function Overloading<br />- When we have two functions with the same name, but with a different<br />number or/and type of arguments in the code, it is known as function<br />overloading in C++.<br />- Function overloading is a feature of object-oriented programming<br />where two or more functions can have the same name but different<br />parameters. When a function name is overloaded with different jobs it<br />is called Function Overloading.<br />- In Function Overloading &ldquo;Function&rdquo; name should be the same and the<br />arguments should be different.<br />- Parameters should have a different type</div>
+          <div>add(int a, int b){<br />}<br />add(double a, double b){<br />}<br />- The&nbsp;advantage&nbsp;of Function overloading is that it increases the readability of the<br />program because you don&amp;#39;t need to use different names for the same action.</div>
+          <div>- // same name different arguments<br />- int test() { }<br />- int test(int a) { }<br />- float test(double a) { }<br />- int test(int a, double b) { }</div>
+          <div>// Error code<br />int test(int a) { }<br />double test(int b){ }</div>
+          <div>Causes of Function Overloading:<br />o Type Conversion.<br />o Function with default arguments.<br />o Function with pass by reference.</div>
+          <div>
+            <div>Parameters should have a different data type<br />add(int a, int b)<br />add(double a, double b)</div>
+            <div>#include &amp;lt;iostream&amp;gt;<br />using namespace std;<br />void add(int a, int b)<br />{<br />&nbsp;cout &amp;lt;&amp;lt; &amp;quot;sum = &amp;quot; &amp;lt;&amp;lt; (a + b);<br />}&nbsp;<br />void add(double a, double b)<br />{<br />&nbsp;cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; &amp;quot;sum = &amp;quot; &amp;lt;&amp;lt; (a + b);<br />}<br />int main()<br />{<br />&nbsp;&nbsp;add(10, 2);<br />add(5.3, 6.2);&nbsp;<br />return 0;<br />}<br />Output<br />sum = 12<br />sum = 11.5</div>
+            <div>&nbsp;</div>
+            <div>Constructor Overloading in C++:<br />- Constructors can be overloaded in a similar way as&nbsp;function overloading.<br />- Constructor is a member function of a class that is used to initialize the objects of the<br />class.<br />- Constructors do not have any return type and are automatically called when the<br />object is created.<br />- Overloaded constructors have the same name of the class but the different number of<br />arguments.</div>
+            <div>
+              <div>Depending upon the number and type of arguments passed, the corresponding<br />constructor is called constructor overloading.<br />Characteristics of constructors<br />- The name of the constructor is the same as the class name<br />- No return type is there for constructors<br />- Called automatically when the object is created<br />- Always placed in the public scope of the class<br />- If a constructor is not created, the default constructor is created automatically<br />and initializes the data member as zero<br />- Declaration of constructor name is case-sensitive<br />- A constructor is not implicitly inherited</div>
+              <div>Syntax:<br />Class class_name<br />{<br />Class_name()<br />{<br />}<br />Class_name(parameter)<br />{<br />}<br />Class_name(Parameter1, parameter2)<br />{<br />}<br />}</div>
+              <div>Programs:<br />Example 1:<br />#include &amp;lt;iostream&amp;gt;<br />using namespace std;<br />class Rect{</div>
+              <div>private:<br />int area;<br />public:<br />Rect(){<br />area = 15;<br />}<br />Rect(int a, int b){<br />area = a * b;<br />}<br />void display(){<br />cout &amp;lt;&amp;lt; &amp;quot;The area is: &amp;quot; &amp;lt;&amp;lt; area &amp;lt;&amp;lt; endl;<br />}<br />};<br />int main(){<br />Rect r1;<br />Rect r2(2, 6);<br />r1.display();<br />r2.display();<br />return 0;<br />}<br />Output<br />The area is: 15<br />The area is: 12</div>
+              <div>&nbsp;</div>
+              <div>
+                <div>C++ this Pointer<br />- In C++ programming,&nbsp;this&nbsp;is a keyword that refers to the current instance of<br />the class. There can be 3 main usage of this keyword in C++.<br />o It can be used&nbsp;to pass current object as a parameter to another method.<br />o It can be used&nbsp;to refer current class instance variable.<br />o It can be used&nbsp;to declare indexers.<br />- Every object in C++ has access to its own address through an important<br />pointer called&nbsp;this&nbsp;pointer.<br />- The&nbsp;this&nbsp;pointer is an implicit parameter to all member functions. (implicit &ndash;<br />means to reduce the length of arguments list of function class without<br />restoring to the variable.)<br />- Therefore, inside a member function, this may be used to refer to the<br />invoking object.<br />- Friend functions do not have a&nbsp;this&nbsp;pointer, because friends are not members<br />of a class. Only member functions have a&nbsp;this&nbsp;pointer.</div>
+                <div>- The main purpose of the &ldquo;this&rdquo; pointer is&nbsp;to be used to refer to the calling<br />object within a member function.<br />-</div>
+                <div>Example:<br />1) When local variable&rsquo;s name is same as member&rsquo;s name<br />#include&amp;lt;iostream&amp;gt;<br />using namespace std;<br />&nbsp;&nbsp;<br />/* local variable is same as a member&amp;#39;s name */<br />class Test<br />{<br />private:<br />&nbsp;&nbsp;&nbsp;int x;<br />public:<br />&nbsp;&nbsp;&nbsp;void okX (int x)<br />&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// The &amp;#39;this&amp;#39; pointer is used to retrieve the object&amp;#39;s x<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// hidden by the local variable &amp;#39;x&amp;#39;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&amp;gt;x = x;<br />&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;void print() {<br />cout &amp;lt;&amp;lt; &amp;quot;x = &amp;quot; &amp;lt;&amp;lt; x &amp;lt;&amp;lt; endl; }<br />};<br />&nbsp;&nbsp;<br />int main()<br />{<br />&nbsp;&nbsp;&nbsp;Test obj;<br />&nbsp;&nbsp;&nbsp;int x = 20;<br />&nbsp;&nbsp;&nbsp;obj.okX(x);<br />&nbsp;&nbsp;&nbsp;obj.print();<br />&nbsp;&nbsp;&nbsp;return 0;<br />}<br />Output:<br />x = 20</div>
+                <div>&nbsp;</div>
+                <div>
+                  <div>Static data members<br />- Static is a keyword in C++ which is&nbsp;used to declare a special type of a variable or<br />a function inside or outside of a class.<br />- static keyword is&nbsp;mainly used for memory management.<br />- It can be used with variables, methods, blocks and nested classes.<br />- It is a keyword which is used to share the same variable or method of a given class.<br />- Basically, static is used for a constant variable or a method that is same for every<br />instance of a class.</div>
+                  <div>- Static data members are class members that are declared using the static keyword.<br />- There is only one copy of the static data member in the class, even if there are many<br />class objects.<br />- &nbsp;This is because all the objects share the static data member.<br />- The static data member is always initialized to zero when the first class object is<br />created.<br />- The syntax of the static data members is given as follows &minus;<br />static data_type data_member_name;</div>
+                  <div>static data_member;<br />static data_type identifier;<br />Example:<br />static data_member;<br />static data_type identifier;<br />For example:<br />class A{<br />static int x;<br />};</div>
+                  <div>class A{<br />//Declaration<br />static int x;<br />};<br />//Defination<br />int A::x=0;</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

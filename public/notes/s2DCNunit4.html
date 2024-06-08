@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 DCN unit-4</title>
+
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit-4</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <h1><strong>Data Link Controls</strong></h1>
+        <p>Data Link Control is the service provided by the Data Link Layer to provide reliable data transfer over the physical medium. For example, In the half-duplex transmission mode, one device can only transmit the data at a time. If both the devices at the end of the links transmit the data simultaneously, they will collide and leads to the loss of the information. The Data link layer provides the coordination among the devices so that no collision occurs.</p>
+        <p><strong>The Data link layer provides three functions:</strong></p>
+        <ul>
+          <li>Line discipline</li>
+          <li>Flow Control</li>
+          <li>Error Control</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h2><strong>Line Discipline</strong></h2>
+        <ul>
+          <li>Line Discipline is a functionality of the Data link layer that provides the coordination among the link systems. It determines which device can send, and when it can send the data.</li>
+        </ul>
+        <p><strong>Line Discipline can be achieved in two ways:</strong></p>
+        <ul>
+          <li>ENQ/ACK</li>
+          <li>Poll/select</li>
+        </ul>
+        <p><strong>END/ACK</strong></p>
+        <p>END/ACK stands for Enquiry/Acknowledgement is used when there is no wrong receiver available on the link and having a dedicated path between the two devices so that the device capable of receiving the transmission is the intended one.</p>
+        <p>END/ACK coordinates which device will start the transmission and whether the recipient is ready or not.</p>
+        <p><strong>Working of END/ACK</strong></p>
+        <p>The transmitter transmits the frame called an Enquiry (ENQ) asking whether the receiver is available to receive the data or not.</p>
+        <p>The receiver responses either with the positive acknowledgement(ACK) or with the negative acknowledgement(NACK) where positive acknowledgement means that the receiver is ready to receive the transmission and negative acknowledgement means that the receiver is unable to accept the transmission.</p>
+        <p>Following are the responses of the receiver:</p>
+        <ul>
+          <li>If the response to the ENQ is positive, the sender will transmit its data, and once all of its data has been transmitted, the device finishes its transmission with an EOT (END-of-Transmission) frame.</li>
+          <li>If the response to the ENQ is negative, then the sender disconnects and restarts the transmission at another time.</li>
+          <li>If the response is neither negative nor positive, the sender assumes that the ENQ frame was lost during the transmission and makes three attempts to establish a link before giving up.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>If the response to the ENQ is positive, the sender will transmit its data, and once all of its data has been transmitted, the device finishes its transmission with an EOT (END-of-Transmission) frame.</li>
+          <li>If the response to the ENQ is negative, then the sender disconnects and restarts the transmission at another time.</li>
+          <li>If the response is neither negative nor positive, the sender assumes that the ENQ frame was lost during the transmission and makes three attempts to establish a link before giving up.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>Poll/Select</strong></p>
+        <p>The Poll/Select method of line discipline works with those topologies where one device is designated as a primary station, and other devices are secondary stations.</p>
+        <p>&nbsp;</p>
+        <p><strong>Working of Poll/Select</strong></p>
+        <p>In this, the primary device and multiple secondary devices consist of a single transmission line, and all the exchanges are made through the primary device even though the destination is a secondary device.</p>
+        <p>The primary device has control over the communication link, and the secondary device follows the instructions of the primary device.</p>
+        <p>The primary device determines which device is allowed to use the communication channel. Therefore, we can say that it is an initiator of the session.</p>
+        <p>If the primary device wants to receive the data from the secondary device, it asks the secondary device that they anything to send, this process is known as polling.</p>
+        <p>If the primary device wants to send some data to the secondary device, then it tells the target secondary to get ready to receive the data, this process is known as selecting.</p>
+        <p>Select</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The select mode is used when the primary device has something to send.</li>
+          <li>When the primary device wants to send some data, then it alerts the secondary device for the upcoming transmission by transmitting a Select (SEL) frame, one field of the frame includes the address of the intended secondary device.</li>
+          <li>When the secondary device receives the SEL frame, it sends an acknowledgement that indicates the secondary ready status.</li>
+          <li>If the secondary device is ready to accept the data, then the primary device sends two or more data frames to the intended secondary device. Once the data has been transmitted, the secondary sends an acknowledgement specifies that the data has been received.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>Poll</strong></p>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <p>o&nbsp;The Poll mode is used when the primary device wants to receive some data from the secondary device.</p>
+                <p>o&nbsp;When a primary device wants to receive the data, then it asks each device whether it has anything to send.</p>
+                <p>o&nbsp;Firstly, the primary asks (poll) the first secondary device, if it responds with the NACK (Negative Acknowledgement) means that it has nothing to send. Now, it approaches the second secondary device, it responds with the ACK means that it has the data to send. The secondary device can send more than one frame one after another or sometimes it may be required to send ACK before sending each one, depending on the type of the protocol being used.</p>
+                <p>&nbsp;</p>
+                <p><strong>Flow Control</strong></p>
+                <p>o&nbsp;It is a set of procedures that tells the sender how much data it can transmit before the data overwhelms the receiver.</p>
+                <p>o&nbsp;The receiving device has limited speed and limited memory to store the data. Therefore, the receiving device must be able to inform the sending device to stop the transmission temporarily before the limits are reached.</p>
+                <p>o&nbsp;It requires a buffer, a block of memory for storing the information until they are processed.</p>
+                <p>Two methods have been developed to control the flow of data:</p>
+                <p>o&nbsp;Stop-and-wait</p>
+                <p>o&nbsp;Sliding window</p>
+                <p>Stop-and-wait</p>
+                <p>&middot;&nbsp;In the Stop-and-wait method, the sender waits for an acknowledgement after every frame it sends.</p>
+                <p>&middot;&nbsp;When acknowledgement is received, then only next frame is sent. The process of alternately sending and waiting of a frame continues until the sender transmits the EOT (End of transmission) frame.</p>
+                <p>Advantage of Stop-and-wait</p>
+                <p>The Stop-and-wait method is simple as each frame is checked and acknowledged before the next frame is sent.</p>
+                <p>Disadvantage of Stop-and-wait</p>
+                <p>Stop-and-wait technique is inefficient to use as each frame must travel across all the way to the receiver, and an acknowledgement travels all the way before the next frame is sent. Each frame sent and received uses the entire time needed to traverse the link.</p>
+                <p>Sliding Window</p>
+                <p>&middot;&nbsp;The Sliding Window is a method of flow control in which a sender can transmit the several frames before getting an acknowledgement.</p>
+                <p>&middot;&nbsp;In Sliding Window Control, multiple frames can be sent one after the another due to which capacity of the communication channel can be utilized efficiently.</p>
+                <p>&middot;&nbsp;A single ACK acknowledge multiple frames.</p>
+                <p>&middot;&nbsp;Sliding Window refers to imaginary boxes at both the sender and receiver end.</p>
+                <p>&middot;&nbsp;The window can hold the frames at either end, and it provides the upper limit on the number of frames that can be transmitted before the acknowledgement.</p>
+                <p>&middot;&nbsp;Frames can be acknowledged even when the window is not completely filled.</p>
+                <p>&middot;&nbsp;The window has a specific size in which they are numbered as modulo-n means that they are numbered from 0 to n-1. For example, if n = 8, the frames are numbered from 0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7,0,1........</p>
+                <p>&middot;&nbsp;The size of the window is represented as n-1. Therefore, maximum n-1 frames can be sent before acknowledgement.</p>
+                <p>&middot;&nbsp;When the receiver sends the ACK, it includes the number of the next frame that it wants to receive. For example, to acknowledge the string of frames ending with frame number 4, the receiver will send the ACK containing the number 5. When the sender sees the ACK with the number 5, it got to know that the frames from 0 through 4 have been received.</p>
+                <p>Sender Window</p>
+                <p>&middot;&nbsp;At the beginning of a transmission, the sender window contains n-1 frames, and when they are sent out, the left boundary moves inward shrinking the size of the window. For example, if the size of the window is w if three frames are sent out, then the number of frames left out in the sender window is w-3.</p>
+                <p>&middot;&nbsp;Once the ACK has arrived, then the sender window expands to the number which will be equal to the number of frames acknowledged by ACK.</p>
+                <p>&middot;&nbsp;For example, the size of the window is 7, and if frames 0 through 4 have been sent out and no acknowledgement has arrived, then the sender window contains only two frames, i.e., 5 and 6. Now, if ACK has arrived with a number 4 which means that 0 through 3 frames have arrived undamaged and the sender window is expanded to include the next four frames. Therefore, the sender window contains six frames (5,6,7,0,1,2).</p>
+                <p>&nbsp;</p>
+                <p>Receiver Window</p>
+                <p>&middot;&nbsp;At the beginning of transmission, the receiver window does not contain n frames, but it contains n-1 spaces for frames.</p>
+                <p>&middot;&nbsp;When the new frame arrives, the size of the window shrinks.</p>
+                <p>&middot;&nbsp;The receiver window does not represent the number of frames received, but it represents the number of frames that can be received before an ACK is sent. For example, the size of the window is w, if three frames are received then the number of spaces available in the window is (w-3).</p>
+                <p>&middot;&nbsp;Once the acknowledgement is sent, the receiver window expands by the number equal to the number of frames acknowledged.</p>
+                <p>&middot;&nbsp;Suppose the size of the window is 7 means that the receiver window contains seven spaces for seven frames. If the one frame is received, then the receiver window shrinks and moving the boundary from 0 to 1. In this way, window shrinks one by one, so window now contains the six spaces. If frames from 0 through 4 have sent, then the window contains two spaces before an acknowledgement is sent.</p>
+                <p>&nbsp;</p>
+                <p><strong>Error Control</strong></p>
+                <p>Error Control is a technique of error detection and retransmission.</p>
+                <p>Categories of Error Control:</p>
+                <p>&nbsp;</p>
+                <p>Stop-and-wait ARQ</p>
+                <p>Stop-and-wait ARQ is a technique used to retransmit the data in case of damaged or lost frames.</p>
+                <p>This technique works on the principle that the sender will not transmit the next frame until it receives the acknowledgement of the last transmitted frame.</p>
+                <p>Four features are required for the retransmission:</p>
+                <p>&middot;&nbsp;The sending device keeps a copy of the last transmitted frame until the acknowledgement is received. Keeping the copy allows the sender to retransmit the data if the frame is not received correctly.</p>
+                <p>&middot;&nbsp;Both the data frames and the ACK frames are numbered alternately 0 and 1 so that they can be identified individually. Suppose data 1 frame acknowledges the data 0 frame means that the data 0 frame has been arrived correctly and expects to receive data 1 frame.</p>
+                <p>&middot;&nbsp;If an error occurs in the last transmitted frame, then the receiver sends the NAK frame which is not numbered. On receiving the NAK frame, sender retransmits the data.</p>
+                <p>&middot;&nbsp;It works with the timer. If the acknowledgement is not received within the allotted time, then the sender assumes that the frame is lost during the transmission, so it will retransmit the frame.</p>
+                <p>Two possibilities of the retransmission:</p>
+                <p>&middot;&nbsp;Damaged Frame:&nbsp;When the receiver receives a damaged frame, i.e., the frame contains an error, then it returns the NAK frame. For example, when the data 0 frame is sent, and then the receiver sends the ACK 1 frame means that the data 0 has arrived correctly, and transmits the data 1 frame. The sender transmits the next frame: data 1. It reaches undamaged, and the receiver returns ACK 0. The sender transmits the next frame: data 0. The receiver reports an error and returns the NAK frame. The sender retransmits the data 0 frame.</p>
+                <p>&middot;&nbsp;Lost Frame:&nbsp;Sender is equipped with the timer and starts when the frame is transmitted. Sometimes the frame has not arrived at the receiving end so that it can be acknowledged neither positively nor negatively. The sender waits for acknowledgement until the timer goes off. If the timer goes off, it retransmits the last transmitted frame.</p>
+                <p>Sliding Window ARQ</p>
+                <p>SlidingWindow ARQ is a technique used for continuous transmission error control.</p>
+                <p>Three Features used for retransmission:</p>
+                <p>1.&nbsp;In this case, the sender keeps the copies of all the transmitted frames until they have been acknowledged. Suppose the frames from 0 through 4 have been transmitted, and the last acknowledgement was for frame 2, the sender has to keep the copies of frames 3 and 4 until they receive correctly.</p>
+                <p>2.&nbsp;The receiver can send either NAK or ACK depending on the conditions. The NAK frame tells the sender that the data have been received damaged. Since the sliding window is a continuous transmission mechanism, both ACK and NAK must be numbered for the identification of a frame. The ACK frame consists of a number that represents the next frame which the receiver expects to receive. The NAK frame consists of a number that represents the damaged frame.</p>
+                <p>3.&nbsp;The sliding window ARQ is equipped with the timer to handle the lost acknowledgements. Suppose then n-1 frames have been sent before receiving any acknowledgement. The sender waits for the acknowledgement, so it starts the timer and waits before sending any more. If the allotted time runs out, the sender retransmits one or all the frames depending upon the protocol used.</p>
+                <p>Two protocols used in sliding window ARQ:</p>
+                <p>1.&nbsp;Go-Back-n ARQ:&nbsp;In Go-Back-N ARQ protocol, if one frame is lost or damaged, then it retransmits all the frames after which it does not receive the positive ACK.</p>
+                <p>Three possibilities can occur for retransmission:</p>
+                <p>1.&nbsp;Damaged Frame:&nbsp;When the frame is damaged, then the receiver sends a NAK frame.</p>
+                <p>&nbsp;</p>
+                <p>In the above figure, three frames have been transmitted before an error discovered in the third frame. In this case, ACK 2 has been returned telling that the frames 0,1 have been received successfully without any error. The receiver discovers the error in data 2 frame, so it returns the NAK 2 frame. The frame 3 is also discarded as it is transmitted after the damaged frame. Therefore, the sender retransmits the frames 2,3.</p>
+                <p>1.&nbsp;Lost Data Frame:&nbsp;In Sliding window protocols, data frames are sent sequentially. If any of the frames is lost, then the next frame arrive at the receiver is out of sequence. The receiver checks the sequence number of each of the frame, discovers the frame that has been skipped, and returns the NAK for the missing frame. The sending device retransmits the frame indicated by NAK as well as the frames transmitted after the lost frame.</p>
+                <p>2.&nbsp;Lost Acknowledgement:&nbsp;The sender can send as many frames as the windows allow before waiting for any acknowledgement. Once the limit of the window is reached, the sender has no more frames to send; it must wait for the acknowledgement. If the acknowledgement is lost, then the sender could wait forever. To avoid such situation, the sender is equipped with the timer that starts counting whenever the window capacity is reached. If the acknowledgement has not been received within the time limit, then the sender retransmits the frame since the last ACK.</p>
+                <p>Selective-Reject ARQ</p>
+                <p>1.&nbsp;Selective-Reject ARQ technique is more efficient than Go-Back-n ARQ.</p>
+                <p>2.&nbsp;In this technique, only those frames are retransmitted for which negative acknowledgement (NAK) has been received.</p>
+                <p>3.&nbsp;The receiver storage buffer keeps all the damaged frames on hold until the frame in error is correctly received.</p>
+                <p>4.&nbsp;The receiver must have an appropriate logic for reinserting the frames in a correct order.</p>
+                <p>5.&nbsp;The sender must consist of a searching mechanism that selects only the requested frame for retransmission.</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>Data Link Layer Protocols</p>
+        <p>&nbsp;</p>
+        <p>The data link protocols operate in the data link layer of the Open System Interconnections (OSI) model, just above the physical layer.</p>
+        <p>The services provided by the data link protocols may be any of the following &minus;</p>
+        <ul>
+          <li>Framing &minus; The stream of bits from the physical layer are divided into data frames whose size ranges from a few hundred to a few thousand bytes. These frames are distributed to different systems, by adding a header to the frame containing the address of the sender and the receiver.</li>
+          <li>Flow Control &minus; Through flow control techniques, data is transmitted in such a way so that a fast sender does not drown a slow receiver.</li>
+          <li>Error Detection and/or Correction &minus; These are techniques of detecting and correcting data frames that have been corrupted or lost during transmission.</li>
+          <li>Multipoint transmission &minus; Access to shared channels and multiple points are regulated in case of broadcasting and LANs.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1><strong>Synchronous Protocols</strong></h1>
+        <p>Synchronous protocols take the whole bitstream and drop it into the character of equal size. It is a data transfer approach in which it is a continual flow of information signals followed by computing signal.</p>
+        <p>&nbsp;</p>
+        <p>These protocols facilitate the provision that the broadcaster and the receiver are integrated. This transmission approach is mainly used when vast amounts of record are needed to be moved from one area to another.</p>
+        <p>&nbsp;</p>
+        <p>There are two types of synchronous protocol which are as follows &ndash;</p>
+        <p>&nbsp;</p>
+        <p>Character Oriented Protocols</p>
+        <p>It is also called as the byte-oriented protocol to interpret a transition frame or packet as a character succession.</p>
+        <p>&nbsp;</p>
+        <p>Binary Synchronous Communication (BSC)</p>
+        <p>It is a famous oriented data link protocol produced by computer hardware company IBM. It has specified half-duplex transmission with a stop-wait argument.</p>
+        <p>&nbsp;</p>
+        <p>There are two types of BSC Frames as given below &ndash;</p>
+        <p>&nbsp;</p>
+        <p>Control Frame</p>
+        <p>&nbsp;</p>
+        <p>Data Frame</p>
+        <p>&nbsp;</p>
+        <p>BISYNC or BSC was one of the most widely used protocols (data link control method) worldwide. It is applicable for half-duplex, point to point or point to multipoint lines. It is a Character Oriented protocol and uses the American Standard Code for Information Interchange (ASCII), Extended Binary Coded Decimal Interchange Code (EBCDIC), or Transcode.</p>
+        <p>&nbsp;</p>
+        <p>The frame format is shown in the figure below &ndash;</p>
+        <p>&nbsp;</p>
+        <table>
+          <tbody>
+            <tr>
+              <td width="79">
+                <p>Error Check Field</p>
+                <p>&nbsp;</p>
+              </td>
+              <td width="79">
+                <p>ETX</p>
+                <p>&nbsp;</p>
+              </td>
+              <td width="79">
+                <p>Data</p>
+                <p>&nbsp;</p>
+              </td>
+              <td width="79">
+                <p>STX</p>
+              </td>
+              <td width="79">
+                <p>Header</p>
+              </td>
+              <td width="79">
+                <p>&nbsp;&nbsp;SOH</p>
+                <p>&nbsp;</p>
+              </td>
+              <td width="79">
+                <p>SYN</p>
+              </td>
+              <td width="79">
+                <p>SYN</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p>BSC Frame Format</p>
+        <h2><strong>Bit-Oriented Protocols</strong></h2>
+        <p>It can pack more information into the shorter frame and avoid the transparency problem of the character-oriented protocol. This frame or packet is interpreted as a series of bits. For example, High-level Data Link Control (HDLC) and Software Development Life Cycle (SDLC).</p>
+        <h3><strong>Working of Synchronous Protocol</strong></h3>
+        <ul>
+          <li>It can separate the clocking lines when the area between the data terminal equipment (DTE) and data communications equipment (DCE) is precise.</li>
+          <li>This approach uses a clocking electrical system at both sending and receiving locations. This provides that the transmission procedure is synchronized.</li>
+          <li>It is a device that connects by using either separate clocking channels.</li>
+        </ul>
+        <p><strong>Advantages&nbsp;</strong></p>
+        <p>The advantages of Synchronous Protocol are as follows &minus;</p>
+        <ul>
+          <li>It helps us to transfer a huge amount of data.</li>
+          <li>It offers real-time transmission between linked machines.</li>
+          <li>Each byte is sent without an inconsistency between the next byte.</li>
+          <li>It is used to decrease the timing errors.</li>
+        </ul>
+        <p><strong>Disadvantages&nbsp;</strong></p>
+        <p>The disadvantages of Synchronous Protocol are as follows &minus;</p>
+        <ul>
+          <li>The efficiency of the received information relies on the receiver's capability to calculate the received bits correctly.</li>
+          <li>The sender and receiver are required to work together with an equal clock frequency.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h1><strong>Asynchronous Protocol</strong></h1>
+        <p><em>Asynchronous</em>&nbsp;(async) is a communications protocol that transmits one byte of information at a time at irregular time intervals. A start bit (one character) precedes the byte (eight characters) of information and a stop bit (one character) follows the byte. Sometimes a parity (checking) bit is included in the transmission to ensure data integrity. The sending and receiving computers do not have to be synchronized.</p>
+        <p>You can access&nbsp;Sterling B2B Collaboration Network&nbsp;using the asynchronous communications protocol.</p>
+        <h2>Transport Methods</h2>
+        <p>The following transport method supports the asynchronous protocol:</p>
+        <ul>
+          <li>ISDN connection through WorldCom X.25 PDN A</li>
+          <li><a href="https://www.ibm.com/ics/support/KBAnswer.asp?questionID=4963"><strong>Async Requirements</strong></a><br />For asynchronous access to&nbsp;Sterling B2B CollaborationNetworkyou must:</li>
+          <li><a href="https://www.ibm.com/ics/support/KBAnswer.asp?questionID=4964"><strong>Sterling B2B Collaboration Network Response to Async Commands</strong></a><br />When you use the asynchronous protocol&nbsp;Sterling B2B CollaborationNetworkdoesthe following:</li>
+          <li><a href="https://www.ibm.com/ics/support/KBAnswer.asp?questionID=4965"><strong>Characters in Asynchronous Scripts</strong></a></li>
+          <li><a href="https://www.ibm.com/ics/support/KBAnswer.asp?questionID=4966"><strong>Asynchronous X.25 PDN Sample Scripts</strong></a></li>
+        </ul>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Link Access Procedure (LAP) Protocols</strong></p>
+        <p>Link Access Procedure (LAP) is basically considered as an ITU family of Data Link Layer (DLL) protocols that are subsets of High-Level Data Link Control (HDLC). LAP is particularly derived from IBM&rsquo;s System Development Life Cycle (SDLC). There are several LAP protocols. Each of these protocols is usually a subset of HDLC tailored for a particular purpose.</p>
+        <p>&nbsp;</p>
+        <p>Some of them are given below :</p>
+        <p>&nbsp;</p>
+        <p>These are explained as following below.</p>
+        <ul>
+          <li><strong>Multilink Procedure (MLP) &ndash;</strong><br />MLP basically allows for Multilink Operations. It is an upper sublayer of the DLL that usually operates among Packet Layer and a multiplicity of SLP&rsquo;s (Single Data Link Protocol) functions. It is generally an extension of LAPB that simply gives permission for multiple physical links along with providing better throughput.</li>
+          <li><strong>Link Access Procedure for Modems (LAPM) &ndash;</strong><br />LAPM has basically used in V.32 error-correcting modems and V.42 modems. Transmission among LAPM is synchronous even though transmission among computer and modem is asynchronous.</li>
+        </ul>
+        <p>With the help of bit-oriented synchronous techniques, LAPM generally transmits data in frames or packets. LAPM usually contains SREJ (Selective Reject) as an optional function that allows it to again send all of corrupted frames along with providing faster recovery from an error. Modem transmits or transfers data as frames even though all the attached or connected computer transfers data to LAPM modem as standard asynchronous input.</p>
+        <p>To simply ensure data reliability i.e., data are reasonably complete and accurate or not, LAPM makes use of CRC (Cycle Redundancy Checking) and also of ARQ (Automatic Repeat Request). It is also been developed and established to apply some HDLC features to modems. It is also designed and created to do asynchronous-synchronous conversion, error detection and correction, and retransmission.</p>
+        <ul>
+          <li><strong>Link Access Procedure for Frame Relay (LAPF) &ndash;</strong><br />LAPF basically provides data link for frame relay networks and is designed for use along with frame relay. It is easiest and simplest version of ISDN&rsquo;s LAPD. It is also required or carrying data only and even there is no signaling at DLL for performing flow and error control. It is also a part of network&rsquo;s communications protocol. LAPF simply ensures that whether frames are error-free and executed in correct sequence or not. It does not make use of C/R (Command/Response) bit, even though other higher-layer protocols that need application-specific do use this bit.</li>
+          <li><strong>Link Access Procedure for Half-Duplex (LAPX) &ndash;</strong><br />LAPX is basically used for ship-to-shore transmission.</li>
+        </ul>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

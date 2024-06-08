@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 OS unit-4</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><b>UNIT-4</b></p>
+        <p><strong>&nbsp;</strong></p>
+        <h1 class="h1">Deadlock Definitions</h1>
+        <p>Every process needs some resources to complete its execution. However, the resource is granted in a sequential order.</p>
+        <ol class="points">
+          <li>The process requests for some resource.</li>
+          <li>OS grant the resource if it is available otherwise let the process waits.</li>
+          <li>The process uses it and release on the completion.</li>
+        </ol>
+        <p>A Deadlock is a situation where each of the computer process waits for a resource which is being assigned to some another process. In this situation, none of the process gets executed since the resource it needs, is held by some other process which is also waiting for some other resource to be released.</p>
+        <p>Let us assume that there are three processes P1, P2 and P3. There are three different resources R1, R2 and R3. R1 is assigned to P1, R2 is assigned to P2 and R3 is assigned to P3.</p>
+        <p>After some time, P1 demands for R1 which is being used by P2. P1 halts its execution since it can't complete without R2. P2 also demands for R3 which is being used by P3. P2 also stops its execution because it can't continue without R3. P3 also demands for R1 which is being used by P1 therefore P3 also stops its execution.</p>
+        <div id="b4eb2c63-fa8c-41d8-8822-fef8abd0a985" class="_ap_apex_ad" data-section="b4eb2c63-fa8c-41d8-8822-fef8abd0a985" data-xpath="#city &gt; table:eq(0) &gt; tbody:eq(0) &gt; tr:eq(0) &gt; td:eq(0) &gt; p:eq(3)" data-section-id="" data-ap-network="custom">
+          <div id="fa2edc69-2050-4713-9bcd-a7b7e206b689" data-platform="DESKTOP" data-country="IN" data-instreamplayermode="inContentMode">
+            <div id="videoWrapperDiv">
+              <div id="ap-player" class="video-js ap-player-dimensions vjs-fill vjs-workinghover vjs-v7 vjs-has-started vjs-error vjs-controls-disabled vjs-ad-playing vjs-playing vjs-user-inactive vjs-seeking vjs-waiting" lang="en" tabindex="-1" role="region" translate="no" aria-label="Video Player">
+                <div class="vjs-text-track-display" translate="yes" aria-live="off" aria-atomic="true">&nbsp;
+                  <h1 class="h1">Deadlock Prevention</h1>
+                  <p>If we simulate deadlock with a table which is standing on its four legs then we can also simulate four legs with the four conditions which when occurs simultaneously, cause the deadlock.</p>
+                  <p>However, if we break one of the legs of the table then the table will fall definitely. The same happens with deadlock, if we can be able to violate one of the four necessary conditions and don't let them occur together then we can prevent the deadlock.</p>
+                  <p>Let's see how we can prevent each of the conditions.</p>
+                  <h2 class="h2">1. Mutual Exclusion</h2>
+                  <p>Mutual section from the resource point of view is the fact that a resource can never be used by more than one process simultaneously which is fair enough but that is the main reason behind the deadlock. If a resource could have been used by more than one process at the same time then the process would have never been waiting for any resource.</p>
+                  <p>However, if we can be able to violate resources behaving in the mutually exclusive manner then the deadlock can be prevented.</p>
+                  <h3 class="h3">Spooling</h3>
+                  <p>For a device like printer, spooling can work. There is a memory associated with the printer which stores jobs from each of the process into it. Later, Printer collects all the jobs and print each one of them according to FCFS. By using this mechanism, the process doesn't have to wait for the printer and it can continue whatever it was doing. Later, it collects the output when it is produced.</p>
+                  <p><br /><img src="https://static.javatpoint.com/operating-system/images/os-deadlock-prevention-spooling.png" alt="os Deadlock Prevention Spooling" /></p>
+                  <p>Although, Spooling can be an effective approach to violate mutual exclusion but it suffers from two kinds of problems.</p>
+                  <ol class="points">
+                    <li>This cannot be applied to every resource.</li>
+                    <li>After some point of time, there may arise a race condition between the processes to get space in that spool.</li>
+                  </ol>
+                  <p>We cannot force a resource to be used by more than one process at the same time since it will not be fair enough and some serious problems may arise in the performance. Therefore, we cannot violate mutual exclusion for a process practically.</p>
+                  <p><strong>&nbsp;</strong></p>
+                  <h2 class="h2">2. Hold and Wait</h2>
+                  <p>Hold and wait condition lies when a process holds a resource and waiting for some other resource to complete its task. Deadlock occurs because there can be more than one process which are holding one resource and waiting for other in the cyclic order.</p>
+                  <p>However, we have to find out some mechanism by which a process either doesn't hold any resource or doesn't wait. That means, a process must be assigned all the necessary resources before the execution starts. A process must not wait for any resource once the execution has been started.</p>
+                  
+                  <p><strong>!(Hold and wait) = !hold or !wait (negation of hold and wait is, either you don't hold or you don't wait)</strong></p>
+                  <p>This can be implemented practically if a process declares all the resources initially. However, this sounds very practical but can't be done in the computer system because a process can't determine necessary resources initially.</p>
+                  <p>Process is the set of instructions which are executed by the CPU. Each of the instruction may demand multiple resources at the multiple times. The need cannot be fixed by the OS.</p>
+                  <p>The problem with the approach is:</p>
+                  <ol class="points">
+                    <li>Practically not possible.</li>
+                    <li>Possibility of getting starved will be increases due to the fact that some process may hold a resource for a very long time.</li>
+                  </ol>
+                  <p><strong>&nbsp;</strong></p>
+                  <h2 class="h2">3. No Preemption</h2>
+                  <p>Deadlock arises due to the fact that a process can't be stopped once it starts. However, if we take the resource away from the process which is causing deadlock then we can prevent deadlock.</p>
+                  <p>This is not a good approach at all since if we take a resource away which is being used by the process then all the work which it has done till now can become inconsistent.</p>
+                  <p>Consider a printer is being used by any process. If we take the printer away from that process and assign it to some other process then all the data which has been printed can become inconsistent and ineffective and also the fact that the process can't start printing again from where it has left which causes performance inefficiency.</p>
+                  <p><strong>&nbsp;</strong></p>
+                  <h2 class="h2">4. Circular Wait</h2>
+                  <p>To violate circular wait, we can assign a priority number to each of the resource. A process can't request for a lesser priority resource. This ensures that not a single process can request a resource which is being utilized by some other process and no cycle will be formed.</p>
+                  <p><br /><img src="https://static.javatpoint.com/operating-system/images/os-deadlock-prevention.png" alt="os Deadlock Prevention" /></p>
+                  <p>Among all the methods, violating Circular wait is the only approach that can be implemented practically.</p>
+                  <p><strong>&nbsp;</strong></p>
+                  <h1 class="h1">Deadlock avoidance</h1>
+                  <p>In deadlock avoidance, the request for any resource will be granted if the resulting state of the system doesn't cause deadlock in the system. The state of the system will continuously be checked for safe and unsafe states.</p>
+                  <p>In order to avoid deadlocks, the process must tell OS, the maximum number of resources a process can request to complete its execution.</p>
+                  <p>The simplest and most useful approach states that the process should declare the maximum number of resources of each type it may ever need. The Deadlock avoidance algorithm examines the resource allocations so that there can never be a circular wait condition.</p>
+                  <h2 class="h2">&nbsp;</h2>
+                  <p>Safe and Unsafe States</p>
+                  
+                  <p>The resource allocation state of a system can be defined by the instances of available and allocated resources, and the maximum instance of the resources demanded by the processes.</p>
+                  <p>A state of a system recorded at some random time is shown below.</p>
+                  <h4 class="h4">Resources Assigned</h4>
+                  <table class="alt">
+                    <tbody>
+                      <tr>
+                        <th>Process</th>
+                        <th>Type 1</th>
+                        <th>Type 2</th>
+                        <th>Type 3</th>
+                        <th>Type 4</th>
+                      </tr>
+                      <tr>
+                        <td>A</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>C</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>D</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h4 class="h4">Resources still needed</h4>
+                  <table class="alt">
+                    <tbody>
+                      <tr>
+                        <th>Process</th>
+                        <th>Type 1</th>
+                        <th>Type 2</th>
+                        <th>Type 3</th>
+                        <th>Type 4</th>
+                      </tr>
+                      <tr>
+                        <td>A</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <td>C</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>D</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>&nbsp;</p>
+                  <div class="codeblock">
+                    <div class="dp-highlighter">
+                      <div class="bar">&nbsp;</div>
+                      <ol class="dp-xml" start="1">
+                        <li class="alt"><span class="attribute">E</span>&nbsp;=&nbsp;(7&nbsp;6&nbsp;8&nbsp;4)&nbsp;&nbsp;</li>
+                        <li class=""><span class="attribute">P</span>&nbsp;=&nbsp;(6&nbsp;2&nbsp;8&nbsp;3)&nbsp;&nbsp;</li>
+                        <li class="alt"><span class="attribute">A</span>&nbsp;=&nbsp;(1&nbsp;4&nbsp;0&nbsp;1)&nbsp;&nbsp;&nbsp;</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <p>&nbsp;</p>
+                  <p>Above tables and vector E, P and A describes the resource allocation state of a system. There are 4 processes and 4 types of the resources in a system. Table 1 shows the instances of each resource assigned to each process.</p>
+                  <p>Table 2 shows the instances of the resources, each process still needs. Vector E is the representation of total instances of each resource in the system.</p>
+                  <p>Vector P represents the instances of resources that have been assigned to processes. Vector A represents the number of resources that are not in use.</p>
+                  <p>A state of the system is called safe if the system can allocate all the resources requested by all the processes without entering into deadlock.</p>
+                  
+                  <p>If the system cannot fulfill the request of all processes then the state of the system is called unsafe.</p>
+                  <p>The key of Deadlock avoidance approach is when the request is made for resources then the request must only be approved in the case if the resulting state is also a safe state.</p>
+                  <p><strong>&nbsp;</strong></p>
+
+                  <h1 class="h1">Resource Allocation Graph</h1>
+                  <p>The resource allocation graph is the pictorial representation of the state of a system. As its name suggests, the resource allocation graph is the complete information about all the processes which are holding some resources or waiting for some resources.</p>
+                  <p>It also contains the information about all the instances of all the resources whether they are available or being used by the processes.</p>
+                  <p>In Resource allocation graph, the process is represented by a Circle while the Resource is represented by a rectangle. Let's see the types of vertices and edges in detail.</p>
+                  <p><br /><img src="https://static.javatpoint.com/operating-system/images/os-resource-allocation-graph.png" alt="OS Resource Allocation Graph" /></p>
+                  <p>Vertices are mainly of two types, Resource and process. Each of them will be represented by a different shape. Circle represents process while rectangle represents resource.</p>
+                  
+                  <p>A resource can have more than one instance. Each instance will be represented by a dot inside the rectangle.</p>
+                  <p><br /><img src="https://static.javatpoint.com/operating-system/images/os-resource-allocation-graph1.png" alt="OS Resource Allocation Graph 1" /></p>
+                  <p>Edges in RAG are also of two types, one represents assignment and other represents the wait of a process for a resource. The above image shows each of them.</p>
+                  <p>A resource is shown as assigned to a process if the tail of the arrow is attached to an instance to the resource and the head is attached to a process.</p>
+                  <p>A process is shown as waiting for a resource if the tail of an arrow is attached to the process while the head is pointing towards the resource.</p>
+                  <p><strong>&nbsp;</strong></p>
+                  <h1 class="h1">Deadlock Detection and Recovery</h1>
+                  <p>In this approach, The OS doesn't apply any mechanism to avoid or prevent the deadlocks. Therefore the system considers that the deadlock will definitely occur. In order to get rid of deadlocks, The OS periodically checks the system for any deadlock. In case, it finds any of the deadlock then the OS will recover the system using some recovery techniques.</p>
+                  <p>The main task of the OS is detecting the deadlocks. The OS can detect the deadlocks with the help of Resource allocation graph.</p>
+                  <p><br /><img src="https://static.javatpoint.com/operating-system/images/os-deadlock-detection-and-recovery.png" alt="OS Deadlock Detection and Recovery" /></p>
+                  <p>In single instanced resource types, if a cycle is being formed in the system then there will definitely be a deadlock. On the other hand, in multiple instanced resource type graph, detecting a cycle is not just enough. We have to apply the safety algorithm on the system by converting the resource allocation graph into the allocation matrix and request matrix.</p>
+                  <p>In order to recover the system from deadlocks, either OS considers resources or processes.</p>
+                  <p><strong>&nbsp;</strong></p>
+                  <h2 class="h2">For Resource</h2>
+                  <p>&nbsp;</p>
+                  <h3 class="h3">Preempt the resource</h3>
+                  <p>We can snatch one of the resources from the owner of the resource (process) and give it to the other process with the expectation that it will complete the execution and will release this resource sooner. Well, choosing a resource which will be snatched is going to be a bit difficult.</p>
+                  <h3 class="h3">Rollback to a safe state</h3>
+                  <p>System passes through various states to get into the deadlock state. The operating system canrollback the system to the previous safe state. For this purpose, OS needs to implement check pointing at every state.</p>
+                  <p>The moment, we get into deadlock, we will rollback all the allocations to get into the previous safe state.</p>
+                  <h2 class="h2">For Process</h2>
+                  <p>&nbsp;</p>
+                  <h3 class="h3">Kill a process</h3>
+                  <p>Killing a process can solve our problem but the bigger concern is to decide which process to kill. Generally, Operating system kills a process which has done least amount of work until now.</p>
+                  <h3 class="h3">Kill all process</h3>
+                  <p>This is not a suggestible approach but can be implemented if the problem becomes very serious. Killing all process will lead to inefficiency in the system because all the processes will execute again from starting.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

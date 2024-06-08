@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 DBMS Unit-1</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <h1>&nbsp;1. Database</h1>
+        <p>&nbsp;The database is a collection of inter-related data which is used to retrieve, insert and&nbsp; delete the data efficiently. It is also used to organize the data in the form of a table,&nbsp; schema, views, and reports, etc.<strong> For example: </strong>&nbsp;The college&nbsp; Database organizes the data&nbsp; about the admin, staff, students and faculty etc.</p>
+        <p>&nbsp;Using the database, you can easily retrieve, insert, and delete the information.</p>
+        <h1>&nbsp;Database Management System</h1>
+        <p>&nbsp;Database management system is a software which is used to manage the database.&nbsp; For example: <a href="https://www.javatpoint.com/mysql-tutorial">&nbsp;</a><a href="https://www.javatpoint.com/mysql-tutorial">MySQL</a>, <a href="https://www.javatpoint.com/oracle-tutorial">&nbsp;</a><a href="https://www.javatpoint.com/oracle-tutorial">&nbsp;</a><a href="https://www.javatpoint.com/oracle-tutorial">Oracle</a> <a href="https://www.javatpoint.com/oracle-tutorial">,</a> etc are a very popular&nbsp; commercial database which is used&nbsp; in different applications.</p>
+        <p>&nbsp;DBMS provides an interface to perform various operations like database creation,&nbsp; storing data in it, updating data, creating a table in the database and a lot more.</p>
+        <p>&nbsp;It provides protection and security to the database. In the case of multiple users, it also&nbsp; maintains data consistency.</p>
+        <p><strong>&nbsp;DBMS allows users the following tasks: </strong></p>
+        <p><strong>&nbsp;Data Definition: </strong>&nbsp;It is used for creation, modification,&nbsp; and removal of definition that&nbsp; defines the organization of data in the database.</p>
+        <p><strong>&nbsp;Data Updation: </strong>&nbsp;It is used for the insertion, modification,&nbsp; and deletion of the actual data&nbsp; in the database.</p>
+        <p><strong>&nbsp;Data Retrieval: </strong>&nbsp;It is used to retrieve the data from&nbsp; the database which can be used by&nbsp; applications for various purposes.</p>
+        <p><strong>&nbsp;User Administration: </strong>&nbsp;It is used for registering and monitoring users, maintain data&nbsp; integrity, enforcing data security, dealing with concurrency control, monitoring&nbsp; performance and recovering information corrupted by unexpected failure.</p>
+        <h1>&nbsp;Characteristics of DBMS</h1>
+        <p>&nbsp;○ &nbsp;It uses a digital repository established on a server to store and manage the&nbsp; information.</p>
+        <p>&nbsp;○ &nbsp;It can provide a clear and logical view of the process that manipulates data. &nbsp;○ &nbsp;DBMS contains automatic backup and recovery procedures.</p>
+        <p>&nbsp;○ &nbsp;It contains ACID properties which maintain data in a healthy state in case of&nbsp; failure.</p>
+        <p>&nbsp;○ &nbsp;It can reduce the complex relationship between data.</p>
+        <p>&nbsp;○ &nbsp;It is used to support manipulation and processing of data.</p>
+        <p>&nbsp;○ &nbsp;It is used to provide security of data.</p>
+        <p>&nbsp;○ &nbsp;It can view the database from different viewpoints according to the requirements&nbsp; of the user.</p>
+        <h1>&nbsp;Advantages of DBMS</h1>
+        <p>&nbsp;○ <strong>&nbsp;Controls database redundancy: </strong>&nbsp;It can control data&nbsp; redundancy because it stores&nbsp; all the data in one single database file and that recorded data is placed in the&nbsp; database.</p>
+        <p>&nbsp;○ <strong>&nbsp;Data sharing: </strong>&nbsp;In DBMS, the authorized users of an&nbsp; organization can share the&nbsp; data among multiple users.</p>
+        <p>&nbsp;○ <strong>&nbsp;Easily Maintenance: </strong>&nbsp;It can be easily maintainable&nbsp; due to the centralized nature of&nbsp; the database system.</p>
+        <p>&nbsp;○ <strong>&nbsp;Reduce time: </strong>&nbsp;It reduces development time and maintenance need.</p>
+        <p>&nbsp;○ <strong>&nbsp;Backup: </strong>&nbsp;It provides backup and recovery subsystems&nbsp; which create automatic&nbsp; backup of data from <a href="https://www.javatpoint.com/hardware">&nbsp;</a><a href="https://www.javatpoint.com/hardware">hardware</a> &nbsp;and <a href="https://www.javatpoint.com/software">&nbsp;</a><a href="https://www.javatpoint.com/software">software</a> &nbsp;failures&nbsp; and restores the data if&nbsp; required.</p>
+        <p>&nbsp;○ <strong>&nbsp;multiple user interface: </strong>&nbsp;It provides different types&nbsp; of user interfaces like&nbsp; graphical user interfaces, application program interfaces</p>
+        <h1>&nbsp;Disadvantages of DBMS</h1>
+        <p>&nbsp;○ <strong>&nbsp;Cost of Hardware and Software: </strong>&nbsp;It requires a high&nbsp; speed of data processor and&nbsp; large memory size to run DBMS software.</p>
+        <p>&nbsp;○ <strong>&nbsp;Size: </strong>&nbsp;It occupies a large space of disks and large&nbsp; memory to run them efficiently.</p>
+        <p>&nbsp;○ <strong>&nbsp;Complexity: </strong>&nbsp;Database system creates additional complexity&nbsp; and requirements.</p>
+        <p>&nbsp;○ <strong>&nbsp;Higher impact of failure: </strong>&nbsp;Failure is highly impacted&nbsp; the database because in&nbsp; most of the organization, all the data stored in a single database and if the&nbsp; database is damaged due to electric failure or database corruption then the data&nbsp; may be lost forever.</p>
+        <h1>&nbsp;2.DBMS Architecture</h1>
+        <p>&nbsp;A Database Management system is not always directly available for&nbsp; users and applications to access and store data in it. A Database&nbsp; Management system can be centralised(all the data stored at one&nbsp; location), decentralised(multiple copies of database at different&nbsp; locations) or hierarchical, depending upon its architecture.</p>
+        <p>&nbsp;1-tier DBMS architecture also exist, this is when the database is&nbsp; directly available to the user for using it to store data. Generally such a&nbsp; setup is used for local application development, where programmers&nbsp; communicate directly with the database for quick response.</p>
+        <h2>&nbsp;2-tier DBMS Architecture</h2>
+        <p>&nbsp;2-tier DBMS architecture includes an Application layer between the&nbsp; user and the DBMS, which is responsible to communicate the user's&nbsp; request to the database management system and then send the&nbsp; response from the DBMS to the user.</p>
+        <p>&nbsp;An application interface known as ODBC(Open Database Connectivity)&nbsp; provides an API that allow client side program to call the DBMS. Most&nbsp; DBMS vendors provide ODBC drivers for their DBMS.</p>
+        <p>&nbsp;Such an architecture provides the DBMS extra security as it is not&nbsp; exposed to the End User directly. Also, security can be improved by&nbsp; adding security and authentication checks in the Application layer too.</p>
+        <h2>&nbsp;3-tier DBMS Architecture</h2>
+        <p>&nbsp;3-tier DBMS architecture is the most commonly used architecture for&nbsp; web applications.</p>
+        <p>&nbsp;It is an extension of the 2-tier architecture. In the 2-tier architecture, we&nbsp; have an application layer which can be accessed programatically to&nbsp; perform various operations on the DBMS. The application generally&nbsp; understands the Database Access Language and processes end users&nbsp; requests to the DBMS.</p>
+        <p>&nbsp;In 3-tier architecture, an additional Presentation or GUI Layer is added,&nbsp; which provides a graphical user interface for the End user to interact&nbsp; with the DBMS.</p>
+        <p>&nbsp;For the end user, the GUI layer is the Database System, and the end&nbsp; user has no idea about the application layer and the DBMS system.</p>
+        <h1>&nbsp;3.DBMS Database Models</h1>
+        <p>&nbsp;A Database model defines the logical design and structure of a&nbsp; database and defines how data will be stored, accessed and updated&nbsp; in a database management system. While the Relational Model is the&nbsp; most widely used database model, there are other models too:</p>
+        <ul>
+          <li>Hierarchical Model</li>
+          <li>Network Model</li>
+          <li><a href="https://www.studytonight.com/dbms/er-model-concepts.php">Entity-relationship Model</a> <a href="https://www.studytonight.com/dbms/rdbms-concept.php">&nbsp;</a><a href="https://www.studytonight.com/dbms/rdbms-concept.php">Relational Model</a></li>
+        </ul>
+        <h2>&nbsp;Hierarchical Model</h2>
+        <p>&nbsp;This database model organises data into a tree-like-structure, with a&nbsp; single root, to which all the other data is linked. The heirarchy starts&nbsp; from the Root data, and expands like a tree, adding child nodes to the&nbsp; parent nodes.</p>
+        <p>&nbsp;In this model, a child node will only have a single parent node.</p>
+        <p>&nbsp;This model efficiently describes many real-world relationships like&nbsp; index of a book, recipes etc.</p>
+        <p>&nbsp;In hierarchical model, data is organised into tree-like structure with&nbsp; one one-to-many relationship between two different types of data, for&nbsp; example, one department can have many courses, many professors&nbsp; and of-course many students.</p>
+        <h2>&nbsp;Network Model</h2>
+        <p>&nbsp;This is an extension of the Hierarchical model. In this model data is&nbsp; organised more like a graph, and are allowed to have more than one&nbsp; parent node.</p>
+        <p>&nbsp;In this database model data is more related as more relationships are&nbsp; established in this database model. Also, as the data is more related,&nbsp; hence accessing the data is also easier and fast. This database model&nbsp; was used to map many-to-many data relationships.</p>
+        <p>&nbsp;This was the most widely used database model, before Relational&nbsp; Model was introduced.</p>
+        <h2>&nbsp;Entity-relationship Model</h2>
+        <p>&nbsp;In this database model, relationships are created by dividing object of&nbsp; interest into entity and its characteristics into attributes.</p>
+        <p>&nbsp;Different entities are related using relationships.</p>
+        <p>&nbsp;E-R Models are defined to represent the relationships into pictorial&nbsp; form to make it easier for different stakeholders to understand.</p>
+        <p>&nbsp;This model is good to design a database, which can then be turned&nbsp; into tables in relational model(explained below).</p>
+        <p>&nbsp;Let's take an example, If we have to design a School Database, then</p>
+        <p>&nbsp;Student will be an entity with attributes name, age, address etc. As&nbsp; Address is generally complex, it can be another entity with attributes&nbsp; street name, pincode, city etc, and there will be a relationship between&nbsp; them.</p>
+        <p>&nbsp;Relationships can also be of different types.</p>
+        <h2>&nbsp;Relational Model</h2>
+        <p>&nbsp;In this model, data is organised in two-dimensional tables and the&nbsp; relationship is maintained by storing a common field.</p>
+        <p>&nbsp;This model was introduced by E.F Codd in 1970, and since then it has&nbsp; been the most widely used database model, infact, we can say the&nbsp; only database model used around the world.</p>
+        <p>&nbsp;The basic structure of data in the relational model is tables. All the&nbsp; information related to a particular type is stored in rows of that table.</p>
+        <p>&nbsp;Hence, tables are also known as relations in relational model.</p>
+        <h2>&nbsp;4. UML</h2>
+        <p>&nbsp;The UML stands for Unified modeling language, is a standardized general-purpose&nbsp; visual modeling language in the field of Software Engineering. It is used for specifying,&nbsp; visualizing, constructing, and documenting the primary artifacts of the software system.&nbsp; It helps in designing and characterizing, especially those software systems that&nbsp; incorporate the concept of Object orientation. It describes the working of both the&nbsp; software and hardware systems.</p>
+        <p>&nbsp;The UML was developed in 1994-95 by Grady Booch, Ivar Jacobson, and James</p>
+        <p>&nbsp;Rumbaugh at the Rational Software. In 1997, it got adopted as a standard by the Object&nbsp; Management Group (OMG).The Object Management Group (OMG) is an association of&nbsp; several companies that controls the open standard UML. The OMG was established to&nbsp; build an open standard that mainly supports the interoperability of object-oriented&nbsp; systems. It is not restricted within the boundaries, but it can also be utilized for&nbsp; modeling the non-software systems. The OMG is best recognized for the Common&nbsp; Object Request Broker Architecture (CORBA) standards.</p>
+        <h2>&nbsp;Goals of UML</h2>
+        <p>&nbsp;○ &nbsp;Since it is a general-purpose modeling language, it can be utilized by all the&nbsp; modelers.</p>
+        <p>&nbsp;○ &nbsp;UML came into existence after the introduction of object-oriented concepts to&nbsp; systemize and consolidate the object-oriented development, due to the absence&nbsp; of standard methods at that time.</p>
+        <p>&nbsp;○ &nbsp;The UML diagrams are made for business users, developers, ordinary people, or&nbsp; anyone who is looking forward to understand the system, such that the system&nbsp; can be software or non-software.</p>
+        <p>&nbsp;○ &nbsp;Thus it can be concluded that the UML is a simple modeling approach that is&nbsp; used to model all the practical systems.</p>
+        <h2>&nbsp;Characteristics of UML</h2>
+        <p>&nbsp;The UML has the following features:</p>
+        <p>&nbsp;○ &nbsp;It is a generalized modeling language.</p>
+        <p>&nbsp;○ &nbsp;It is distinct from other programming languages like C++, Python, etc.</p>
+        <p>&nbsp;○ &nbsp;It is interrelated to object-oriented analysis and design.</p>
+        <p>&nbsp;○ &nbsp;It is used to visualize the workflow of the system.</p>
+        <p>&nbsp;○ &nbsp;It is a pictorial language, used to generate powerful modeling artifacts.</p>
+        <h2>&nbsp;5. Functional Dependency</h2>
+        <p>&nbsp;The functional dependency is a relationship that exists between two attributes. It&nbsp; typically exists between the primary key and non-key attribute within a table.&nbsp; 1.&nbsp; X&nbsp;&nbsp; &rarr;&nbsp;&nbsp; Y</p>
+        <p>&nbsp;The left side of FD is known as a determinant, the right side of the production is known&nbsp; as a dependent.</p>
+        <p><strong>&nbsp;For example: </strong></p>
+        <p>&nbsp;Assume we have an employee table with attributes: Emp_Id, Emp_Name, Emp_Address.</p>
+        <p>&nbsp;Here&nbsp; Emp_Id&nbsp; attribute&nbsp; can&nbsp; uniquely&nbsp; identify&nbsp; the&nbsp; Emp_Name&nbsp; attribute&nbsp; of&nbsp; employee&nbsp; table&nbsp; because if we know the Emp_Id, we can tell that employee name associated with it.</p>
+        <p>&nbsp;Functional dependency can be written as:</p>
+        <ol>
+          <li>Emp_Id &rarr; Emp_Name</li>
+        </ol>
+        <p>&nbsp;We can say that Emp_Name is functionally dependent on Emp_Id.</p>
+        <h3>&nbsp;Types of Functional dependency</h3>
+        <h4>&nbsp;1. Trivial functional dependency</h4>
+        <p>&nbsp;○ &nbsp;A &rarr; B has trivial functional dependency if B is a subset of A.</p>
+        <p>&nbsp;○ &nbsp;The following dependencies are also trivial like: A &rarr; A, B &rarr; B</p>
+        <p><strong>&nbsp;Example: </strong></p>
+        <ol>
+          <li>Consider a table with two columns Employee_Id and Employee_Name.</li>
+          <li>{Employee_id, Employee_Name} &rarr;&nbsp;&nbsp;&nbsp; Employee_Id is a trivial functional&nbsp; dependency as</li>
+          <li>Employee_Id is a subset of {Employee_Id, Employee_Name}.</li>
+          <li>Also, Employee_Id &rarr; Employee_Id and Employee_Name &rarr;&nbsp;&nbsp;&nbsp; Employee_Name&nbsp; are trivial dependencies too.</li>
+        </ol>
+        <h4>&nbsp;2. Non-trivial functional dependency</h4>
+        <p>&nbsp;○ &nbsp;A &rarr; B has a non-trivial functional dependency if B is not a subset of A.</p>
+        <p>&nbsp;○ &nbsp;When A intersection B is NULL, then A &rarr; B is called as complete non-trivial.</p>
+        <p><strong>&nbsp;Example: </strong></p>
+        <ol>
+          <li>ID &rarr;&nbsp;&nbsp;&nbsp; Name,</li>
+          <li>Name &rarr;&nbsp;&nbsp;&nbsp; DOB</li>
+        </ol>
+        <p><strong>&nbsp;Functional Dependency Set: </strong>&nbsp;Functional Dependency&nbsp; set or FD set of a relation&nbsp; is the set of all FDs present in the relation. For Example, FD set for relation&nbsp; STUDENT shown in table 1 is:</p>
+        <p>&nbsp;{ STUD_NO-&gt;STUD_NAME, STUD_NO-&gt;STUD_PHONE, STUD_NO-&gt;STUD_STATE,</p>
+        <p>&nbsp;STUD_NO-&gt;STUD_COUNTRY,</p>
+        <p>&nbsp;STUD_NO -&gt; STUD_AGE, STUD_STATE-&gt;STUD_COUNTRY }</p>
+        <p><strong>&nbsp;Attribute Closure: </strong>&nbsp;Attribute closure of an attribute&nbsp; set can be defined as set of&nbsp; attributes which can be functionally determined from it.</p>
+        <p><strong>&nbsp;How to find attribute closure of an attribute set? </strong>&nbsp;To find attribute closure of an attribute set:</p>
+        <ul>
+          <li>Add elements of attribute set to the result set.</li>
+          <li>Recursively add elements to the result set which can be functionally determined from the elements of the result set.</li>
+        </ul>
+        <p>&nbsp;Using FD set of table 1, attribute closure can be determined as:</p>
+        <p>&nbsp;(STUD_NO)+ = {STUD_NO, STUD_NAME, STUD_PHONE, STUD_STATE,</p>
+        <p>&nbsp;STUD_COUNTRY, STUD_AGE}</p>
+        <p>&nbsp;(STUD_STATE)+ = {STUD_STATE, STUD_COUNTRY}</p>
+        <h2>&nbsp;Normalization</h2>
+        <p>&nbsp;A&nbsp; large&nbsp; database&nbsp; defined&nbsp; as&nbsp; a&nbsp; single&nbsp; relation&nbsp; may&nbsp; result&nbsp; in&nbsp; data&nbsp; duplication.&nbsp; This&nbsp; repetition of data may result in:</p>
+        <p>&nbsp;○ &nbsp;Making relations very large.</p>
+        <p>&nbsp;○ &nbsp;It isn't easy to maintain and update data as it would involve searching many&nbsp; records in relation.</p>
+        <p>&nbsp;○ &nbsp;Wastage and poor utilization of disk space and resources.</p>
+        <p>&nbsp;○ &nbsp;The likelihood of errors and inconsistencies increases.</p>
+        <p>&nbsp;So&nbsp; to&nbsp; handle&nbsp; these&nbsp; problems,&nbsp; we&nbsp; should&nbsp; analyze&nbsp; and&nbsp; decompose&nbsp; the&nbsp; relations&nbsp; with&nbsp; redundant&nbsp; data&nbsp; into&nbsp; smaller,&nbsp; simpler,&nbsp; and&nbsp; well-structured&nbsp; relations&nbsp; that&nbsp; are&nbsp; satisfy&nbsp; desirable&nbsp; properties.&nbsp; Normalization&nbsp; is&nbsp; a&nbsp; process&nbsp; of&nbsp; decomposing&nbsp; the&nbsp; relations&nbsp; into&nbsp; relations with fewer attributes.</p>
+        <p>&nbsp;6.What is Normalization?</p>
+        <p>&nbsp;○ &nbsp;Normalization is the process of organizing the data in the database.</p>
+        <p>&nbsp;○ &nbsp;Normalization is used to minimize the redundancy from a relation or set of&nbsp; relations. It is also used to eliminate undesirable characteristics like Insertion,&nbsp; Update, and Deletion Anomalies.</p>
+        <p>&nbsp;○ &nbsp;Normalization divides the larger table into smaller and links them using&nbsp; relationships.</p>
+        <p>&nbsp;○ &nbsp;The normal form is used to reduce redundancy from the database table.</p>
+        <p>&nbsp;Why do we need Normalization?</p>
+        <p>&nbsp;The&nbsp; main&nbsp; reason&nbsp; for&nbsp; normalizing&nbsp; the&nbsp; relations&nbsp; is&nbsp; removing&nbsp; these&nbsp; anomalies.&nbsp; Failure&nbsp; to&nbsp; eliminate&nbsp; anomalies&nbsp; leads&nbsp; to&nbsp; data&nbsp; redundancy&nbsp; and&nbsp; can&nbsp; cause&nbsp; data&nbsp; integrity&nbsp; and&nbsp; other&nbsp; problems&nbsp; as&nbsp; the&nbsp; database&nbsp; grows.&nbsp; Normalization&nbsp; consists&nbsp; of&nbsp; a&nbsp; series&nbsp; of&nbsp; guidelines&nbsp; that&nbsp; helps to guide you in creating a good database structure.</p>
+        <p><strong>&nbsp;Data modification anomalies can be categorized into three types: </strong></p>
+        <p>&nbsp;○ <strong>&nbsp;Insertion Anomaly: </strong>&nbsp;Insertion Anomaly refers to when&nbsp; one cannot insert a new&nbsp; tuple into a relationship due to lack of data.</p>
+        <p>&nbsp;○ <strong>&nbsp;Deletion Anomaly: </strong>&nbsp;The delete anomaly refers to the&nbsp; situation where the deletion&nbsp; of data results in the unintended loss of some other important data.</p>
+        <p>&nbsp;○ <strong>&nbsp;Updatation Anomaly: </strong>&nbsp;The update anomaly is when an&nbsp; update of a single data&nbsp; value requires multiple rows of data to be updated.</p>
+        <p>&nbsp;Types of Normal Forms:</p>
+        <p>&nbsp;Normalization&nbsp; works&nbsp; through&nbsp; a&nbsp; series&nbsp; of&nbsp; stages&nbsp; called&nbsp; Normal&nbsp; forms.&nbsp; The&nbsp; normal&nbsp; forms&nbsp; apply&nbsp; to&nbsp; individual&nbsp; relations.&nbsp; The&nbsp; relation&nbsp; is&nbsp; said&nbsp; to&nbsp; be&nbsp; in&nbsp; particular&nbsp; normal&nbsp; form&nbsp; if&nbsp; it&nbsp; satisfies constraints.</p>
+        <p><strong>&nbsp;Following are the various types of Normal forms: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="95">
+                <p><strong>&nbsp;Normal</strong></p>
+                <p><strong>&nbsp;Form</strong></p>
+              </td>
+              <td width="529">
+                <p><strong>&nbsp;Description</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="95">
+                <p><a href="https://www.javatpoint.com/dbms-first-normal-form">&nbsp;</a><a href="https://www.javatpoint.com/dbms-first-normal-form">1NF</a></p>
+              </td>
+              <td width="529">
+                <p>&nbsp;A relation is in 1NF if it contains an atomic value.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="95">
+                <p><a href="https://www.javatpoint.com/dbms-second-normal-form">&nbsp;</a><a href="https://www.javatpoint.com/dbms-second-normal-form">2NF</a></p>
+              </td>
+              <td width="529">
+                <p>&nbsp;A&nbsp; relation&nbsp; will&nbsp; be&nbsp; in&nbsp; 2NF&nbsp; if&nbsp; it&nbsp; is&nbsp; in&nbsp; 1NF&nbsp; and&nbsp; all&nbsp; non-key&nbsp; attributes&nbsp; are&nbsp; fully</p>
+                <p>&nbsp;functional dependent on the primary key.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="95">
+                <p><a href="https://www.javatpoint.com/dbms-third-normal-form">&nbsp;</a><a href="https://www.javatpoint.com/dbms-third-normal-form">3NF</a></p>
+              </td>
+              <td width="529">
+                <p>&nbsp;A&nbsp; relation&nbsp; will&nbsp; be&nbsp; in&nbsp; 3NF&nbsp; if&nbsp; it&nbsp; is&nbsp; in&nbsp; 2NF&nbsp; and&nbsp; no&nbsp; transition&nbsp; dependency&nbsp; exists.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="95">
+                <p>&nbsp;BCNF</p>
+              </td>
+              <td width="529">
+                <p>&nbsp;A stronger definition of 3NF is known as Boyce Codd's normal form.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="95">
+                <p><a href="https://www.javatpoint.com/dbms-forth-normal-form">&nbsp;</a><a href="https://www.javatpoint.com/dbms-forth-normal-form">4NF</a></p>
+              </td>
+              <td width="529">
+                <p>&nbsp;A&nbsp; relation&nbsp; will&nbsp; be&nbsp; in&nbsp; 4NF&nbsp; if&nbsp; it&nbsp; is&nbsp; in&nbsp; Boyce&nbsp; Codd's&nbsp; normal&nbsp; form&nbsp; and&nbsp; has&nbsp; no&nbsp; multi-valued dependency.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="95">
+                <p><a href="https://www.javatpoint.com/dbms-fifth-normal-form">&nbsp;</a><a href="https://www.javatpoint.com/dbms-fifth-normal-form">5NF</a></p>
+              </td>
+              <td width="529">
+                <p>&nbsp;A&nbsp; relation&nbsp; is&nbsp; in&nbsp; 5NF.&nbsp; If&nbsp; it&nbsp; is&nbsp; in&nbsp; 4NF&nbsp; and&nbsp; does&nbsp; not&nbsp; contain&nbsp; any&nbsp; join&nbsp; dependency, joining should be lossless.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>&nbsp;Advantages of Normalization</h3>
+        <p>&nbsp;○ &nbsp;Normalization helps to minimize data redundancy.</p>
+        <p>&nbsp;○ &nbsp;Greater overall database organization.</p>
+        <p>&nbsp;○ &nbsp;Data consistency within the database.</p>
+        <p>&nbsp;○ &nbsp;Much more flexible database design.</p>
+        <p>&nbsp;○ &nbsp;Enforces the concept of relational integrity.</p>
+        <h3>&nbsp;Disadvantages of Normalization</h3>
+        <p>&nbsp;○ &nbsp;You cannot start building the database before knowing what the user needs.</p>
+        <p>&nbsp;○ &nbsp;The performance degrades when normalizing the relations to higher normal&nbsp; forms, i.e., 4NF, 5NF.</p>
+        <p>&nbsp;○ &nbsp;It is very time-consuming and difficult to normalize relations of a higher degree.</p>
+        <p>&nbsp;○ &nbsp;Careless decomposition may lead to a bad database design, leading to serious&nbsp; problems.</p>
+        <h2>&nbsp;First Normal Form (1NF)</h2>
+        <p>&nbsp;○ &nbsp;A relation will be 1NF if it contains an atomic value.</p>
+        <p>&nbsp;○ &nbsp;It states that an attribute of a table cannot hold multiple values. It must hold only&nbsp; single-valued attribute.</p>
+        <p>&nbsp;○ &nbsp;First normal form disallows the multi-valued attribute, composite attribute, and&nbsp; their combinations.</p>
+        <p><strong>&nbsp;Example: </strong>&nbsp;Relation&nbsp; EMPLOYEE&nbsp; is&nbsp; not&nbsp; in&nbsp; 1NF&nbsp; because&nbsp; of&nbsp; multi-valued&nbsp; attribute&nbsp; EMP_PHONE.</p>
+        <p><strong>&nbsp;EMPLOYEE table: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="120">
+                <p><strong>&nbsp;EMP_ID</strong></p>
+              </td>
+              <td width="164">
+                <p><strong>&nbsp;EMP_NAME</strong></p>
+              </td>
+              <td width="175">
+                <p><strong>&nbsp;EMP_PHONE</strong></p>
+              </td>
+              <td width="165">
+                <p><strong>&nbsp;EMP_STATE</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="120">
+                <p>&nbsp;14</p>
+              </td>
+              <td width="164">
+                <p>&nbsp;John</p>
+              </td>
+              <td width="175">
+                <p>&nbsp;7272826385,</p>
+                <p>&nbsp;9064738238</p>
+              </td>
+              <td width="165">
+                <p>&nbsp;UP</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="120">
+                <p>&nbsp;20</p>
+              </td>
+              <td width="164">
+                <p>&nbsp;Harry</p>
+              </td>
+              <td width="175">
+                <p>&nbsp;8574783832</p>
+              </td>
+              <td width="165">
+                <p>&nbsp;Bihar</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="120">
+                <p>&nbsp;12</p>
+              </td>
+              <td width="164">
+                <p>&nbsp;Sam</p>
+              </td>
+              <td width="175">
+                <p>&nbsp;7390372389,</p>
+                <p>&nbsp;8589830302</p>
+              </td>
+              <td width="165">
+                <p>&nbsp;Punjab</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;The decomposition of the EMPLOYEE table into 1NF has been shown below:</p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="120">
+                <p><strong>&nbsp;EMP_ID</strong></p>
+              </td>
+              <td width="164">
+                <p><strong>&nbsp;EMP_NAME</strong></p>
+              </td>
+              <td width="175">
+                <p><strong>&nbsp;EMP_PHONE</strong></p>
+              </td>
+              <td width="165">
+                <p><strong>&nbsp;EMP_STATE</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="120">
+                <p>&nbsp;14</p>
+              </td>
+              <td width="164">
+                <p>&nbsp;John</p>
+              </td>
+              <td width="175">
+                <p>&nbsp;7272826385</p>
+              </td>
+              <td width="165">
+                <p>&nbsp;UP</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="120">
+                <p>&nbsp;14</p>
+              </td>
+              <td width="164">
+                <p>&nbsp;John</p>
+              </td>
+              <td width="175">
+                <p>&nbsp;9064738238</p>
+              </td>
+              <td width="165">
+                <p>&nbsp;UP</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="120">
+                <p>&nbsp;20</p>
+              </td>
+              <td width="164">
+                <p>&nbsp;Harry</p>
+              </td>
+              <td width="175">
+                <p>&nbsp;8574783832</p>
+              </td>
+              <td width="165">
+                <p>&nbsp;Bihar</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="120">
+                <p>&nbsp;12</p>
+              </td>
+              <td width="164">
+                <p>&nbsp;Sam</p>
+              </td>
+              <td width="175">
+                <p>&nbsp;7390372389</p>
+              </td>
+              <td width="165">
+                <p>&nbsp;Punjab</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="120">
+                <p>&nbsp;12</p>
+              </td>
+              <td width="164">
+                <p>&nbsp;Sam</p>
+              </td>
+              <td width="175">
+                <p>&nbsp;8589830302</p>
+              </td>
+              <td width="165">
+                <p>&nbsp;Punjab</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>&nbsp;Second Normal Form (2NF)</h2>
+        <p>&nbsp;○ &nbsp;In the 2NF, relational must be in 1NF.</p>
+        <p>&nbsp;○ &nbsp;In the second normal form, all non-key attributes are fully functional dependent&nbsp; on the primary key</p>
+        <p><strong>&nbsp;Example: </strong>&nbsp;Let's&nbsp; assume,&nbsp; a&nbsp; school&nbsp; can&nbsp; store&nbsp; the&nbsp; data&nbsp; of&nbsp; teachers&nbsp; and&nbsp; the&nbsp; subjects&nbsp; they&nbsp; teach. In a school, a teacher can teach more than one subject.</p>
+        <p><strong>&nbsp;TEACHER table </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="217">
+                <p><strong>&nbsp;TEACHER_ID</strong></p>
+              </td>
+              <td width="161">
+                <p><strong>&nbsp;SUBJECT</strong></p>
+              </td>
+              <td width="246">
+                <p><strong>&nbsp;TEACHER_AGE</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="217">
+                <p>&nbsp;25</p>
+              </td>
+              <td width="161">
+                <p>&nbsp;Chemistry</p>
+              </td>
+              <td width="246">
+                <p>&nbsp;30</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="217">
+                <p>&nbsp;25</p>
+              </td>
+              <td width="161">
+                <p>&nbsp;Biology</p>
+              </td>
+              <td width="246">
+                <p>&nbsp;30</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="217">
+                <p>&nbsp;47</p>
+              </td>
+              <td width="161">
+                <p>&nbsp;English</p>
+              </td>
+              <td width="246">
+                <p>&nbsp;35</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="217">
+                <p>&nbsp;83</p>
+              </td>
+              <td width="161">
+                <p>&nbsp;Math</p>
+              </td>
+              <td width="246">
+                <p>&nbsp;38</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="217">
+                <p>&nbsp;83</p>
+              </td>
+              <td width="161">
+                <p>&nbsp;Computer</p>
+              </td>
+              <td width="246">
+                <p>&nbsp;38</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;In&nbsp; the&nbsp; given&nbsp; table,&nbsp; non-prime&nbsp; attribute&nbsp; TEACHER_AGE&nbsp; is&nbsp; dependent&nbsp; on&nbsp; TEACHER_ID&nbsp; which is a proper subset of a candidate key. That's why it violates the rule for 2NF.</p>
+        <p>&nbsp;To convert the given table into 2NF, we decompose it into two tables:</p>
+        <p><strong>&nbsp;TEACHER_DETAIL table: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="293">
+                <p><strong>&nbsp;TEACHER_ID</strong></p>
+              </td>
+              <td width="331">
+                <p><strong>&nbsp;TEACHER_AGE</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="293">
+                <p>&nbsp;25</p>
+              </td>
+              <td width="331">
+                <p>&nbsp;30</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="293">
+                <p>&nbsp;47</p>
+              </td>
+              <td width="331">
+                <p>&nbsp;35</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="293">
+                <p>&nbsp;83</p>
+              </td>
+              <td width="331">
+                <p>&nbsp;38</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;TEACHER_SUBJECT table: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="358">
+                <p><strong>&nbsp;TEACHER_ID</strong></p>
+              </td>
+              <td width="266">
+                <p><strong>&nbsp;SUBJECT</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="358">
+                <p>&nbsp;25</p>
+              </td>
+              <td width="266">
+                <p>&nbsp;Chemistry</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="358">
+                <p>&nbsp;25</p>
+              </td>
+              <td width="266">
+                <p>&nbsp;Biology</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="358">
+                <p>&nbsp;47</p>
+              </td>
+              <td width="266">
+                <p>&nbsp;English</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="358">
+                <p>&nbsp;83</p>
+              </td>
+              <td width="266">
+                <p>&nbsp;Math</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="358">
+                <p>&nbsp;83</p>
+              </td>
+              <td width="266">
+                <p>&nbsp;Computer</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>&nbsp;Third Normal Form (3NF)</h2>
+        <p>&nbsp;○ &nbsp;A relation will be in 3NF if it is in 2NF and not contain any transitive partial&nbsp; dependency.</p>
+        <p>&nbsp;○ &nbsp;3NF is used to reduce the data duplication. It is also used to achieve the data&nbsp; integrity.</p>
+        <p>&nbsp;○ &nbsp;If there is no transitive dependency for non-prime attributes, then the relation&nbsp; must be in third normal form.</p>
+        <p>&nbsp;A&nbsp; relation&nbsp; is&nbsp; in&nbsp; third&nbsp; normal&nbsp; form&nbsp; if&nbsp; it&nbsp; holds&nbsp; atleast&nbsp; one&nbsp; of&nbsp; the&nbsp; following&nbsp; conditions&nbsp; for&nbsp; every non-trivial function dependency X &rarr; Y.</p>
+        <ol>
+          <li>X is a super key.</li>
+          <li>Y is a prime attribute, i.e., each element of Y is part of some candidate key.</li>
+        </ol>
+        <p><strong>&nbsp;Example: </strong></p>
+        <p><strong>&nbsp;EMPLOYEE_DETAIL table: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="103">
+                <p><strong>&nbsp;EMP_ID</strong></p>
+              </td>
+              <td width="139">
+                <p><strong>&nbsp;EMP_NAME</strong></p>
+              </td>
+              <td width="112">
+                <p><strong>&nbsp;EMP_ZIP</strong></p>
+              </td>
+              <td width="141">
+                <p><strong>&nbsp;EMP_STATE</strong></p>
+              </td>
+              <td width="129">
+                <p><strong>&nbsp;EMP_CITY</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="103">
+                <p>&nbsp;222</p>
+              </td>
+              <td width="139">
+                <p>&nbsp;Harry</p>
+              </td>
+              <td width="112">
+                <p>&nbsp;201010</p>
+              </td>
+              <td width="141">
+                <p>&nbsp;UP</p>
+              </td>
+              <td width="129">
+                <p>&nbsp;Noida</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="103">
+                <p>&nbsp;333</p>
+              </td>
+              <td width="139">
+                <p>&nbsp;Stephan</p>
+              </td>
+              <td width="112">
+                <p>&nbsp;02228</p>
+              </td>
+              <td width="141">
+                <p>&nbsp;US</p>
+              </td>
+              <td width="129">
+                <p>&nbsp;Boston</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="103">
+                <p>&nbsp;444</p>
+              </td>
+              <td width="139">
+                <p>&nbsp;Lan</p>
+              </td>
+              <td width="112">
+                <p>&nbsp;60007</p>
+              </td>
+              <td width="141">
+                <p>&nbsp;US</p>
+              </td>
+              <td width="129">
+                <p>&nbsp;Chicago</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="103">
+                <p>&nbsp;555</p>
+              </td>
+              <td width="139">
+                <p>&nbsp;Katharine</p>
+              </td>
+              <td width="112">
+                <p>&nbsp;06389</p>
+              </td>
+              <td width="141">
+                <p>&nbsp;UK</p>
+              </td>
+              <td width="129">
+                <p>&nbsp;Norwich</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="103">
+                <p>&nbsp;666</p>
+              </td>
+              <td width="139">
+                <p>&nbsp;John</p>
+              </td>
+              <td width="112">
+                <p>&nbsp;462007</p>
+              </td>
+              <td width="141">
+                <p>&nbsp;MP</p>
+              </td>
+              <td width="129">
+                <p>&nbsp;Bhopal</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;Super key in the table above: </strong></p>
+        <p>&nbsp;{EMP_ID}, {EMP_ID, EMP_NAME}, {EMP_ID, EMP_NAME, EMP_ZIP}....so on</p>
+        <p><strong>&nbsp;Candidate key: </strong>&nbsp;{EMP_ID}</p>
+        <p><strong>&nbsp;Non-prime attributes: </strong>&nbsp;In the given table, all attributes except EMP_ID are non-prime.</p>
+        <p>&nbsp;Here, EMP_STATE &amp; EMP_CITY dependent on EMP_ZIP and EMP_ZIP dependent on&nbsp; EMP_ID. The non-prime attributes (EMP_STATE, EMP_CITY) transitively dependent on&nbsp; super key(EMP_ID). It violates the rule of third normal form.</p>
+        <p>&nbsp;That's why we need to move the EMP_CITY and EMP_STATE to the new&nbsp; &lt;EMPLOYEE_ZIP&gt; table, with EMP_ZIP as a Primary key.</p>
+        <p><strong>&nbsp;EMPLOYEE table: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="180">
+                <p><strong>&nbsp;EMP_ID</strong></p>
+              </td>
+              <td width="245">
+                <p><strong>&nbsp;EMP_NAME</strong></p>
+              </td>
+              <td width="199">
+                <p><strong>&nbsp;EMP_ZIP</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="180">
+                <p>&nbsp;222</p>
+              </td>
+              <td width="245">
+                <p>&nbsp;Harry</p>
+              </td>
+              <td width="199">
+                <p>&nbsp;201010</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="180">
+                <p>&nbsp;333</p>
+              </td>
+              <td width="245">
+                <p>&nbsp;Stephan</p>
+              </td>
+              <td width="199">
+                <p>&nbsp;02228</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="180">
+                <p>&nbsp;444</p>
+              </td>
+              <td width="245">
+                <p>&nbsp;Lan</p>
+              </td>
+              <td width="199">
+                <p>&nbsp;60007</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="180">
+                <p>&nbsp;555</p>
+              </td>
+              <td width="245">
+                <p>&nbsp;Katharine</p>
+              </td>
+              <td width="199">
+                <p>&nbsp;06389</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="180">
+                <p>&nbsp;666</p>
+              </td>
+              <td width="245">
+                <p>&nbsp;John</p>
+              </td>
+              <td width="199">
+                <p>&nbsp;462007</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;EMPLOYEE_ZIP table: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="184">
+                <p><strong>&nbsp;EMP_ZIP</strong></p>
+              </td>
+              <td width="229">
+                <p><strong>&nbsp;EMP_STATE</strong></p>
+              </td>
+              <td width="211">
+                <p><strong>&nbsp;EMP_CITY</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="184">
+                <p>&nbsp;201010</p>
+              </td>
+              <td width="229">
+                <p>&nbsp;UP</p>
+              </td>
+              <td width="211">
+                <p>&nbsp;Noida</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="184">
+                <p>&nbsp;02228</p>
+              </td>
+              <td width="229">
+                <p>&nbsp;US</p>
+              </td>
+              <td width="211">
+                <p>&nbsp;Boston</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="184">
+                <p>&nbsp;60007</p>
+              </td>
+              <td width="229">
+                <p>&nbsp;US</p>
+              </td>
+              <td width="211">
+                <p>&nbsp;Chicago</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="184">
+                <p>&nbsp;06389</p>
+              </td>
+              <td width="229">
+                <p>&nbsp;UK</p>
+              </td>
+              <td width="211">
+                <p>&nbsp;Norwich</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="184">
+                <p>&nbsp;462007</p>
+              </td>
+              <td width="229">
+                <p>&nbsp;MP</p>
+              </td>
+              <td width="211">
+                <p>&nbsp;Bhopal</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>&nbsp;Boyce Codd normal form (BCNF)</h2>
+        <p>&nbsp;○ &nbsp;BCNF is the advance version of 3NF. It is stricter than 3NF.</p>
+        <p>&nbsp;○ &nbsp;A table is in BCNF if every functional dependency X &rarr; Y, X is the super key of the&nbsp; table.</p>
+        <p>&nbsp;○ &nbsp;For BCNF, the table should be in 3NF, and for every FD, LHS is super key.</p>
+        <p><strong>&nbsp;Example: </strong>&nbsp;Let's&nbsp; assume&nbsp; there&nbsp; is&nbsp; a&nbsp; company&nbsp; where&nbsp; employees&nbsp; work&nbsp; in&nbsp; more&nbsp; than&nbsp; one&nbsp; department.</p>
+        <p><strong>&nbsp;EMPLOYEE table: </strong></p>
+        <table width="625">
+          <tbody>
+            <tr>
+              <td width="88">
+                <p><strong>&nbsp;EMP_I</strong></p>
+                <p><strong>&nbsp;D</strong></p>
+              </td>
+              <td width="153">
+                <p><strong>&nbsp;EMP_COUNTR</strong></p>
+                <p><strong>&nbsp;Y</strong></p>
+              </td>
+              <td width="114">
+                <p><strong>&nbsp;EMP_DEP</strong></p>
+                <p><strong>&nbsp;T</strong></p>
+              </td>
+              <td width="122">
+                <p><strong>&nbsp;DEPT_TYP</strong></p>
+                <p><strong>&nbsp;E</strong></p>
+              </td>
+              <td width="148">
+                <p><strong>&nbsp;EMP_DEPT_N</strong></p>
+                <p><strong>&nbsp;O</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p>&nbsp;264</p>
+              </td>
+              <td width="153">
+                <p>&nbsp;India</p>
+              </td>
+              <td width="114">
+                <p>&nbsp;Designing</p>
+              </td>
+              <td width="122">
+                <p>&nbsp;D394</p>
+              </td>
+              <td width="148">
+                <p>&nbsp;283</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p>&nbsp;264</p>
+              </td>
+              <td width="153">
+                <p>&nbsp;India</p>
+              </td>
+              <td width="114">
+                <p>&nbsp;Testing</p>
+              </td>
+              <td width="122">
+                <p>&nbsp;D394</p>
+              </td>
+              <td width="148">
+                <p>&nbsp;300</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p>&nbsp;364</p>
+              </td>
+              <td width="153">
+                <p>&nbsp;UK</p>
+              </td>
+              <td width="114">
+                <p>&nbsp;Stores</p>
+              </td>
+              <td width="122">
+                <p>&nbsp;D283</p>
+              </td>
+              <td width="148">
+                <p>&nbsp;232</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p>&nbsp;364</p>
+              </td>
+              <td width="153">
+                <p>&nbsp;UK</p>
+              </td>
+              <td width="114">
+                <p>&nbsp;Developing</p>
+              </td>
+              <td width="122">
+                <p>&nbsp;D283</p>
+              </td>
+              <td width="148">
+                <p>&nbsp;549</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;In the above table Functional dependencies are as follows: </strong></p>
+        <ol>
+          <li>EMP_ID &rarr;&nbsp; EMP_COUNTRY</li>
+          <li>EMP_DEPT &rarr;&nbsp;&nbsp; {DEPT_TYPE, EMP_DEPT_NO}</li>
+        </ol>
+        <p><strong>&nbsp;Candidate key: {EMP-ID, EMP-DEPT} </strong></p>
+        <p>&nbsp;The table is not in BCNF because neither EMP_DEPT nor EMP_ID alone are keys.</p>
+        <p>&nbsp;To convert the given table into BCNF, we decompose it into three tables:</p>
+        <p><strong>&nbsp;EMP_COUNTRY table: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td colspan="3" width="240">
+                <p><strong>&nbsp;EMP_ID</strong></p>
+              </td>
+              <td width="384">
+                <p><strong>&nbsp;EMP_COUNTRY</strong></p>
+              </td>
+              <td width="1">
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="1">
+                <p>&nbsp;</p>
+              </td>
+              <td width="229">
+                <p>&nbsp;264</p>
+              </td>
+              <td colspan="3" width="395">
+                <p>&nbsp;India</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="1">
+                <p>&nbsp;</p>
+              </td>
+              <td width="229">
+                <p>&nbsp;264</p>
+              </td>
+              <td colspan="3" width="395">
+                <p>&nbsp;India</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="1">&nbsp;</td>
+              <td width="228">&nbsp;</td>
+              <td width="10">&nbsp;</td>
+              <td width="383">&nbsp;</td>
+              <td width="1">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;EMP_DEPT table: </strong></p>
+        <table width="625">
+          <tbody>
+            <tr>
+              <td width="186">
+                <p><strong>&nbsp;EMP_DEPT</strong></p>
+              </td>
+              <td width="198">
+                <p><strong>&nbsp;DEPT_TYPE</strong></p>
+              </td>
+              <td width="241">
+                <p><strong>&nbsp;EMP_DEPT_NO</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="186">
+                <p>&nbsp;Designing</p>
+              </td>
+              <td width="198">
+                <p>&nbsp;D394</p>
+              </td>
+              <td width="241">
+                <p>&nbsp;283</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="186">
+                <p>&nbsp;Testing</p>
+              </td>
+              <td width="198">
+                <p>&nbsp;D394</p>
+              </td>
+              <td width="241">
+                <p>&nbsp;300</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="186">
+                <p>&nbsp;Stores</p>
+              </td>
+              <td width="198">
+                <p>&nbsp;D283</p>
+              </td>
+              <td width="241">
+                <p>&nbsp;232</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="186">
+                <p>&nbsp;Developing</p>
+              </td>
+              <td width="198">
+                <p>&nbsp;D283</p>
+              </td>
+              <td width="241">
+                <p>&nbsp;549</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;EMP_DEPT_MAPPING table: </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="272">
+                <p><strong>&nbsp;EMP_ID</strong></p>
+              </td>
+              <td width="352">
+                <p><strong>&nbsp;EMP_DEPT</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="272">
+                <p>&nbsp;D394</p>
+              </td>
+              <td width="352">
+                <p>&nbsp;283</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="272">
+                <p>&nbsp;D394</p>
+              </td>
+              <td width="352">
+                <p>&nbsp;300</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="272">
+                <p>&nbsp;D283</p>
+              </td>
+              <td width="352">
+                <p>&nbsp;232</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="272">
+                <p>&nbsp;D283</p>
+              </td>
+              <td width="352">
+                <p>&nbsp;549</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;Functional dependencies: </strong></p>
+        <ol>
+          <li>EMP_ID &rarr;&nbsp;&nbsp;&nbsp; EMP_COUNTRY</li>
+          <li>EMP_DEPT &rarr;&nbsp;&nbsp; {DEPT_TYPE, EMP_DEPT_NO} <strong>&nbsp;Candidate keys: </strong></li>
+        </ol>
+        <p><strong>&nbsp;For the first table: </strong>&nbsp;EMP_ID</p>
+        <p><strong>&nbsp;For the second table: </strong>&nbsp;EMP_DEPT</p>
+        <p><strong>&nbsp;For the third table: </strong>&nbsp;{EMP_ID, EMP_DEPT}</p>
+        <p>&nbsp;Now, this is in BCNF because left side part of both the functional dependencies is a key.</p>
+        <h2>&nbsp;Fourth normal form (4NF)</h2>
+        <p>&nbsp;○ &nbsp;A relation will be in 4NF if it is in Boyce Codd normal form and has no&nbsp; multi-valued dependency.</p>
+        <p>&nbsp;○ &nbsp;For a dependency A &rarr; B, if for a single value of A, multiple values of B exists,&nbsp; then the relation will be a multi-valued dependency. </p>
+        <h3>&nbsp;Example</h3>
+        <p><strong>&nbsp;STUDENT </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="199">&nbsp;</td>
+              <td width="223">&nbsp;</td>
+              <td width="202">&nbsp;</td>
+            </tr>
+            <tr>
+              <td width="199">
+                <p>&nbsp;21</p>
+              </td>
+              <td width="223">
+                <p>&nbsp;Computer</p>
+              </td>
+              <td width="202">
+                <p>&nbsp;Dancing</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="199">
+                <p>&nbsp;21</p>
+              </td>
+              <td width="223">
+                <p>&nbsp;Math</p>
+              </td>
+              <td width="202">
+                <p>&nbsp;Singing</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="199">
+                <p>&nbsp;34</p>
+              </td>
+              <td width="223">
+                <p>&nbsp;Chemistry</p>
+              </td>
+              <td width="202">
+                <p>&nbsp;Dancing</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="199">
+                <p>&nbsp;74</p>
+              </td>
+              <td width="223">
+                <p>&nbsp;Biology</p>
+              </td>
+              <td width="202">
+                <p>&nbsp;Cricket</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="199">
+                <p>&nbsp;59</p>
+              </td>
+              <td width="223">
+                <p>&nbsp;Physics</p>
+              </td>
+              <td width="202">
+                <p>&nbsp;Hockey</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;The&nbsp; given&nbsp; STUDENT&nbsp; table&nbsp; is&nbsp; in&nbsp; 3NF,&nbsp; but&nbsp; the&nbsp; COURSE&nbsp; and&nbsp; HOBBY&nbsp; are&nbsp; two&nbsp; independent&nbsp; entity. Hence, there is no relationship between COURSE and HOBBY.</p>
+        <p>&nbsp;In&nbsp; the&nbsp; STUDENT&nbsp; relation,&nbsp; a&nbsp; student&nbsp; with&nbsp; STU_ID, <strong>&nbsp;21 </strong>&nbsp;contains&nbsp; two&nbsp; courses, <strong>&nbsp;Computer </strong>&nbsp;and <strong>&nbsp;Math </strong>&nbsp;and&nbsp; two&nbsp; hobbies, <strong>&nbsp;Dancing </strong>&nbsp;and <strong>&nbsp;Singing</strong> .&nbsp; So&nbsp; there&nbsp; is&nbsp; a&nbsp; Multi-valued&nbsp; dependency&nbsp; on&nbsp; STU_ID, which leads to unnecessary repetition of data.</p>
+        <p>&nbsp;So to make the above table into 4NF, we can decompose it into two tables:</p>
+        <p><strong>&nbsp;STUDENT_COURSE </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="294">
+                <p><strong>&nbsp;STU_ID</strong></p>
+              </td>
+              <td width="330">
+                <p><strong>&nbsp;COURSE</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="294">
+                <p>&nbsp;21</p>
+              </td>
+              <td width="330">
+                <p>&nbsp;Computer</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="294">
+                <p>&nbsp;21</p>
+              </td>
+              <td width="330">
+                <p>&nbsp;Math</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="294">
+                <p>&nbsp;34</p>
+              </td>
+              <td width="330">
+                <p>&nbsp;Chemistry</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="294">
+                <p>&nbsp;74</p>
+              </td>
+              <td width="330">
+                <p>&nbsp;Biology</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="294">
+                <p>&nbsp;59</p>
+              </td>
+              <td width="330">
+                <p>&nbsp;Physics</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>&nbsp;STUDENT_HOBBY </strong></p>
+        <table width="624">
+          <tbody>
+            <tr>
+              <td width="310">
+                <p><strong>&nbsp;STU_ID</strong></p>
+              </td>
+              <td width="314">
+                <p><strong>&nbsp;HOBBY</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="310">
+                <p>&nbsp;21</p>
+              </td>
+              <td width="314">
+                <p>&nbsp;Dancing</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="310">
+                <p>&nbsp;21</p>
+              </td>
+              <td width="314">
+                <p>&nbsp;Singing</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="310">
+                <p>&nbsp;34</p>
+              </td>
+              <td width="314">
+                <p>&nbsp;Dancing</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="310">
+                <p>&nbsp;74</p>
+              </td>
+              <td width="314">
+                <p>&nbsp;Cricket</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="310">
+                <p>&nbsp;59</p>
+              </td>
+              <td width="314">
+                <p>&nbsp;Hockey</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 CLOUD COMPUTING Unit-4</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit-4</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>Development role of business analyst in cloud computing</strong></p>
+        <p>A business analyst in cloud computing is responsible for analyzing and identifying the needs of an organization related to cloud-based solutions. The analyst will assess the current infrastructure, processes, and business objectives of the organization to identify the most appropriate cloud-based solutions to meet their needs. This may include identifying areas where cloud-based solutions can be used to improve efficiency, reduce costs, or improve scalability. The analyst will also work with stakeholders across the organization to gather requirements and develop a plan for the implementation of cloud-based solutions. Additionally, the analyst will be responsible for monitoring and analyzing the performance of the cloud-based solutions to ensure they are meeting the needs of the organization and making any necessary adjustments.</p>
+        <ol>
+          <li><a href="https://en.wikipedia.org/wiki/Strategic_planning"><u>Strategic planning</u></a>&ndash; to identify the organization's business needs</li>
+          <li><a href="https://en.wikipedia.org/wiki/Business_model"><u>Business model analysis</u></a>&ndash; to define the organization's policies and market approaches</li>
+          <li>Process design &ndash; to standardize the organization&rsquo;s workflows</li>
+          <li><a href="https://en.wikipedia.org/wiki/Systems_analysis"><u>Systems analysis</u></a>&ndash; the interpretation of business rules and requirements for technical systems (generally within IT)</li>
+        </ol>
+        <p><strong>Strategic Planning</strong></p>
+        <p>Strategic Planning should help Solutions Architects determine which cloud model (Private, Public Cloud or Hybrid Cloud) would be a better match for organization business needs. In most cases moving to the cloud comes form senior executives in IT or business, in some larger organizations moving to the cloud comes from &ldquo;Strategic Planning&rdquo; by business analysis.</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process Design</strong></p>
+        <p>Process Design in the cloud is a role for DevOps engineers or Site Reliability Engineers (SRE) or DevSecOps Engineers. Practice like&nbsp;<a href="https://12factor.net/"><u>The Twelve-Factors App</u></a>&nbsp;as a methodology for developing modern application is not cloud specific but it has more momentum in the cloud than non-cloud applications.</p>
+        <p><strong>Process Design &amp; Source Code Management</strong></p>
+        <p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow"><u>Gitflow Workflow</u></a>&nbsp;for source code management (SCM) is an example of &ldquo;Process Design&rdquo; and workflow best practices in software development.</p>
+        <p><strong>Process Design &amp; Continuous Delivery</strong></p>
+        <p>Continuous Integration (CI), Continuous Delivery (CD) and Continuous Deployment (CD) are development process and workflow for modern application which are not cloud specific but cloud applications have better adoption to these practices. Pipeline As Code, Configuration Management, and Compliance as Code are best practices for automation and resiliency with higher reliability, shorter time to audit and maintain which differs from practice of heavy documentation. Today in many organizations these practices usually categorize under DevOps or ITIL practices.</p>
+        <p><strong>System Analysis</strong></p>
+        <p>System Analysis in most cases is a role for Solution Architects (SA) or Enterprise Systems Architect (ESA) which may include gap analysis of capability, requirements and needs against technology. For instance moving to the cloud could be a conclusion of technology gap analysis, marketplace, competition and cost to value.</p>
+        <p><strong>Business Analysis for Software Development</strong></p>
+        <p>BA role in a software development team almost is the same as developing in the cloud because business requirement is the same but implementation, process and delivery models are different, however since capability in the cloud is much more extensive then complexity might grow in development, also this would increase the complexity of business requirements, business expectations, test automation, user acceptance and so on.</p>
+        <p>In many cases when people talk about BA they mean BA role in software development and all of other areas falls beyond role of BA or they have different titles such as &ldquo;Architect&rdquo;, &ldquo;Solutions&rdquo;, &ldquo;Systems&rdquo;, &ldquo;Engineer&rdquo;, &ldquo;Enterprise&rdquo; and so on.</p>
+        <p>&nbsp;</p>
+        <p><strong>Technical Architecture consideration</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>More and more applications are being built in cloud environments, for example on orchestrated deployments of virtual machines, load balancers and other services, and increasingly as micro-services deployed as containers and similar orchestration platforms.&nbsp;</p>
+        <p>Whilst it's clear that deploying using technologies such as requires a different approach to a traditional "bare metal" deployment, in reality that remains true of any type of cloud deployment. Engineers need to understand how to make proper use of the services provided by their cloud vendor and architect their applications and deployments to make proper use of them to ensure data remains secure, highly available, and quick to access.</p>
+        <p><strong>1) How do you keep your database secure?</strong></p>
+        <p>In a traditional deployment of a database in a privately hosted environment a lot of emphasis is placed on the fact that the entire network and hosting facilities are not public and can only be accessed by authorised personnel (or applications) from within the organization. Trust is placed heavily on the physical security of the servers, and controls on the network such as border routers with strict intrusion prevention rules (firewalls) and intrusion detection.</p>
+        <p>When we deploy in the cloud we're running on someone else's servers, in someone else's datacenter, on a network that's designed to be accessed via the public internet.&nbsp;</p>
+        <p><br /><strong>Physical Security</strong></p>
+        <p>The&nbsp;<a href="#access"><u>physical security of the systems</u></a>&nbsp;is largely out of our control. We must rely on the cloud provider to take appropriate measures to ensure their facilities and the equipment within them are secure. When selecting a cloud provider, be sure to research and understand the work they've undertaken to ensure the security of your data.&nbsp;<a href="https://en.wikipedia.org/wiki/System_and_Organization_Controls"><u>System Organizational Control</u></a>&nbsp;(SOC) 1, 2, and 3 reports are commonly seen; these are audit reports defined by the American Institute of Certified Public Accountants that assess five "Trust Service Principles" (security, availability, confidentiality, processing integrity, and privacy) at different levels. Other standards to look out for include ISO/IEC 27001, 27017, and 27018.</p>
+        <p>&nbsp;</p>
+        <p><strong>Network Security</strong></p>
+        <p>When running in the cloud, we cannot rely on our own border routers (or internal firewalls) to prevent connections to our database servers. Most large cloud providers provide services that can be used to provide equivalent levels of security, if utilised appropriately.</p>
+        <p>Virtual Private Cloud or VPC is a term originally coined by Amazon in AWS. In the early days of AWS, when you created a virtual instance it was effectively just a virtual machine connected to the internet. In order to provide additional security (as well as to help minimise use of IPv4 addresses) VPCs were created. These are essentially virtual private networks hosted in the cloud that can consist of one or more IPv4 or IPv6 subnets, spread across one or more availability zones - think datacenter - in a single region.&nbsp;</p>
+        <p>Most cloud providers offer virtual firewalls that can be used to secure services and VPCs. Wherever this is presented as an option, make use of it to lock down access to the resource. Follow the principle of least privilege; deny all access except that which is required for operation. Don't forget to leave a secure path for your system administrators to login as needed to perform routine maintenance and fault diagnostics. This should be kept as independent from any other access paths (e.g. for users visiting a website) as possible; one option might be to only allow SSH access to the VPC from a dedicated VPN endpoint which only the administrators can connect to.</p>
+        <p>Finally, it's worth noting that security is not just about keeping unauthorized users out of your application and database; it's also about ensuring your data remains available and accessible. Ensure you make use of the services provided by your cloud provider to perform regular backups - and&nbsp;<strong>make sure you test</strong>&nbsp;them! If you don't test your backups regularly, you should assume you do not have backups. It is also highly recommended to make use of database replicas as another type of backup (albeit, not one that can replace normal backups). Most cloud providers organise their infrastructure into multiple availability zones (data centers) within each geographical region. By keeping a replica of your database in multiple locations, you maximise the chances of being able to stay online in the event of an outage in any one location.</p>
+        <p>Securing databases in the cloud requires an understanding of the cloud environment and the way it's intended to be used. Whilst in traditional environments many aspects of the security are often handled by dedicated professionals, such as physical security guards, network administrators, database administrators and so on, in a cloud environment those tasks are partly handled by the cloud provider, and partly by what is often one DevOps team that needs to understand the entire deployment and its security architecture.</p>
+        <p>&nbsp;</p>
+        <p><strong>2) How do you keep your database performant?</strong></p>
+        <p><a href="https://www.enterprisedb.com/postgres-tutorials/introduction-postgresql-performance-tuning-and-optimization"><u>Performance tuning PostgreSQL</u></a>&nbsp;(<a href="https://info.enterprisedb.com/Webinar_Tuning-Tips-to-Maximize-Postgres-Performance.html"><u>webinar</u></a>) in the cloud is largely the same as in other environments at the highest level, however, the differences become larger the further down the stack you go - and they can be quite dependent on the type of deployment you create.</p>
+        <p>If you use virtual instances to self-build and manage a deployment, then the opportunities are the greatest. You have full access to the operating system and kernel configuration, storage layout and provisioned IOPs to guarantee minimum performance (subject to what block storage options are available), the PostgreSQL installation and configuration, and of course, the database schema. You can also select from a much wider range of machine instance types, with the characteristics best suited to your needs. You can make that access available not just to your own team, but also to dedicated database support vendors. However, this type of deployment requires far more design work and effort to get up and running and manage than DBaaS solutions.</p>
+        <p>DBaaS solutions built by third parties on top of the infrastructure provided by the cloud vendors may offer additional options, as well as the opportunity for the vendor to assist with more complex tuning needs than the big cloud vendors will.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>3) What failures do you need to tolerate?</strong></p>
+        <p>Failures are inevitable, whether due to issues with the database software, operating system, or underlying virtual or physical hardware on which it all runs. Cloud environments make it very easy to have geographically diverse replicas, which can also be utilised for offloading report workload or load balancing read-only queries. More complex systems such as EDB's BDR (Bi-Directional Replication) can offer both read and write servers in multiple locations, as well as "always on" fault tolerant architectures.</p>
+        <p>For the most simple deployments, a single database instance with backups taken at a suitable interval &mdash; optionally with transaction log archiving to allow point-in-time recovery &mdash; may suffice. If your requirement for recovery time (RTO) is low, this may be a relatively cheap option. If your requirement for recovery point (RPO) &mdash; how recently in time data can be recovered to &mdash; &nbsp;is long, even more can be saved by not archiving transaction logs.</p>
+        <p>Consider your requirements for recovery time, recovery point, and geographical redundancy when planning your deployments. Minimising downtime, minimising the amount of possible transaction loss, and protecting against large, wide-scale failures all add to the complexity and cost of your deployment.</p>
+        <p>&nbsp;</p>
+        <p><strong>4) What are the cost implications?</strong></p>
+        <p>It's relatively easy to estimate the cost of running a PostgreSQL instance in the cloud; providers often provide a pricing calculator to help with this. However, it can be common to overlook or underestimate the cost of the storage required which can be surprisingly high, especially when provisioned IOPs are allocated. Make sure that you keep this in mind, as well as the fact that the storage costs may differ between DBaaS services and plain virtual instances with attached block storage that could be running PostgreSQL.</p>
+        <p>Data transfer between DBaaS instances and virtual instances within the same region is often free of charge, however, cross-region may not be, and internet egress usually isn't (although ingress is often free). Consider what the data flows will look like in your application infrastructure, and weigh the expected costs into your choice of cloud provider and application design. Network costs for database use are typically very low compared to the storage and compute costs (whether DBaaS or virtual instances), but it can get expensive if you have very high volumes of egress to the internet or cross region.</p>
+        <p>If you have one or more replicas, expect to multiply the cost for compute and storage by the number of nodes. Whilst some providers may offer discount rates for replicas, these are often very small discounts. If you're building your cluster yourself and have cross-region replicas, the network traffic from the primary to the replica may also incur additional costs..</p>
+        <p>It can be extremely difficult to estimate the cost of running a database in the cloud. When running in your own datacenter it may be relatively simple; the cost of a number of boxes plus the power and cooling costs. In the cloud the number of variables is much, much higher, and dependent on usage patterns and application behaviours which may be very hard to predict.</p>
+        <p>&nbsp;</p>
+        <p><strong>5) How will you support your database?</strong></p>
+        <p>Support can be critical with production systems; even with an expert team on staff, it&rsquo;s unlikely they'll have the in-depth knowledge of the database engine that a specialist database company with a deep understanding of the code would have.</p>
+        <p>When using a DBaaS service, you will typically not have any access to the operating system or virtual hardware on which the database is running, which can make it difficult to diagnose and fix certain problems. In fact, you may not even have "true" superuser access to the database server. The major cloud providers also have limits to the support they will offer; typically, ensuring the database is up and running and you can connect to it is about as involved as they will get. Specialist database companies such as EDB may offer more options, such as remote DBA services, however they too will be limited due to the lack of access to the underlying platform.</p>
+        <p>If you build your own cluster on virtual instances then you have far more access; you can login to the instances, modify kernel parameters and disk configuration, and change any aspect of the Postgres configuration you like, with or without the help of a third party support vendor. However, as noted above, this is far less convenient than DBaaS services, requiring you to build and manage your own clusters, rather than deploying them with a few mouse clicks or a simple Terraform script or Ansible playbook..</p>
+        <p>Support is a requirement for many organisations, even if only as a safety net. Consider how much database level support you will receive from the cloud provider, and how much access you and your chosen database specialists will have to the underlying systems when choosing a deployment type.</p>
+        <p>&nbsp;</p>
+        <p><strong>Conclusion</strong></p>
+        <p>Deploying in the cloud can offer a lot of flexibility, but that often comes at the cost of supportability or just good old fashioned money. It also requires a change in mindset of those deploying databases and applications; whilst many of the concepts of cloud environments mirror those of private environments, there are differences, and often those involved will need to understand topics that previously were handled by others.</p>
+        <p>The questions asked and answered in this blog post will help you understand some of the key considerations and tradeoffs that need to be made in order to successfully deploy databases in the cloud.</p>
+        <p><strong>Service creation environment to develop cloud based applications</strong></p>
+        <p>Cloud application development is profitable to every enterprise and business since most of the data storage and processing issues are taken care of by remote servers. Along with that, cloud software development or cloud application development has a range of undeniable advantages that are mentioned briefly here.&nbsp;</p>
+        <p>Cost-saving&nbsp;</p>
+        <p>Cloud services only charge for necessary cloud space and feature sets required for your application development model. This pay-as-you-go system applies to every cloud deployment service that factors in lower cost and higher results.</p>
+        <p>Security&nbsp;</p>
+        <p>A cloud host&rsquo;s full-time job is to monitor data security which is significantly more efficient than a conventional in house system. Cloud software development also makes it easier to comply with government security standards. On top of that, the cloud gives an automated response to updates and data recoveries.&nbsp;</p>
+        <p>Flexibility&nbsp;</p>
+        <p>Developing cloud applications offers more flexibility overall against hosting on a local server. If you need extra bandwidth, cloud services can meet that demand instantly rather than going on a long update to enhance infrastructure.&nbsp;</p>
+        <p>Competitive edge and sustainability</p>
+        <p>Cloud services integrated with AI technology such as&nbsp;<a href="https://appinventiv.com/blog/building-chatbot-using-nlp/"><u>chatbots and assistants&nbsp;</u></a>also offer a better customer experience to the audience. For instance,&nbsp;<a href="https://appinventiv.com/portfolio/ai-in-banking-industry/"><u>Appinventiv developed an AI-based analytics platform on the cloud</u></a>&nbsp;for a leading global bank to enhance its CRM system and customer retention.&nbsp;</p>
+        <p>With the help of the developed&nbsp;<a href="https://appinventiv.com/blog/conversational-ai-how-it-works/"><u>conversational AI&nbsp;</u></a>on the cloud, the bank was able to handle 50% of customer requests, resulting in reduced manpower cost by 20%. This is a huge competitive advantage for modern enterprises along with long term sustainability goals.</p>
+        <p>Mobility and insight&nbsp;</p>
+        <p>Through cloud application platforms, you can access information across any device, gadget, team, company etc., to remain updated. It&rsquo;s not at all surprising to see that organizations investing in cloud sharing services have better employee engagement and satisfaction than the local hosting companies.&nbsp;</p>
+        <p>Cloud-native application development also helps with personalized customer data insights to boost data access speed and experience. For instance,&nbsp;<a href="https://appinventiv.com/portfolio/data-analytics-platform-for-telecom-company/"><u>Appinventiv crafted a customer-centric data analytic platform on the cloud</u></a>&nbsp;for a leading telecom company. The insights offered by the cloud analytic platform led to 85% in data accessibility, better customer data management and optimization.&nbsp;</p>
+        <p>A varied range of solutions&nbsp;</p>
+        <p>Cloud-based solutions contribute maximum to the organization&rsquo;s success by extending the range of services and resources for the business model. From CRM to<a href="https://appinventiv.com/blog/cost-of-erp-software-development/"><u>&nbsp;ERP solutions</u></a>, the cloud computing platform manages everything.&nbsp;</p>
+        <p>For instance-&nbsp;<a href="https://appinventiv.com/portfolio/ikea-shopping-app/"><u>Appinventiv created an ERP solution on the cloud for the world&rsquo;s biggest furniture retailer IKEA</u></a>. From creating a private IP address to developing an entire web application on the cloud, we helped IKEA improve its customer onboarding and data accessibility.&nbsp;</p>
+        <p>Furthermore, cloud computing application development keeps data quality in control and helps with disaster recovery and data loss. These advantages exhibit how developing cloud-based solutions can help your business reach new heights. If you are convinced enough, let&rsquo;s bring you the steps you need to follow to develop a successful cloud application.&nbsp;</p>
+        <p>How to develop a cloud based application?</p>
+        <p>Cloud application development ranges from&nbsp;<a href="https://appinventiv.com/full-cycle-app-development/"><u>mobile development services&nbsp;</u></a>to&nbsp;<a href="https://appinventiv.com/web-application-development/"><u>web development services</u></a>. It&rsquo;s better to choose the most appropriate approach beforehand that goes well with your project idea. It&rsquo;s also important to have an investing mindset when working with cloud development. You need to understand that the resources you invest in are going to commit and scale your business in the long run.&nbsp;</p>
+        <p>Before you begin, identify your target audience, pain points, and demand in the required app. Then analyze how your product can resolve its challenges. When you are done analyzing, below are the steps you can follow to create a cloud-based application the right way:&nbsp;</p>
+        <p>Hire a cloud development team&nbsp;</p>
+        <p>You are more likely to build a successful app when you outsource cloud development services. A reliable cloud app development company can get you quick business model analysis,&nbsp;<a href="https://appinventiv.com/guide/mobile-app-development-cost/"><u>app development cost estimation</u></a>&nbsp;and project planning report.&nbsp;</p>
+        <p>Before diving into the actual development process, your cloud application developers will help you create an app w</p>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

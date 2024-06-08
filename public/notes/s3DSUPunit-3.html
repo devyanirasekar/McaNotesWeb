@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 DSUP unit-3</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit 3</strong></p>
+        <p>&nbsp;</p>
+        <p><strong><h1>What is a Data Structure?</strong></h1></strong></p>
+        <ul>
+          <li>A data structure is a way of organizing data in computer memory, implemented in a programming language.</li>
+        </ul>
+        <ul>
+          <li>This organization is required for efficient storage, retrieval, and modification of data.</li>
+        </ul>
+        <ul>
+          <li>It is a fundamental concept as data structures are one of the main building blocks of any modern software. Learning what data structures exist and how to use them efficiently in different situations is one of the first steps toward learning any programming language.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h1> Data Structures in Python</h1>
+        <ul>
+          <li>Built-in data structures in Python can be divided into two broad categories:</li>
+        </ul>
+        <p><strong>mutable</strong> and <strong>immutable</strong>.&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><strong>Mutable data structures:</strong> are those which we can modify &mdash; for example, by adding, removing, or changing their elements.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Python has three mutable data structures<strong>: lists</strong>, <strong>dictionaries</strong>, and <strong>sets</strong>.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><strong>Immutable data structures</strong>: on the other hand, are those that we cannot modify after their creation. The only basic built-in immutable data structure in Python is a tuple.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1> List</h1>
+        <ul>
+          <li>Lists are similar to arrays in C. However; the list can contain data of different types.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The items stored in the list are separated with a comma (,) and enclosed within square brackets []. We can use slice [:] operators to access the data of the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The concatenation operator (+) and repetition operator (*) works with the list in the same way as they were working with the strings.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>Example: Creating a List</strong></p>
+        <p>&gt;&gt;&gt; num = [1,2,3,4]</p>
+        <p>&gt;&gt;&gt; num</p>
+        <p>[1, 2, 3, 4]</p>
+        <p>&gt;&gt;&gt; print(num[0])</p>
+        <p>1</p>
+        <ul>
+          <li>We can access a list&rsquo;s elements using indices, where the first element of a list has the index of 0.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong> List Library Functions </strong></p>
+        <ul>
+          <li><strong>append():</strong> Adds an element at the end of the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_extend.asp"><strong>extend()</strong></a><a href="https://www.w3schools.com/python/ref_list_extend.asp"><strong>:</strong></a> Add the elements of a list, to the end of the current list <a href="https://www.w3schools.com/python/ref_list_index.asp">index()</a> Returns the index of the first element with the specified value <a href="https://www.w3schools.com/python/ref_list_insert.asp">insert()</a> Adds an element at the specified position.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_pop.asp"><strong>pop()</strong></a><a href="https://www.w3schools.com/python/ref_list_pop.asp"><strong>:</strong></a> Removes the element at the specified position.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_remove.asp"><strong>remove():</strong></a> Removes the item with the specified value.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_reverse.asp"><strong>reverse()</strong></a><a href="https://www.w3schools.com/python/ref_list_reverse.asp"><strong>:</strong></a> Reverses the order of the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_sort.asp"><strong>sort()</strong></a><a href="https://www.w3schools.com/python/ref_list_sort.asp"><strong>:</strong></a> Sorts the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_copy.asp"><strong>copy()</strong></a><a href="https://www.w3schools.com/python/ref_list_copy.asp"><strong>:</strong></a> Returns a copy of the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_count.asp"><strong>count()</strong></a><a href="https://www.w3schools.com/python/ref_list_count.asp"><strong>:</strong></a> Returns the number of elements with the specified value.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_clear.asp"><strong>clear()</strong></a><a href="https://www.w3schools.com/python/ref_list_clear.asp"><strong>:</strong></a> Removes all the elements from the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>List Example using functions:</strong></p>
+        <p><strong>Adding elements to list:</strong></p>
+        <p>&gt;&gt;&gt; nums = [11,22,33,44]</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44]</p>
+        <p>&gt;&gt;&gt; nums.<strong>append</strong>(55)</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44, 55]</p>
+        <p>&gt;&gt;&gt; nums.<strong>extend</strong>([66,77])</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44, 55, 66, 77]</p>
+        <p>&gt;&gt;&gt; nums.<strong>insert</strong>(3,33)</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 33, 44, 55, 66, 77]</p>
+        <p>&gt;&gt;&gt; print(nums.<strong>index</strong>(22))</p>
+        <p>1</p>
+        <p>&gt;&gt;&gt; print(nums.<strong>index</strong>(33))</p>
+        <p>2</p>
+        <p>&gt;&gt;&gt; print(nums.<strong>count</strong>(33))</p>
+        <p>2</p>
+        <p>&gt;&gt;&gt; newnums = nums.<strong>copy</strong>()</p>
+        <p>&gt;&gt;&gt; print(newnums) [11, 22, 33, 33, 44, 55, 66, 77] <strong>Removing elements to list:</strong></p>
+        <table width="465">
+          <tbody>
+            <tr>
+              <td width="268">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;&gt;&gt; nums.<strong>pop</strong>(3)</p>
+                <p>33</p>
+                <p>&gt;&gt;&gt; print(nums)</p>
+                <p>[11, 22, 33, 44, 55, 66, 77]</p>
+              </td>
+              <td width="197">
+                <p><strong>#Remove using index no </strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="268">
+                <p>&gt;&gt;&gt; nums.<strong>remove</strong>(77)</p>
+              </td>
+              <td width="197">
+                <p><strong>#Remove using value </strong></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44, 55, 66]</p>
+        <table width="458">
+          <tbody>
+            <tr>
+              <td width="192">
+                <p>&gt;&gt;&gt; <strong>del </strong>nums[5]</p>
+                <p>&gt;&gt;&gt; print(nums)</p>
+                <p>[11, 22, 33, 44, 55]</p>
+              </td>
+              <td width="265">
+                <p><strong>&nbsp;</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="192">
+                <p>&gt;&gt;&gt; newnums.<strong>clear</strong>()</p>
+              </td>
+              <td width="265">
+                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #Remove all elements </strong></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h1>#Remove using del keyword</h1>
+        <p>&gt;&gt;&gt; print(newnums)</p>
+        <p>[]</p>
+        <p>&gt;&gt;&gt; nums.<strong>reverse</strong>()</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[55, 44, 33, 22, 11]</p>
+        <p>&gt;&gt;&gt; nums.<strong>sort</strong>()</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44, 55]</p>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tuples</strong></p>
+        <p>A tuple in Python is similar to a list. The difference between the two is that we cannot change the elements of a tuple once it is assigned whereas we can change the elements of a list.&nbsp;</p>
+        <p><strong>Accessing Tuple Elements: </strong></p>
+        <p><strong>Indexing: </strong></p>
+        <p>To access an object of a tuple, we can use the index operator [], where indexing in the tuple starts from 0. A tuple with 5 items will have indices ranging from 0 to 4.</p>
+        <p>&nbsp;</p>
+        <p><strong>Example: Creating a tuple </strong></p>
+        <p>&gt;&gt;&gt; t = (11,22,33,44)</p>
+        <p>&gt;&gt;&gt; print(t)</p>
+        <p>(11, 22, 33, 44)</p>
+        <p>&gt;&gt;&gt; type(t)</p>
+        <p>&lt;class 'tuple'&gt;</p>
+        <p>&gt;&gt;&gt; print(t[0:2])</p>
+        <p>(11, 22)</p>
+        <p>Only 2 methods provided</p>
+        <p>&gt;&gt;&gt; t.<strong>index</strong>(22)</p>
+        <p>1</p>
+        <p>&gt;&gt;&gt; t.<strong>count</strong>(33)</p>
+        <p>1</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Set</strong></p>
+        <ul>
+          <li>A Python set is the collection of the unordered items. Each element in the set must be unique, immutable, and the sets remove the duplicate elements. Sets are mutable which means we can modify it after its creation.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Unlike other collections in Python, there is no index attached to the elements of the set, i.e., we cannot directly access any element of the set by the index. However, we can print them all together, or we can get the list of elements by looping through the set. It is like list and Tuple but here no value can be repeated. Here we use {}. Here indexing is not supported as sequence is random.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Example: Creating a set </strong></p>
+        <p>The set can be created by enclosing the comma-separated immutable items with the curly braces {}. Python also provides the set() method, which can be used to create the set by the passed sequence.</p>
+        <p>&gt;&gt;&gt; s = {11,22,33,44}</p>
+        <p>&gt;&gt;&gt; print(s)</p>
+        <p>{33, 11, 44, 22}</p>
+        <p>&gt;&gt;&gt; type(s)</p>
+        <p>&lt;class 'set'&gt;</p>
+        <p>&gt;&gt;&gt; s.add(55)</p>
+        <p>&gt;&gt;&gt; print(s)</p>
+        <p>{33, 11, 44, 22, 55}</p>
+        <p><strong>Example: Adding items to the set: </strong></p>
+        <p>Python provides the <strong>add()</strong> method and <strong>update()</strong> method which can be used to add some particular item to the set. The add() method is used to add a single element whereas the update() method is used to add multiple elements to the set.</p>
+        <p>&gt;&gt;&gt; s = {11,22,33,44}</p>
+        <p>&gt;&gt;&gt; print(s)</p>
+        <p>{33, 11, 44, 22}</p>
+        <p>&gt;&gt;&gt; s.add(55)</p>
+        <p>&gt;&gt;&gt; print(s)</p>
+        <p>{33, 11, 44, 55, 22}</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dictionary</strong></p>
+        <p>An effective data structure for storing data in Python is dictionaries, in which can simulate the real-life data arrangement where some specific value exists for some particular key.Python Dictionary is used to store the data in a key-value pair format.</p>
+        <ul>
+          <li>It is the mutable data-structure.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The elements Keys and values is employed to create the dictionary.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Keys must consist of just one element.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Value can be any type such as list, tuple, integer, etc.</li>
+        </ul>
+        <p>The dictionary use key and value concept. every key must be unique value can be repeated,use {} and : in between key and value.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Example: Creating the Dictionary: </strong></p>
+        <p>The simplest approach to create a Python dictionary is by using curly brackets {}, but there are other methods as well. The dictionary can be created by using multiple key-value pairs enclosed with the curly brackets {}, and each key is separated from its value by the colon (:). The syntax to define the dictionary is given below.</p>
+        <p>&gt;&gt;&gt; d = {"yash":"asus","saurabh":"oneplus"}</p>
+        <p>&gt;&gt;&gt; print(d)</p>
+        <p>{' yash ': 'asus', 'saurabh': 'oneplus'}</p>
+        <p>&gt;&gt;&gt; print(type(d))</p>
+        <p>&lt;class 'dict'&gt; &gt;&gt;&gt; print(d.keys()) dict_keys(['yash', 'saurabh'])</p>
+        <p>&gt;&gt;&gt; d.values() dict_values(['asus', 'oneplus'])&nbsp;</p>
+        <p><strong>Accessing the Dictionary Value </strong></p>
+        <p>We've discussed about using indexing to access data stored in lists and tuples. However, because the dictionary's keys are distinct from one another, it is possible to get the values by utilising the keys. The dictionary values can be accessed in the following way. &gt;&gt;&gt; d['yash']</p>
+        <p>'asus'</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NumPy Introduction</strong></p>
+        <ul>
+          <li>NumPy is a Python library used for working with arrays.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>It also has functions for working in domain of linear algebra, fourier transform, and matrices.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><strong>NumPy was created in 2005 by Travis Oliphant.</strong> It is an open source project and you can use it freely.</li>
+        </ul>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▪ &nbsp;&nbsp;&nbsp; &nbsp;</p>
+        <ul>
+          <li>NumPy stands for <strong>Numerical Python.</strong></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp; <strong>Why to use NumPy?</strong></p>
+        <ul>
+          <li>In Python we have lists that serve the purpose of arrays, but they are slow to process.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>NumPy aims to provide an array object that is up to 50x faster than traditional Python lists.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The array object in NumPy is called <strong>ndarray</strong>, it provides a lot of supporting functions that make working with <strong>ndarray</strong> very easy.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Arrays are very frequently used in data science, where speed and resources are very important.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Why is NumPy Faster Than Lists? </strong></p>
+        <ul>
+          <li>NumPy arrays are stored at one continuous place in memory unlike lists, so processes can access and manipulate them very efficiently.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>This behaviour is called locality of reference in computer science.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>This is the main reason why NumPy is faster than lists. Also it is optimized to work with latest CPU architectures.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation of NumPy</strong></p>
+        <ul>
+          <li>If you have <a href="https://www.w3schools.com/python/default.asp"><strong>Python</strong></a> and <a href="https://www.w3schools.com/python/python_pip.asp"><strong>PIP</strong></a> already installed on a system, then installation of NumPy is very easy.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Install it using this command:</li>
+        </ul>
+        <p>C:\Users\<em>Your Name</em>&gt;pip install numpy</p>
+        <ul>
+          <li>If this command fails, then use a python distribution that already has NumPy installed like, Anaconda, Spyder etc.</li>
+        </ul>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Import NumPy</p>
+        <p>Once NumPy is installed, import it in your applications by adding the <strong>import</strong> <strong>keyword:</strong></p>
+        <p>import numpy</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now NumPy is imported and ready to use.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; import numpy&nbsp;</p>
+        <p><strong>Example:</strong> arr = numpy.array([1, 2, 3, 4, 5])</p>
+        <p>print(arr)</p>
+        <p>NumPy as <strong>np</strong></p>
+        <p>NumPy is usually imported under the <strong>np</strong> alias.</p>
+        <p><strong>alias: In Python alias are an alternate name for referring to the same</strong> <strong>thing.</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>Example: Create an alias with the as keyword while importing:</strong></p>
+        <p>import numpy as <strong>np</strong></p>
+        <p>Now the NumPy package can be referred to as np instead of numpy.</p>
+        <p>arr = np.array([1, 2, 3, 4, 5])</p>
+        <p>print(arr)</p>
+        <p>OUTPUT: [ 1 2 3 4 5]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Create a NumPy ndarray Object </strong></p>
+        <p>&nbsp;</p>
+        <p>NumPy is used to work with arrays. The array object in NumPy is called <strong>ndarray.</strong></p>
+        <p>We can create a NumPy <strong>ndarray </strong>object by using the <strong>array()</strong> function.&nbsp;</p>
+        <p>Import numpy as np</p>
+        <p>arr = np.array([1, 2, 3, 4, 5])</p>
+        <p>print(arr)</p>
+        <p>print(type(arr))</p>
+        <p>OUTPUT</p>
+        <p>[1 2 3 4 5]</p>
+        <p>&lt;class 'numpy.ndarray'&gt;</p>
+        <table width="667">
+          <tbody>
+            <tr>
+              <td width="667">
+                <p>type(): This built-in Python function tells us the type of the object passed to it. Like</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="667">
+                <p>in above code it shows that arr is numpy.ndarray type.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>To create an ndarray, we can pass a list, tuple or any array-like object into the array() method, and it will be converted into an ndarray</p>
+        <p>print(arr)</p>
+        <ul>
+          <li>2 3 4 5]</li>
+        </ul>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dimensions in Arrays</p>
+        <p>&nbsp;</p>
+        <p>A dimension in arrays is one level of array depth (nested arrays).</p>
+        <p><strong>Nested array</strong>: are arrays that have arrays as their elements.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0-D Arrays</p>
+        <p>0-D arrays, or Scalars, are the elements in an array. Each value in an array is a 0-D array.</p>
+        <p>print(arr)</p>
+        <p>OUTPUT 42</p>
+        <p>1-D Arrays</p>
+        <p>An array that has 0-D arrays as its elements is called uni-dimensional or 1-D array.</p>
+        <p>These are the most common and basic arrays</p>
+        <p>print(arr)</p>
+        <p>[1 2 3 4 5]</p>
+        <p>2-D Arrays</p>
+        <p>An array that has 1-D arrays as its elements is called a 2-D array.</p>
+        <p>These are often used to represent matrix or 2nd order tensors.</p>
+        <p>NumPy has a whole sub module dedicated towards matrix operations called numpy.mat Create a 2-D&nbsp; array containing two arrays with the values 1,2, 3&nbsp; and 4 ,5,6: arr = np.array([[1, 2, 3], [4, 5, 6]])</p>
+        <p>print(arr)</p>
+        <p>[[1 2 3]</p>
+        <p>[4 5 6]]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-D arrays</p>
+        <p>&nbsp;</p>
+        <p>An array that has 2-D arrays (matrices) as its elements is called 3-D array.</p>
+        <p>These are often used to represent a 3rd order tensor.</p>
+        <p>arr = np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]])</p>
+        <p>print(arr)</p>
+        <p>[[[1 2 3]</p>
+        <p>[4 5 6]]</p>
+        <p>[[1 2 3]</p>
+        <p>[4 5 6]]]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check Number of Dimensions?</p>
+        <p>&nbsp;</p>
+        <p>NumPy Arrays provides the ndim attribute that returns an integer that tells us how many dimensions the array have.</p>
+        <ul>
+          <li>= np.array([1, 2, 3, 4, 5])</li>
+          <li>= np.array([[1, 2, 3], [4, 5, 6]])</li>
+          <li>= np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]])</li>
+        </ul>
+        <p>print(a.ndim)</p>
+        <p>print(b.ndim)</p>
+        <p>print(c.ndim)</p>
+        <p>print(d.ndim)</p>
+        <p>0</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>In python matrix can be implemented as 2D <a href="https://www.geeksforgeeks.org/python-set-3-strings-lists-tuples-iterations/">list</a> or 2D Array. Forming matrix from latter, gives the additional functionalities for performing various operations in matrix. These operations and <a href="https://www.geeksforgeeks.org/array-python-set-1-introduction-functions/">array</a> are defines in module &ldquo;<strong>numpy</strong>&ldquo;.</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operations on Matrix :</strong></p>
+        <ul>
+          <li><strong> add() :- </strong>This function is used to perform <strong>element wise matrix addition</strong>.</li>
+          <li><strong> subtract() :- </strong>This function is used to perform <strong>element wise matrix subtraction</strong>.</li>
+          <li><strong> divide() :- </strong>This function is used to perform <strong>element wise matrix division</strong>.</li>
+        </ul>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implementation Of Matrix</strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table width="494">
+          <tbody>
+            <tr>
+              <td width="494">
+                <p># Python code to demonstrate matrix operations</p>
+                <p># add(), subtract() and divide()</p>
+                <p># importing numpy for matrix operations</p>
+                <p><strong>import </strong>numpy</p>
+                <p># initializing matrices</p>
+                <p>x <strong>= </strong>numpy.array([[1, 2], [4, 5]])</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>y <strong>= </strong>numpy.array([[7, 8], [9, 10]])</p>
+        <p># using add() to add matrices</p>
+        <p>print ("The element wise addition of matrix <strong>is </strong>: ")</p>
+        <p>print (numpy.add(x,y))</p>
+        <p># using subtract() to subtract matrices print ("The</p>
+        <p>element wise subtraction of matrix <strong>is </strong>:</p>
+        <p>")</p>
+        <p>print (numpy.subtract(x,y))</p>
+        <p># using divide() to divide matrices</p>
+        <p>print ("The element wise division of matrix <strong>is </strong>: ")</p>
+        <p>print (numpy.divide(x,y))</p>
+        <p><strong>Output :</strong></p>
+        <p>The element wise addition of matrix is :</p>
+        <p>[[ 8 10]</p>
+        <p>[13 15]]</p>
+        <p>The element wise subtraction of matrix is :</p>
+        <p>[[-6 -6]</p>
+        <p>[-5 -5]]</p>
+        <p>The element wise division of matrix is :</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [[ 0.14285714 0.25 &nbsp;&nbsp;&nbsp;&nbsp; ]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 0.44444444 0.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]]</p>
+        <ul>
+          <li><strong>multiply() :- </strong>This function is used to perform <strong>element wise matrix multiplication</strong>.</li>
+          <li><strong>dot() :- </strong>This function is used to compute the <strong>matrix multiplication, rather than element wise multiplication</strong>.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>print ("The product of matrices <strong>is </strong>: ")</p>
+        <p>print (numpy.dot(x,y))</p>
+        <p><strong>Output :</strong></p>
+        <p>The element wise multiplication of matrix is :</p>
+        <p>[[ 7 16]</p>
+        <p>[36 50]]</p>
+        <p>The product of matrices is :</p>
+        <p>[[25 28]</p>
+        <p>[73 82]]</p>
+        <p>▪ &nbsp;&nbsp;&nbsp; <strong>sqrt() :- </strong>This function is used to compute the <strong>square root of each element </strong>of matrix.</p>
+        <ul>
+          <li><strong>sum(x,axis) :- </strong>This function is used to <strong>add all the elements in matrix</strong>. Optional &ldquo;axis&rdquo; argument computes the <strong>column sum if axis is 0 </strong>and <strong>row sum if axis is 1</strong>.</li>
+          <li><strong>&ldquo;T&rdquo; :- </strong>This argument is used to <strong>transpose </strong>the specified matrix.</li>
+        </ul>
+        <p><strong>Implementation:</strong></p>
+        <p>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Python</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table width="566">
+          <tbody>
+            <tr>
+              <td width="566">
+                <p># Python code to demonstrate matrix operations</p>
+                <p># sqrt(), sum() and "T"</p>
+                <p># importing numpy for matrix operations</p>
+                <p><strong>import </strong>numpy</p>
+                <p># initializing matrices</p>
+                <p>x <strong>= </strong>numpy.array([[1, 2], [4, 5]])</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>y <strong>= </strong>numpy.array([[7, 8], [9, 10]])</p>
+        <p># using sqrt() to print the square root of matrix</p>
+        <p>print ("The element wise square root <strong>is </strong>: ")</p>
+        <p><strong>print </strong>(numpy.sqrt(x))</p>
+        <p># using sum() to print summation of all elements of matrix</p>
+        <p>print ("The summation of all matrix element <strong>is </strong>: ")</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table width="566">
+          <tbody>
+            <tr>
+              <td width="566">
+                <p>print (numpy.sum(y))</p>
+                <p># using sum(axis=0) to print summation of all columns of matrix</p>
+                <p><strong>print </strong>("The column wise summation of all matrix <strong>is </strong>: ")</p>
+                <p><strong>print </strong>(numpy.sum(y,axis<strong>=</strong>0))</p>
+                <p># using sum(axis=1) to print summation of all columns of matrix</p>
+                <p><strong>print </strong>("The row wise summation of all matrix <strong>is </strong>: ")</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>print </strong>(numpy.sum(y,axis<strong>=</strong>1))</p>
+        <p># using "T" to transpose the matrix</p>
+        <p>print ("The transpose of given matrix <strong>is </strong>: ")</p>
+        <p>print (x.T)</p>
+        <p><strong>Output :</strong></p>
+        <p>The element wise square root is :</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;[[ 1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.41421356]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.23606798]]</p>
+        <p>The summation of all matrix element is :</p>
+        <p>34</p>
+        <p>The column wise summation of all matrix is :</p>
+        <p>[16 18]</p>
+        <p>The row wise summation of all matrix is :</p>
+        <p>[15 19]</p>
+        <p>The transpose of given matrix is :</p>
+        <p>[[1 4]</p>
+        <p>[2 5]]</p>
+        <p>Numpy | Linear Algebra</p>
+        <p>The Linear Algebra module of NumPy offers various methods to apply linear algebra on any numpy array.</p>
+        <p>&nbsp;</p>
+        <p>One can find:</p>
+        <ul>
+          <li>rank, determinant, trace, etc. of an array.</li>
+          <li>eigen values of matrices</li>
+          <li>matrix and vector products (dot, inner, outer,etc. product), matrix exponentiation</li>
+          <li>solve linear or tensor equations and much more!</li>
+        </ul>
+        <p># Importing numpy as np</p>
+        <p><strong>import </strong>numpy as np</p>
+        <p>A <strong>= </strong>np.array([[6, 1, 1],</p>
+        <p>[4, <strong>-</strong>2, 5],</p>
+        <p>[2, 8, 7]])</p>
+        <p># Rank of a matrix</p>
+        <p>print("Rank of A:", np.linalg.matrix_rank(A))</p>
+        <p># Trace of matrix A</p>
+        <p>print("\nTrace of A:", np.trace(A))</p>
+        <p># Determinant of a matrix</p>
+        <p>print("\nDeterminant of A:", np.linalg.det(A))</p>
+        <p># Inverse of matrix A</p>
+        <p>print("\nInverse of A:\n", np.linalg.inv(A))</p>
+        <p>print("\nMatrix A raised to power 3:\n",</p>
+        <p>np.linalg.matrix_power(A, 3))</p>
+        <p>Run on IDE <strong>Output:</strong></p>
+        <p>Rank of A: 3</p>
+        <p>Trace of A: 11</p>
+        <p>Determinant of A: -306.0</p>
+        <p>Inverse of A:</p>
+        <p>[[ 0.17647059 -0.00326797 -0.02287582]</p>
+        <p>[ 0.05882353 -0.13071895 0.08496732]</p>
+        <p>[-0.11764706 0.1503268 0.05228758]]</p>
+        <p>Matrix A raised to power 3:</p>
+        <p>[[336 162 228] [406 162 469]</p>
+        <p>[698 702 905]]</p>
+        <p>Dataset</p>
+        <ul>
+          <li>In Python, a dataset typically refers to a collection of data organized in a specific way. This could be in the form of lists, arrays, or more advanced data structures like pandas DataFrames. Datasets are used to store and manipulate data for analysis or other computational tasks. Libraries like pandas provide powerful tools for working with datasets in Python.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>In Python, a Pandas DataFrame is a two-dimensional, tabular data structure provided by the Pandas library. It resembles a spreadsheet or SQL table, where data is organized in rows and Each column in a DataFrame can have a different data type (e.g., integers, floats, strings), and you can perform various operations like filtering, grouping, and merging on the data.Here's a simple example of creating a DataFrame in Pandas:import pandas as pd</li>
+        </ul>
+        <p># Creating a DataFrame from a dictionary data = {'Name': ['Alice', 'Bob',</p>
+        <p>'Charlie'],</p>
+        <p>'Age': [25, 30, 35],</p>
+        <p>'City': ['New York', 'San Francisco', 'Los Angeles']}</p>
+        <p>df = pd.DataFrame(data)</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(df)This would output:Name Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; City</p>
+        <ul>
+          <li>Alice 25 New York</li>
+          <li>Bob 30 San Francisco</li>
+          <li>Charlie 35 Los Angeles</li>
+        </ul>
+        <p>Pandas provides a wide range of functionalities for data manipulation, analysis, and cleaning, making it a popular choice for working with tabular data in Python.</p>
+        <p>Control Structures in Python</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Most programs don't operate by carrying out a straightforward sequence of statements. A code is written to allow making choices and several pathways through the program to be followed depending on shifts in variable values.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>All programming languages contain a pre-included set of control structures that enable these control flows to execute, which makes it</li>
+        </ul>
+        <p>Types of Control Structures</p>
+        <ul>
+          <li>Control flow refers to the sequence a program will follow during its execution.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Conditions, loops, and calling functions significantly influence how a Python program is controlled.</li>
+        </ul>
+        <p>There are three types of control structures in Python:</p>
+        <p>○ Sequential - The default working of a program</p>
+        <p>○ Selection - This structure is used for making decisions by checking conditions and branching</p>
+        <p>○ Repetition - This structure is used for looping, i.e., repeatedly executing a certain piece of a code block.</p>
+        <p>Sequential</p>
+        <p>Sequential statements are a set of statements whose execution process happens in a sequence. The problem with sequential statements is that if the logic has broken in any one of the lines, then the complete source code execution will break.</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how a sequential control structure works</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li># We will initialize some variables</li>
+          <li># Then operations will be done</li>
+          <li># And, at last, results will be printed</li>
+          <li># Execution flow will be the same as the code is written, and there is no hidden flow</li>
+          <li>a = 20</li>
+          <li>b = 10</li>
+          <li>c = a - b</li>
+        </ol>
+        <p>10.d = a + b</p>
+        <p>11.e = a * b</p>
+        <p>12.<strong>print</strong>("The result of the subtraction is: ", c)</p>
+        <p>13.<strong>print</strong>("The result of the addition is: ", d)</p>
+        <p>14.<strong>print</strong>("The result of the multiplication is: ", e)</p>
+        <p><strong>Output:</strong></p>
+        <p>The result of the subtraction is: 10</p>
+        <p>The result of the addition is :</p>
+        <p>30</p>
+        <p>The result of the multiplication is: 200</p>
+        <p>The statements used in selection control structures are also referred to as branching statements or, as their fundamental role is to make decisions, decision control statements.</p>
+        <p>A program can test many conditions using these selection statements, and depending on whether the given condition is true or not, it can execute different code blocks.</p>
+        <p>There can be many forms of decision control structures. Here are some most commonly used control structures:</p>
+        <p>○ Only if</p>
+        <p>○ if-else</p>
+        <p>○ The nested if</p>
+        <p>○ The complete if-elif-else</p>
+        <p>Simple if</p>
+        <p>&nbsp;</p>
+        <p>If statements in Python are called control flow statements. The selection statements assist us in running a certain piece of code, but only in certain circumstances. There is only one condition to test in a basic if statement.</p>
+        <p>The if statement's fundamental structure is as follows:</p>
+        <h2>Syntax</h2>
+        <ol>
+          <li><strong>if </strong>&lt;conditional expression&gt; :</li>
+          <li>The code block to be executed <strong>if </strong>the condition <strong>is </strong>True</li>
+        </ol>
+        <p>These statements will always be executed. They are part of the main code.</p>
+        <p>All the statements written indented after the if statement will run if the condition giver after the if the keyword is True. Only the code statement that will always be executed regardless of the if the condition is the statement written aligned to the main code. Python uses these types of indentations to identify a code block of a particular control flow statement. The specified control structure will alter the flow of only those indented statements.</p>
+        <p>Here are a few instances:</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how a simple if keyword works</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li># Initializing some variables</li>
+          <li>v = 5</li>
+          <li>t = 4</li>
+          <li><strong>print</strong>("The initial value of v is", v, "and that of t is ",t) 7.</li>
+          <li># Creating a selection control structure</li>
+          <li><strong>if </strong>v &gt; t :</li>
+          <li><strong>print</strong>(v, "is bigger than ", t)</li>
+          <li>v -= 2</li>
+        </ol>
+        <p>12.</p>
+        <p>13.<strong>print</strong>("The new value of v is", v, "and the t is ",t) 14.</p>
+        <p>15.# Creating the second control structure</p>
+        <p>16.<strong>if </strong>v &lt; t :</p>
+        <ol start="17">
+          <li><strong>print</strong>(v , "is smaller than ", t)</li>
+          <li>v += 1</li>
+        </ol>
+        <p>19.</p>
+        <p>20.<strong>print</strong>("the new value of v is ", v) 21.</p>
+        <p>22.# Creating the third control structure</p>
+        <p>23.<strong>if </strong>v == t:</p>
+        <ol start="24">
+          <li><strong>print</strong>("The value of v, ", v, " and t,", t, ", are equal")</li>
+        </ol>
+        <p><strong>Output:</strong></p>
+        <p>The initial value of v is 5 and that of t is 4</p>
+        <p>5 is bigger than 4</p>
+        <p>The new value of v is 3 and the t is 4</p>
+        <ul>
+          <li>is smaller than 4 the new value of v is 4</li>
+        </ul>
+        <p>The value of v,</p>
+        <ul>
+          <li>and t, 4, are equal</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>If the condition given in if is False, the if-else block will perform the code t=given in the else block.</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how to use the if-else control structure</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li># Initializing two variables</li>
+          <li>v = 4</li>
+          <li>t = 5</li>
+          <li><strong>print</strong>("The value of v is ", v, "and that of t is ", t) 7.</li>
+          <li># Checking the condition</li>
+          <li><strong>if </strong>v &gt; t :</li>
+          <li><strong>print</strong>("v is greater than t")</li>
+        </ol>
+        <p>11.# Giving the instructions to perform if the if condition is not true</p>
+        <p>12.<strong>else </strong>:</p>
+        <ol start="13">
+          <li><strong>print</strong>("v is less than t") <strong>Output:</strong></li>
+        </ol>
+        <p>The value of v is 4 and that of t is 5 v is less than t</p>
+        <p>To repeat a certain set of statements, we use the repetition structure.</p>
+        <p>There are generally two loop statements to implement the repetition structure:</p>
+        <p>○ The for loop</p>
+        <p>○ The while loop</p>
+        <p>For Loop</p>
+        <p>We use a for loop to iterate over an iterable Python sequence. Examples of these data structures are lists, strings, tuples, dictionaries, etc. Under the for loop code block, we write the commands we want to execute repeatedly for each sequence item.</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how to execute a for loop</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li># Creating a sequence. In this case, a list</li>
+          <li>l = [2, 4, 7, 1, 6, 4]</li>
+        </ol>
+        <p>5.</p>
+        <ol start="6">
+          <li># Executing the for loops</li>
+          <li><strong>for </strong>i <strong>in </strong>range(len(l)):</li>
+          <li><strong>print</strong>(l[i], end = ", ")</li>
+          <li><strong>print</strong>("\n")</li>
+        </ol>
+        <p>10.<strong>for </strong>j <strong>in </strong>range(0,10):</p>
+        <ol start="11">
+          <li><strong>print</strong>(j, end = ", ")</li>
+        </ol>
+        <p><strong>Output:</strong></p>
+        <p>&nbsp;</p>
+        <p>2, 4, 7, 1, 6, 4,</p>
+        <p>0, 1, 2, 3, 4, 5, 6, 7, 8, 9,</p>
+        <p>&nbsp;</p>
+        <p>While Loop</p>
+        <p>While loops are also used to execute a certain code block repeatedly, the difference is that loops continue to work until a given precondition is satisfied. The expression is checked before each execution. Once the condition results in Boolean False, the loop stops the iteration.</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how to execute a while loop</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li>b = 9</li>
+          <li>a = 2</li>
+        </ol>
+        <p>5.</p>
+        <ol start="6">
+          <li># Starting the while loop</li>
+          <li># The condition a &lt; b will be checked before each iteration</li>
+          <li><strong>while </strong>a &lt; b:</li>
+          <li><strong>print</strong>(a, end = " ")</li>
+          <li>a = a + 1</li>
+        </ol>
+        <h1>[DATA</h1>
+        <p>&nbsp;</p>
+        <p>Corolla Data Set</p>
+        <p>&nbsp;</p>
+        <p>To start, let's assume you have a dataset named <strong>`toyota_corolla_data`</strong> and we'll proceed with some basic examples using this dataset.</p>
+        <p>&nbsp;</p>
+        <p><strong>### Using if-else statements: </strong></p>
+        <p>Let's say you want to print information based on a condition:</p>
+        <p>&nbsp;</p>
+        <p># Assuming <strong>toyota_corolla_data</strong> is a list of dictionaries with car information for car in <strong>toyota_corolla_data:</strong></p>
+        <p>if car['price'] &gt; 15000:</p>
+        <p>print(f"{car['model']} is expensive.") else:</p>
+        <p>print(f"{car['model']} is affordable.")</p>
+        <p>&nbsp;</p>
+        <p>### Using a for loop:</p>
+        <p>Iterating through the dataset:</p>
+        <p>&nbsp;</p>
+        <p>for car in <strong>toyota_corolla_data:</strong> print(car['model'], car['price'])</p>
+        <p>&nbsp;</p>
+        <p>### Using a for loop with a conditional break:</p>
+        <p>Breaking the loop when a certain condition is met:</p>
+        <p>&nbsp;</p>
+        <p>for car in <strong>toyota_corolla_data:</strong> if car['year'] == 2020: print(f"Found a {car['model']} from 2020.") break</p>
+        <p>```</p>
+        <p>&nbsp;</p>
+        <p><strong>### Using a while loop: </strong></p>
+        <p><strong>Implementing a while loop for a specific condition: </strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>i = 0 while i &lt; len(toyota_corolla_data): print(toyota_corolla_data[i]['model']) i += 1</p>
+        <p><strong>What is a Data Structure?</strong></p>
+        <ul>
+          <li>A data structure is a way of organizing data in computer memory, implemented in a programming language.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>This organization is required for efficient storage, retrieval, and modification of data.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>It is a fundamental concept as data structures are one of the main building blocks of any modern software. Learning what data structures exist and how to use them efficiently in different situations is one of the first steps toward learning any programming language.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data Structures in Python</h1>
+        <ul>
+          <li>Built-in data structures in Python can be divided into two broad categories:</li>
+        </ul>
+        <p><strong>mutable</strong> and <strong>immutable</strong>.&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><strong>Mutable data structures:</strong> are those which we can modify &mdash; for example, by adding, removing, or changing their elements.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Python has three mutable data structures<strong>: lists</strong>, <strong>dictionaries</strong>, and <strong>sets</strong>.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><strong>Immutable data structures</strong>: on the other hand, are those that we cannot modify after their creation. The only basic built-in immutable data structure in Python is a tuple.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List</h1>
+        <ul>
+          <li>Lists are similar to arrays in C. However; the list can contain data of different types.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The items stored in the list are separated with a comma (,) and enclosed within square brackets []. We can use slice [:] operators to access the data of the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The concatenation operator (+) and repetition operator (*) works with the list in the same way as they were working with the strings.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>Example: Creating a List</strong></p>
+        <p>&gt;&gt;&gt; num = [1,2,3,4]</p>
+        <p>&gt;&gt;&gt; num</p>
+        <p>[1, 2, 3, 4]</p>
+        <p>&gt;&gt;&gt; print(num[0])</p>
+        <p>1</p>
+        <ul>
+          <li>We can access a list&rsquo;s elements using indices, where the first element of a list has the index of 0.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List Library Functions </strong></p>
+        <ul>
+          <li><strong>append():</strong> Adds an element at the end of the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_extend.asp"><strong>extend()</strong></a><a href="https://www.w3schools.com/python/ref_list_extend.asp"><strong>:</strong></a> Add the elements of a list, to the end of the current list <a href="https://www.w3schools.com/python/ref_list_index.asp">index()</a> Returns the index of the first element with the specified value <a href="https://www.w3schools.com/python/ref_list_insert.asp">insert()</a> Adds an element at the specified position.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_pop.asp"><strong>pop()</strong></a><a href="https://www.w3schools.com/python/ref_list_pop.asp"><strong>:</strong></a> Removes the element at the specified position.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_remove.asp"><strong>remove():</strong></a> Removes the item with the specified value.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_reverse.asp"><strong>reverse()</strong></a><a href="https://www.w3schools.com/python/ref_list_reverse.asp"><strong>:</strong></a> Reverses the order of the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_sort.asp"><strong>sort()</strong></a><a href="https://www.w3schools.com/python/ref_list_sort.asp"><strong>:</strong></a> Sorts the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_copy.asp"><strong>copy()</strong></a><a href="https://www.w3schools.com/python/ref_list_copy.asp"><strong>:</strong></a> Returns a copy of the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_count.asp"><strong>count()</strong></a><a href="https://www.w3schools.com/python/ref_list_count.asp"><strong>:</strong></a> Returns the number of elements with the specified value.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><a href="https://www.w3schools.com/python/ref_list_clear.asp"><strong>clear()</strong></a><a href="https://www.w3schools.com/python/ref_list_clear.asp"><strong>:</strong></a> Removes all the elements from the list.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>List Example using functions:</strong></p>
+        <p><strong>Adding elements to list:</strong></p>
+        <p>&gt;&gt;&gt; nums = [11,22,33,44]</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44]</p>
+        <p>&gt;&gt;&gt; nums.<strong>append</strong>(55)</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44, 55]</p>
+        <p>&gt;&gt;&gt; nums.<strong>extend</strong>([66,77])</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44, 55, 66, 77]</p>
+        <p>&gt;&gt;&gt; nums.<strong>insert</strong>(3,33)</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 33, 44, 55, 66, 77]</p>
+        <p>&gt;&gt;&gt; print(nums.<strong>index</strong>(22))</p>
+        <p>1</p>
+        <p>&gt;&gt;&gt; print(nums.<strong>index</strong>(33))</p>
+        <p>2</p>
+        <p>&gt;&gt;&gt; print(nums.<strong>count</strong>(33))</p>
+        <p>2</p>
+        <p>&gt;&gt;&gt; newnums = nums.<strong>copy</strong>()</p>
+        <p>&gt;&gt;&gt; print(newnums) [11, 22, 33, 33, 44, 55, 66, 77] <strong>Removing elements to list:</strong></p>
+        <table width="465">
+          <tbody>
+            <tr>
+              <td width="268">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;&gt;&gt; nums.<strong>pop</strong>(3)</p>
+                <p>33</p>
+                <p>&gt;&gt;&gt; print(nums)</p>
+                <p>[11, 22, 33, 44, 55, 66, 77]</p>
+              </td>
+              <td width="197">
+                <p><strong>#Remove using index no </strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="268">
+                <p>&gt;&gt;&gt; nums.<strong>remove</strong>(77)</p>
+              </td>
+              <td width="197">
+                <p><strong>#Remove using value </strong></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44, 55, 66]</p>
+        <table width="458">
+          <tbody>
+            <tr>
+              <td width="192">
+                <p>&gt;&gt;&gt; <strong>del </strong>nums[5]</p>
+                <p>&gt;&gt;&gt; print(nums)</p>
+                <p>[11, 22, 33, 44, 55]</p>
+              </td>
+              <td width="265">
+                <p><strong>&nbsp;</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="192">
+                <p>&gt;&gt;&gt; newnums.<strong>clear</strong>()</p>
+              </td>
+              <td width="265">
+                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #Remove all elements </strong></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h1>#Remove using del keyword</h1>
+        <p>&gt;&gt;&gt; print(newnums)</p>
+        <p>[]</p>
+        <p>&gt;&gt;&gt; nums.<strong>reverse</strong>()</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[55, 44, 33, 22, 11]</p>
+        <p>&gt;&gt;&gt; nums.<strong>sort</strong>()</p>
+        <p>&gt;&gt;&gt; print(nums)</p>
+        <p>[11, 22, 33, 44, 55]</p>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tuples</strong></p>
+        <p>A tuple in Python is similar to a list. The difference between the two is that we cannot change the elements of a tuple once it is assigned whereas we can change the elements of a list.&nbsp;</p>
+        <p><strong>Accessing Tuple Elements: </strong></p>
+        <p><strong>Indexing: </strong></p>
+        <p>To access an object of a tuple, we can use the index operator [], where indexing in the tuple starts from 0. A tuple with 5 items will have indices ranging from 0 to 4.</p>
+        <p>&nbsp;</p>
+        <p><strong>Example: Creating a tuple </strong></p>
+        <p>&gt;&gt;&gt; t = (11,22,33,44)</p>
+        <p>&gt;&gt;&gt; print(t)</p>
+        <p>(11, 22, 33, 44)</p>
+        <p>&gt;&gt;&gt; type(t)</p>
+        <p>&lt;class 'tuple'&gt;</p>
+        <p>&gt;&gt;&gt; print(t[0:2])</p>
+        <p>(11, 22)</p>
+        <p>Only 2 methods provided</p>
+        <p>&gt;&gt;&gt; t.<strong>index</strong>(22)</p>
+        <p>1</p>
+        <p>&gt;&gt;&gt; t.<strong>count</strong>(33)</p>
+        <p>1</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Set</strong></p>
+        <ul>
+          <li>A Python set is the collection of the unordered items. Each element in the set must be unique, immutable, and the sets remove the duplicate elements. Sets are mutable which means we can modify it after its creation.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Unlike other collections in Python, there is no index attached to the elements of the set, i.e., we cannot directly access any element of the set by the index. However, we can print them all together, or we can get the list of elements by looping through the set. It is like list and Tuple but here no value can be repeated. Here we use {}. Here indexing is not supported as sequence is random.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Example: Creating a set </strong></p>
+        <p>The set can be created by enclosing the comma-separated immutable items with the curly braces {}. Python also provides the set() method, which can be used to create the set by the passed sequence.</p>
+        <p>&gt;&gt;&gt; s = {11,22,33,44}</p>
+        <p>&gt;&gt;&gt; print(s)</p>
+        <p>{33, 11, 44, 22}</p>
+        <p>&gt;&gt;&gt; type(s)</p>
+        <p>&lt;class 'set'&gt;</p>
+        <p>&gt;&gt;&gt; s.add(55)</p>
+        <p>&gt;&gt;&gt; print(s)</p>
+        <p>{33, 11, 44, 22, 55}</p>
+        <p><strong>Example: Adding items to the set: </strong></p>
+        <p>Python provides the <strong>add()</strong> method and <strong>update()</strong> method which can be used to add some particular item to the set. The add() method is used to add a single element whereas the update() method is used to add multiple elements to the set.</p>
+        <p>&gt;&gt;&gt; s = {11,22,33,44}</p>
+        <p>&gt;&gt;&gt; print(s)</p>
+        <p>{33, 11, 44, 22}</p>
+        <p>&gt;&gt;&gt; s.add(55)</p>
+        <p>&gt;&gt;&gt; print(s)</p>
+        <p>{33, 11, 44, 55, 22}</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dictionary</strong></p>
+        <p>An effective data structure for storing data in Python is dictionaries, in which can simulate the real-life data arrangement where some specific value exists for some particular key.Python Dictionary is used to store the data in a key-value pair format.</p>
+        <ul>
+          <li>It is the mutable data-structure.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The elements Keys and values is employed to create the dictionary.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Keys must consist of just one element.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Value can be any type such as list, tuple, integer, etc.</li>
+        </ul>
+        <p>The dictionary use key and value concept. every key must be unique value can be repeated,use {} and : in between key and value.</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Example: Creating the Dictionary: </strong></p>
+        <p>The simplest approach to create a Python dictionary is by using curly brackets {}, but there are other methods as well. The dictionary can be created by using multiple key-value pairs enclosed with the curly brackets {}, and each key is separated from its value by the colon (:). The syntax to define the dictionary is given below.</p>
+        <p>&gt;&gt;&gt; d = {"yash":"asus","saurabh":"oneplus"}</p>
+        <p>&gt;&gt;&gt; print(d)</p>
+        <p>{' yash ': 'asus', 'saurabh': 'oneplus'}</p>
+        <p>&gt;&gt;&gt; print(type(d))</p>
+        <p>&lt;class 'dict'&gt; &gt;&gt;&gt; print(d.keys()) dict_keys(['yash', 'saurabh'])</p>
+        <p>&gt;&gt;&gt; d.values() dict_values(['asus', 'oneplus'])&nbsp;</p>
+        <p><strong>Accessing the Dictionary Value </strong></p>
+        <p>We've discussed about using indexing to access data stored in lists and tuples. However, because the dictionary's keys are distinct from one another, it is possible to get the values by utilising the keys. The dictionary values can be accessed in the following way. &gt;&gt;&gt; d['yash']</p>
+        <p>'asus'</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NumPy Introduction</strong></p>
+        <ul>
+          <li>NumPy is a Python library used for working with arrays.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>It also has functions for working in domain of linear algebra, fourier transform, and matrices.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li><strong>NumPy was created in 2005 by Travis Oliphant.</strong> It is an open source project and you can use it freely.</li>
+        </ul>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▪ &nbsp;&nbsp;&nbsp; &nbsp;</p>
+        <ul>
+          <li>NumPy stands for <strong>Numerical Python.</strong></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp; <strong>Why to use NumPy?</strong></p>
+        <ul>
+          <li>In Python we have lists that serve the purpose of arrays, but they are slow to process.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>NumPy aims to provide an array object that is up to 50x faster than traditional Python lists.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The array object in NumPy is called <strong>ndarray</strong>, it provides a lot of supporting functions that make working with <strong>ndarray</strong> very easy.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Arrays are very frequently used in data science, where speed and resources are very important.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Why is NumPy Faster Than Lists? </strong></p>
+        <ul>
+          <li>NumPy arrays are stored at one continuous place in memory unlike lists, so processes can access and manipulate them very efficiently.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>This behaviour is called locality of reference in computer science.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>This is the main reason why NumPy is faster than lists. Also it is optimized to work with latest CPU architectures.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installation of NumPy</strong></p>
+        <ul>
+          <li>If you have <a href="https://www.w3schools.com/python/default.asp"><strong>Python</strong></a> and <a href="https://www.w3schools.com/python/python_pip.asp"><strong>PIP</strong></a> already installed on a system, then installation of NumPy is very easy.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Install it using this command:</li>
+        </ul>
+        <p>C:\Users\<em>Your Name</em>&gt;pip install numpy</p>
+        <ul>
+          <li>If this command fails, then use a python distribution that already has NumPy installed like, Anaconda, Spyder etc.</li>
+        </ul>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Import NumPy</p>
+        <p>Once NumPy is installed, import it in your applications by adding the <strong>import</strong> <strong>keyword:</strong></p>
+        <p>import numpy</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now NumPy is imported and ready to use.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; import numpy&nbsp;</p>
+        <p><strong>Example:</strong> arr = numpy.array([1, 2, 3, 4, 5])</p>
+        <p>print(arr)</p>
+        <p>NumPy as <strong>np</strong></p>
+        <p>NumPy is usually imported under the <strong>np</strong> alias.</p>
+        <p><strong>alias: In Python alias are an alternate name for referring to the same</strong> <strong>thing.</strong></p>
+        <p>&nbsp;</p>
+        <p><strong>Example: Create an alias with the as keyword while importing:</strong></p>
+        <p>import numpy as <strong>np</strong></p>
+        <p>Now the NumPy package can be referred to as np instead of numpy.</p>
+        <p>arr = np.array([1, 2, 3, 4, 5])</p>
+        <p>print(arr)</p>
+        <p>OUTPUT: [ 1 2 3 4 5]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Create a NumPy ndarray Object </strong></p>
+        <p>&nbsp;</p>
+        <p>NumPy is used to work with arrays. The array object in NumPy is called <strong>ndarray.</strong></p>
+        <p>We can create a NumPy <strong>ndarray </strong>object by using the <strong>array()</strong> function.&nbsp;</p>
+        <p>Import numpy as np</p>
+        <p>arr = np.array([1, 2, 3, 4, 5])</p>
+        <p>print(arr)</p>
+        <p>print(type(arr))</p>
+        <p>OUTPUT</p>
+        <p>[1 2 3 4 5]</p>
+        <p>&lt;class 'numpy.ndarray'&gt;</p>
+        <table width="667">
+          <tbody>
+            <tr>
+              <td width="667">
+                <p>type(): This built-in Python function tells us the type of the object passed to it. Like</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="667">
+                <p>in above code it shows that arr is numpy.ndarray type.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>To create an ndarray, we can pass a list, tuple or any array-like object into the array() method, and it will be converted into an ndarray</p>
+        <p>print(arr)</p>
+        <ul>
+          <li>2 3 4 5]</li>
+        </ul>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dimensions in Arrays</p>
+        <p>&nbsp;</p>
+        <p>A dimension in arrays is one level of array depth (nested arrays).</p>
+        <p><strong>Nested array</strong>: are arrays that have arrays as their elements.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0-D Arrays</p>
+        <p>0-D arrays, or Scalars, are the elements in an array. Each value in an array is a 0-D array.</p>
+        <p>print(arr)</p>
+        <p>OUTPUT 42</p>
+        <p>1-D Arrays</p>
+        <p>An array that has 0-D arrays as its elements is called uni-dimensional or 1-D array.</p>
+        <p>These are the most common and basic arrays</p>
+        <p>print(arr)</p>
+        <p>[1 2 3 4 5]</p>
+        <p>2-D Arrays</p>
+        <p>An array that has 1-D arrays as its elements is called a 2-D array.</p>
+        <p>These are often used to represent matrix or 2nd order tensors.</p>
+        <p>NumPy has a whole sub module dedicated towards matrix operations called numpy.mat Create a 2-D&nbsp; array containing two arrays with the values 1,2, 3&nbsp; and 4 ,5,6: arr = np.array([[1, 2, 3], [4, 5, 6]])</p>
+        <p>print(arr)</p>
+        <p>[[1 2 3]</p>
+        <p>[4 5 6]]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-D arrays</p>
+        <p>&nbsp;</p>
+        <p>An array that has 2-D arrays (matrices) as its elements is called 3-D array.</p>
+        <p>These are often used to represent a 3rd order tensor.</p>
+        <p>arr = np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]])</p>
+        <p>print(arr)</p>
+        <p>[[[1 2 3]</p>
+        <p>[4 5 6]]</p>
+        <p>[[1 2 3]</p>
+        <p>[4 5 6]]]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check Number of Dimensions?</p>
+        <p>&nbsp;</p>
+        <p>NumPy Arrays provides the ndim attribute that returns an integer that tells us how many dimensions the array have.</p>
+        <ul>
+          <li>= np.array([1, 2, 3, 4, 5])</li>
+          <li>= np.array([[1, 2, 3], [4, 5, 6]])</li>
+          <li>= np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]])</li>
+        </ul>
+        <p>print(a.ndim)</p>
+        <p>print(b.ndim)</p>
+        <p>print(c.ndim)</p>
+        <p>print(d.ndim)</p>
+        <p>0</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>In python matrix can be implemented as 2D <a href="https://www.geeksforgeeks.org/python-set-3-strings-lists-tuples-iterations/">list</a> or 2D Array. Forming matrix from latter, gives the additional functionalities for performing various operations in matrix. These operations and <a href="https://www.geeksforgeeks.org/array-python-set-1-introduction-functions/">array</a> are defines in module &ldquo;<strong>numpy</strong>&ldquo;.</p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operations on Matrix :</strong></p>
+        <ul>
+          <li><strong> add() :- </strong>This function is used to perform <strong>element wise matrix addition</strong>.</li>
+          <li><strong> subtract() :- </strong>This function is used to perform <strong>element wise matrix subtraction</strong>.</li>
+          <li><strong> divide() :- </strong>This function is used to perform <strong>element wise matrix division</strong>.</li>
+        </ul>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implementation Of Matrix</strong></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table width="494">
+          <tbody>
+            <tr>
+              <td width="494">
+                <p># Python code to demonstrate matrix operations</p>
+                <p># add(), subtract() and divide()</p>
+                <p># importing numpy for matrix operations</p>
+                <p><strong>import </strong>numpy</p>
+                <p># initializing matrices</p>
+                <p>x <strong>= </strong>numpy.array([[1, 2], [4, 5]])</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>y <strong>= </strong>numpy.array([[7, 8], [9, 10]])</p>
+        <p># using add() to add matrices</p>
+        <p>print ("The element wise addition of matrix <strong>is </strong>: ")</p>
+        <p>print (numpy.add(x,y))</p>
+        <p># using subtract() to subtract matrices print ("The</p>
+        <p>element wise subtraction of matrix <strong>is </strong>:</p>
+        <p>")</p>
+        <p>print (numpy.subtract(x,y))</p>
+        <p># using divide() to divide matrices</p>
+        <p>print ("The element wise division of matrix <strong>is </strong>: ")</p>
+        <p>print (numpy.divide(x,y))</p>
+        <p><strong>Output :</strong></p>
+        <p>The element wise addition of matrix is :</p>
+        <p>[[ 8 10]</p>
+        <p>[13 15]]</p>
+        <p>The element wise subtraction of matrix is :</p>
+        <p>[[-6 -6]</p>
+        <p>[-5 -5]]</p>
+        <p>The element wise division of matrix is :</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [[ 0.14285714 0.25 &nbsp;&nbsp;&nbsp;&nbsp; ]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 0.44444444 0.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]]</p>
+        <ul>
+          <li><strong>multiply() :- </strong>This function is used to perform <strong>element wise matrix multiplication</strong>.</li>
+          <li><strong>dot() :- </strong>This function is used to compute the <strong>matrix multiplication, rather than element wise multiplication</strong>.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>print ("The product of matrices <strong>is </strong>: ")</p>
+        <p>print (numpy.dot(x,y))</p>
+        <p><strong>Output :</strong></p>
+        <p>The element wise multiplication of matrix is :</p>
+        <p>[[ 7 16]</p>
+        <p>[36 50]]</p>
+        <p>The product of matrices is :</p>
+        <p>[[25 28]</p>
+        <p>[73 82]]</p>
+        <p>▪ &nbsp;&nbsp;&nbsp; <strong>sqrt() :- </strong>This function is used to compute the <strong>square root of each element </strong>of matrix.</p>
+        <ul>
+          <li><strong>sum(x,axis) :- </strong>This function is used to <strong>add all the elements in matrix</strong>. Optional &ldquo;axis&rdquo; argument computes the <strong>column sum if axis is 0 </strong>and <strong>row sum if axis is 1</strong>.</li>
+          <li><strong>&ldquo;T&rdquo; :- </strong>This argument is used to <strong>transpose </strong>the specified matrix.</li>
+        </ul>
+        <p><strong>Implementation:</strong></p>
+        <p>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Python</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table width="566">
+          <tbody>
+            <tr>
+              <td width="566">
+                <p># Python code to demonstrate matrix operations</p>
+                <p># sqrt(), sum() and "T"</p>
+                <p># importing numpy for matrix operations</p>
+                <p><strong>import </strong>numpy</p>
+                <p># initializing matrices</p>
+                <p>x <strong>= </strong>numpy.array([[1, 2], [4, 5]])</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>y <strong>= </strong>numpy.array([[7, 8], [9, 10]])</p>
+        <p># using sqrt() to print the square root of matrix</p>
+        <p>print ("The element wise square root <strong>is </strong>: ")</p>
+        <p><strong>print </strong>(numpy.sqrt(x))</p>
+        <p># using sum() to print summation of all elements of matrix</p>
+        <p>print ("The summation of all matrix element <strong>is </strong>: ")</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table width="566">
+          <tbody>
+            <tr>
+              <td width="566">
+                <p>print (numpy.sum(y))</p>
+                <p># using sum(axis=0) to print summation of all columns of matrix</p>
+                <p><strong>print </strong>("The column wise summation of all matrix <strong>is </strong>: ")</p>
+                <p><strong>print </strong>(numpy.sum(y,axis<strong>=</strong>0))</p>
+                <p># using sum(axis=1) to print summation of all columns of matrix</p>
+                <p><strong>print </strong>("The row wise summation of all matrix <strong>is </strong>: ")</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>print </strong>(numpy.sum(y,axis<strong>=</strong>1))</p>
+        <p># using "T" to transpose the matrix</p>
+        <p>print ("The transpose of given matrix <strong>is </strong>: ")</p>
+        <p>print (x.T)</p>
+        <p><strong>Output :</strong></p>
+        <p>The element wise square root is :</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;[[ 1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.41421356]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.23606798]]</p>
+        <p>The summation of all matrix element is :</p>
+        <p>34</p>
+        <p>The column wise summation of all matrix is :</p>
+        <p>[16 18]</p>
+        <p>The row wise summation of all matrix is :</p>
+        <p>[15 19]</p>
+        <p>The transpose of given matrix is :</p>
+        <p>[[1 4]</p>
+        <p>[2 5]]</p>
+        <p>Numpy | Linear Algebra</p>
+        <p>The Linear Algebra module of NumPy offers various methods to apply linear algebra on any numpy array.</p>
+        <p>&nbsp;</p>
+        <p>One can find:</p>
+        <ul>
+          <li>rank, determinant, trace, etc. of an array.</li>
+          <li>eigen values of matrices</li>
+          <li>matrix and vector products (dot, inner, outer,etc. product), matrix exponentiation</li>
+          <li>solve linear or tensor equations and much more!</li>
+        </ul>
+        <p># Importing numpy as np</p>
+        <p><strong>import </strong>numpy as np</p>
+        <p>A <strong>= </strong>np.array([[6, 1, 1],</p>
+        <p>[4, <strong>-</strong>2, 5],</p>
+        <p>[2, 8, 7]])</p>
+        <p># Rank of a matrix</p>
+        <p>print("Rank of A:", np.linalg.matrix_rank(A))</p>
+        <p># Trace of matrix A</p>
+        <p>print("\nTrace of A:", np.trace(A))</p>
+        <p># Determinant of a matrix</p>
+        <p>print("\nDeterminant of A:", np.linalg.det(A))</p>
+        <p># Inverse of matrix A</p>
+        <p>print("\nInverse of A:\n", np.linalg.inv(A))</p>
+        <p>print("\nMatrix A raised to power 3:\n",</p>
+        <p>np.linalg.matrix_power(A, 3))</p>
+        <p>Run on IDE <strong>Output:</strong></p>
+        <p>Rank of A: 3</p>
+        <p>Trace of A: 11</p>
+        <p>Determinant of A: -306.0</p>
+        <p>Inverse of A:</p>
+        <p>[[ 0.17647059 -0.00326797 -0.02287582]</p>
+        <p>[ 0.05882353 -0.13071895 0.08496732]</p>
+        <p>[-0.11764706 0.1503268 0.05228758]]</p>
+        <p>Matrix A raised to power 3:</p>
+        <p>[[336 162 228] [406 162 469]</p>
+        <p>[698 702 905]]</p>
+        <p>Dataset</p>
+        <ul>
+          <li>In Python, a dataset typically refers to a collection of data organized in a specific way. This could be in the form of lists, arrays, or more advanced data structures like pandas DataFrames. Datasets are used to store and manipulate data for analysis or other computational tasks. Libraries like pandas provide powerful tools for working with datasets in Python.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>In Python, a Pandas DataFrame is a two-dimensional, tabular data structure provided by the Pandas library. It resembles a spreadsheet or SQL table, where data is organized in rows and Each column in a DataFrame can have a different data type (e.g., integers, floats, strings), and you can perform various operations like filtering, grouping, and merging on the data.Here's a simple example of creating a DataFrame in Pandas:import pandas as pd</li>
+        </ul>
+        <p># Creating a DataFrame from a dictionary data = {'Name': ['Alice', 'Bob',</p>
+        <p>'Charlie'],</p>
+        <p>'Age': [25, 30, 35],</p>
+        <p>'City': ['New York', 'San Francisco', 'Los Angeles']}</p>
+        <p>df = pd.DataFrame(data)</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(df)This would output:Name Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; City</p>
+        <ul>
+          <li>Alice 25 New York</li>
+          <li>Bob 30 San Francisco</li>
+          <li>Charlie 35 Los Angeles</li>
+        </ul>
+        <p>Pandas provides a wide range of functionalities for data manipulation, analysis, and cleaning, making it a popular choice for working with tabular data in Python.</p>
+        <p>Control Structures in Python</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Most programs don't operate by carrying out a straightforward sequence of statements. A code is written to allow making choices and several pathways through the program to be followed depending on shifts in variable values.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>All programming languages contain a pre-included set of control structures that enable these control flows to execute, which makes it</li>
+        </ul>
+        <p>Types of Control Structures</p>
+        <ul>
+          <li>Control flow refers to the sequence a program will follow during its execution.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Conditions, loops, and calling functions significantly influence how a Python program is controlled.</li>
+        </ul>
+        <p>There are three types of control structures in Python:</p>
+        <p>○ Sequential - The default working of a program</p>
+        <p>○ Selection - This structure is used for making decisions by checking conditions and branching</p>
+        <p>○ Repetition - This structure is used for looping, i.e., repeatedly executing a certain piece of a code block.</p>
+        <p>Sequential</p>
+        <p>Sequential statements are a set of statements whose execution process happens in a sequence. The problem with sequential statements is that if the logic has broken in any one of the lines, then the complete source code execution will break.</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how a sequential control structure works</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li># We will initialize some variables</li>
+          <li># Then operations will be done</li>
+          <li># And, at last, results will be printed</li>
+          <li># Execution flow will be the same as the code is written, and there is no hidden flow</li>
+          <li>a = 20</li>
+          <li>b = 10</li>
+          <li>c = a - b</li>
+        </ol>
+        <p>10.d = a + b</p>
+        <p>11.e = a * b</p>
+        <p>12.<strong>print</strong>("The result of the subtraction is: ", c)</p>
+        <p>13.<strong>print</strong>("The result of the addition is: ", d)</p>
+        <p>14.<strong>print</strong>("The result of the multiplication is: ", e)</p>
+        <p><strong>Output:</strong></p>
+        <p>The result of the subtraction is: 10</p>
+        <p>The result of the addition is :</p>
+        <p>30</p>
+        <p>The result of the multiplication is: 200</p>
+        <p>The statements used in selection control structures are also referred to as branching statements or, as their fundamental role is to make decisions, decision control statements.</p>
+        <p>A program can test many conditions using these selection statements, and depending on whether the given condition is true or not, it can execute different code blocks.</p>
+        <p>There can be many forms of decision control structures. Here are some most commonly used control structures:</p>
+        <p>○ Only if</p>
+        <p>○ if-else</p>
+        <p>○ The nested if</p>
+        <p>○ The complete if-elif-else</p>
+        <p>Simple if</p>
+        <p>&nbsp;</p>
+        <p>If statements in Python are called control flow statements. The selection statements assist us in running a certain piece of code, but only in certain circumstances. There is only one condition to test in a basic if statement.</p>
+        <p>The if statement's fundamental structure is as follows:</p>
+        <h2>Syntax</h2>
+        <ol>
+          <li><strong>if </strong>&lt;conditional expression&gt; :</li>
+          <li>The code block to be executed <strong>if </strong>the condition <strong>is </strong>True</li>
+        </ol>
+        <p>These statements will always be executed. They are part of the main code.</p>
+        <p>All the statements written indented after the if statement will run if the condition giver after the if the keyword is True. Only the code statement that will always be executed regardless of the if the condition is the statement written aligned to the main code. Python uses these types of indentations to identify a code block of a particular control flow statement. The specified control structure will alter the flow of only those indented statements.</p>
+        <p>Here are a few instances:</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how a simple if keyword works</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li># Initializing some variables</li>
+          <li>v = 5</li>
+          <li>t = 4</li>
+          <li><strong>print</strong>("The initial value of v is", v, "and that of t is ",t) 7.</li>
+          <li># Creating a selection control structure</li>
+          <li><strong>if </strong>v &gt; t :</li>
+          <li><strong>print</strong>(v, "is bigger than ", t)</li>
+          <li>v -= 2</li>
+        </ol>
+        <p>12.</p>
+        <p>13.<strong>print</strong>("The new value of v is", v, "and the t is ",t) 14.</p>
+        <p>15.# Creating the second control structure</p>
+        <p>16.<strong>if </strong>v &lt; t :</p>
+        <ol start="17">
+          <li><strong>print</strong>(v , "is smaller than ", t)</li>
+          <li>v += 1</li>
+        </ol>
+        <p>19.</p>
+        <p>20.<strong>print</strong>("the new value of v is ", v) 21.</p>
+        <p>22.# Creating the third control structure</p>
+        <p>23.<strong>if </strong>v == t:</p>
+        <ol start="24">
+          <li><strong>print</strong>("The value of v, ", v, " and t,", t, ", are equal")</li>
+        </ol>
+        <p><strong>Output:</strong></p>
+        <p>The initial value of v is 5 and that of t is 4</p>
+        <p>5 is bigger than 4</p>
+        <p>The new value of v is 3 and the t is 4</p>
+        <ul>
+          <li>is smaller than 4 the new value of v is 4</li>
+        </ul>
+        <p>The value of v,</p>
+        <ul>
+          <li>and t, 4, are equal</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>If the condition given in if is False, the if-else block will perform the code t=given in the else block.</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how to use the if-else control structure</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li># Initializing two variables</li>
+          <li>v = 4</li>
+          <li>t = 5</li>
+          <li><strong>print</strong>("The value of v is ", v, "and that of t is ", t) 7.</li>
+          <li># Checking the condition</li>
+          <li><strong>if </strong>v &gt; t :</li>
+          <li><strong>print</strong>("v is greater than t")</li>
+        </ol>
+        <p>11.# Giving the instructions to perform if the if condition is not true</p>
+        <p>12.<strong>else </strong>:</p>
+        <ol start="13">
+          <li><strong>print</strong>("v is less than t") <strong>Output:</strong></li>
+        </ol>
+        <p>The value of v is 4 and that of t is 5 v is less than t</p>
+        <p>To repeat a certain set of statements, we use the repetition structure.</p>
+        <p>There are generally two loop statements to implement the repetition structure:</p>
+        <p>○ The for loop</p>
+        <p>○ The while loop</p>
+        <p>For Loop</p>
+        <p>We use a for loop to iterate over an iterable Python sequence. Examples of these data structures are lists, strings, tuples, dictionaries, etc. Under the for loop code block, we write the commands we want to execute repeatedly for each sequence item.</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how to execute a for loop</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li># Creating a sequence. In this case, a list</li>
+          <li>l = [2, 4, 7, 1, 6, 4]</li>
+        </ol>
+        <p>5.</p>
+        <ol start="6">
+          <li># Executing the for loops</li>
+          <li><strong>for </strong>i <strong>in </strong>range(len(l)):</li>
+          <li><strong>print</strong>(l[i], end = ", ")</li>
+          <li><strong>print</strong>("\n")</li>
+        </ol>
+        <p>10.<strong>for </strong>j <strong>in </strong>range(0,10):</p>
+        <ol start="11">
+          <li><strong>print</strong>(j, end = ", ")</li>
+        </ol>
+        <p><strong>Output:</strong></p>
+        <p>&nbsp;</p>
+        <p>2, 4, 7, 1, 6, 4,</p>
+        <p>0, 1, 2, 3, 4, 5, 6, 7, 8, 9,</p>
+        <p>&nbsp;</p>
+        <p>While Loop</p>
+        <p>While loops are also used to execute a certain code block repeatedly, the difference is that loops continue to work until a given precondition is satisfied. The expression is checked before each execution. Once the condition results in Boolean False, the loop stops the iteration.</p>
+        <h2>Code</h2>
+        <ol>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Python program to show how to execute a while loop</li>
+        </ol>
+        <p>2.</p>
+        <ol start="3">
+          <li>b = 9</li>
+          <li>a = 2</li>
+        </ol>
+        <p>5.</p>
+        <ol start="6">
+          <li># Starting the while loop</li>
+          <li># The condition a &lt; b will be checked before each iteration</li>
+          <li><strong>while </strong>a &lt; b:</li>
+          <li><strong>print</strong>(a, end = " ")</li>
+          <li>a = a + 1</li>
+        </ol>
+        <h1>[DATA</h1>
+        <p>&nbsp;</p>
+        <p>Corolla Data Set</p>
+        <p>&nbsp;</p>
+        <p>To start, let's assume you have a dataset named <strong>`toyota_corolla_data`</strong> and we'll proceed with some basic examples using this dataset.</p>
+        <p>&nbsp;</p>
+        <p><strong>### Using if-else statements: </strong></p>
+        <p>Let's say you want to print information based on a condition:</p>
+        <p>&nbsp;</p>
+        <p># Assuming <strong>toyota_corolla_data</strong> is a list of dictionaries with car information for car in <strong>toyota_corolla_data:</strong></p>
+        <p>if car['price'] &gt; 15000:</p>
+        <p>print(f"{car['model']} is expensive.") else:</p>
+        <p>print(f"{car['model']} is affordable.")</p>
+        <p>&nbsp;</p>
+        <p>### Using a for loop:</p>
+        <p>Iterating through the dataset:</p>
+        <p>&nbsp;</p>
+        <p>for car in <strong>toyota_corolla_data:</strong> print(car['model'], car['price'])</p>
+        <p>&nbsp;</p>
+        <p>### Using a for loop with a conditional break:</p>
+        <p>Breaking the loop when a certain condition is met:</p>
+        <p>&nbsp;</p>
+        <p>for car in <strong>toyota_corolla_data:</strong> if car['year'] == 2020: print(f"Found a {car['model']} from 2020.") break</p>
+        <p>```</p>
+        <p>&nbsp;</p>
+        <p><strong>### Using a while loop: </strong></p>
+        <p><strong>Implementing a while loop for a specific condition: </strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>i = 0 while i &lt; len(toyota_corolla_data): print(toyota_corolla_data[i]['model']) i += 1</p>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

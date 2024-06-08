@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 DBMS Unit-4</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong><u>Transaction:</u></strong></p>
+        <p>A&nbsp;transaction&nbsp;is a set of logically related operations. For example, you are transferring money from your bank account to your friend&rsquo;s account, the set of operations would be like this:</p>
+        <p>Three operations can be performed in a transaction as follows.&nbsp;</p>
+        <ul>
+          <li>Read/Access data (R).&nbsp;</li>
+          <li>Write/Change data (W).</li>
+          <li></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>Simple Transaction Example</p>
+        <ol>
+          <li>Read your account balance<br /> Deduct the amount from your balance<br /> 3. Write the remaining balance to your account<br /> 4. Read your friend&rsquo;s account balance<br /> 5. Add the amount to his account balance<br /> 6. Write the new updated balance to his account</li>
+        </ol>
+        <p><u>Transaction State:</u></p>
+        <p>&nbsp;</p>
+        <p><strong><u>Properties</u></strong><strong><u>&nbsp;of transaction:</u></strong></p>
+        <p>A transaction is a very small unit of a program and it may contain several low&nbsp;level tasks. A transaction in a database system must maintain&nbsp;Atomicity,&nbsp;Consistency,&nbsp;Isolation, and&nbsp;Durability &minus; commonly known as ACID properties &minus; in order to ensure accuracy, completeness, and data integrity.</p>
+        <ul>
+          <li>Atomicity&nbsp;&minus; This property states that a transaction must be treated as an atomic unit, that is, either all of its operations are executed or none. There must be no state in a database where a transaction is left partially completed. States should be defined either before the execution of the transaction or after the execution/abortion/failure of the transaction.</li>
+          <li>Consistency&nbsp;&minus; The database must remain in a consistent state after any transaction. No transaction should have any adverse effect on the data residing in the database. If the database was in a consistent state before the execution of a transaction, it must remain consistent after the execution of the transaction as well.</li>
+          <li>Durability&nbsp;&minus; The database should be durable enough to hold all its latest updates even if the system fails or restarts. If a transaction updates a chunk of data in a database and commits, then the database will hold the modified data. If a transaction commits but the system fails before the data could be written on to the disk, then that data will be updated once the system springs back into action.</li>
+          <li>Isolation&nbsp;&minus; In a database system where more than one transaction are being executed simultaneously and in parallel, the property of isolation states that all the transactions will be carried out and executed as if it is the only transaction in the system. No transaction will affect the existence of any other transaction.</li>
+        </ul>
+        <h3><strong>&nbsp;</strong></h3>
+        <h3><strong>&nbsp;</strong></h3>
+        <h3><strong>Serializability</strong><strong>&nbsp;of transaction: </strong></h3>
+        <ul>
+          <li>Serializability is a concurrency scheme where the concurrent transaction is equivalent to one that executes the transactions serially.</li>
+          <li>A schedule is a list of transactions.</li>
+          <li>Serial schedule defines each transaction is executed consecutively without any interference from other transactions.</li>
+          <li>Non-serial schedule defines the operations from a group of concurrent transactions that are interleaved.</li>
+          <li>In non-serial schedule, if the schedule is not proper, then the problems can arise like multiple update, uncommitted dependency and incorrect analysis.</li>
+          <li>The main objective of serializability is to find non-serial schedules that allow transactions to execute concurrently without interference and produce a database state that could be produced by a serial execution.</li>
+          <li>Serializability is the process of search for a concurrent schedule who output is equal to a serial schedule where transaction are execute one after the other. Depending on the type of schedules, there are two types of serializability:</li>
+          <li>Conflict</li>
+          <li>View</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><u>Conflict serializability</u></p>
+        <ul>
+          <li>Conflict serializability defines two instructions of two different transactions accessing the same data item to perform a read/write operation.</li>
+          <li>It deals with detecting the instructions that are conflicting in any way and specifying the order in which the instructions should execute in case there is any conflict.</li>
+          <li>A conflict serializability arises when one of the instruction is a write operation.</li>
+        </ul>
+        <p>That means:</p>
+        <p>Readi(x) readj(x) - non conflict &nbsp;read-read operation</p>
+        <p>Readi(x) writej(x) - conflict &nbsp; &nbsp; &nbsp; read-write operation.</p>
+        <p>Writei(x) readj(x) - conflict &nbsp; &nbsp; &nbsp; write-read operation.</p>
+        <p>Writei(x) writej(x) - conflict &nbsp; &nbsp; &nbsp;write-write operation.</p>
+        <p><u>View serializability</u></p>
+        <ul>
+          <li>View serializability is the another type of serializability.</li>
+          <li>It can be derived by creating another schedule out of an existing schedule and involves the same set of transactions</li>
+        </ul>
+        <p>The rules it follows are as follows &minus;</p>
+        <p>T1 is reading the initial value of A, then T2 also reads the initial value of A.</p>
+        <p>T1 is the reading value written by T2, then T2 also reads the value written by T1.</p>
+        <p>T1 is writing the final value, and then T2 also has the write operation as the final value.</p>
+        <p>&nbsp;</p>
+        <p><strong>Two phase commit protocol</strong></p>
+        <p>In a local database system, for committing a transaction, the transaction manager has to only convey the decision to commit to the recovery manager. However, in a distributed system, the transaction manager should convey the decision to commit to all the servers in the various sites where the transaction is being executed and uniformly enforce the decision. When processing is complete at each site, it reaches the partially committed transaction state and waits for all other transactions to reach their partially committed states. When it receives the message that all the sites are ready to commit, it starts to commit. In a distributed system, either all sites commit or none of them does.</p>
+        <p>The different distributed commit protocols are &minus;</p>
+        <ul>
+          <li>One-phase commit</li>
+          <li>Two-phase commit</li>
+        </ul>
+        <p><u>Distributed One-phase Commit</u></p>
+        <p>Distributed one-phase commit is the simplest commit protocol. Let us consider that there is a controlling site and a number of slave sites where the transaction is being executed. The steps in distributed commit are &minus;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>After each slave has locally completed its transaction, it sends a &ldquo;DONE&rdquo; message to the controlling site.</li>
+          <li>The slaves wait for &ldquo;Commit&rdquo; or &ldquo;Abort&rdquo; message from the controlling site. This waiting time is called&nbsp;window of vulnerability.</li>
+          <li>When the controlling site receives &ldquo;DONE&rdquo; message from each slave, it makes a decision to commit or abort. This is called the commit point. Then, it sends this message to all the slaves.</li>
+          <li>On receiving this message, a slave either commits or aborts and then sends an acknowledgement message to the controlling site.</li>
+        </ul>
+        <p><u>Distributed Two-phase Commit</u></p>
+        <p>Distributed two-phase commit reduces the vulnerability of one-phase commit protocols. The steps performed in the two phases are as follows &minus;</p>
+        <p>Phase 1: Prepare Phase</p>
+        <ul>
+          <li>After each slave has locally completed its transaction, it sends a &ldquo;DONE&rdquo; message to the controlling site. When the controlling site has received &ldquo;DONE&rdquo; message from all slaves, it sends a &ldquo;Prepare&rdquo; message to the slaves.</li>
+          <li>The slaves vote on whether they still want to commit or not. If a slave wants to commit, it sends a &ldquo;Ready&rdquo; message.</li>
+          <li>A slave that does not want to commit sends a &ldquo;Not Ready&rdquo; message. This may happen when the slave has conflicting concurrent transactions or there is a timeout.</li>
+        </ul>
+        <p>Phase 2: Commit/Abort Phase</p>
+        <ul>
+          <li>After the controlling site has received &ldquo;Ready&rdquo; message from all the slaves &minus;</li>
+          <li>The controlling site sends a &ldquo;Global Commit&rdquo; message to the slaves.</li>
+          <li>The slaves apply the transaction and send a &ldquo;Commit ACK&rdquo; message to the controlling site.</li>
+          <li>When the controlling site receives &ldquo;Commit ACK&rdquo; message from all the slaves, it considers the transaction as committed.</li>
+          <li>After the controlling site has received the first &ldquo;Not Ready&rdquo; message from any slave &minus;</li>
+          <li>The controlling site sends a &ldquo;Global Abort&rdquo; message to the slaves.</li>
+          <li>The slaves abort the transaction and send a &ldquo;Abort ACK&rdquo; message to the controlling site.</li>
+          <li>When the controlling site receives &ldquo;Abort ACK&rdquo; message from all the slaves, it considers the transaction as aborted.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>Deadlock</strong></p>
+        <p>A deadlock is a condition where two or more transactions are waiting indefinitely for one another to give up locks. Deadlock is said to be one of the most feared complications in DBMS as no task ever gets finished and is in waiting state forever.</p>
+        <p>For example:&nbsp;In the student table, transaction T1 holds a lock on some rows and needs to update some rows in the grade table. Simultaneously, transaction T2 holds locks on some rows in the grade table and needs to update the rows in the Student table held by Transaction T1.</p>
+        <p>&nbsp;</p>
+        <p><u>Deadlock Avoidance</u></p>
+        <p>When a database is stuck in a deadlock state, then it is better to avoid the database rather than aborting or restating the database. This is a waste of time and resource.&nbsp;Deadlock avoidance mechanism is used to detect any deadlock situation in advance. A method like "wait for graph" is used for detecting the deadlock situation but this method is suitable only for the smaller database. For the larger database, deadlock prevention method can be used.</p>
+        <p>Deadlock Detection</p>
+        <p>In a database, when a transaction waits indefinitely to obtain a lock, then the DBMS should detect whether the transaction is involved in a deadlock or not. The lock manager maintains a Wait for the graph to detect the deadlock cycle in the database.</p>
+        <p>Deadlock Prevention</p>
+        <p>It is imperative to prevent a deadlock before it can occur. So, the system rigorously checks each transaction before it is executed to make sure it does not lead to deadlock. If there is even a chance that a transaction may lead to deadlock, it is never allowed to execute.</p>
+        <p>There are some deadlock prevention schemes that use timestamps in order to make sure that deadlock does not occur. These are &minus;</p>
+        <ul>
+          <li>Wait - Die Scheme
+            <ul>
+              <li>In the wait - die scheme, if a transaction T1 requests for a resource that is held by transaction T2, one of the following two possibilities may occur:</li>
+              <li>TS(T1) &lt; TS(T2) - If T1 is older than T2 i.e T1 came in the system earlier than T2, then it is allowed to wait for the resource which will be free when T2 has completed its execution.</li>
+              <li>TS(T1) &gt; TS(T2) - If T1 is younger than T2 i.e T1 came in the system after T2, then T1 is killed. It is restarted later with the same timestamp.</li>
+            </ul>
+          </li>
+          <li>Wound - Wait Scheme
+            <ul>
+              <li>In the wound - wait scheme, if a transaction T1 requests for a resource that is held by transaction T2, one of the following two possibilities may occur:</li>
+              <li>TS(T1) &lt; TS(T2) - If T1 is older than T2 i.e T1 came in the system earlier than T2, then it is allowed to roll back T2 or wound T2. Then T1 takes the resource and completes its execution. T2 is later restarted with the same timestamp.</li>
+              <li>TS(T1) &gt; TS(T2) - If T1 is younger than T2 i.e T1 came in the system after T2, then it is allowed to wait for the resource which will be free when T2 has completed its execution.</li>
+            </ul>
+          </li>
+        </ul>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Two phase commit protocol</strong></p>
+        <p>We have discussed briefly the&nbsp;<a href="https://www.geeksforgeeks.org/dbms-concurrency-control-protocols-lock-based-protocol/">first type of Concurrency Control Protocol</a>, i.e., Lock-based Protocol.&nbsp;</p>
+        <p>Now, recalling where we last left off, there are two types of Locks available&nbsp;Shared S(a)&nbsp;and&nbsp;Exclusive X(a). Implementing this lock system without any restrictions gives us the Simple Lock-based protocol (or&nbsp;Binary Locking), but it has its own disadvantages, they do&nbsp;not guarantee Serializability. Schedules may follow the preceding rules but a non-serializable schedule may result.&nbsp;</p>
+        <p>To guarantee serializability, we must follow some additional protocol&nbsp;concerning the positioning of locking and unlocking operations&nbsp;in every transaction. This is where the concept of Two-Phase Locking(2-PL) comes into the picture, 2-PL ensures serializability. Now, let&rsquo;s dig deep!&nbsp;</p>
+        <p><strong><u>Two-Phase Locking &ndash;</u></strong></p>
+        <p>A transaction is said to follow the Two-Phase Locking protocol if Locking and Unlocking can be done in two phases.&nbsp;</p>
+        <p><u>Growing Phase</u>:&nbsp;New locks on data items may be acquired but none can be released.</p>
+        <p><u>Shrinking Phase</u>:&nbsp;Existing locks may be released but no new locks can be acquired.</p>
+        <p>Note &ndash;&nbsp;If lock conversion is allowed, then upgrading of lock( from S(a) to X(a) ) is allowed in the Growing Phase, and downgrading of lock (from X(a) to S(a)) must be done in shrinking phase.&nbsp;</p>
+        <p>Let&rsquo;s see a transaction implementing 2-PL.&nbsp;</p>
+        <p>&nbsp;</p>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+              <td>
+                <p>T1</p>
+              </td>
+              <td>
+                <p>T2</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>1</p>
+              </td>
+              <td>
+                <p>lock-S(A)</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>2</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+              <td>
+                <p>lock-S(A)</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>3</p>
+              </td>
+              <td>
+                <p>lock-X(B)</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>4</p>
+              </td>
+              <td>
+                <p>&hellip;&hellip;.</p>
+              </td>
+              <td>
+                <p>&hellip;&hellip;</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>5</p>
+              </td>
+              <td>
+                <p>Unlock(A)</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+              <td>
+                <p>Lock-X(C)</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>7</p>
+              </td>
+              <td>
+                <p>Unlock(B)</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>8</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+              <td>
+                <p>Unlock(A)</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>9</p>
+              </td>
+              <td>
+                <p>&nbsp;</p>
+              </td>
+              <td>
+                <p>Unlock(C)</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>10</p>
+              </td>
+              <td>
+                <p>&hellip;&hellip;.</p>
+              </td>
+              <td>
+                <p>&hellip;&hellip;</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>This is just a skeleton transaction that shows how unlocking and locking work with 2-PL. Note for:&nbsp;<br />Transaction T1:</p>
+        <ul>
+          <li>The growing Phase is from steps 1-3.</li>
+          <li>The shrinking Phase is from steps 5-7.</li>
+          <li>Lock Point at 3</li>
+        </ul>
+        <p>Transaction T2:</p>
+        <ul>
+          <li>The growing Phase is from steps 2-6.</li>
+          <li>The shrinking Phase is from steps 8-9.</li>
+          <li>Lock Point at 6</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>NoSQL Database</strong><strong>&nbsp;:</strong></p>
+        <p>Introduction:</p>
+        <ul>
+          <li>NoSQL Database is used to refer a non-SQL or non relational database.</li>
+          <li>A database is a collection of structured data or information which is stored in a computer system and can be accessed easily. A database is usually managed by a Database Management System (DBMS).</li>
+          <li>NoSQL is a non-relational database that is used to store the data in the nontabular form. NoSQL stands for Not only SQL. The main types are documents, key-value, wide-column, and graphs.&nbsp;</li>
+          <li>It provides a mechanism for storage and retrieval of data other than tabular relations model used in relational databases. NoSQL database doesn't use tables for storing data. It is generally used to store big data and real-time web applications.</li>
+        </ul>
+        <p>Types of NoSQL Database:</p>
+        <ul>
+          <li>Document-based databases</li>
+          <li>Key-value stores</li>
+          <li>Column-oriented databases</li>
+          <li>Graph-based databases</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>CURD Operation:</strong></p>
+        <p>Any organizations that tracks data&nbsp;(like accounts, payment information, or other records)&nbsp;need systems that provide persistent storage, which is usually organized into a database. A relational database consists of data organized by rows and columns. They can be connected to other tables using primary and&nbsp;<a href="https://www.educative.io/blog/what-is-foreign-key-database">foreign keys</a>.</p>
+        <p>CRUD (create, read, update, delete) is an acronym that refers to the&nbsp;four functions&nbsp;we use to implement persistent storage applications and relational database applications, including the Oracle Database, Microsoft SQL Server, and&nbsp;<a href="https://www.educative.io/blog/mysql-tutorial">MySQL</a>.</p>
+        <p>The term CRUD is strongly connected with managing digital data. To be more precise, CRUD refers to an&nbsp;acronym&nbsp;of four fundamental operators of persistent database applications:</p>
+        <ul>
+          <li>Create (create a dataset)</li>
+          <li>Read or&nbsp;Retrieve (read datasets)</li>
+          <li>Update (update datasets)</li>
+          <li>Delete or&nbsp;Destroy (destroy datasets)</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Data Mining</strong></p>
+        <p>Data mining refers to extracting or mining knowledge from large amounts of data. It is the computational&nbsp; process of discovering patterns in large data sets involving methods at the intersection of artificial&nbsp; intelligence, machine learning, statistics, and database systems.&nbsp;</p>
+        <p>The overall goal of the data mining process is to extract information from a data set and transform it into&nbsp; an understandable structure for further use.&nbsp;&nbsp;</p>
+        <p>The database is an organized collection of related data. When we store a large amount of data (<a href="https://t4tutorials.com/hadoop-mcqs-big-data-science/">big data</a>), then it is very difficult to extract the information from this big data. Data mining is a technique to extract useful information from data. Data is meaningless for a user. So, we need to mine the data. Recently&nbsp;<a href="https://t4tutorials.com/what-is-data-mining-what-is-not-data-mining/">data mining</a>&nbsp;is used widely to explore the data. Data mining is very useful for business analytics.</p>
+        <p>The key properties of data mining are&nbsp;&nbsp;</p>
+        <ul>
+          <li>Automatic discovery of patterns&nbsp;&nbsp;</li>
+          <li>Prediction of likely outcomes&nbsp;&nbsp;</li>
+          <li>Creation of actionable information&nbsp;&nbsp;</li>
+          <li>Focus on large datasets and databases</li>
+        </ul>
+        <p><u>Data mining techniques</u></p>
+        <ul>
+          <li>Association rules:&nbsp;An association rule is a rule-based method for finding relationships between variables in a given data These methods are frequently used for market basket analysis, allowing companies to better understand relationships between different products. Understanding consumption habits of customers enables businesses to develop better cross-selling strategies and recommendation engines.</li>
+          <li>Neural networks:&nbsp;Primarily leveraged for deep learning algorithms,&nbsp;<a href="https://www.ibm.com/cloud/learn/neural-networks">neural networks</a>process training data by mimicking the inter connectivity&nbsp;of the human brain through layers of nodes. Each node is made up of inputs, weights, a bias (or threshold), and an output. If that output value exceeds a given threshold, it &ldquo;fires&rdquo; or activates the node, passing data to the next layer in the network. Neural networks learn this mapping function through supervised learning, adjusting based on the loss function through the process of gradient descent. When the cost function is at or near zero, we can be confident in the model&rsquo;s accuracy to yield the correct answer.</li>
+          <li>Decision tree:&nbsp;This data mining technique uses classification or regression methods to classify or predict potential outcomes based on a set of decisions. As the name suggests, it uses a tree-like visualization to represent the potential outcomes of these decisions.</li>
+          <li>K- nearest neighbor (KNN):&nbsp;K-nearest neighbor, also known as the KNN algorithm, is a non-parametric algorithm that classifies data points based on their proximity and association to other available data. This algorithm assumes that similar data points can be found near each other. As a result, it seeks to calculate the distance between data points, usually through Euclidean distance, and then it assigns a category based on the most frequent category or average.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>XML</strong></p>
+        <p>XML database is a data persistence software system used for storing the huge amount of information in XML format. It provides a secure place to store XML documents.&nbsp;You can query your stored data by using XQuery, export and serialize into desired format. XML databases are usually associated with document-oriented databases.</p>
+        <p><u>Types of XML databases</u></p>
+        <p>There are two types of XML databases.</p>
+        <ul>
+          <li>XML-enabled database</li>
+          <li>Native XML database (NXD)</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>XML-enable Database</p>
+        <p>XML-enable database works just like a relational database. It is like an extension provided for the conversion of XML documents. In this database, data is stored in table, in the form of rows and columns.</p>
+        <p>Native XML Database</p>
+        <p>Native XML database is used to store large amount of data. Instead of table format, Native XML database is based on container format. You can query data by XPath expressions.</p>
+        <p>Native XML database is preferred over XML-enable database because it is highly capable to store, maintain and query XML documents.</p>
+        <p><u>Example:</u></p>
+        <p>&lt;?xml version = "1.0"?&gt;&lt;contact-info&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&lt;contact1&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;Tanmay Patil&lt;/name&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;company&gt;TutorialsPoint&lt;/company&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;phone&gt;(011) 123-4567&lt;/phone&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&lt;/contact1&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&lt;contact2&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;Manisha Patil&lt;/name&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;company&gt;TutorialsPoint&lt;/company&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;phone&gt;(011) 789-4567&lt;/phone&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&lt;/contact2&gt;&lt;/contact-info&gt;</p>
+        <p><strong>&nbsp;</strong></p>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

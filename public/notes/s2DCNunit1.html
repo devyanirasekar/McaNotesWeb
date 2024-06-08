@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 DCN unit-1</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><b>UNIT-1</b></p>
+        <p><strong>&nbsp;</strong></p>
+        <p><b>DATA COMMUNICATIONS</b></p>
+        <p>&nbsp;</p>
+        <p>When we communicate, we are sharing information. This sharing can be local or remote. Between individuals, local communication usually occurs face to face, while remote communication takes place over distance. The term telecommunication, which includes telephony, telegraphy, and television, means communication at a distance . The word data refers to information presented in whatever form is agreed upon by the parties creating and using the data. Data communications are the exchange of data between two devices via some form of transmission medium such as a wire cable.</p>
+        <p>&nbsp;</p>
+        <p>For data communications to occur, the communicating devices must be part of a communication system made up of a combination of hardware (physical equipment) and software (programs).</p>
+        <p>&nbsp;</p>
+        <p>The effectiveness of a data communications system depends on four fundamental characteristics: delivery, accuracy, timeliness, and jitter.</p>
+        <ol>
+          <li><strong>Delivery</strong>. The system must deliver data to the correct destination. Data must be received by the intended device or user and only by that device or user.</li>
+          <li>&nbsp;The system must deliver the data accurately. Data that have been altered in transmission and left uncorrected are unusable.</li>
+        </ol>
+        <ul>
+          <li>&nbsp;The system must deliver data in a timely manner. Data delivered late are useless. In the case of video and audio, timely delivery means delivering data as they are produced, in the same order that they are produced, and without significant delay. This kind of delivery is called real-time transmission.</li>
+        </ul>
+        <ol>
+          <li><strong>Jitter</strong>. Jitter refers to the variation in the packet arrival time. It is the uneven delay in the delivery of audio or video packets. For example, let us assume that video packets are sent every 3D ms. Ifsome of the packets arrive with 3D-ms delay and others with 4D-ms delay, an uneven quality in the video is the result.</li>
+        </ol>
+        <p><strong>Components </strong></p>
+        <p>A data communications system has five components</p>
+        <p>&nbsp;</p>
+        <p>Figure 1.1 Five components ofdata communication :</p>
+        <ol>
+          <li><strong>Message</strong>. The message is the information (data) to be communicated. Popular forms of information include text, numbers, pictures, audio, and video.</li>
+          <li><strong>Sender</strong>. The sender is the device that sends the data message. It can be a computer, workstation, telephone handset, video camera, and so on.</li>
+        </ol>
+        <ul>
+          <li><strong>Receiver</strong>. The receiver is the device that receives the message. It can be a computer, workstation, telephone handset, television, and so on.</li>
+        </ul>
+        <ol>
+          <li><strong>Transmission medium</strong>. The transmission medium is the physical path by which a message travels from sender to receiver. Some examples of transmission media include twisted-pair wire, coaxial cable, fiber-optic cable, and radio waves.</li>
+          <li><strong>Protocol</strong>. A protocol is a set of rules that govern data communications. It represents an agreement between the communicating devices. Without a protocol, two devices may be connected but not communicating, just as a person speaking French cannot be understood by a person who speaks only Japanese.</li>
+        </ol>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>NETWORKS </strong></p>
+        <p>A network is a set of devices (often referred to as nodes) connected by communication links. A node can be a computer, printer, or any other device capable of sending and/or receiving data generated by other nodes on the network.</p>
+        <p>&nbsp;Distributed Processing: &nbsp;Most networks use distributed processing, in which a task is divided among multiple computers. Instead of one single large machine being responsible for all aspects of process, separate computers (usually a personal computer or workstation) handle a subset.</p>
+        <p>Network Criteria A network must be able to meet a certain number of criteria. The most important of these are performance, reliability, and security.</p>
+        <p><strong>Performance </strong></p>
+        <p>Performance can be measured in many ways, including transit time and response time. Transit time is the amount of time required for a message to travel from one device to another. Response time is the elapsed time between an inquiry and a response. The performance of a network depends on a number of factors, including the number of users, the type of transmission medium, the capabilities of the connected hardware, and the efficiency of the software. Performance is often evaluated by two networking metrics: throughput and delay. We often need more throughputs and less delay. However, these two criteria are often contradictory. If we try to send more data to the network, we may increase throughput but we increase the delay because of traffic congestion in the network.</p>
+        <p><strong>Reliability </strong></p>
+        <p>In addition to accuracy of delivery, network reliability is measured by the frequency of failure, the time it takes a link to recover from a failure, and the network's robustness in a catastrophe.</p>
+        <p><strong>&nbsp;Security</strong></p>
+        <p>&nbsp;Network security issues include protecting data from unauthorized access, protecting data from damage and development, and implementing policies and procedures for recovery from breaches and data losses.</p>
+        <p><strong>Categories of Networks </strong></p>
+        <p>Today when we speak of networks, we are generally referring to two primary categories: local-area networks and wide-area networks. The category into which a network falls is determined by its size. A LAN normally covers an area less than 2 mi; a WAN can be worldwide. Networks of a size in between are normally referred to as metropolitanarea networks and span tens of miles.</p>
+        <p><strong>Local Area Network: </strong></p>
+        <p>A local area network (LAN) is usually privately owned and links the devices in a single office, building, or campus (see Figure 1.10). Depending on the needs of an organization and the type of technology used, a LAN can be as simple as two PCs and a printer in someone's home office; or it can extend throughout a company and include audio and video peripherals. Currently, LAN size is limited to a few kilometres.</p>
+        <p>LANs are designed to allow resources to be shared between personal computers or workstations. The resources to be shared can include hardware (e.g., a printer), software (e.g., an application program), or data. A common example of a LAN, found in many business environments, links a workgroup of task-related computers, for example, engineering workstations or accounting PCs. One of the computers may be given a large capacity disk drive and may become a server to clients. Software can be stored on this central server and used as needed by the whole group. The size of the LAN may be determined by licensing restrictions on the number of users per copy of software, or by restrictions on the number of users licensed to access the operating system.</p>
+        <p><strong>Wide Area Network </strong></p>
+        <p>A wide area network (WAN) provides long-distance transmission of data, image, audio, and video information over large geographic areas that may comprise a country, a continent, or even the whole world. A WAN can be as complex as the backbones that connect the Internet or as simple as a dial-up line that connects a home computer to the Internet. We normally refer to the first as a switched WAN and to the second as a point-to-point WAN ). The switched WAN connects the end systems, which usually comprise a router (internetworking connecting device) that connects to another LAN or WAN. The point-to-point WAN is normally a line leased from a telephone or cable TV provider that connects a home computer or a small LAN to an Internet service provider (lSP). This type of WAN is often used to provide Internet access.</p>
+        <p><strong>Metropolitan Area Networks </strong></p>
+        <p>A metropolitan area network (MAN) is a network with a size between a LAN and a WAN. It normally covers the area inside a town or a city. It is designed for customers who need a high-speed connectivity, normally to the Internet, and have endpoints spread over a city or part of city. A good example of a MAN is the part of the telephone company network that can provide a high-speed DSL line to the customer. Another example is the cable TV network that originally was designed for cable TV, but today can also be used for high-speed data connection to the Internet.</p>
+        <p><strong>PROTOCOLS AND STANDARDS </strong></p>
+        <p>&nbsp;We define two widely used terms: protocols and standards. First, we define protocol, which is synonymous with rule. Then we discuss standards, which are agreed-upon rules. Protocols In computer networks, communication occurs between entities in different systems. An entity is anything capable of sending or receiving information. However, two entities cannot simply send bit streams to each other and expect to be understood. For communication to occur, the entities must agree on a protocol. A protocol is a set of rules that govern data communications.</p>
+        <p>A protocol defines what is communicated, how it is communicated, and when it is communicated. The key elements of a protocol are syntax, semantics, and timing. o Syntax. The term syntax refers to the structure or format of the data, meaning the order in which they are presented. For example, a simple protocol might expect the first 8 bits of data to be the address of the sender, the second 8 bits to be the address of the receiver, and the rest of the stream to be the message itself. o Semantics. The word semantics refers to the meaning of each section of bits. How is a particular pattern to be interpreted, and what action is to be taken based on that interpretation?</p>
+        <p>For example, does an address identify the route to be taken or the final destination of the message? o Timing. The term timing refers to two characteristics: when data should be sent and how fast they can be sent. For example, if a sender produces data at 100 Mbps but the receiver can process data at only 1 Mbps, the transmission will overload the receiver and some data will be lost. Standards are essential in creating and maintaining an open and competitive market for equipment manufacturers and in guaranteeing national and international interoperability of data and telecommunications technology and processes. Standards provide guidelines to manufacturers, vendors, government agencies, and other service providers to ensure the kind of interconnectivity necessary in today's marketplace and in international communications. Data communication standards fall into two categories: de facto (meaning "by fact" or "by convention") and de jure (meaning "by law" or "by regulation").</p>
+        <p><strong>o De facto</strong>. Standards that have not been approved by an organized body but have been adopted as standards through widespread use are de facto standards. De facto standards are often established originally by manufacturers who seek to define the functionality of a new product or technology.</p>
+        <p>&nbsp;<strong>o De jure.</strong>&nbsp;Those standards that have been legislated by an officially recognized body are de jure standards.</p>
+        <p><strong>&nbsp;Standards Organizations</strong></p>
+        <p>&nbsp;Standards are developed through the cooperation of standards creation committees, forums, and government regulatory agencies.</p>
+        <p>Standards Creation Committees While many organizations are dedicated to the establishment of standards, data telecommunications in North America rely primarily on those published by the following:</p>
+        <p><strong>o International Organization for Standardization (ISO).</strong>&nbsp;The ISO is a multinational body whose membership is drawn mainly from the standards creation committees of various governments throughout the world. The ISO is active in developing cooperation in the realms of scientific, technological, and economic activity.</p>
+        <p><strong>&nbsp;o International Telecommunication Union-Telecommunication Standards Sector (ITU-T</strong>). By the early 1970s, a number of countries were defining national standards for telecommunications, but there was still little international compatibility. The United Nations responded by forming, as part of its International Telecommunication Union (ITU), a committee, the Consultative Committee for International Telegraphy and Telephony (CCITT). This committee was devoted to the research and establishment of standards for telecommunications in general and for phone and data systems in particular. On March 1, 1993, the name of this committee was changed to the International Telecommunication UnionTelecommunication Standards Sector (ITU-T).</p>
+        <p><strong>o American National Standards Institute (ANSI).</strong>&nbsp;Despite its name, the American National Standards Institute is a completely private, nonprofit corporation not affiliated with the U.S. federal government. However, all ANSI activities are undertaken with the welfare of the United States and its citizens occupying primary importance.</p>
+        <p>&nbsp;<strong>o Institute of Electrical and Electronics Engineers (IEEE). </strong>The Institute of Electrical and Electronics Engineers is the largest professional engineering society in the world. International in scope, it aims to advance theory, creativity, and product quality in the fields of electrical engineering, electronics, and radio as well as in all related branches of engineering. As one of its goals, the IEEE oversees the development and adoption of international standards for computing and communications.</p>
+        <p><strong>o Electronic Industries Association (EIA</strong>). Aligned with ANSI, the Electronic Industries Association is a nonprofit organization devoted to the promotion of electronics manufacturing concerns. Its activities include public awareness education and lobbying efforts in addition to standards development. In the field of information technology, the EIA has made significant contributions by defining physical connection interfaces and electronic signaling specifications for data communication.</p>
+        <p>&nbsp;</p>
+        <p><strong>Line Configuration in Computer Networks</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>A network is two or more devices connected through a link. A link is a communication pathway that transfers data from one device to another. Devices can be a computer, printer, or any other device that is capable to send and receive data. For visualization purposes, imagine any link as a line drawn between two points.&nbsp;</p>
+        <p>For communication to occur, two devices must be connected in some way to the same link at the same time. There are two possible types of connections:&nbsp;</p>
+        <ol>
+          <li><strong>Point-to-Point Connection</strong></li>
+          <li><strong>Multipoint Connection</strong></li>
+        </ol>
+        <p>&nbsp;</p>
+        <p><strong>Point-to-Point Connection:</strong>&nbsp;&nbsp;</p>
+        <ol>
+          <li>A point-to-point connection provides a dedicated link between two devices.</li>
+          <li>The entire capacity of the link is reserved for transmission between those two devices.</li>
+          <li>Most point-to-point connections use an actual length of wire or cable to connect the two ends, but other options such as microwave or satellite links are also possible.</li>
+          <li>Point to point network topology is considered to be one of the easiest and most conventional networks&nbsp;topologies. It is also the simplest to establish and understand.</li>
+        </ol>
+        <p>Example: Point-to-Point connection between the remote control and Television for changing the channels.</p>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Advantages of Point-to-Point Connection:</strong></p>
+        <ol>
+          <li><strong>High Bandwidth:</strong>A point-to-point connection provides a dedicated link between two devices, which means that the entire capacity of the link is reserved for the two devices. As a result, point-to-point connections usually offer high bandwidth, which makes them suitable for transferring large amounts of data quickly.</li>
+          <li><strong>Security:</strong>Point-to-point connections are more secure than multipoint connections because the link is dedicated to only two devices. There is no risk of other devices eavesdropping on the communication or interfering with it in any way.</li>
+          <li><strong>Reliability:</strong>Because a point-to-point connection provides a dedicated link between two devices, it is usually more reliable than a shared link. If there is a problem with the link, it is easier to troubleshoot and fix because there are only two devices involved.</li>
+          <li><strong>Reduced Latency:</strong>Point-to-point connections offer lower latency than multipoint connections because there is no contention for the link. This means that data can be transmitted more quickly, which is especially important for real-time applications such as video conferencing or online gaming.</li>
+          <li><strong>Increased Control:</strong>Point-to-point connections provide greater control over network traffic and bandwidth allocation. This allows for more efficient use of network resources and can help to prevent issues such as network congestion and bottlenecks.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p><strong>Disadvantages of Point-to-Point Connection:</strong></p>
+        <ol>
+          <li><strong>Cost:</strong>Setting up a point-to-point connection can be more expensive than setting up a shared link. This is because a dedicated link requires its own infrastructure, such as cables, routers, and switches.</li>
+          <li><strong>Scalability:</strong>Point-to-point connections are not easily scalable, as they require a separate link for each pair of devices. This can be a limitation for large networks that require many devices to be connected.</li>
+          <li><strong>Maintenance:</strong>Because a point-to-point connection provides a dedicated link between two devices, it requires more maintenance than a shared link. If there is a problem with the link, it is the responsibility of the network administrator to troubleshoot and fix it.</li>
+          <li><strong>Limited Flexibility:&nbsp;</strong>Point-to-point connections offer limited flexibility compared to multipoint connections because they only allow communication between two devices. This can be a limitation for applications that require collaboration or coordination between multiple devices.</li>
+          <li><strong>Time-consuming Installation:</strong>Setting up a point-to-point connection can be time-consuming, as it requires a dedicated link to be established between two devices. This can be a disadvantage in situations where time is critical, such as in emergency response situations.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Multipoint Connection :</strong>&nbsp;&nbsp;</p>
+        <ol>
+          <li>It is also called Multidrop configuration. In this connection, two or more devices share a single link.</li>
+          <li>If more than two devices share the link then the channel is considered a &lsquo;shared channel&rsquo;. With shared capacity, there can be two possibilities in a Multipoint Line configuration:</li>
+        </ol>
+        <p><strong>Spatial Sharing:</strong>&nbsp;If several devices can share the link simultaneously, it&rsquo;s called Spatially shared line configuration.&nbsp;</p>
+        <p><strong>Temporal (Time) Sharing:</strong>&nbsp;If users must take turns using the link, then it&rsquo;s called Temporally shared or Time Shared Line configuration.&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Advantages of Multipoint Connection:</strong></p>
+        <ol>
+          <li><strong>Cost-Effective:</strong>Multipoint connections are usually less expensive than point-to-point connections because they allow multiple devices to share the same resources, such as cables, routers, and switches.</li>
+          <li><strong>Scalability:</strong>Multipoint connections are more scalable than point-to-point connections because they allow multiple devices to be connected to the same link. This makes them suitable for large networks that require many devices to be connected.</li>
+          <li><strong>Flexibility:</strong>Multipoint connections are more flexible than point-to-point connections because they allow multiple devices to communicate with each other over the same link. This makes them suitable for applications that require collaboration or coordination between multiple devices.</li>
+          <li><strong>Increased Efficiency:</strong>Multipoint connections can improve network efficiency by allowing multiple devices to transmit data simultaneously. This reduces the chances of network congestion and improves overall network performance.</li>
+          <li><strong>Simplified Management:</strong>Multipoint connections simplify network management by reducing the number of physical connections that need to be managed. This reduces the complexity of network administration and makes it easier to troubleshoot problems.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p><strong>Disadvantages of Multipoint Connection:</strong></p>
+        <ol>
+          <li><strong>Limited Bandwidth:</strong>Multipoint connections usually offer limited bandwidth because the link is shared by multiple devices. As a result, the speed of the link may be affected by the number of devices using it.</li>
+          <li><strong>Security:&nbsp;</strong>Multipoint connections are less secure than point-to-point connections because the link is shared by multiple devices. There is a risk of other devices eavesdropping on the communication or interfering with it in some way.</li>
+          <li><strong>Reliability:</strong>Multipoint connections are less reliable than point-to-point connections because the link is shared by multiple devices. If there is a problem with the link, it can affect multiple devices, which can be difficult to troubleshoot and fix.</li>
+          <li><strong>Latency:&nbsp;</strong>Multipoint connections may have higher latency than point-to-point connections due to the increased number of devices accessing the same link. This can lead to delays in data transmission and affect the overall performance of the network.</li>
+          <li><strong>Complexity:&nbsp;</strong>Multipoint connections can be more complex to set up and configure than point-to-point connections. This is because multiple devices need to be connected and configured to work together on the same link, which can be challenging to manage.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p><strong>Network Topology</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>n Computer Network ,there are various ways through which different components are connected to one another.&nbsp;<strong>Network Topology</strong>&nbsp;is the way that defines the structure, and how these components are connected to each other.</p>
+        <p>&nbsp;</p>
+        <h2><strong>Types of Network Topology</strong></h2>
+        <p>The arrangement of a network that comprises nodes and connecting lines via sender and receiver is referred to as&nbsp;<strong>Network Topology</strong>. The various network topologies are:</p>
+        <ul>
+          <li>Mesh Topology</li>
+          <li>Star Topology</li>
+          <li>Bus Topology</li>
+          <li>Ring Topology</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3><strong>Mesh Topology</strong></h3>
+        <p>In a mesh topology, every device is connected to another device via a particular channel.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Advantages of Mesh Topology</strong></p>
+        <ul>
+          <li>Communication is very fast between the nodes.</li>
+          <li>Mesh Topology is robust.</li>
+          <li>The fault is diagnosed easily. Data is reliable because data is transferred among the devices through dedicated channels or links.</li>
+          <li>Provides security and privacy.</li>
+        </ul>
+        <p><strong>Drawbacks of Mesh Topology</strong></p>
+        <ul>
+          <li>Installation and configuration are difficult.</li>
+          <li>The cost of cables is high as bulk wiring is required, hence suitable for less number of devices.</li>
+          <li>The cost of maintenance is high.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3><strong>Star Topology</strong></h3>
+        <p>In&nbsp;<a href="https://www.geeksforgeeks.org/difference-between-star-and-ring-topology/"><u>Star Topology</u></a>, all the devices are connected to a single hub through a cable. This hub is the central node and all other nodes are connected to the central node. The hub can be passive in nature i.e., not an intelligent hub such as broadcasting devices, at the same time the hub can be intelligent known as an active hub.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Advantages of Star Topology</strong></p>
+        <ul>
+          <li>If N devices are connected to each other in a star topology, then the number of cables required to connect them is N. So, it is easy to set up.</li>
+          <li>Each device requires only 1 port i.e. to connect to the hub, therefore the total number of ports required is N.</li>
+          <li>It is Robust. If one link fails only that link will affect and not other than that.</li>
+          <li>Easy to fault identification and fault isolation.</li>
+          <li>Star topology is cost-effective as it uses inexpensive coaxial cable.</li>
+        </ul>
+        <p><strong>Drawbacks of Star Topology</strong></p>
+        <ul>
+          <li>If the concentrator (hub) on which the whole topology relies fails, the whole system will crash down.</li>
+          <li>The cost of installation is high.</li>
+          <li>Performance is based on the single concentrator i.e. hub.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3><strong>Bus Topology</strong></h3>
+        <p><a href="https://www.geeksforgeeks.org/difference-between-star-topology-and-bus-topology/"><u>Bus Topology</u></a>&nbsp;is a network type in which every computer and network device is connected to a single cable. It is bi-directional.&nbsp;It is a multi-point connection and a non-robust topology because if the backbone fails the topology crashes.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Advantages of Bus Topology</strong></p>
+        <ul>
+          <li>If N devices are connected to each other in a bus topology, then the number of cables required to connect them is 1, known as backbone cable, and N drop lines are required.</li>
+          <li>Coaxial or twisted pair cables are mainly used in bus-based networks that support up to 10 Mbps.</li>
+          <li>The cost of the cable is less compared to other topologies, but it is used to build small networks.</li>
+          <li>Bus topology is familiar technology as installation and troubleshooting techniques are well known.</li>
+          <li><a href="https://www.geeksforgeeks.org/carrier-sense-multiple-access-csma/"><u>CSMA</u></a>is the most common method for this type of topology.</li>
+        </ul>
+        <p><strong>&nbsp;Drawbacks of &nbsp;Bus Topology</strong></p>
+        <ul>
+          <li>A bus topology is quite simpler, but still, it requires a lot of cabling.</li>
+          <li>If the common cable fails, then the whole system will crash down.</li>
+          <li>If the network traffic is heavy, it increases collisions in the network. To avoid this, various protocols are used in the MAC layer known as Pure Aloha, Slotted Aloha, CSMA/CD, etc.</li>
+          <li>Adding new devices to the network would slow down networks.</li>
+          <li>Security is very low.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3><strong>Ring Topology</strong></h3>
+        <p>In a&nbsp;<a href="https://www.geeksforgeeks.org/difference-between-ring-topology-and-tree-topology/"><u>Ring Topology</u></a>, it forms a ring connecting devices with exactly two neighboring devices. A number of repeaters are used for Ring topology with a large number of nodes, because if someone wants to send some data to the last node in the ring topology with 100 nodes, then the data will have to pass through 99 nodes to reach the 100th node. Hence to prevent data loss repeaters are used in the network.</p>
+        <p>The data flows in one direction, i.e. it is unidirectional, but it can be made bidirectional by having 2 connections between each Network Node, it is called&nbsp;Dual Ring Topology. In-Ring Topology, the Token Ring Passing protocol is used by the workstations to transmit the data.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p><strong>Advantages of Ring Topology</strong></p>
+        <ul>
+          <li>The data transmission is high-speed.</li>
+          <li>The possibility of collision is minimum in this type of topology.</li>
+          <li>Cheap to install and expand.</li>
+          <li>It is less costly than a star topology.</li>
+        </ul>
+        <p><strong>Drawbacks of Ring Topology</strong></p>
+        <ul>
+          <li>The failure of a single node in the network can cause the entire network to fail.</li>
+          <li>Troubleshooting is difficult in this topology.</li>
+          <li>The addition of stations in between or the removal of stations can disturb the whole topology.</li>
+          <li>Less secure.&nbsp;</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h1><strong>What are Analog and Digital Signals? Differences, Examples</strong></h1>
+        <p>&nbsp;</p>
+        <h2><strong>What is a Signal?</strong></h2>
+        <p>Gestures, actions, sounds, expressions tell us some information, and these are the ways of communicating one to other. Similarly&nbsp;<strong>signal</strong>&nbsp;is a way of communicating by sending information from one system to other system. In other words signal is a function that represents information or data.</p>
+        <p>Signal is an electromagnetic wave that carries information through physical medium. Here the data is converted into electromagnetic signal either as analog or digital and sent from sender to receiver.</p>
+        <p>Voltage and current are few time varying quantities that are used to represent data, by varying these quantities with respect to time data can be transmitted. Similarly&nbsp;<a href="https://instrumentationtools.com/why-4-20-ma-is-used-instead-of-voltage-signal/"><u>signal</u></a>&nbsp;is also represented as the function of the frequency domain rather than time domain.</p>
+        <p>For communicating between two systems, a message signal is passed through encoder and modulator to transmit through a medium while it is passed through decoder and demodulator to receive the message signal at the other end.</p>
+        <p>Signals are divided into two categories based on their nature.&nbsp;</p>
+        <p>Signals which are</p>
+        <ol>
+          <li>Signal which are Continuous as time varying in nature are&nbsp;<strong>analog signals</strong></li>
+          <li>Signal which are discrete are called&nbsp;<strong>digital signals</strong>.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h2><strong>Analog Signals</strong></h2>
+        <p><strong>Analog signal</strong>&nbsp;is a form of electrical energy (voltage, current or electromagnetic power) for which there is a linear relationship between electrical quantity and the value that the signal represents.</p>
+        <p>The signal whose amplitude takes any value in a continuous range is called analog signal.</p>
+        <p>Analog Signals are continuous in nature which vary with respect to time. They can be periodic or non-periodic.</p>
+        <p>Voltage, current, frequency, pressure, sound, light, temperature are the physical variables that are measured with respect to their changes with respect to time to obtain information.</p>
+        <p>When voltage versus time graph is plotted we see curve with continuous values like sine waves.</p>
+        <p>These signals are more subjected to&nbsp;<a href="https://instrumentationtools.com/reduce-control-valve-noise/"><u>noise</u></a>&nbsp;as they travel through the medium, these noises result in information loss in the signal.&nbsp;</p>
+        <p>Analog to digital converter converts analog signal to digital signal by a process called sampling and quantization. Sound waves are converted to sequence of samples by the process Sampling</p>
+        <p><strong>Examples of analog signals:</strong></p>
+        <p>Conventional (old) transmitters,&nbsp;<a href="https://instrumentationtools.com/sensors-and-transducers-classification/"><u>transducers</u></a>&nbsp;convey data in analog mode.</p>
+        <p>The signals include audio signals transmitted through wires, video signals broadcasted using older technology, radio signals, and analog watches.</p>
+        <h2><strong>Digital Signals</strong></h2>
+        <p>The signal, whose amplitude takes only limited values is called Digital signal.</p>
+        <p>Digital signal are discrete, they contain only distinct values.&nbsp;</p>
+        <p>Digital signals carry binary data i.e. 0 or 1 in form of bits, it can only contain one value at a period of time. Digital signals are represented as&nbsp;<a href="https://instrumentationtools.com/topic/square-wave-signals/"><u>square waves</u></a>&nbsp;or clock signals.</p>
+        <p>The minimum value is 0 volts whereas maximum value is 5 volts.</p>
+        <p>Digital signals are less subjected to noise compared to analog signal.</p>
+        <p>Transmission of digital data in analog channel is done by process called Modulation.</p>
+        <p>Amplitude modulation is a process in which digital data is converted to analog signals using single frequency carrier signal. Similarly FREQUENCY shift keying uses a constant amplitude carrier signal and two frequencies to differentiate between 1 and 0.</p>
+        <p>Nowadays usage of digital signals for transmitting information has increased rapidly in every field of usage as the applications and properties of digital signals are more productive compared to analog signals.&nbsp;&nbsp;</p>
+        <p><strong>Examples of digital signals:</strong></p>
+        <ul>
+          <li>Smart transmitters using various protocols transmit data through analog and digital signals.</li>
+          <li>Digital watches.</li>
+          <li>Digital video signals.</li>
+          <li>CD&rsquo;s.</li>
+          <li>DVD&rsquo;s.</li>
+          <li></li>
+        </ul>
+        <h2><strong>Difference between Analog and Digital Signals</strong></h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <p><strong>Analog Signals</strong></p>
+              </td>
+              <td>
+                <p><strong>Digital Signals</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Analog signal is continuous and time varying.</p>
+              </td>
+              <td>
+                <p>Digital signal have two or more states and in binary form.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Troubleshooting of analog signals are difficult.</p>
+              </td>
+              <td>
+                <p>Troubleshooting of digital signals are easy.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>An analog signal is usually in the form of sine wave.</p>
+              </td>
+              <td>
+                <p>An digital signal is usually in the form of square wave.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Easily affected by the noise.</p>
+              </td>
+              <td>
+                <p>These are stable and less prone to noise.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Analog signals use continous values to represent the data.</p>
+              </td>
+              <td>
+                <p>Digital signals use discrete values to represent the data.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Accuracy of the analog signals may be affected by noise.</p>
+              </td>
+              <td>
+                <p>Accuracy of the digital signals are immune from the noise.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Analog signals may be affected during data transmission.</p>
+              </td>
+              <td>
+                <p>Digital signals are not affacted during data transmission.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Analog signals use more power.</p>
+              </td>
+              <td>
+                <p>Digital signals use less power.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Examples: Temperature, Pressure, Flow measurements, etc.</p>
+              </td>
+              <td>
+                <p>Examples: Valve Feedback, Motor Start, Trip, etc.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Components like resistors, Capacitors, Inductors, Diodes are used in analog circuits.</p>
+              </td>
+              <td>
+                <p>Components like transistors, logic gates, and micro-controllers are used in Digital circuits.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2><em>What is Periodic Signal?</em></h2>
+        <p>A periodic signal is a signal that repeats itself at regular intervals of time. A periodic signal can be represented as a sum of sinusoidal functions with frequencies that are integer multiples of the fundamental frequency of the signal. The fundamental frequency of a periodic signal is the lowest frequency present in the signal. Periodic signals are important in many applications because they have a well-defined frequency spectrum and they can be easily analyzed using tools from Fourier analysis.</p>
+        <p>Periodic signals are characterized by their period, which is the time it takes for the signal to repeat itself, and their frequency, which is the number of cycles the signal goes through in a given time period. The period and the frequency of a periodic signal are inversely related: a signal with a short period has a high frequency, and a signal with a long period has a low frequency. Periodic signals are important in many applications because they have a well-defined frequency spectrum and they can be easily analyzed using tools from Fourier analysis.</p>
+        <h2><em>What is Non-Periodic Signal?</em></h2>
+        <p>a non-periodic signal is a signal that does not repeat itself at regular intervals. This means that it does not have a fundamental frequency, and its frequency spectrum is generally not composed of discrete frequencies. Non-periodic signals can be continuous or discrete, and they can be either deterministic or random. Examples of non-periodic signals include white noise, impulses, and arbitrary waveforms. Non-periodic signals are often encountered in real-world applications, such as speech, music, and environmental noise.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Time and Frequency Domains</p>
+        <p>A sine wave is comprehensively defined by its amplitude, frequency, and phase. We have been showing a sine wave by using what is called a time-domain plot. The time-domain plot shows changes in signal amplitude with respect to time (it is an amplitude-versus-time plot). Phase is not explicitly shown on a time-domain plot. To show the relationship between amplitude and frequency, we can use what is called a frequency-domain plot. A frequency-domain plot is concerned with only the peak value and the frequency. Changes of amplitude during one period are not shown.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>It is obvious that the frequency domain is easy to plot and conveys the information that one can find in a time domain plot. The advantage of the frequency domain is that we can immediately see the values of the frequency and peak amplitude. A complete sine wave is represented by one spike. The position of the spike shows the frequency; its height shows the peak amplitude.</p>
+        <p><strong>Composite Signal </strong></p>
+        <p>A composite signal is a combination of two or more simple sine waves with different frequency, phase and amplitude. If the composite signal is periodic, the decomposition gives a series of signals with discrete frequencies; if the composite signal is non-periodic, the decomposition gives a combination of sine waves with continuous frequencies.</p>
+        <p>For data communication a simple sine wave is not useful, what is used is a composite signal which is a combination of many simple sine waves.</p>
+        <p>&nbsp;According to French Mathematician, Jean Baptist, any composite signal is a combination of simple sine waves with different amplitudes and frequencies and phases.</p>
+        <p>&nbsp;Composite signals can be periodic or non periodic. A periodic composite signal can be decomposed into a series of signals with discrete frequencies. A non-periodic signal when decomposed gives a combination of sine waves with continuous frequencies.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

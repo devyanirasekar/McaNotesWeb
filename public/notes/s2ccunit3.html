@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 CLOUD COMPUTING Unit-3</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>&nbsp;Principles of Cloud Computing Architecture Design</strong></p>
+        <p>We can get to know the overall architecture and service capability of Cloud Computing from another perspective, which is the cloud computing architecture system. From down to up it includes infrastructure, cloud computing operating system, product system (including security and management), solution system, and service system.</p>
+        <p>&nbsp;</p>
+        <p>A complete cloud computing architecture design is also a step-by-step process that begins with collecting requirements and analysis, designing the architecture based on the requirements analysis, evaluating improvements and delivering implementation, and then achieving continuous operations.</p>
+        <p>&nbsp;</p>
+        <p>To proceed with architecture design based on Cloud Computing, all technical solutions should follow certain principles, which is the target to be hit in architecture design. There are 6 principles of cloud computing architecture design, including reasonable deployment, business continuity, elastic expansion, performance efficiency, security compliance, and continuous operation. These 6 principles represent different perspectives that need to be considered in architecture design, and only by following these principles can a full-equipped architecture solution be designed. But in practice, it is not necessary to integrate all design patterns into all architectural designs to construct complicated architectural solutions.</p>
+        <p>Principle 1: Reasonable Deployment</p>
+        <p>The deployment of business systems on the public cloud includes the cloud hosts in the form of virtual machines and physical cloud hosts with higher performance. Hosting services include hosted applications and hosted physical servers.</p>
+        <p>Based on the status of IT historical resources and compliance requirements, many enterprises have not yet migrated to the cloud. In response to this situation, the cloud computing operating system is extracted and packaged as independent software and services to be deployed in the user's private environment. Unlike public clouds, which are available to "any" user, private deployments are only available to a select few users.</p>
+        <p>Hybrid architecture enables unified management and scheduling of resources for public cloud and privatized deployed platforms, traditional VMware, OpenStack virtualization platforms or physical servers. The hybrid architecture not only enjoys the benefits of not changing the local environment and meeting compliance requirements, but also enjoys the advantages of abundant cloud platform resources and sufficient service capabilities. Hybrid architecture is also an intermediate state in the current enterprise transformation to the cloud, which will exist for a long time.</p>
+        <p>Principle 2: Business Continuity</p>
+        <p>Business continuity mainly refers to the 3 aspects of high availability, continuous operations, and disaster recovery, and the design pattern is developed according to this logic.</p>
+        <ul>
+          <li>High Availability refers to avoiding business interruption by redundancy and other designs when the resources running the business fail.</li>
+          <li>Continuous Operations mean that the resources for business operation are fault-free and the business can continuously provide services.</li>
+          <li>Disaster Recovery refers to the ability to restore applications and data in different environments when the business operating environment is damaged.</li>
+        </ul>
+        <p>Redundancy and business continuity should be implemented in each layer of the architecture design. No redundancy means that there will be a single point, and a single point of failure will cause local service termination.</p>
+        <ul>
+          <li>Storage products: Block storage achieves redundancy through 3 copies. When an error occurs in one copy, the data is verified and recovered by other copies; Data redundancy checks are implemented in object storage through correction codes to provide recoverability; Object storage provides cross-region replication to avoid a single geographic region becoming a single point of object storage.</li>
+          <li>Backup solution: Improve reliability through cross-availability zone and cross-region data backup in the cloud to avoid storing only one copy of data; Backing up data to the cloud in a hybrid architecture allows for recovery from cloud backup files in the event of data damage in the local environment.</li>
+          <li>Disaster recovery solution: Achieve disaster recovery for business systems to avoid the current business environment from becoming a single point and improve the availability and risk resistance of the overall business.</li>
+          <li>High Availability: Achieve redundancy of cloud hosts and availability zones through cross-availability zone load balancing deployment; Achieve high availability across regions and cloud platforms through global load balancing.</li>
+        </ul>
+        <p>Principle 3: Elastic Expansion</p>
+        <p>Tightly coupled systems are not easy to expand, and it is difficult to troubleshoot problems when software bugs and system failures occur. The pressure to call each system component is different, and small problems are magnified step by step, which can easily cause the entire business to be interrupted. To maintain the elastic expansion of the system, the first step is to decouple the system components, including the decoupling of dynamic data and static data. The decoupled components can realize functional unitization and perform their own duties.</p>
+        <p>&nbsp;</p>
+        <p>The decoupling is followed by the expansion of components and services, namely the vertical expansion, horizontal expansion and automatic expansion, including the expansion of the database layer, as well as the extension of the computing, storage backup, security protection, and product service capabilities of the local environment through the hybrid architecture. Migration of applications and data also counts as an expansion of the entire system. When migrating from one environment to another, the system should maintain elastic expansion and enable rapid implementation when migration is required. Finally, balancing needs to be carried out.</p>
+        <p>&nbsp;</p>
+        <p>Component decoupling is a prerequisite for achieving expandability and can be done in the following ways.</p>
+        <ul>
+          <li>Remain stateless and store state data in Redis.</li>
+          <li>Put in load balancing, as expansion and scaling had no effect on the overall business.</li>
+          <li>Decoupled by message queues or API Gateway. Producers and consumers can be expanded without affecting each other.</li>
+          <li>Achieve global load balancing of business. Back-end business can be expanded in a hybrid architecture and multi-cloud environment.</li>
+        </ul>
+        <p>Principle 4: Performance Efficiency</p>
+        <p>A very large number of solutions and cases involve performance challenges due to high concurrency and traffic surges. The primary goal in performance efficiency is to discover and enhance the performance of the application and improve the efficiency of resources and components.</p>
+        <p>The first is computing performance. The single-machine performance is improved by using high-configuration cloud hosts or physical cloud hosts, and the overall service performance is expanded through clusters.&nbsp;</p>
+        <p>The second is storage and caching. Cache hot data and store temporary state data by Redis, and performing in-memory calculations can improve business performance. Hotspot configuration files and hotspot data are cached through Redis and loaded in advance to reduce access time.</p>
+        <p>The third is the optimization of network. Select the optimal data center when the business is deployed globally, and improve the network performance based on global infrastructure network, CDN and global application acceleration to obtain the request acceleration effect.</p>
+        <p>Finally is the introduction of application performance monitoring and stress testing. Evaluate the current performance status and identify problematic bottlenecks from the application perspective, and solves the problem in a targeted manner.</p>
+        <p>Principle 5: Security Compliance</p>
+        <p>On the one hand, security compliance is to meet the business security protection of their own needs, on the other hand, it is to meet the security supervision requirements. In the specific implementation, these two aspects will be crossed together.</p>
+        <ul>
+          <li>Set up master accounts and sub-accounts in the account system, and manage public keys and private keys separately; Set appropriate roles and assign the minimum permissions required to accounts and roles.</li>
+          <li>Controlling network access through ACLs; Restrict open ports on cloud hosts through security groups; Control communication across subnets through subnetting and routing. Configure the database and the cloud hosts that only need internal access to the intranet VPCs, set the VPCs that are allowed to access, and set them to not connect to the extranet.</li>
+          <li>Prevent DDoS, cc, SQL injection, XSS and other attacks.</li>
+          <li>Security audit; Keep access logs and operation logs; Gradually realize low-frequency storage and archive storage, etc.</li>
+        </ul>
+        <p>Principle 6: Continuous Operation</p>
+        <p>Cloud resources, cloud services, events and users' applications will be monitored in continuous operation, and alarms will be set. When alarm conditions are reached, relevant personnel will be notified by phone, SMS, email, WeChat, etc. Alarms will be handed over to callback functions, which can realize automated fault handling or corresponding contingency plans and reduce manual intervention.</p>
+        <p>In addition, it needs to have automatic response and processing functions. Automatic scaling can automatically expand or shrink the number of cloud hosts by monitoring indicators such as CPU.&nbsp;</p>
+        <p>Detect changes in consumption and business costs in a timely manner and optimize costs. Set alarm values for account balances to avoid rapid spending and achieve cost control.</p>
+        <p>&nbsp;</p>
+        <p>Web Services in Cloud Computing</p>
+        <p>The Internet is the worldwide connectivity of hundreds of thousands of computers belonging to many different networks.</p>
+        <p>A web service is a standardized method for propagating messages between client and server applications on the World Wide Web. A web service is a software module that aims to accomplish a specific set of tasks. Web services can be found and implemented over a network in cloud computing.</p>
+        <p>The web service would be able to provide the functionality to the client that invoked the web service.</p>
+        <p>A web service is a set of open protocols and standards that allow data exchange between different applications or systems. Web services can be used by software programs written in different programming languages and on different platforms to exchange data through computer networks such as the Internet. In the same way, communication on a computer can be inter-processed.</p>
+        <p>Any software, application, or cloud technology that uses a standardized Web protocol (HTTP or HTTPS) to connect, interoperate, and exchange data messages over the Internet-usually XML (Extensible Markup Language) is considered a Web service. Is.</p>
+        <p>Web services allow programs developed in different languages to be connected between a client and a server by exchanging data over a web service. A client invokes a web service by submitting an XML request, to which the service responds with an XML response.</p>
+        <ul>
+          <li>Web services functions</li>
+          <li>It is possible to access it via the Internet or intranet network.</li>
+          <li>XML messaging protocol that is standardized.</li>
+          <li>Operating system or programming language independent.</li>
+          <li>Using the XML standard is self-describing.</li>
+        </ul>
+        <p>A simple location approach can be used to detect this.</p>
+        <h2>Web Service Components</h2>
+        <p>XML and HTTP is the most fundamental web service platform. All typical web services use the following components:</p>
+        <h3>1. SOAP (Simple Object Access Protocol)</h3>
+        <p>SOAP stands for "Simple Object Access Protocol". It is a transport-independent messaging protocol. SOAP is built on sending XML data in the form of SOAP messages. A document known as an XML document is attached to each message.</p>
+        <p>Only the structure of an XML document, not the content, follows a pattern. The great thing about web services and SOAP is that everything is sent through HTTP, the standard web protocol.</p>
+        <p>Every SOAP document requires a root element known as an element. In an XML document, the root element is the first element.</p>
+        <p>The "envelope" is divided into two halves. The header comes first, followed by the body. Routing data, or information that directs the XML document to which client it should be sent, is contained in the header. The real message will be in the body.</p>
+        <h3>2. UDDI (Universal Description, Search, and Integration)</h3>
+        <p>UDDI is a standard for specifying, publishing and searching online service providers. It provides a specification that helps in hosting the data through web services. UDDI provides a repository where WSDL files can be hosted so that a client application can search the WSDL file to learn about the various actions provided by the web service. As a result, the client application will have full access to UDDI, which acts as the database for all WSDL files.</p>
+        <p>The UDDI Registry will keep the information needed for online services, such as a telephone directory containing the name, address, and phone number of a certain person so that client applications can find where it is.</p>
+        <h3>3. WSDL (Web Services Description Language)</h3>
+        <p>The client implementing the web service must be aware of the location of the web service. If a web service cannot be found, it cannot be used. Second, the client application must understand what the web service does to implement the correct web service. WSDL, or Web Service Description Language, is used to accomplish this. A WSDL file is another XML-based file that describes what a web service does with a client application. The client application will understand where the web service is located and how to access it using the WSDL document.</p>
+        <p>Benefits of Cloud Computing Architecture</p>
+        <p>The cloud computing architecture is designed in such a way that:</p>
+        <ul>
+          <li>It solves latency issues and improves data processing requirements</li>
+          <li>It reduces IT operating costs and gives good accessibility to access data and digital tools</li>
+          <li>It helps businesses to easily scale up and scale down their cloud resources</li>
+          <li>It has a flexibility feature which gives businesses a competitive advantage</li>
+          <li>It results in better disaster recovery and&nbsp; provides high security</li>
+          <li>It automatically updates its services</li>
+          <li>It encourages remote working and promotes team collaboration&nbsp;</li>
+        </ul>
+        <p>Going ahead, let&rsquo;s have a look at the components of cloud computing architecture.</p>
+        <p>Challenges of Cloud Computing</p>
+        <p>Cloud computing is a hot topic at the moment, and there is a lot of ambiguity when it comes to managing its features and resources. Technology is evolving, and as companies scale up, their need to use the latest Cloud frameworks also increases. Some of the benefits introduced by cloud solutions include data security, flexibility, efficiency, and high performance. Smoother processes and improved collaboration between enterprises while reducing costs are among its perks. However, the Cloud is not perfect and has its own set of drawbacks when it comes to data management and privacy concerns. Thus, there are various benefits and challenges of cloud computing. The list below discusses some of the key challenges in the adoption of cloud computing.</p>
+        <h3>1. Data Security and Privacy</h3>
+        <p>Data security is a major concern when working with Cloud environments. It is one of the major challenges in cloud computing as users have to take accountability for their data, and not all Cloud providers can assure 100% data privacy. Lack of visibility and control tools, no identity access management, data misuse, and Cloud misconfiguration are the common causes behind Cloud privacy leaks. There are also concerns with insecure APIs, malicious insiders, and oversights or neglect in Cloud data management.</p>
+        <p>Solution: Configure network hardware and install the latest software updates to prevent security vulnerabilities. Using firewalls, antivirus, and increasing bandwidth for Cloud data availability are some ways to prevent data security risks.</p>
+        <h3>2. Multi-Cloud Environments</h3>
+        <p>Common cloud computing issues and challenges with multi-cloud environments are - configuration errors, lack of security patches, data governance, and no granularity. It is difficult to track the security requirements of multi-clouds and apply data management policies across various boards.</p>
+        <p>Solution: Using a multi-cloud data management solution is a good start for enterprises. Not all tools will offer specific security functionalities, and multi-cloud environments grow highly sophisticated and complex. Open-source products like Terraform provide a great deal of control over multi-cloud architectures.</p>
+        <h3>3. Performance Challenges</h3>
+        <p>The performance of Cloud computing solutions depends on the vendors who offer these services to clients, and if a Cloud vendor goes down, the business gets affected too. It is one of the major challenges associated with cloud computing.</p>
+        <p>Solution: Sign up with Cloud Service Providers who have real-time SaaS monitoring policies.</p>
+        <p>The&nbsp;<a href="https://www.knowledgehut.com/cloud-computing/aws-solution-architect-certification-training"><u>Cloud Solution Architect Certification</u></a>&nbsp;training addresses all Cloud performance issues and teaches learners how to mitigate them.</p>
+        <h3>4. Interoperability and Flexibility</h3>
+        <p>Interoperability is a challenge when you try to move applications between two or multiple Cloud ecosystems. It is one of the challenges faced in cloud computing. Some common issues faced are:&nbsp;</p>
+        <ul>
+          <li>Rebuilding application stacks to match the target cloud environment's specifications&nbsp;</li>
+          <li>Handling data encryption during migration&nbsp;</li>
+          <li>Setting up networks in the target cloud for operations&nbsp;</li>
+          <li>Managing apps and services in the target cloud ecosystem</li>
+        </ul>
+        <p>Solution: Setting Cloud interoperability and portability standards in organizations before getting to work on projects can help solve this problem. The use of multi-layer authentication and authorization tools is also encouraged for account verifications in public, private, and hybrid cloud ecosystems.</p>
+        <h3>5. High Dependence on Network</h3>
+        <p>Lack of sufficient internet bandwidth is a common problem when transferring large volumes of information to and from Cloud data servers. It is one of the various challenges in cloud computing. Data is highly vulnerable, and there is a risk of sudden outages. Enterprises that want to lower hardware costs without sacrificing performance need to ensure there is high bandwidth, which will help prevent business losses from sudden outages.</p>
+        <p>Solution: Pay more for higher bandwidth and focus on improving operational efficiency to address network dependencies.</p>
+        <h3>6. Lack of Knowledge and Expertise</h3>
+        <p>Organizations are finding it tough to find and hire the right Cloud talent, which is another common challenge in cloud computing. There is a shortage of professionals with the required qualifications in the industry. Workloads are increasing, and the number of tools launched in the market is increasing. Enterprises need good expertise in order to use these tools and find out which ones are ideal for them.</p>
+        <p>Solution: Hire Cloud professionals with specializations in DevOps and automation</p>
+        <h3>7. Reliability and Availability</h3>
+        <p>High unavailability of Cloud services and a lack of reliability are two major concerns in these ecosystems. Organizations are forced to seek additional computing resources in order to keep up with changing business requirements. If a Cloud vendor gets hacked or affected, the data of organizations using their services gets compromised. It is another one of the many cloud security risks and challenges faced by the industry.</p>
+        <p>Solution: Implementing the NIST Framework standards in Cloud environments can greatly improve both aspects.</p>
+        <h3>8. Password Security&nbsp;</h3>
+        <p>Account managers use the same passwords to manage all their Cloud accounts. Password management is a critical problem, and it is often found that users resort to using reused and weak passwords.</p>
+        <p>Solution: Use a strong password management solution to secure all your accounts. To further improve security, use Multifactor Authentication (MFA) in addition to a password manager. Good cloud-based password managers alert users of security risks and leaks.</p>
+        <p>Cloud Service Model</p>
+        <p>SaaS, PaaS, and IaaS are the three main cloud computing service model categories. You can access all three via an Internet browser or online apps available on different devices. The cloud service model enables the team to collaborate online instead of offline creation and then share online.</p>
+        <p>Software as a Service (SaaS) is a web-based deployment model that makes the software accessible through a web browser. SaaS software users don&rsquo;t need to care where the software is hosted, which operating system it uses, or even which programming language it is written in. The SaaS software is accessible from any device with an internet connection.</p>
+        <p>Characteristics of SaaS</p>
+        <p>There are the following characteristics of SaaS:</p>
+        <ul>
+          <li>It is managed from a central location.</li>
+          <li>Hosted directly on a remote server.</li>
+          <li>It is accessible over the Internet.</li>
+          <li>SaaS users are not responsible for hardware and software updates.</li>
+          <li>The services are purchased on a pay-as-per-use basis.</li>
+        </ul>
+        <p>Advantages SaaS</p>
+        <p>Here are the important advantages/pros of SaaS:</p>
+        <ul>
+          <li>The biggest benefit of using SaaS is that it is easy to set up, so you can start using it instantly.</li>
+          <li>Compared with on-premises software, it is more cost-effective.</li>
+          <li>You don&rsquo;t need to manage or upgrade the software, as it is typically included in a SaaS subscription or purchase.</li>
+          <li>It won&rsquo;t use your local resources, such as the hard disk typically required to install desktop software.</li>
+          <li>It is a cloud computing service category that provides a wide range of hosted capabilities and services.</li>
+          <li>Developers can easily build and deploy web-based software applications.</li>
+          <li>You can easily access it through a browser.</li>
+        </ul>
+        <p>Disadvantages SaaS</p>
+        <p>Here are the important cons/drawbacks of SaaS:</p>
+        <ul>
+          <li>Integrations are up to the provider, so it&rsquo;s impossible to &ldquo;patch&rdquo; an integration on your end.</li>
+          <li>SaaS tools may become incompatible with other tools and hardware already used in your business.</li>
+          <li>You depend on the SaaS company&rsquo;s security measures, so your data may be compromised if any leaks occur.</li>
+        </ul>
+        <p>Things to Consider Before SaaS Implementation</p>
+        <p>Here are essential things you need to consider before SaaS implementation:</p>
+        <ul>
+          <li>It would help if you opted for&nbsp;<em>configuration</em>over&nbsp;<em>customization</em>&nbsp;within a SaaS-based delivery model.</li>
+          <li>You must carefully understand the usage rates and set clear objectives to achieve the SaaS adoption.</li>
+          <li>You can complement your SaaS solution with integrations and security options to make it more user-oriented.</li>
+        </ul>
+        <p>Platform as a Service (PaaS)</p>
+        <p>Platform-as-a-Service (PaaS) provides a cloud computing framework for software application creation and deployment. It is a platform for the deployment and management of software apps. This flexible cloud computing model scales up automatically on demand. It also manages the servers, storage, and networking, while the developers manage only the application part. It offers a runtime environment for application development and deployment tools.</p>
+        <p>This Model provides all the facilities required to support the complex life cycle of building and delivering web applications and services entirely for the Internet. This cloud computing model enables developers to rapidly develop, run, and manage their apps without building and maintaining the infrastructure or platform.</p>
+        <p>Characteristics of PaaS</p>
+        <p>There are the following characteristics of PaaS:</p>
+        <ul>
+          <li>Builds on virtualization technology, so computing resources can easily be scaled up (Auto-scale) or down according to the organization&rsquo;s needs.</li>
+          <li>Support multiple programming languages and frameworks.</li>
+          <li>Integrates with web services and databases.</li>
+        </ul>
+        <p>Advantages PaaS</p>
+        <p>Here are the important benefits/pros of PaaS:</p>
+        <ul>
+          <li>Simple, cost-effective development and deployment of apps</li>
+          <li>Developers can customize SaaS apps without the headache of maintaining the software</li>
+          <li>Provide automation of Business Policy</li>
+          <li>Easy migration to the&nbsp;Hybrid Model</li>
+          <li>It allows developers to build applications without the overhead of the underlying operating system or cloud infrastructure</li>
+          <li>Offers freedom to developers to focus on the application&rsquo;s design while the platform takes care of the language and the database</li>
+          <li>It helps developers to collaborate with other developers on a single app</li>
+        </ul>
+        <p>Disadvantages of SaaS</p>
+        <p>Here are the important cons/drawbacks of PaaS:</p>
+        <ul>
+          <li>You have control over the app&rsquo;s code and not its infrastructure.</li>
+          <li>The PaaS organization stores your data, so it sometimes poses a security risk to your app&rsquo;s users.</li>
+          <li>Vendors provide varying service levels, so selecting the right services is essential.</li>
+          <li>The risk of lock-in with a vendor may affect the ecosystem you need for your development environment.</li>
+        </ul>
+        <p>Things to Consider Before PaaS Implementation</p>
+        <p>Here are essential things you need to consider before PaaS implementation:</p>
+        <ul>
+          <li>Analyze your business needs, decide the automation levels, and also decides whether you want a self-service or fully automated PaaS model.</li>
+          <li>You need to determine whether to deploy on a private or public cloud.</li>
+          <li>Plan through the customization and efficiency levels.</li>
+        </ul>
+        <p>Infrastructure as a Service (IaaS)</p>
+        <p>Infrastructure-as-a-Service (IaaS) is a cloud computing service offering on-demand computing, storage, and networking resources. It usually works on a pay-as-you-go basis.</p>
+        <p>Organizations can purchase resources on-demand and as needed instead of buying the hardware outright.</p>
+        <p>The IaaS cloud vendor hosts the infrastructure components, including the on-premises data center, servers, storage, networking hardware, and the hypervisor (virtualization layer).</p>
+        <p>This Model contains the basic building blocks for your web application. It provides complete control over the hardware that runs your application (storage, servers, VMs, networks &amp; operating systems). IaaS model gives you the best flexibility and management control over your IT resources.</p>
+        <p>Characteristics of IaaS</p>
+        <p>There are the following characteristics of IaaS:</p>
+        <ul>
+          <li>Resources are available as a service</li>
+          <li>Services are highly scalable</li>
+          <li>Dynamic and flexible Cloud Service Model</li>
+          <li>GUI and API-based access</li>
+          <li>Automate the administrative tasks</li>
+        </ul>
+        <p>Advantages of IaaS</p>
+        <p>Here are the important benefits/pros of PaaS:</p>
+        <ul>
+          <li>Easy to automate the deployment of storage, networking, and servers.</li>
+          <li>Hardware purchases can be based on consumption.</li>
+          <li>Clients keep complete control of their underlying infrastructure.</li>
+          <li>The provider can deploy the resources to a customer&rsquo;s environment anytime.</li>
+          <li>It can be scaled up or downsized according to your needs.</li>
+        </ul>
+        <p>Disadvantages of IaaS</p>
+        <p>Here are the important Cons/drawbacks of IaaS:</p>
+        <ul>
+          <li>You should ensure that your apps and operating systems are working correctly and providing the utmost security.</li>
+          <li>You&rsquo;re in charge of the data, so if any of it is lost, it&rsquo;s up to you to recover it.</li>
+          <li>IaaS firms only provide the servers and API, so you must configure everything else.</li>
+        </ul>
+        <p>Things to Consider Before IaaS Implementation</p>
+        <p>Here are some specific considerations you should remember before IaaS Implementation:</p>
+        <ul>
+          <li>You should clearly define your access needs and your network&rsquo;s bandwidth to facilitate smooth implementation and functioning.</li>
+          <li>Plan out detailed data storage and security strategy to streamline the business process.</li>
+          <li>Ensure that your organization has a proper disaster recovery plan to keep your data safe and accessible.</li>
+        </ul>
+        <p>Other important As a Services</p>
+        <ul>
+          <li>MaaS&ndash;MaaS stands for monitoring as a service. It allows the consumer to monitor the status of their critical applications regardless of location.</li>
+          <li>CaaS&nbsp;&ndash; Communication as a service use Enterprise level VPNs, VoIP, PBX, and Unified Communications between the costly investment of hosting, purchasing, and managing the IT infrastructure. It also enables you to reduce CAPEX and OPEX.</li>
+          <li>DaaS&nbsp;&ndash; Desktop as a service ensures a reliable, consistent experience for the remote use of programs, applications, and files anywhere, anytime.</li>
+          <li>DRaaS&nbsp;&ndash; Disaster Recovery as a service is a cloud computing model that provides safeguards from natural (or artificial) catastrophes.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Cloud Computing Vendors</p>
+        <p>Cloud computing and the top 10 cloud service vendors delivering these services, have brought fundamental changes to the market backdrop of IT infrastructure globally. Public cloud service providers are facilitating the inherent efficiencies of distributed cloud computing, which is enabling innovative software applications and platforms to be built, while simultaneously enhancing information security and privacy controls. As such, it is critical to understand each leading cloud service provider, as well as their varying strategies.</p>
+        <p>As a whole, the top 10 cloud service vendors globally in 2023 are Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), Alibaba Cloud, Oracle Cloud, IBM Cloud (Kyndryl), Tencent Cloud, OVHcloud, DigitalOcean, and Linode (owned by Akamai).</p>
+        <h4><em><u>1. Amazon Web Services (AWS)</u></em></h4>
+        <p>Amazon Web Services (AWS), the cloud computing service of Amazon.com, is the largest cloud service provider globally. From its data centers, the business provides over 200 fully featured services including compute, storage, and database.</p>
+        <p>AWS currently has 26 regions and 84 availability zones in operation. These regions and availability zones are located throughout the United States, AWS GovCloud (US), Americas, Europe, Asia Pacific, as well as in the Middle East &amp; Africa.</p>
+        <p>Amazon Web Services (AWS) has grown net sales from ~$8 billion in 2015, to more than $17 billion for 2017, reaching $35 billion by 2019, and now generating almost $74 billion on an annual basis. This staggering growth has been driven by the expansion of AWS from 32 availability zones in 2015, to 52 availability zones in 2017, and now reaching 84 availability zones at present. In parallel, the company has launched thousands of new AWS services which has also fueled its expansion.</p>
+        <h4><em><u>2. Microsoft Azure</u></em></h4>
+        <p>Microsoft Corporation&rsquo;s Intelligent Cloud segment contains Azure, the second largest cloud service provider globally. Through Microsoft Azure, the company delivers a consistent hybrid cloud experience, developer productivity, artificial intelligence (AI) capabilities, and security &amp; compliance.</p>
+        <p>Microsoft Azure presently has 60 regions and 116 availability zones in operation. These regions and availability zones are distributed throughout the United States, Azure Government (U.S.), Americas, Europe, Asia Pacific, as well as in the Middle East &amp; Africa.</p>
+        <h4><em><u>3. Google Cloud Platform (GCP)</u></em></h4>
+        <p>Google Cloud Platform (GCP), part of Alphabet Inc, is the third largest cloud service provider globally, providing enterprise-ready cloud services. GCP enables developers to build, test, and deploy applications on its distributed and scalable infrastructure, while utilizing the service&rsquo;s capabilities in security, data management, analytics, and artificial intelligence (AI).</p>
+        <h4><em><u>4. Alibaba Cloud</u></em></h4>
+        <p>Alibaba Group&rsquo;s cloud computing unit, known as Alibaba Cloud, is the fourth largest cloud service provider globally, the primary cloud vendor in Asia Pacific, and the largest cloud service provider in China. Through Alibaba Cloud, the business offers cloud services, including elastic computing, database, storage, network virtualization, large-scale computing, security, management &amp; application services, big data analytics, and machine learning.</p>
+        <p>Oracle Corporation&rsquo;s Cloud Services offerings include Oracle Cloud Software-as-a-Service (SaaS) and Oracle Cloud Infrastructure (OCI). Through OCI, the company is a cloud service provider, delivering infrastructure technologies as-a-service including compute, storage, and networking services.</p>
+        <p>Oracle Cloud presently has 38 regions and 46 availability zones in operation. These regions and availability zones are located throughout the United States, Canada, Europe, the Middle East, &amp; Africa (EMEA), Latin America, and Asia Pacific. In addition, Oracle Cloud offers government cloud regions for the U.S. government, U.S. Department of Defense (DoD), and UK government.</p>
+        <p>Cloud Management in Cloud Computing</p>
+        <p>Cloud computing management&nbsp;is maintaining and controlling the cloud services and resources be it public, private or hybrid. Some of its aspects include load balancing, performance, storage, backups, capacity, deployment etc. To do so a cloud managing personnel needs full access to all the functionality of resources in the cloud. Different software products and technologies are combined to provide a cohesive cloud management strategy and process.</p>
+        <p>As we know&nbsp;<a href="https://www.geeksforgeeks.org/features-components-of-private-cloud/"><u>Private cloud&nbsp;</u></a>infrastructure is operated only for a single organization, so that can be managed by the organization or by a third party. Public cloud services are delivered over a network that is open and available for public use. In this model, the IT infrastructure is owned by a private company and members of the public can purchase or lease data storage or computing capacity as needed. Hybrid cloud environments are a combination of public and private cloud services from different providers. Most organizations store data on private cloud servers for privacy concerns, while leveraging public cloud applications at a lower price point for less sensitive information. The combination of both the public and private cloud are known as Hybrid cloud servers.</p>
+        <p>Need of Cloud Management :<br />Cloud is nowadays preferred by huge organizations as their primary data storage. A small downtime or an error can cause a great deal of loss and inconvenience for the organizations. So as to design, handle and maintain a cloud computing service specific members are responsible who make sure things work out as supposed and all arising issues are addressed.</p>
+        <p>Cloud Management Platform :<br />A cloud management platform is a software solution that has a robust and extensive set of APIs that allow it to pull data from every corner of the IT infrastructure. A CMP allows an IT organization to establish a structured approach to security and IT governance that can be implemented across the organization&rsquo;s entire cloud environment.</p>
+        <p>Cloud Management Tasks :<br />The below figure represents different cloud management tasks :</p>
+        <p>&nbsp;</p>
+        <p><em>Cloud Management Tasks</em></p>
+        <ul>
+          <li>Auditing System Backups &ndash;<br />It is required to audit the backups from time to time to ensure restoration of randomly selected files of different users. This might be done by the organization or by the cloud provider.</li>
+          <li>Flow of data in the system &ndash;<br />The managers are responsible for designing a data flow diagram that shows how the data is supposed to flow throughout the organization.</li>
+          <li>Vendor Lock-In &ndash;<br />The managers should know how to move their data from a server to another in case the organization decides to switch providers.</li>
+          <li>Knowing provider&rsquo;s security procedures &ndash;<br />The managers should know the security plans of the provider, especially Multitenant use, E-commerce processing, Employee screening and Encryption policy.</li>
+          <li>Monitoring the Capacity, Planning and Scaling abilities &ndash;<br />The manager should know if their current cloud provider is going to meet their organization&rsquo;s demand in the future and also their scaling capabilities.</li>
+          <li>Monitoring audit log &ndash;<br />In order to identify errors in the system, logs are audited by the managers on a regular basis.</li>
+          <li>Solution Testing and Validation &ndash;<br />It is necessary to test the cloud services and verify the results and for error-free solutions.</li>
+        </ul>
+        <h1>Cloud Performance, Scalability</h1>
+        <h1>Performance</h1>
+        <h1>Performance is the&nbsp;throughput of a system under a given&nbsp;workload for a specific time. For an application this could be:</h1>
+        <h1>&middot;&nbsp;The time it takes for an application to finish a task. For example, running a query on a database server to fetch all staff records.</h1>
+        <h1>&middot;&nbsp;The response time for an application to act upon a user request. For example, a user that requests a webpage.</h1>
+        <h1>&middot;&nbsp;A load of a system, measured in the volume of transactions. For example, a web server that processes 500 requests per second.</h1>
+        <h1>In the cloud, we validate performance by measurement and testing scalability. Here are examples of items you should measure:</h1>
+        <h1>&middot;&nbsp;Resource usage:</h1>
+        <h1>o&nbsp;CPU load</h1>
+        <h1>o&nbsp;Memory usage</h1>
+        <h1>o&nbsp;Disk I/O</h1>
+        <h1>o&nbsp;Read/write database queries</h1>
+        <h1>&middot;&nbsp;Application statistics</h1>
+        <h1>o&nbsp;number of requests</h1>
+        <h1>o&nbsp;response time</h1>
+        <h1>Performance measurement is an ongoing process, it never ends. You can use the cloud provider&lsquo;s tools or external tools.</h1>
+        <h1>Performance requirements change when there are new business requirements or when you add new features to your application.</h1>
+        <h1>If you use a public cloud, you also need to consider the bandwidth and delay of your WAN connection to the public cloud.</h1>
+        <h1>Networklessons.com runs on Amazon AWS. Here are two screenshots of how we measure the performance.</h1>
+        <h2>Scalability</h2>
+        <p>Scalability is the ability of a system to handle the increase in demand without impacting the application&rsquo;s performance or availability.</p>
+        <p>When the demand is too high and there are not enough resources, then it impacts performance. There are two types of scalability:</p>
+        <ul>
+          <li>Vertical: scale up or down:
+            <ul>
+              <li>Add or remove resources:
+                <ul>
+                  <li>CPU</li>
+                  <li>Memory</li>
+                  <li>Storage</li>
+                </ul>
+              </li>
+              <li>Horizontal: scale out or in:
+                <ul>
+                  <li>Add or remove systems</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>For example, we can increase the number of CPU cores and memory in a web server (vertical) or we can increase the number of web servers (horizontal).</p>
+        <p>We can scale up horizontally or vertical to prevent lack of resources affecting our performance and availability. Here is a screenshot of the Amazon AWS auto scaling policy we use for networklessons.com web servers:</p>
+        <h1><em>Tools &amp; Technologies used to manage cloud service deployment</em></h1>
+        <p>Present-day software groups are progressively receiving the cloud, run their applications, and deciding to host and infrastructure utilizing cloud platforms and providers rather than on-premise solutions.</p>
+        <p>However,&nbsp;cloud application deployment&nbsp;can be essentially not quite the same as doing as such in your own data center. Various advances go into conveying an application in the cloud from work to package to delivery, and there can be a great deal of overhead in doing that physically.</p>
+        <p><strong>List of Cloud Deployment Tools</strong></p>
+        <p>Various tools work in assisting you with automating the tasks in question, from incorporating code tests to build deployment and packaging. To give a guide, we took a looked at the top 20&nbsp;Cloud Deployment Tools, listed below:</p>
+        <ol>
+          <li><strong>AppVeyor:&nbsp;</strong>Groups creating applications on .NET and Windows might need to look at AppVeyor, a CD/CI stage. Open-source applications are facilitated free of charge, and enterprise clients have the alternative of on-premise establishments and limitless form specialists. AppVeyor has upheld for VSTS, GitLab, Bitbucket, and GitHub.</li>
+          <li><strong>AWS CodeDeploy:&nbsp;</strong>In case you&rsquo;re an Amazon Web Service cloud client, AWS CodeDeploy is a deployment service that encourages you to computerize your application deployments, regardless of whether you&rsquo;re deploying your application with a solitary AWS Lambda function or across a huge number of Amazon EC2 occurrences. With CodeDeploy, you can deal with your deployments from one spot utilizing the AWS CLI or the AWS Management Console.</li>
+          <li><strong>Ansible Tower:</strong>Ansible Tower allows you to computerize numerous tedious IT tasks like deployment. Everything is not difficult to track down on one dashboard alongside inventory and scheduling management. Its CLI and REST API gives you the extensibility and power you need to coordinate with your current toolset.</li>
+          <li><strong>AWS Fargate:</strong>This passage adds a strong contribution for any (ECS) Amazon Elastic Container Service clients hoping to send applications in containers without stressing over cluster or server management.</li>
+          <li><strong>Bamboo:</strong>Part of the Atlassian world, Bamboo is a form, test, and convey stage with key highlights like Jira integration and built-in git branching workflows both fundamental out-of-the-box highlights for any cutting-edge software group.&nbsp;It runs on Amazon EC2 reconciliations, so it can undoubtedly scale on a case-by-case basis.</li>
+          <li><strong>Azure DevOps Server:</strong>Track your team&rsquo;s work and share your code from one spot without agonizing over software locations or conflicts. You can build, deploy, and test in one area, so getting issues before you convey new software or highlights is implicit. It underpins OAuth 2.0 and REST APIs which permits you to coordinate your preferred toolset with the general mix.</li>
+          <li><strong>CircleCI:</strong>While CircleCI offers an on-premise arrangement, this cloud-based help requires no committed server. CircleCI is frequently utilized for one or the other little and open-source projects in which efficient and easy deployment is fundamental.</li>
+        </ol>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

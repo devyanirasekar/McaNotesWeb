@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 DSA unit-1</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>UNIT-1</strong></p>
+        <p>&nbsp;</p>
+        <h1 class="h1">Stack vs. Queue</h1>
+        <div style="margin: 5px 0;">
+          <h3 class="h3">What is a Stack?</h3>
+          <p>A&nbsp;<a href="https://www.javatpoint.com/data-structure-stack">Stack</a>&nbsp;is a linear&nbsp;<a href="https://www.javatpoint.com/data-structure-tutorial">data structure</a>. In case of an array, random access is possible, i.e., any element of an array can be accessed at any time, whereas in a stack, the sequential access is only possible. It is a container that follows the insertion and deletion rule. It follows the principle&nbsp;<strong>LIFO (Last In First Out)</strong>&nbsp;in which the insertion and deletion take place from one side known as a&nbsp;<strong>top</strong>. In stack, we can insert the elements of a similar data type, i.e., the different data type elements cannot be inserted in the same stack. The two operations are performed in LIFO, i.e.,&nbsp;<strong>push</strong>&nbsp;and&nbsp;<strong>pop</strong>&nbsp;operation.</p>
+          <p>&nbsp;</p>
+          <ul class="points">
+            <li><strong>push(x):</strong>&nbsp;It is an operation in which the elements are inserted at the top of the stack. In the&nbsp;<strong>push</strong>&nbsp;function, we need to pass an element which we want to insert in a stack.</li>
+            <li><strong>pop():</strong>&nbsp;It is an operation in which the elements are deleted from the top of the stack. In the&nbsp;<strong>pop()</strong>&nbsp;function, we do not have to pass any argument.</li>
+            <li><strong>peek()/top():</strong>&nbsp;This function returns the value of the topmost element available in the stack. Like pop(), it returns the value of the topmost element but does not remove that element from the stack.</li>
+            <li><strong>isEmpty():</strong>&nbsp;If the stack is empty, then this function will return a true value or else it will return a false value.</li>
+            <li><strong>isFull():</strong>&nbsp;If the stack is full, then this function will return a true value or else it will return a false value.</li>
+          </ul>
+          <p>In stack, the&nbsp;<strong>top</strong>&nbsp;is a pointer which is used to keep track of the last inserted element. To implement the stack, we should know the size of the stack. We need to allocate the memory to get the size of the stack. There are two ways to implement the stack:</p>
+          <ul class="points">
+            <li><strong>Static:</strong>&nbsp;The static implementation of the stack can be done with the help of arrays.</li>
+            <li><strong>Dynamic:</strong>&nbsp;The dynamic implementation of the stack can be done with the help of a linked list.</li>
+          </ul>
+          <h3 class="h3">What is the Queue?</h3>
+          <p>A&nbsp;<a href="https://www.javatpoint.com/data-structure-queue">Queue</a>&nbsp;is a linear data structure. It is an ordered list that follows the principle FIFO (First In -First Out). A Queue is a structure that follows some restrictions on insertion and deletion. In the case of Queue, insertion is performed from one end, and that end is known as a rear end. The deletion is performed from another end, and that end is known as a front end. In Queue, the technical words for insertion and deletion are&nbsp;<strong>enqueue()</strong>&nbsp;and&nbsp;<strong>dequeue(),</strong>&nbsp;respectively whereas, in the case of the stack, the technical words for insertion and deletion are push() and pop(), respectively. Its structure contains two pointers&nbsp;<strong>front pointer</strong>&nbsp;and&nbsp;<strong>rear pointer</strong>, where the front pointer is a pointer that points to the element that was first added in the queue and the rear pointer that points to the element inserted last in the queue.</p>
+          <h3 class="h3">Similarities between stack and queue.</h3>
+          <p><strong>There are two similarities between the stack and queue:</strong></p>
+          <ul class="points">
+            <li><strong>Linear data structure</strong><br />Both the stack and queue are the linear data structure, which means that the elements are stored sequentially and accessed in a single run.</li>
+            <li><strong>Flexible in size</strong><br />Both the stack and queue are flexible in size, which means they can grow and shrink according to the requirements at the run-time.</li>
+          </ul>
+          <h1 class="h1">Linear:</h1>
+          <div style="margin: 5px 0;">
+            <p>A linear&nbsp;<a href="https://www.javatpoint.com/data-structure-tutorial">data structure</a>&nbsp;is a structure in which the elements are stored sequentially, and the elements are connected to the previous and the next element. As the elements are stored sequentially, so they can be traversed or accessed in a single run. The implementation of linear data structures is easier as the elements are sequentially organized in memory. The data elements in an array are traversed one after another and can access only one element at a time.</p>
+            <p>The types of linear data structures are Array, Queue, Stack, Linked List.</p>
+            <p><strong>Let's discuss each linear data structure in detail.</strong></p>
+            <ul class="points">
+              <li><strong>Array:</strong>&nbsp;An array consists of data elements of a same data type. For example, if we want to store the roll numbers of 10 students, so instead of creating 10 integer type variables, we will create an array having size 10. Therefore, we can say that an array saves a lot of memory and reduces the length of the code.</li>
+              <li><strong>Stack:</strong>&nbsp;It is linear data structure that uses the LIFO (Last In-First Out) rule in which the data added last will be removed first. The addition of data element in a stack is known as a push operation, and the deletion of data element form the list is known as pop operation.</li>
+              <li><strong>Queue:</strong>&nbsp;It is a data structure that uses the FIFO rule (First In-First Out). In this rule, the element which is added first will be removed first. There are two terms used in the queue&nbsp;<strong>front</strong>&nbsp;end and&nbsp;<strong>rear</strong>&nbsp;The insertion operation performed at the back end is known ad enqueue, and the deletion operation performed at the front end is known as dequeue.</li>
+              <li><strong>Linked list:</strong>&nbsp;It is a collection of nodes that are made up of two parts, i.e., data element and reference to the next node in the sequence.</li>
+            </ul>
+            <div style="margin: 5px 0;">
+              <h1 class="h1">Circular Queue</h1>
+              <div style="margin: 5px 0;">
+                <p>As we know that in a queue, the front pointer points to the first element while the rear pointer points to the last element of the queue. The problem that arises with the linear queue is that if some empty cells occur at the beginning of the queue then we cannot insert new element at the empty space as the rear cannot be further incremented.</p>
+                <p>A circular queue is also a linear data structure like a normal queue that follows the FIFO principle but it does not end the queue; it connects the last position of the queue to the first position of the queue. If we want to insert new elements at the beginning of the queue, we can insert it using the circular queue data structure.</p>
+                <p>In the circular queue, when the rear reaches the end of the queue, then rear is reset to zero. It helps in refilling all the free spaces. The problem of managing the circular queue is overcome if the first position of the queue comes after the last position of the queue.</p>
+                <p><strong>Conditions for the queue to be a circular queue</strong></p>
+                <ul class="points">
+                  <li>Front ==0 and rear=n-1</li>
+                  <li>Front=rear+1</li>
+                </ul>
+                <p>If either of the above conditions is satisfied means that the queue is a circular queue.</p>
+                <h3 class="h3">Operations on Circular Queue</h3>
+                <p>The following are the two operations that can be performed on a circular queue are:</p>
+                <ul class="points">
+                  <li><strong>Enqueue:</strong>&nbsp;It inserts an element in a queue. The given below are the scenarios that can be considered while inserting an element:
+                    <ol class="points">
+                      <li>If the queue is empty, then the front and rear are set to 0 to insert a new element.</li>
+                      <li>If queue is not empty, then the value of the rear gets incremented.</li>
+                      <li>If queue is not empty and rear is equal to n-1, then rear is set to 0.</li>
+                    </ol>
+                  </li>
+                  <li><strong>Dequeue:</strong>&nbsp;It performs a deletion operation in the Queue. The following are the points or cases that can be considered while deleting an element:
+                    <ol class="points">
+                      <li>If there is only one element in a queue, after the dequeue operation is performed on the queue, the queue will become empty. In this case, the front and rear values are set to -1.</li>
+                      <li>If the value of the front is equal to n-1, after the dequeue operation is performed, the value of the front variable is set to 0.</li>
+                      <li>If either of the above conditions is not fulfilled, then the front value is incremented.</li>
+                    </ol>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

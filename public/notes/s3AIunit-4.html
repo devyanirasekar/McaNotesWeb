@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 AI unit-4</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p>Unit-4</p>
+        <p>&nbsp;</p>
+        <h1 class="h1">What is knowledge representation?</h1>
+        <p>Humans are best at understanding, reasoning, and interpreting knowledge. Human knows things, which is knowledge and as per their knowledge they perform various actions in the real world.&nbsp;<strong>But how machines do all these things comes under knowledge representation and reasoning</strong>. Hence we can describe Knowledge representation as following:</p>
+        <ul class="points">
+          <li>Knowledge representation and reasoning (KR, KRR) is the part of Artificial intelligence which concerned with AI agents thinking and how thinking contributes to intelligent behavior of agents.</li>
+          <li>It is responsible for representing information about the real world so that a computer can understand and can utilize this knowledge to solve the complex real world problems such as diagnosis a medical condition or communicating with humans in natural language.</li>
+          <li>It is also a way which describes how we can represent knowledge in artificial intelligence. Knowledge representation is not just storing data into some database, but it also enables an intelligent machine to learn from that knowledge and experiences so that it can behave intelligently like a human.</li>
+        </ul>
+        <h2 class="h2">What to Represent:</h2>
+        <p>Following are the kind of knowledge which needs to be represented in AI systems:</p>
+        <ul class="points">
+          <li><strong>Object:</strong>&nbsp;All the facts about objects in our world domain. E.g., Guitars contains strings, trumpets are brass instruments.</li>
+          <li><strong>Events:</strong>&nbsp;Events are the actions which occur in our world.</li>
+          <li><strong>Performance:</strong>&nbsp;It describe behavior which involves knowledge about how to do things.</li>
+          <li><strong>Meta-knowledge:</strong>&nbsp;It is knowledge about what we know.</li>
+          <li><strong>Facts:</strong>&nbsp;Facts are the truths about the real world and what we represent.</li>
+          <li><strong>Knowledge-Base:</strong>&nbsp;The central component of the knowledge-based agents is the knowledge base. It is represented as KB. The Knowledgebase is a group of the Sentences (Here, sentences are used as a technical term and not identical with the English language).</li>
+        </ul>
+        <p><strong>Knowledge:</strong>&nbsp;Knowledge is awareness or familiarity gained by experiences of facts, data, and situations. Following are the types of knowledge in artificial intelligence:</p>
+        <h2 class="h2">Types of knowledge</h2>
+        <p>Following are the various types of knowledge:</p>
+        <p><strong>1. Declarative Knowledge:</strong></p>
+        <ul class="points">
+          <li>Declarative knowledge is to know about something.</li>
+          <li>It includes concepts, facts, and objects.</li>
+          <li>It is also called descriptive knowledge and expressed in declarativesentences.</li>
+          <li>It is simpler than procedural language.</li>
+        </ul>
+        <p><strong>2. Procedural Knowledge</strong></p>
+        <ul class="points">
+          <li>It is also known as imperative knowledge.</li>
+          <li>Procedural knowledge is a type of knowledge which is responsible for knowing how to do something.</li>
+          <li>It can be directly applied to any task.</li>
+          <li>It includes rules, strategies, procedures, agendas, etc.</li>
+          <li>Procedural knowledge depends on the task on which it can be applied.</li>
+        </ul>
+        <p><strong>3. Meta-knowledge:</strong></p>
+        <ul class="points">
+          <li>Knowledge about the other types of knowledge is called Meta-knowledge.</li>
+        </ul>
+        <p><strong>4. Heuristic knowledge:</strong></p>
+        <ul class="points">
+          <li>Heuristic knowledge is representing knowledge of some experts in a filed or subject.</li>
+          <li>Heuristic knowledge is rules of thumb based on previous experiences, awareness of approaches, and which are good to work but not guaranteed.</li>
+        </ul>
+        <p><strong>5. Structural knowledge:</strong></p>
+        <ul class="points">
+          <li>Structural knowledge is basic knowledge to problem-solving.</li>
+          <li>It describes relationships between various concepts such as kind of, part of, and grouping of something.</li>
+          <li>It describes the relationship that exists between concepts or objects.</li>
+        </ul>
+        <div style="margin: 5px 0;">Declarative Representation:</div>
+        <div style="margin: 5px 0;">Declarative programming in artificial intelligence (AI)&nbsp;<mark class="QVRyCf">emphasizes high-level abstractions, immutability, and the use of domain-specific languages</mark>.&nbsp;It separates logic from the control flow, which promotes code readability, maintainability, and reusability.</div>
+        <div style="margin: 5px 0;">
+          <div class="WaaZC Zh8Myb">
+            <div class="rPeykc PZPZlf" data-attrid="SGEParagraphFeedback" data-hveid="CAMQAA" data-ved="2ahUKEwiv9LzH3_aDAxUFzDgGHTQMB48Qo_EKegQIAxAA">Declarative programming involves specifying what result is expected from the code.&nbsp;It's a programming paradigm where programmers program for the what and not the how.<span class="UV3uM">&nbsp;</span>
+              <div class="NPrrbc" data-cid="_RGOxZa_CC4WY4-EPtJic-Ag_8" data-bt="1">&nbsp;</div>
+            </div>
+          </div>
+          <div class="WaaZC Zh8Myb">
+            <div class="rPeykc PZPZlf" data-attrid="SGEParagraphFeedback" data-hveid="CAUQAA" data-ved="2ahUKEwiv9LzH3_aDAxUFzDgGHTQMB48Qo_EKegQIBRAA">Declarative knowledge clarifies what to do to perform a certain task.&nbsp;It lays down the function to perform, but not the control information to implement the knowledge.<span class="UV3uM">&nbsp;</span>
+              <div class="NPrrbc" data-cid="_RGOxZa_CC4WY4-EPtJic-Ag_11" data-bt="1">&nbsp;</div>
+            </div>
+          </div>
+          <div class="WaaZC Zh8Myb">
+            <div class="rPeykc PZPZlf" data-attrid="SGEParagraphFeedback" data-hveid="CAcQAA" data-ved="2ahUKEwiv9LzH3_aDAxUFzDgGHTQMB48Qo_EKegQIBxAA">Declarative knowledge is not very valuable when data is stored as a disjointed collection of facts and information.&nbsp;Instead, the data must be categorized and organized into a functional structure that can be referenced for reasoning and learning about a subject.<span class="UV3uM">&nbsp;</span>
+              <div class="NPrrbc" data-cid="_RGOxZa_CC4WY4-EPtJic-Ag_14" data-bt="1">&nbsp;</div>
+            </div>
+          </div>
+          <div class="WaaZC Zh8Myb">
+            <div class="rPeykc uP58nb eUu65e PZPZlf" data-attrid="SGEParagraphFeedback" data-hveid="CAsQCg" data-ved="2ahUKEwiv9LzH3_aDAxUFzDgGHTQMB48Qo_EKegQICxAK"><span role="heading" aria-level="2">Some examples of declarative knowledge include:</span></div>
+          </div>
+          <div class="WaaZC Zh8Myb">
+            <ul data-hveid="CAsQCw" data-ved="2ahUKEwiv9LzH3_aDAxUFzDgGHTQMB48Qm_YKegQICxAL">
+              <li class="PZPZlf" data-attrid="SGEListItem">Knowing an organization's yearly revenue goal</li>
+              <li class="PZPZlf" data-attrid="SGEListItem">Writing an expense report from start to finish</li>
+              <li class="PZPZlf" data-attrid="SGEListItem">Knowing the name of a country's president</li>
+              <li class="PZPZlf" data-attrid="SGEListItem"><span class="oXzekf">Knowing how to do a cartwheel</span></li>
+            </ul>
+            <div style="margin: 5px 0;">
+              <h1 class="h1">Techniques of knowledge representation</h1>
+              <p>There are mainly four ways of knowledge representation which are given as follows:</p>
+              <ol class="points">
+                <li>Logical Representation</li>
+                <li>Semantic Network Representation</li>
+                <li>Frame Representation</li>
+                <li>Production Rules</li>
+              </ol>
+              <span class="oXzekf"><span class="oXzekf"><img src="https://static.javatpoint.com/tutorial/ai/images/ai-techniques-of-knowledge-representation.png" alt="Techniques of knowledge representation" /></span></span>
+              <h2 class="h2">1. Logical Representation</h2>
+              <p>Logical representation is a language with some concrete rules which deals with propositions and has no ambiguity in representation. Logical representation means drawing a conclusion based on various conditions. This representation lays down some important communication rules. It consists of precisely defined syntax and semantics which supports the sound inference. Each sentence can be translated into logics using syntax and semantics.</p>
+              <h3 class="h3">Syntax:</h3>
+              <ul class="points">
+                <li>Syntaxes are the rules which decide how we can construct legal sentences in the logic.</li>
+                <li>It determines which symbol we can use in knowledge representation.</li>
+                <li>How to write those symbols.</li>
+              </ul>
+              <h3 class="h3">Semantics:</h3>
+              <ul class="points">
+                <li>Semantics are the rules by which we can interpret the sentence in the logic.</li>
+                <li>Semantic also involves assigning a meaning to each sentence.</li>
+              </ul>
+              <p>Logical representation can be categorised into mainly two logics:</p>
+              <ol class="pointsa">
+                <li>Propositional Logics</li>
+                <li>Predicate logics</li>
+              </ol>
+              <div style="margin: 5px 0;">
+                <h3 class="h3">Advantages of logical representation:</h3>
+                <ol class="points">
+                  <li>Logical representation enables us to do logical reasoning.</li>
+                  <li>Logical representation is the basis for the programming languages.</li>
+                </ol>
+                <div style="margin: 5px 0;">&nbsp;</div>
+                <div style="margin: 5px 0;">&nbsp;</div>
+                <h3 class="h3">Disadvantages of logical Representation:</h3>
+                <ol class="points">
+                  <li>Logical representations have some restrictions and are challenging to work with.</li>
+                  <li>Logical representation technique may not be very natural, and inference may not be so efficient.</li>
+                </ol>
+                <div style="margin: 5px 0;">
+                  <h2 class="h2">2. Semantic Network Representation</h2>
+                  <p>Semantic networks are alternative of predicate logic for knowledge representation. In Semantic networks, we can represent our knowledge in the form of graphical networks. This network consists of nodes representing objects and arcs which describe the relationship between those objects. Semantic networks can categorize the object in different forms and can also link those objects. Semantic networks are easy to understand and can be easily extended.</p>
+                  <p>This representation consist of mainly two types of relations:</p>
+                  <ol class="pointsa">
+                    <li>IS-A relation (Inheritance)</li>
+                    <li>Kind-of-relation</li>
+                  </ol>
+                  <p><strong>Example:</strong>&nbsp;Following are some statements which we need to represent in the form of nodes and arcs.</p>
+                  <h3 class="h3">Statements:</h3>
+                  <ol class="pointsa">
+                    <li>Jerry is a cat.</li>
+                    <li>Jerry is a mammal</li>
+                    <li>Jerry is owned by Priya.</li>
+                    <li>Jerry is brown colored.</li>
+                    <li>All Mammals are animal.</li>
+                  </ol>
+                  <p><img src="https://static.javatpoint.com/tutorial/ai/images/ai-techniques-of-knowledge-representation2.png" alt="Techniques of knowledge representation" /></p>
+                  <p>In the above diagram, we have represented the different type of knowledge in the form of nodes and arcs. Each object is connected with another object by some relation.</p>
+                  <h3 class="h3">Drawbacks in Semantic representation:</h3>
+                  <ol class="points">
+                    <li>Semantic networks take more computational time at runtime as we need to traverse the complete network tree to answer some questions. It might be possible in the worst case scenario that after traversing the entire tree, we find that the solution does not exist in this network.</li>
+                    <li>Semantic networks try to model human-like memory (Which has 1015 neurons and links) to store the information, but in practice, it is not possible to build such a vast semantic network.</li>
+                    <li>These types of representations are inadequate as they do not have any equivalent quantifier, e.g., for all, for some, none, etc.</li>
+                    <li>Semantic networks do not have any standard definition for the link names.</li>
+                    <li>These networks are not intelligent and depend on the creator of the system.</li>
+                  </ol>
+                  <h3 class="h3">Advantages of Semantic network:</h3>
+                  <ol class="points">
+                    <li>Semantic networks are a natural representation of knowledge.</li>
+                    <li>Semantic networks convey meaning in a transparent manner.</li>
+                    <li>These networks are simple and easily understandable.</li>
+                  </ol>
+                  <h2 class="h2">3. Frame Representation</h2>
+                  <p>A frame is a record like structure which consists of a collection of attributes and its values to describe an entity in the world. Frames are the AI data structure which divides knowledge into substructures by representing stereotypes situations. It consists of a collection of slots and slot values. These slots may be of any type and sizes. Slots have names and values which are called facets.</p>
+                  <p><strong>Facets:</strong>&nbsp;The various aspects of a slot is known as&nbsp;<strong>Facets</strong>. Facets are features of frames which enable us to put constraints on the frames. Example: IF-NEEDED facts are called when data of any particular slot is needed. A frame may consist of any number of slots, and a slot may include any number of facets and facets may have any number of values. A frame is also known as&nbsp;<strong>slot-filter knowledge representation</strong>&nbsp;in artificial intelligence.</p>
+                  <p>Frames are derived from semantic networks and later evolved into our modern-day classes and objects. A single frame is not much useful. Frames system consist of a collection of frames which are connected. In the frame, knowledge about an object or event can be stored together in the knowledge base. The frame is a type of technology which is widely used in various applications including Natural language processing and machine visions.</p>
+                  
+                  <h3 class="h3">Example: 1</h3>
+                  <p>Let's take an example of a frame for a book</p>
+                  <table class="alt">
+                    <tbody>
+                      <tr>
+                        <th>Slots</th>
+                        <th>Filters</th>
+                      </tr>
+                      <tr>
+                        <td><strong>Title</strong></td>
+                        <td>Artificial Intelligence</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Genre</strong></td>
+                        <td>Computer Science</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Author</strong></td>
+                        <td>Peter Norvig</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Edition</strong></td>
+                        <td>Third Edition</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Year</strong></td>
+                        <td>1996</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Page</strong></td>
+                        <td>1152</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h3 class="h3">Example 2:</h3>
+                  <p>Let's suppose we are taking an entity, Peter. Peter is an engineer as a profession, and his age is 25, he lives in city London, and the country is England. So following is the frame representation for this:</p>
+                  <table class="alt">
+                    <tbody>
+                      <tr>
+                        <th>Slots</th>
+                        <th>Filter</th>
+                      </tr>
+                      <tr>
+                        <td><strong>Name</strong></td>
+                        <td>Peter</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Profession</strong></td>
+                        <td>Doctor</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Age</strong></td>
+                        <td>25</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Marital status</strong></td>
+                        <td>Single</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Weight</strong></td>
+                        <td>78</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h3 class="h3">Advantages of frame representation:</h3>
+                  <ol class="points">
+                    <li>The frame knowledge representation makes the programming easier by grouping the related data.</li>
+                    <li>The frame representation is comparably flexible and used by many applications in AI.</li>
+                    <li>It is very easy to add slots for new attribute and relations.</li>
+                    <li>It is easy to include default data and to search for missing values.</li>
+                    <li>Frame representation is easy to understand and visualize.</li>
+                  </ol>
+                  <h3 class="h3">Disadvantages of frame representation:</h3>
+                  <ol class="points">
+                    <li>In frame system inference mechanism is not be easily processed.</li>
+                    <li>Inference mechanism cannot be smoothly proceeded by frame representation.</li>
+                    <li>Frame representation has a much generalized approach.</li>
+                  </ol>
+                  <h2 class="h2">4. Production Rules</h2>
+                  <p>Production rules system consist of (<strong>condition, action</strong>) pairs which mean, "If condition then action". It has mainly three parts:</p>
+                  <ul class="points">
+                    <li>The set of production rules</li>
+                    <li>Working Memory</li>
+                    <li>The recognize-act-cycle</li>
+                  </ul>
+                  <p>In production rules agent checks for the condition and if the condition exists then production rule fires and corresponding action is carried out. The condition part of the rule determines which rule may be applied to a problem. And the action part carries out the associated problem-solving steps. This complete process is called a recognize-act cycle.</p>
+                  <p>The working memory contains the description of the current state of problems-solving and rule can write knowledge to the working memory. This knowledge match and may fire other rules.</p>
+                  <p>If there is a new situation (state) generates, then multiple production rules will be fired together, this is called conflict set. In this situation, the agent needs to select a rule from these sets, and it is called a conflict resolution.</p>
+                  <h3 class="h3">Example:</h3>
+                  <ul class="points">
+                    <li><strong>IF (at bus stop AND bus arrives) THEN action (get into the bus)</strong></li>
+                    <li><strong>IF (on the bus AND paid AND empty seat) THEN action (sit down).</strong></li>
+                    <li><strong>IF (on bus AND unpaid) THEN action (pay charges).</strong></li>
+                    <li><strong>IF (bus arrives at destination) THEN action (get down from the bus).</strong></li>
+                  </ul>
+                  <h3 class="h3">Advantages of Production rule:</h3>
+                  <ol class="points">
+                    <li>The production rules are expressed in natural language.</li>
+                    <li>The production rules are highly modular, so we can easily remove, add or modify an individual rule.</li>
+                  </ol>
+                  <h3 class="h3">Disadvantages of Production rule:</h3>
+                  <ol class="points">
+                    <li>Production rule system does not exhibit any learning capabilities, as it does not store the result of the problem for the future uses.</li>
+                    <li>During the execution of the program, many rules may be active hence rule-based production systems are inefficient.</li>
+                  </ol>
+                  <div style="margin: 5px 0;">
+                    <h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Conceptual dependency</span></h1>
+                  </div>
+                  <div style="margin: 5px 0;">
+                    <div class="flex-1 overflow-hidden">
+                      <div class="react-scroll-to-bottom--css-esclm-79elbk h-full">
+                        <div class="react-scroll-to-bottom--css-esclm-1n7m0yu">
+                          <div class="flex flex-col pb-9 text-sm">
+                            <div class="w-full text-token-text-primary" data-testid="conversation-turn-3">
+                              <div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+                                <div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
+                                  <div class="relative flex w-full flex-col lg:w-[calc(100%-115px)] agent-turn">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                      <div class="flex flex-grow flex-col max-w-full">
+                                        <div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="e71cfa9e-8e62-48ac-94c8-166e840a68c4">
+                                          <div class="markdown prose w-full break-words dark:prose-invert light">
+                                            <p>Conceptual Dependency (CD) is a knowledge representation framework that was introduced by Roger Schank in the early 1970s. It is a model designed to represent the meaning of natural language sentences in a way that is more accessible for computer processing. The primary goal of Conceptual Dependency is to capture the conceptual structure of sentences and the relationships between concepts.</p>
+                                            <p>Here are some key points about Conceptual Dependency in the context of artificial intelligence:</p>
+                                            <ol>
+                                              <li>
+                                                <p><strong>Representation of Knowledge:</strong> Conceptual Dependency focuses on representing knowledge in terms of concepts and the relationships between them. Concepts are mental constructs that represent entities or ideas in the world.</p>
+                                              </li>
+                                              <li>
+                                                <p><strong>Semantic Networks:</strong> CD can be considered a type of semantic network, where nodes represent concepts and edges represent relationships between these concepts. These relationships capture the actions, events, and interactions between different entities.</p>
+                                              </li>
+                                              <li>
+                                                <p><strong>Primitive Actions and Goals:</strong> In Conceptual Dependency, actions are represented as primitive actions, and goals are specified as states of the world that need to be achieved. Primitive actions are basic operations that can change the state of the world.</p>
+                                              </li>
+                                              <li>
+                                                <p><strong>Inference Mechanism:</strong> CD includes an inference mechanism that allows reasoning about the relationships between concepts. This enables the system to draw conclusions or make inferences based on the represented knowledge.</p>
+                                              </li>
+                                              <li>
+                                                <p><strong>Natural Language Understanding:</strong> One of the main applications of Conceptual Dependency is in natural language understanding. By representing the meaning of sentences in a structured way, it becomes easier for computers to comprehend and process natural language input.</p>
+                                              </li>
+                                              <li>
+                                                <p><strong>Limitations:</strong> While Conceptual Dependency was an influential model in its time, it has certain limitations. It may struggle with ambiguity in natural language, and representing complex knowledge structures can be challenging.</p>
+                                              </li>
+                                              <li>
+                                                <p><strong>Evolution:</strong> Over the years, other knowledge representation models, such as frame-based systems, ontologies, and more recently, neural network-based approaches, have gained popularity. These newer models often address some of the limitations of earlier frameworks like Conceptual Dependency.</p>
+                                              </li>
+                                            </ol>
+                                            <p>In modern AI systems, a combination of various knowledge representation techniques is often used based on the specific requirements of the task at hand. While Conceptual Dependency may not be as widely used today, its contributions to the development of early AI systems and natural language understanding are notable.</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="mt-1 flex justify-start gap-3 empty:hidden">&nbsp;</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full pt-2 md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:w-[calc(100%-.5rem)]">&nbsp;</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

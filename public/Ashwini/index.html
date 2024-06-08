@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="../index.html">
+                <li class="listno list-diplay">Home</li>
+            </a>
+            <a href="../Devyani/2aboutUs.html" ><li class="listno list-diplay">About</li> </a>
+            <a href="../Pages/contactUs.html" ><li class="listno list-diplay">Contact</li></a>
+            <a href="../login.php" ><li><span class="download list-diplay" id="download">Logout</span></li></a>
+            <a href="" ><li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li></a>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="../index.html">
+                <li class="listno ">Home</li>
+            </a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <h3>SEM 1</h3>
+            <ul>
+                <li> <a href="SubUnits/sem1/DM/index.html"> DESCRETE MATHEMATICS</a></li><br>
+                <li><a href="SubUnits/sem1/DS USING C/index.html">DATA STRUCTURES USING C</a></li><br>
+                <li><a href="SubUnits/sem1/oops Using c/index.html">OOP's USING C</a><li><br>
+                <li><a href="SubUnits/sem1/WEB DEV/index.html">WEB DEVELOPMENT</a></li><br>
+                <li><a href="SubUnits/sem1/ENGLISH/index.html">BUSINESS ENGLISH</a></li><br>
+            </ul>
+            <span class="count">1</span>
+        </div>
+        <div class="box">
+            <h3>SEM 2</h3>
+            <ul>
+                <li><a href="SubUnits/sem2/os/">OS USING ANDROID</a></li><br>
+                <li><a href="SubUnits/sem2/dbms/index.html">DBMS</a></li><br>
+                <li><a href="SubUnits/sem2/DCN/index.html">DCN</a></li><br>
+                <li><a href="SubUnits/sem2/cloudComputing/">CLOUD COMPUTING</a></li><br>
+                <li><a href="SubUnits/sem2/EVS/index.html">ENVIRONMENTAL STUDIES</a></li><br>
+            </ul>
+            <span class="count">2</span>
+        </div>
+        <div class="box">
+            <h3>SEM 3</h3>
+            <ul>
+                <li><a href="SubUnits/sem3/python/index.html">DATA SCIENCE USING PYTHON</a></li><br>
+                <li><a href="SubUnits/sem3/sad/index.html"> SYSTEM ANALYSIS AND DESIGN</a> </li><br>
+                <li><a href="SubUnits/sem3/ai/index.html">ARTIFICIAL INTELLIGENCE</a></li><br>
+                <li><a href="SubUnits/sem3/cyberSecurity/index.html">CYBER SECURITY</a></li><br>
+                <li><a href="SubUnits/sem3/softskill/index.html">SOFT SKILLS</a> </li><br>
+            </ul>
+            <span class="count">3</span>
+        </div>
+    </div>
+
+    <!-- <!footer--  --> 
+    <footer class="footer">
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="../Devyani/2aboutUs.html">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="../index.php">Home</a></li>
+                        <li><a href="../Pages/contactUs.html">Conatct US</a></li>
+                        <li><a href="../Devyani/2aboutUs.html">About Us</a></li>
+                        <li><a href="../Syllabus/index.html">Syllabus</a></li>
+                        <li><a href="../QuetionPapper/index.html">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+<!-- Gsap CDN -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Scroll Trigger CDN -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- jsfile -->
+
+<script src="../gSap.js"></script>
+<script src="../script.js"></script>  
+</body>
+</html>

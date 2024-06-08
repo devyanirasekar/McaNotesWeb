@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 WD unit-4</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit-4</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <h1>CSS&nbsp;<span class="color_h1">Introduction</span></h1>
+        <div style="margin: 5px 0;">
+          <p class="intro">CSS is the language we use to style a Web page.</p>
+          <hr />
+          <h2>What is CSS?</h2>
+          <ul>
+            <li>CSS stands for Cascading Style Sheets</li>
+            <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+            <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+            <li>External stylesheets are stored in CSS files</li>
+          </ul>
+          <div style="margin: 5px 0;">
+            <h2>Why Use CSS?</h2>
+            <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+            <div class="w3-example">
+              <h3>CSS Example</h3>
+              <div class="w3-code notranslate cssHigh"><span class="cssselectorcolor">body&nbsp;<span class="cssdelimitercolor">{</span><span class="csspropertycolor"><br />&nbsp;&nbsp;background-color<span class="csspropertyvaluecolor"><span class="cssdelimitercolor">:</span>&nbsp;lightblue<span class="cssdelimitercolor">;</span></span><br /></span><span class="cssdelimitercolor">}</span><br /><br />h1&nbsp;<span class="cssdelimitercolor">{</span><span class="csspropertycolor"><br />&nbsp;&nbsp;color<span class="csspropertyvaluecolor"><span class="cssdelimitercolor">:</span>&nbsp;white<span class="cssdelimitercolor">;</span></span><br />&nbsp;&nbsp;text-align<span class="csspropertyvaluecolor"><span class="cssdelimitercolor">:</span>&nbsp;center<span class="cssdelimitercolor">;</span></span><br /></span><span class="cssdelimitercolor">}</span><br /><br />p&nbsp;<span class="cssdelimitercolor">{</span><span class="csspropertycolor"><br />&nbsp; font-family<span class="csspropertyvaluecolor"><span class="cssdelimitercolor">:</span>&nbsp;verdana<span class="cssdelimitercolor">;</span></span><br />&nbsp;&nbsp;font-size<span class="csspropertyvaluecolor"><span class="cssdelimitercolor">:</span>&nbsp;20px<span class="cssdelimitercolor">;</span></span><br /></span><span class="cssdelimitercolor">}</span></span></div>
+              <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_intro" target="_blank" rel="noopener">Try it Yourself &raquo;</a>
+            </div>
+            <hr />
+            <h2>CSS Solved a Big Problem</h2>
+            <p>HTML was NEVER intended to contain tags for formatting a web page!</p>
+            <p>HTML was created to describe the content of a web page, like:</p>
+            <p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
+            <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+            <p>When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.</p>
+            <p>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+            <h2>CSS Syntax</h2>
+            <div>
+              <p><img class="w3-image" src="https://www.w3schools.com/css/img_selector.gif" alt="CSS selector" /></p>
+            </div>
+            <p>The selector points to the HTML element you want to style.</p>
+            <p>The declaration block contains one or more declarations separated by semicolons.</p>
+            <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+            <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+            <div class="w3-example">
+              <h3>Example</h3>
+              <p>In this example all &lt;p&gt; elements will be center-aligned, with a red text color:</p>
+              <div class="w3-code notranslate cssHigh"><span class="cssselectorcolor">p&nbsp;<span class="cssdelimitercolor">{</span><span class="csspropertycolor"><br />&nbsp;&nbsp;color<span class="csspropertyvaluecolor"><span class="cssdelimitercolor">:</span>&nbsp;red<span class="cssdelimitercolor">;</span></span><br />&nbsp;&nbsp;text-align<span class="csspropertyvaluecolor"><span class="cssdelimitercolor">:</span>&nbsp;center<span class="cssdelimitercolor">;</span></span><br /></span><span class="cssdelimitercolor">}</span></span></div>
+              <div class="w3-code notranslate cssHigh">&nbsp;</div>
+              <div class="w3-code notranslate cssHigh">
+                <h4>Example Explained</h4>
+                <ul>
+                  <li><code class="w3-codespan">p</code>&nbsp;is a selector in CSS (it points to the HTML element you want to style: &lt;p&gt;).</li>
+                  <li><code class="w3-codespan">color</code>&nbsp;is a property, and&nbsp;<code class="w3-codespan">red</code>&nbsp;is the property value</li>
+                  <li><code class="w3-codespan">text-align</code>&nbsp;is a property, and&nbsp;<code class="w3-codespan">center</code>&nbsp;is the property value</li>
+                </ul>
+                <div style="margin: 5px 0;">
+                  <h2>CSS Color Names</h2>
+                  <p>In CSS, a color can be specified by using a predefined color name:</p>
+                  <div class="w3-row w3-center">
+                    <div class="w3-col l3 m6">
+                      <div>Tomato</div>
+                    </div>
+                    <div class="w3-col l3 m6">
+                      <div>Orange</div>
+                    </div>
+                    <div class="w3-col l3 m6">
+                      <div>DodgerBlue</div>
+                    </div>
+                    <div class="w3-col l3 m6">
+                      <div>MediumSeaGreen</div>
+                    </div>
+                    <div class="w3-col l3 m6">
+                      <div>Gray</div>
+                    </div>
+                    <div class="w3-col l3 m6">
+                      <div>SlateBlue</div>
+                    </div>
+                    <div class="w3-col l3 m6">
+                      <div>Violet</div>
+                    </div>
+                    <div class="w3-col l3 m6">
+                      <div>LightGray</div>
+                      <div>&nbsp;</div>
+                      <div>
+                        <h1>CSS&nbsp;<span class="color_h1">Backgrounds</span></h1>
+                        <div style="margin: 5px 0;">
+                          <p class="intro">The CSS background properties are used to add background effects for elements.</p>
+                          <hr />
+                          <div>
+                            <p>In these chapters, you will learn about the following CSS background properties:</p>
+                            <ul>
+                              <li><code class="w3-codespan">background-color</code></li>
+                              <li><code class="w3-codespan">background-image</code></li>
+                              <li><code class="w3-codespan">background-repeat</code></li>
+                              <li><code class="w3-codespan">background-attachment</code></li>
+                              <li><code class="w3-codespan">background-position</code></li>
+                              <li><code class="w3-codespan">background</code>&nbsp;(shorthand property)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM2 OS unit-2</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><b>UNIT-2</b></p>
+        <p><strong>&nbsp;</strong></p>
+        <h1>CONCEPT OF PROCESS</h1>
+        <p>&nbsp;</p>
+        <ul>
+          <li>A process is sequential program in execution. A process defines the fundamental unit of computation for the computer. Components of process are :</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ol>
+          <li>Object Program</li>
+          <li>Data</li>
+          <li>Resources</li>
+          <li>Status of the process execution.</li>
+        </ol>
+        <ul>
+          <li>Object program i.e. code to be executed. Data is used for executing the program. While executing the program, it may require some resources. Last component is used for verifying the status of the process execution. A process can run to completion only when all requested resources have been allocated to the process. Two or more processes could be executing the same program, each using their own data and resources.</li>
+        </ul>
+        <h2> Processes and Programs</h2>
+        <ul>
+          <li>Process is a dynamic entity, that is a program in execution. A process is a sequence of information executions. Process exists in a limited span of time. Two or more processes could be executing the same program, each using their own data and resources.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Program is a static entity made up of program statement. Program contains the instructions. A program exists at single place in space and continues to exist. A program does not perform the action by itself.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>When process executes, it changes state. Process state is defined as the current activity of the process.  shows the general form of the process state transition diagram. Process state contains five states. Each process is in one of the states. The states are listed below.</li>
+        </ul>
+        <ol>
+          <li>New</li>
+          <li>Ready</li>
+          <li>Running</li>
+          <li>Waiting</li>
+          <li>Terminated(exist)</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol>
+          <li>New : A process that just been created.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="2">
+          <li>Ready : Ready processes are waiting to have the processor allocated to them by the operating system so that they can run.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="3">
+          <li>Running : The process that is currently being executed. A running process possesses all the resources needed for its execution, including the processor.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="4">
+          <li>Waiting : A process that can not execute until some event occurs such as the completion of an I/O operation. The</li>
+        </ol>
+        <p>running process may become suspended by invoking an I/O module.</p>
+        <p>&nbsp;</p>
+        <ol start="5">
+          <li>Terminated : A process that has been released from the pool of executable processes by the operating system.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p> Diagram for Process State</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Whenever processes changes state, the operating system reacts by placing the process PCB in the list that corresponds to its new state. Only one process can be running on any processor at any instant and many processes may be ready and waiting state.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h2>Suspended Processes</h2>
+        <p>Characteristics of suspend process</p>
+        <ol>
+          <li>Suspended process is not immediately available for execution.</li>
+          <li>The process may or may not be waiting on an event.</li>
+          <li>For preventing the execution, process is suspend by OS, parent process, process itself and an agent.</li>
+          <li>Process may not be removed from the suspended state until the agent orders the removal.</li>
+        </ol>
+        <ul>
+          <li>Swapping is used to move all of a process from main memory to disk. When all the process by putting it in the suspended state and transferring it to disk.</li>
+        </ul>
+        <h2>Reasons for process suspension</h2>
+        <ol>
+          <li>Swapping</li>
+          <li>Timing</li>
+          <li>Interactive user request</li>
+          <li>Parent process request</li>
+        </ol>
+        <p>Swapping: OS needs to release required main memory to bring in a process that is ready to execute.</p>
+        <p>&nbsp;</p>
+        <p>Timing: Process may be suspended while waiting for the next time interval.</p>
+        <p>Interactive user request: Process may be suspended for debugging purpose by user.</p>
+        <p>&nbsp;</p>
+        <p>Parent process request: To modify the suspended process or to coordinate the activity of various descendants.</p>
+        <p>&nbsp;</p>
+        <h2> Process Control Block (PCB)</h2>
+        <ul>
+          <li>Each process contains the process control block (PCB). PCB is the data structure used by the operating system. Operating system groups all information that needs about particular process. Fig. 3.2 shows the process control block.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <table width="282">
+          <tbody>
+            <tr>
+              <td width="111">
+                <p>&nbsp;</p>
+                <p>Pointer</p>
+              </td>
+              <td width="171">
+                <p>Process</p>
+                <p>State</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" width="282">
+                <p>Process Number</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" width="282">
+                <p>Program Counter</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" width="282">
+                <p>CPU registers</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" width="282">
+                <p>Memory Allocation</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" width="282">
+                <p>Event Information</p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" width="282">
+                <p>List of open files</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="111">
+                <p>&nbsp;</p>
+              </td>
+              <td width="171">
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p> Process Control Block</p>
+        <p>&nbsp;</p>
+        <ol>
+          <li>Pointer : Pointer points to another process control block. Pointer is used for maintaining the scheduling list.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="2">
+          <li>Process State : Process state may be new, ready, running, waiting and so on.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="3">
+          <li>Program Counter : It indicates the address of the next instruction to be executed for this process.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="4">
+          <li>Event information : For a process in the blocked state this field contains information concerning the event for which the process is waiting.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="5">
+          <li>CPU register : It indicates general purpose register, stack pointers, index registers and accumulators etc. number of register and type of register totally depends upon the computer architecture.</li>
+          <li>Memory Management Information : This information may include the value of base and limit register. This information is useful for deallocating the memory when the process terminates.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ol start="7">
+          <li>Accounting Information : This information includes the amount of CPU and real time used, time limits, job or process numbers, account numbers etc.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Process control block also includes the information about CPU scheduling, I/O resource management, file management information, priority and so on. The PCB simply serves as the repository for any information that may vary from process to process.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>When a process is created, hardware registers and flags are set to the values provided by the loader or linker. Whenever that process is suspended, the contents of the processor register are usually saved on the stack and the pointer to the related stack frame is stored in the PCB. In this way, the hardware state can be restored when the process is scheduled to run again.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROCESS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MANAGEMENT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROCESS</p>
+        <h1>SCHEDULING</h1>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Multiprogramming operating system allows more than one process to be loaded into the executable memory at a time and for the loaded process to share the CPU using time multiplexing.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>The scheduling mechanism is the part of the process manager that handles the removal of the running process from the CPU and the selection of another process on the basis of particular strategy.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h2> Scheduling Queues</h2>
+        <ul>
+          <li>When the process enters into the system, they are put into a job queue. This queue consists of all processes in the system. The operating system also has other queues.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Device queue is a queue for which a list of processes waiting for a particular I/O device. Each device has its own device queue. Fig. 3.3 shows the queuing diagram of process scheduling. In the fig 3.3, queue is represented by rectangular box. The circles represent the resources that serve the queues. The arrows indicate the flow of processes in the system.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;&nbsp;</p>
+        <p> Queuing Diagram</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Queues are of two types : ready queue and set of device queues. A newly arrived process is put in the ready queue. Processes are waiting in ready queue for allocating the CPU. Once the CPU is assigned to the process, then process will execute. While executing the process, one of the several events could occur.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ol>
+          <li>The process could issue an I/O request and then place in an I/O queue.</li>
+          <li>The process could create new sub process and waits for its termination.</li>
+          <li>The process could be removed forcibly from the CPU, as a result of interrupt and put back in the ready queue.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <h3> Two State Process Model</h3>
+        <ul>
+          <li>Process may be in one of two states :
+            <ol>
+              <li>Running</li>
+              <li>Not Running</li>
+            </ol>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>When new process is created by OS, that process enters into the system in the running state.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Processes that are not running are kept in queue, waiting their turn to execute. Each entry in the queue is a printer to a particular process. Queue is</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>implemented by using linked list. Use of dispatcher is as follows. When a process interrupted, that process is transferred in the waiting queue. If the process has completed or aborted, the process is discarded. In either case, the dispatcher then select a process from the queue to execute.</p>
+        <p>&nbsp;</p>
+        <h2>Schedules</h2>
+        <ul>
+          <li>Schedulers are of three types.</li>
+        </ul>
+        <ol>
+          <li>Long Term Scheduler</li>
+          <li>Short Term Scheduler</li>
+          <li>Medium Term Scheduler</li>
+        </ol>
+        <p>&nbsp;</p>
+        <h3>Long Term Scheduler</h3>
+        <ul>
+          <li>It is also called job scheduler. Long term scheduler determines which programs are admitted to the system for processing. Job scheduler selects processes from the queue and loads them into memory for execution. Process loads into the memory for CPU scheduler. The primary objective of the job scheduler is to provide a balanced mix of jobs, such as I/O bound and processor bound. It also controls the degree of multiprogramming. If the degree of multiprogramming is stable, then the average rate of process creation must be equal to the average departure rate of processes leaving the system.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>On same systems, the long term scheduler may be absent or minimal. Time-sharing operating systems have no long term scheduler. When process changes the state from new to ready, then there is a long term scheduler.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3> Short Term Scheduler</h3>
+        <ul>
+          <li>It is also called CPU scheduler. Main objective is increasing system performance in accordance with the chosen set of criteria. It is the change of ready state to running state of the process. CPU scheduler selects from among the processes that are ready to execute and allocates the CPU to one of them.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Short term scheduler also known as dispatcher, execute most frequently and makes the fine grained decision of which process to execute next. Short term scheduler is faster than long tern scheduler.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <h3>Medium Term Scheduler</h3>
+        <ul>
+          <li>Medium term scheduling is part of the swapping function. It removes the processes from the memory. It reduces the</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>degree of multiprogramming. The medium term scheduler is in charge of handling the swapped out-processes.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>Medium term scheduler is shown in the Fig. 3.4</p>
+        <p>&nbsp;</p>
+        <p>Fig 3.4 Queueing diagram with medium term scheduler</p>
+        <p>Running process may become suspended by making an I/O request. Suspended processes cannot make any progress towards completion. In this condition, to remove the process from memory and make space for other process. Suspended process is move to the secondary storage is called swapping, and the process is said to be swapped out or rolled out. Swapping may be necessary to improve the process mix.</p>
+        <p>&nbsp;</p>
+        <h3>Comparison between Scheduler</h3>
+        <p>&nbsp;</p>
+        <table width="452">
+          <tbody>
+            <tr>
+              <td width="37">
+                <p>Sr.</p>
+                <p>No.</p>
+              </td>
+              <td width="136">
+                <p>Long Term</p>
+              </td>
+              <td width="137">
+                <p>Short Term</p>
+              </td>
+              <td width="142">
+                <p>Medium Term</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="37">
+                <p>1</p>
+              </td>
+              <td width="136">
+                <p>It is job scheduler</p>
+              </td>
+              <td width="137">
+                <p>It &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CPU</p>
+                <p>Scheduler</p>
+              </td>
+              <td width="142">
+                <p>It is swapping</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="37">
+                <p>2</p>
+              </td>
+              <td width="136">
+                <p>Speed is less than short term</p>
+                <p>scheduler</p>
+              </td>
+              <td width="137">
+                <p>Speed is very fast</p>
+              </td>
+              <td width="142">
+                <p>Speed &nbsp; is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in between both</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="37">
+                <p>3</p>
+              </td>
+              <td width="136">
+                <p>It controls degree of</p>
+                <p>multiprogramming</p>
+              </td>
+              <td width="137">
+                <p>Less control over</p>
+                <p>degree &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of</p>
+                <p>multiprogramming</p>
+              </td>
+              <td width="142">
+                <p>Reduce the degree</p>
+                <p>of multiprogramming.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="37">
+                <p>4</p>
+              </td>
+              <td width="136">
+                <p>Absent or minimal in time sharing system.</p>
+              </td>
+              <td width="137">
+                <p>Minimal in time sharing system.</p>
+              </td>
+              <td width="142">
+                <p>Time sharing system&nbsp; use medium term scheduler.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table width="452">
+          <tbody>
+            <tr>
+              <td width="21">
+                <p>5</p>
+              </td>
+              <td width="140">
+                <p>It select processes from pool and load them into memory for execution.</p>
+              </td>
+              <td width="132">
+                <p>It select from among&nbsp; the processes that are ready to execute.</p>
+              </td>
+              <td width="130">
+                <p>Process &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; can</p>
+                <p>reintroduced</p>
+                <p>memory &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and</p>
+                <p>execution &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; can continued.</p>
+              </td>
+              <td width="30">
+                <p>be into its be</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="21">
+                <p>6</p>
+              </td>
+              <td width="140">
+                <p>Process state is (New to Ready)</p>
+              </td>
+              <td width="132">
+                <p>Process state is</p>
+                <p>(Ready &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to</p>
+                <p>Running)</p>
+              </td>
+              <td width="130">
+                <p>-</p>
+              </td>
+              <td width="30">
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="21">
+                <p>7</p>
+              </td>
+              <td width="140">
+                <p>Select a good process, mix of I/O bound and CPU bound.</p>
+              </td>
+              <td width="132">
+                <p>Select a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new process &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a CPU &nbsp; quite frequently.</p>
+              </td>
+              <td width="130">
+                <p>-</p>
+              </td>
+              <td width="30">
+                <p>&nbsp;</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>When the scheduler switches the CPU from executing one process to executing another, the context switcher saves the content of all processor registers for the process being removed from the CPU in its process being removed from the CPU in its process descriptor. The context of a process is represented in the process control block of a process. Context switch time is pure overhead. Context switching can significantly affect performance, since modern computers have a lot of general and status registers to be saved.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Content switch times are highly dependent on hardware support. Context switch requires ( n + m ) bXK time units to save the state of the processor with n general registers, assuming b store operations are required to save register and each store instruction requires K time units. Some hardware systems employ two or more sets of processor registers to reduce the amount of context switching time.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>When the process is switched the information stored is :
+            <ol>
+              <li>Program Counter</li>
+              <li>Scheduling Information</li>
+              <li>Base and limit register value</li>
+              <li>Currently used register</li>
+              <li>Changed State</li>
+              <li>I/O State</li>
+              <li>Accounting</li>
+            </ol>
+          </li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1>3.5 OPERATION ON PROCESSES</h1>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Several operations are possible on the process. Process must be created and deleted dynamically. Operating system must provide the environment for the process operation. We discuss the two main operations on processes.</li>
+        </ul>
+        <ol>
+          <li>Create a process</li>
+          <li>Terminate a process</li>
+        </ol>
+        <p>&nbsp;</p>
+        <h2>3.5.1 Create Process</h2>
+        <ul>
+          <li>Operating system creates a new process with the specified or default attributes and identifier. A process may create several new subprocesses. Syntax for creating new process is :</li>
+        </ul>
+        <p>CREATE ( processed, attributes )</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Two names are used in the process they are parent process and child process.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>Parent process is a creating process. Child process is created by the parent process. Child process may create another subprocess. So it forms a tree of processes. When operating system issues a CREATE system call, it obtains a new process control block from the pool of free memory, fills the fields with provided and default parameters, and insert the PCB into the ready list. Thus it makes the specified process eligible to run the process.</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>When a process is created, it requires some parameters. These are priority, level of privilege, requirement of memory, access right, memory protection information etc. Process will need certain resources, such as CPU time, memory, files and I/O devices to complete the operation. When process creates a subprocess, that subprocess may obtain its resources directly from the operating system. Otherwise it uses the resources of parent process.</li>
+          <li>When a process creates a new process, two possibilities exist in terms of execution.</li>
+        </ul>
+        <ol>
+          <li>The parent continues to execute concurrently with its children.</li>
+          <li>The parent waits until some or all of its children have terminated.</li>
+        </ol>
+        <ul>
+          <li>For address space, two possibilities occur:</li>
+        </ul>
+        <ol>
+          <li>The child process is a duplicate of the parent process.</li>
+          <li>The child process has a program loaded into it.</li>
+        </ol>
+        <p>&nbsp;</p>
+        <h2>3.5.2 Terminate a Process</h2>
+        <ul>
+          <li>DELETE system call is used for terminating a process. A process may delete itself or by another process. A process can cause the termination of another process via an appropriate system call. The operating system reacts by reclaiming all resources allocated to the specified process, closing files opened by or for the process. PCB is also removed from its place of residence in the list and is returned to the free pool. The DELETE service is normally invoked as a part of orderly program termination.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li>Following are the resources for terminating the child process by parent process.</li>
+        </ul>
+        <ol>
+          <li>The task given to the child is no longer required.</li>
+          <li>Child has exceeded its usage of some of the resources that it has been allocated.</li>
+          <li>Operating system does not allow a child to continue if its parent terminates.</li>
+        </ol>
+        <div style="margin: 5px 0;">
+          <h1>1 INTRODUCTION OF THREAD</h1>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>A thread is a flow of execution through the process code, with its own program counter, system registers and stack. Threads are a popular way to improve application performance through parallelism. A thread is sometimes called a light weight process.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Threads represent a software approach to improving performance of operating system by reducing the over head</li>
+          </ul>
+          <p>thread is equivalent to a classical process. Each thread belongs to exactly one process and no thread can exist outside a process. Each thread represents a separate flow of control.</p>
+          <ul>
+            <li>4.1shows the single and multithreaded process.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Threads have been successfully used in implementing network servers. They also provide a suitable foundation for parallel execution of applications on shared memory multiprocessors.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Threads is implemented in two ways :</p>
+          <ol>
+            <li>User Level</li>
+            <li>Kernel Level</li>
+          </ol>
+          <p>&nbsp;</p>
+          <h2>4.2.1 User Level Thread</h2>
+          <ul>
+            <li>In a user thread, all of the work of thread management is done by the application and the kernel is not aware of the existence of threads. The thread library contains code for creating and destroying threads, for passing message and data between threads, for scheduling thread execution and for saving and restoring thread contexts. The application begins with a single thread and begins running in that thread.</li>
+            <li>4.2 shows the user level thread.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>User level threads are generally fast to create and manage. &nbsp;</p>
+          <p>Advantage of user level thread over Kernel level thread :</p>
+          <ol>
+            <li>Thread switching does not require Kernel mode privileges.</li>
+            <li>User level thread can run on any operating system.</li>
+            <li>Scheduling can be application specific.</li>
+            <li>User level threads are fast to create and manage.</li>
+          </ol>
+          <p>&nbsp;</p>
+          <p>Disadvantages of user level thread :</p>
+          <ol>
+            <li>In a typical operating system, most system calls are blocking.</li>
+            <li>Multithreaded application &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cannot take &nbsp;&nbsp;&nbsp;&nbsp; advantage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of multiprocessing.</li>
+          </ol>
+          <p>&nbsp;</p>
+          <h2>4.2.2 Kernel Level Threads</h2>
+          <ul>
+            <li>In Kernel level thread, thread management done by the Kernel. There is no thread management code in the application area. Kernel threads are supported directly by the operating system. Any application can be programmed to be multithreaded. All of the threads within an application are supported within a single process. The Kernel maintains context information for the process as a whole and for individuals threads within the process.</li>
+            <li>Scheduling by the Kernel is done on a thread basis. The Kernel performs thread creation, scheduling and management in Kernel space. Kernel threads are generally slower to create and manage than the user threads.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>Advantages of Kernel level thread:</p>
+          <ol>
+            <li>Kernel can simultaneously schedule multiple threads from the same process on multiple process.</li>
+            <li>If one thread in a process is blocked, the Kernel can schedule another thread of the same process.</li>
+            <li>Kernel routines themselves can multithreaded.</li>
+          </ol>
+          <p>Disadvantages:</p>
+          <ol>
+            <li>Kernel threads are generally slower to create and manage than the user threads.</li>
+            <li>Transfer of control from one thread to another within same process requires a mode switch to the Kernel.</li>
+          </ol>
+          <p>&nbsp;</p>
+          <h2>4.2.3 Advantages of Thread</h2>
+          <ol>
+            <li>Thread minimize context switching time.</li>
+            <li>Use of threads provides concurrency within a process.</li>
+            <li>Efficient communication.</li>
+            <li>Economy- It is more economical to create and context switch threads.</li>
+            <li>Utilization of multiprocessor architectures &ndash;</li>
+          </ol>
+          <p>The benefits of multithreading can be greatly increased in a multiprocessor architecture.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h1>4.3 MULTITHREADING MODELS</h1>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Some operating system provide a combined user level thread and Kernel level thread facility. Solaris is a good example of this combined approach. In a combined system, multiple threads within the same application can run in parallel on multiple processors and a blocking system call need not block the entire process.</li>
+            <li>Multithreading models are three types:</li>
+          </ul>
+          <ol>
+            <li>Many to many relationship.</li>
+            <li>Many to one relationship.</li>
+            <li>One to one relationship.</li>
+          </ol>
+          <h2>4.3.1 Many to Many Model</h2>
+          <ul>
+            <li>In this model, many user level threads multiplexes to the Kernel thread of smaller or equal numbers. The number of Kernel threads may be specific to either a particular application or a particular machine.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>4.3 shows the many to many model. In this model, developers can create as many user threads as necessary and the corresponding Kernel threads can run in parallels on a multiprocessor.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp;</p>
+          <h2>4.3.2 Many to One Model</h2>
+          <ul>
+            <li>Many to one model maps many user level threads to one Kernel level thread. Thread management is done in user space. When thread makes a blocking system call, the entire process will be blocks. Only one thread can access the Kernel at a time, so multiple threads are unable to run in parallel on multiprocessors.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>4.4 shows the many to one model.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>If the user level thread libraries are implemented in the operating system, that system does not support Kernel threads use the many to one relationship modes.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <h2>4.3.3 One to One Model</h2>
+          <ul>
+            <li>There is one to one relationship of user level thread to the kernel level thread. Fig. 4.5 shows one to one relationship model. This model provides more concurrency than the many to one model.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>It also another thread to run when a thread makes a blocking system call. It support multiple thread to execute in parallel on microprocessors. Disadvantage of this model is that creating user thread requires the corresponding Kernel thread. OS/2, windows NT and windows 2000 use one to one relationship model.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h1>4.4 DIFFERENCE BETWEEN USER LEVEL &amp; KERNEL LEVEL THREAD</h1>
+          <p>&nbsp;</p>
+          <table width="452">
+            <tbody>
+              <tr>
+                <td width="38">
+                  <p>Sr.</p>
+                  <p>No</p>
+                </td>
+                <td width="212">
+                  <p>User Level Threads</p>
+                </td>
+                <td width="202">
+                  <p>Kernel Level Thread</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>1</p>
+                </td>
+                <td width="212">
+                  <p>User level thread are faster to create and manage.</p>
+                </td>
+                <td width="202">
+                  <p>Kernel level thread are slower to create and manage.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>2</p>
+                </td>
+                <td width="212">
+                  <p>Implemented &nbsp;&nbsp; by &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread library at the user level.</p>
+                </td>
+                <td width="202">
+                  <p>Operating system support directly to Kernel threads.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>3</p>
+                </td>
+                <td width="212">
+                  <p>User level thread can run on any operating system.</p>
+                </td>
+                <td width="202">
+                  <p>Kernel level &nbsp;&nbsp;&nbsp; threads are specific &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operating system.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>4</p>
+                </td>
+                <td width="212">
+                  <p>Support provided at the user level called user level thread.</p>
+                </td>
+                <td width="202">
+                  <p>Support may be provided by kernel is called Kernel level threads.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>5</p>
+                </td>
+                <td width="212">
+                  <p>Multithread application cannot take &nbsp;&nbsp;&nbsp;&nbsp; advantage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of multiprocessing.</p>
+                </td>
+                <td width="202">
+                  <p>Kernel routines themselves can be multithreaded.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>4.5 DIFFERENCE BETWEEN PROCESS AND THREAD</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <table width="452">
+            <tbody>
+              <tr>
+                <td width="36">
+                  <p>Sr.</p>
+                  <p>No</p>
+                </td>
+                <td width="233">
+                  <p>Process</p>
+                </td>
+                <td width="184">
+                  <p>Thread</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="36">
+                  <p>1</p>
+                </td>
+                <td width="233">
+                  <p>Process is called heavy weight process.</p>
+                </td>
+                <td width="184">
+                  <p>Thread is called light weight process.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="36">
+                  <p>2</p>
+                </td>
+                <td width="233">
+                  <p>Process switching needs interface with operating system.</p>
+                </td>
+                <td width="184">
+                  <p>Thread switching does not need to call a operating system and cause an interrupt to the Kernel.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="36">
+                  <p>3</p>
+                </td>
+                <td width="233">
+                  <p>In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; multiple &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; process implementation each &nbsp;&nbsp;&nbsp; process executes the same code but has its &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; own &nbsp;&nbsp;&nbsp;&nbsp; memory &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file resources.</p>
+                </td>
+                <td width="184">
+                  <p>All threads can share same set of open files, child processes.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="36">
+                  <p>4</p>
+                </td>
+                <td width="233">
+                  <p>If one server process is blocked no other server process can</p>
+                  <p>execute until the first process unblocked.</p>
+                </td>
+                <td width="184">
+                  <p>While one server thread is blocked and waiting, second thread in the same task could run.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <table width="452">
+            <tbody>
+              <tr>
+                <td width="21">
+                  <p>5</p>
+                </td>
+                <td width="215">
+                  <p>Multiple redundant process uses more resources than multiple threaded.</p>
+                </td>
+                <td width="216">
+                  <p>Multiple threaded process uses fewer resources than multiple redundant process.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="21">
+                  <p>6</p>
+                </td>
+                <td width="215">
+                  <p>In &nbsp;&nbsp;&nbsp; multiple &nbsp;&nbsp;&nbsp;&nbsp; process &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; each</p>
+                  <p>process operates independently of the others.</p>
+                </td>
+                <td width="216">
+                  <p>One thread can read, write or even completely wipe out another threads stack.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h1>4.6 THREADING ISSUES</h1>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>System calls fork and exec is discussed here. In a multithreaded program environment, fork and exec system calls is changed. Unix system have two version of fork system calls. One call duplicates all threads and another that duplicates only the thread that invoke the fork system call. Whether to use one or two version of fork system call totally depends upon the application. Duplicating all threads is unnecessary, if exec is called immediately after fork system call.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Thread cancellation is a process of thread terminates before its completion of task. For example, in multiple thread environment, thread concurrently searching through a database. If any one thread returns the result, the remaining thread might be cancelled.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Thread cancellation is of two types.</li>
+          </ul>
+          <ol>
+            <li>Asynchronous cancellation</li>
+            <li>Synchronous cancellation</li>
+          </ol>
+          <p>&nbsp;</p>
+          <ul>
+            <li>In asynchronous cancellation, one thread immediately terminates the target thread. Deferred cancellation periodically check for terminate by target thread. It also allow the target thread to terminate itself in an orderly fashion. Some resources are allocated to the thread. If we cancel the thread, which update the data with other thread. This problem may face by asynchronous cancellation system wide resource are not free if threads cancelled asynchronously. Most of the operating system allow a process or thread to be cancelled asynchronously.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <h1>1 INTRODUCTION OF THREAD</h1>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>A thread is a flow of execution through the process code, with its own program counter, system registers and stack. Threads are a popular way to improve application performance through parallelism. A thread is sometimes called a light weight process.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Threads represent a software approach to improving performance of operating system by reducing the over head</li>
+          </ul>
+          <p>thread is equivalent to a classical process. Each thread belongs to exactly one process and no thread can exist outside a process. Each thread represents a separate flow of control.</p>
+          <ul>
+            <li>4.1shows the single and multithreaded process.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Threads have been successfully used in implementing network servers. They also provide a suitable foundation for parallel execution of applications on shared memory multiprocessors.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Threads is implemented in two ways :</p>
+          <ol>
+            <li>User Level</li>
+            <li>Kernel Level</li>
+          </ol>
+          <p>&nbsp;</p>
+          <h2>4.2.1 User Level Thread</h2>
+          <ul>
+            <li>In a user thread, all of the work of thread management is done by the application and the kernel is not aware of the existence of threads. The thread library contains code for creating and destroying threads, for passing message and data between threads, for scheduling thread execution and for saving and restoring thread contexts. The application begins with a single thread and begins running in that thread.</li>
+            <li>4.2 shows the user level thread.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>User level threads are generally fast to create and manage. &nbsp;</p>
+          <p>Advantage of user level thread over Kernel level thread :</p>
+          <ol>
+            <li>Thread switching does not require Kernel mode privileges.</li>
+            <li>User level thread can run on any operating system.</li>
+            <li>Scheduling can be application specific.</li>
+            <li>User level threads are fast to create and manage.</li>
+          </ol>
+          <p>&nbsp;</p>
+          <p>Disadvantages of user level thread :</p>
+          <ol>
+            <li>In a typical operating system, most system calls are blocking.</li>
+            <li>Multithreaded application &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cannot take &nbsp;&nbsp;&nbsp;&nbsp; advantage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of multiprocessing.</li>
+          </ol>
+          <p>&nbsp;</p>
+          <h2>4.2.2 Kernel Level Threads</h2>
+          <ul>
+            <li>In Kernel level thread, thread management done by the Kernel. There is no thread management code in the application area. Kernel threads are supported directly by the operating system. Any application can be programmed to be multithreaded. All of the threads within an application are supported within a single process. The Kernel maintains context information for the process as a whole and for individuals threads within the process.</li>
+            <li>Scheduling by the Kernel is done on a thread basis. The Kernel performs thread creation, scheduling and management in Kernel space. Kernel threads are generally slower to create and manage than the user threads.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>Advantages of Kernel level thread:</p>
+          <ol>
+            <li>Kernel can simultaneously schedule multiple threads from the same process on multiple process.</li>
+            <li>If one thread in a process is blocked, the Kernel can schedule another thread of the same process.</li>
+            <li>Kernel routines themselves can multithreaded.</li>
+          </ol>
+          <p>Disadvantages:</p>
+          <ol>
+            <li>Kernel threads are generally slower to create and manage than the user threads.</li>
+            <li>Transfer of control from one thread to another within same process requires a mode switch to the Kernel.</li>
+          </ol>
+          <p>&nbsp;</p>
+          <h2>4.2.3 Advantages of Thread</h2>
+          <ol>
+            <li>Thread minimize context switching time.</li>
+            <li>Use of threads provides concurrency within a process.</li>
+            <li>Efficient communication.</li>
+            <li>Economy- It is more economical to create and context switch threads.</li>
+            <li>Utilization of multiprocessor architectures &ndash;</li>
+          </ol>
+          <p>The benefits of multithreading can be greatly increased in a multiprocessor architecture.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h1>4.3 MULTITHREADING MODELS</h1>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Some operating system provide a combined user level thread and Kernel level thread facility. Solaris is a good example of this combined approach. In a combined system, multiple threads within the same application can run in parallel on multiple processors and a blocking system call need not block the entire process.</li>
+            <li>Multithreading models are three types:</li>
+          </ul>
+          <ol>
+            <li>Many to many relationship.</li>
+            <li>Many to one relationship.</li>
+            <li>One to one relationship.</li>
+          </ol>
+          <h2>4.3.1 Many to Many Model</h2>
+          <ul>
+            <li>In this model, many user level threads multiplexes to the Kernel thread of smaller or equal numbers. The number of Kernel threads may be specific to either a particular application or a particular machine.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>4.3 shows the many to many model. In this model, developers can create as many user threads as necessary and the corresponding Kernel threads can run in parallels on a multiprocessor.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp;</p>
+          <h2>4.3.2 Many to One Model</h2>
+          <ul>
+            <li>Many to one model maps many user level threads to one Kernel level thread. Thread management is done in user space. When thread makes a blocking system call, the entire process will be blocks. Only one thread can access the Kernel at a time, so multiple threads are unable to run in parallel on multiprocessors.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>4.4 shows the many to one model.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>If the user level thread libraries are implemented in the operating system, that system does not support Kernel threads use the many to one relationship modes.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <h2>4.3.3 One to One Model</h2>
+          <ul>
+            <li>There is one to one relationship of user level thread to the kernel level thread. Fig. 4.5 shows one to one relationship model. This model provides more concurrency than the many to one model.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>It also another thread to run when a thread makes a blocking system call. It support multiple thread to execute in parallel on microprocessors. Disadvantage of this model is that creating user thread requires the corresponding Kernel thread. OS/2, windows NT and windows 2000 use one to one relationship model.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h1>4.4 DIFFERENCE BETWEEN USER LEVEL &amp; KERNEL LEVEL THREAD</h1>
+          <p>&nbsp;</p>
+          <table width="452">
+            <tbody>
+              <tr>
+                <td width="38">
+                  <p>Sr.</p>
+                  <p>No</p>
+                </td>
+                <td width="212">
+                  <p>User Level Threads</p>
+                </td>
+                <td width="202">
+                  <p>Kernel Level Thread</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>1</p>
+                </td>
+                <td width="212">
+                  <p>User level thread are faster to create and manage.</p>
+                </td>
+                <td width="202">
+                  <p>Kernel level thread are slower to create and manage.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>2</p>
+                </td>
+                <td width="212">
+                  <p>Implemented &nbsp;&nbsp; by &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread library at the user level.</p>
+                </td>
+                <td width="202">
+                  <p>Operating system support directly to Kernel threads.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>3</p>
+                </td>
+                <td width="212">
+                  <p>User level thread can run on any operating system.</p>
+                </td>
+                <td width="202">
+                  <p>Kernel level &nbsp;&nbsp;&nbsp; threads are specific &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operating system.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>4</p>
+                </td>
+                <td width="212">
+                  <p>Support provided at the user level called user level thread.</p>
+                </td>
+                <td width="202">
+                  <p>Support may be provided by kernel is called Kernel level threads.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="38">
+                  <p>5</p>
+                </td>
+                <td width="212">
+                  <p>Multithread application cannot take &nbsp;&nbsp;&nbsp;&nbsp; advantage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of multiprocessing.</p>
+                </td>
+                <td width="202">
+                  <p>Kernel routines themselves can be multithreaded.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>4.5 DIFFERENCE BETWEEN PROCESS AND THREAD</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <table width="452">
+            <tbody>
+              <tr>
+                <td width="36">
+                  <p>Sr.</p>
+                  <p>No</p>
+                </td>
+                <td width="233">
+                  <p>Process</p>
+                </td>
+                <td width="184">
+                  <p>Thread</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="36">
+                  <p>1</p>
+                </td>
+                <td width="233">
+                  <p>Process is called heavy weight process.</p>
+                </td>
+                <td width="184">
+                  <p>Thread is called light weight process.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="36">
+                  <p>2</p>
+                </td>
+                <td width="233">
+                  <p>Process switching needs interface with operating system.</p>
+                </td>
+                <td width="184">
+                  <p>Thread switching does not need to call a operating system and cause an interrupt to the Kernel.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="36">
+                  <p>3</p>
+                </td>
+                <td width="233">
+                  <p>In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; multiple &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; process implementation each &nbsp;&nbsp;&nbsp; process executes the same code but has its &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; own &nbsp;&nbsp;&nbsp;&nbsp; memory &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file resources.</p>
+                </td>
+                <td width="184">
+                  <p>All threads can share same set of open files, child processes.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="36">
+                  <p>4</p>
+                </td>
+                <td width="233">
+                  <p>If one server process is blocked no other server process can</p>
+                  <p>execute until the first process unblocked.</p>
+                </td>
+                <td width="184">
+                  <p>While one server thread is blocked and waiting, second thread in the same task could run.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <table width="452">
+            <tbody>
+              <tr>
+                <td width="21">
+                  <p>5</p>
+                </td>
+                <td width="215">
+                  <p>Multiple redundant process uses more resources than multiple threaded.</p>
+                </td>
+                <td width="216">
+                  <p>Multiple threaded process uses fewer resources than multiple redundant process.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="21">
+                  <p>6</p>
+                </td>
+                <td width="215">
+                  <p>In &nbsp;&nbsp;&nbsp; multiple &nbsp;&nbsp;&nbsp;&nbsp; process &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; each</p>
+                  <p>process operates independently of the others.</p>
+                </td>
+                <td width="216">
+                  <p>One thread can read, write or even completely wipe out another threads stack.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h1>4.6 THREADING ISSUES</h1>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <ul>
+            <li>System calls fork and exec is discussed here. In a multithreaded program environment, fork and exec system calls is changed. Unix system have two version of fork system calls. One call duplicates all threads and another that duplicates only the thread that invoke the fork system call. Whether to use one or two version of fork system call totally depends upon the application. Duplicating all threads is unnecessary, if exec is called immediately after fork system call.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Thread cancellation is a process of thread terminates before its completion of task. For example, in multiple thread environment, thread concurrently searching through a database. If any one thread returns the result, the remaining thread might be cancelled.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <ul>
+            <li>Thread cancellation is of two types.</li>
+          </ul>
+          <ol>
+            <li>Asynchronous cancellation</li>
+            <li>Synchronous cancellation</li>
+          </ol>
+          <p>&nbsp;</p>
+          <ul>
+            <li>In asynchronous cancellation, one thread immediately terminates the target thread. Deferred cancellation periodically check for terminate by target thread. It also allow the target thread to terminate itself in an orderly fashion. Some resources are allocated to the thread. If we cancel the thread, which update the data with other thread. This problem may face by asynchronous cancellation system wide resource are not free if threads cancelled asynchronously. Most of the operating system allow a process or thread to be cancelled asynchronously.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <p>SCHEDULING CRITERIA:</p>
+          <p>&nbsp;</p>
+          <ol>
+            <li>Throughput: how many jobs are completed by the cpu with in a timeperiod.</li>
+            <li>Turn around time : The time interval between the submission of the process and time of the completion is turn around time.</li>
+          </ol>
+          <p>TAT = Waiting time in ready queue + executing time + waiting time in waiting queue for I/O.</p>
+          <ol start="3">
+            <li>Waiting time: The time spent by the process to wait for cpu to beallocated.</li>
+            <li>Response time: Time duration between the submission and firstresponse.</li>
+            <li>Cpu Utilization: CPU is costly device, it must be kept as busy aspossible. Eg: CPU efficiency is 90% means it is busy for 90 units, 10 units idle.</li>
+          </ol>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>CPU SCHEDULINGALGORITHMS:</p>
+          <p>&nbsp;</p>
+          <ol>
+            <li>First come First served scheduling: (FCFS): The process that request the CPU first is holds the cpu first. If a process request the cpu then it is loaded into the ready queue, connect CPU to that process.</li>
+          </ol>
+          <p>Consider the following set of processes that arrive at time 0, the length of the cpu burst time given in milli seconds.</p>
+          <p>burst time is the time, required the cpu to execute that job, it is in milli seconds.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <table width="639">
+            <tbody>
+              <tr>
+                <td width="320">
+                  <p>Process</p>
+                </td>
+                <td width="319">
+                  <p>Burst time(milliseconds)</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="320">
+                  <p>P1</p>
+                </td>
+                <td width="319">
+                  <p>5</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="320">
+                  <p>P2</p>
+                </td>
+                <td width="319">
+                  <p>24</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="320">
+                  <p>P3</p>
+                </td>
+                <td width="319">
+                  <p>16</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="320">
+                  <p>P4</p>
+                </td>
+                <td width="319">
+                  <p>10</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="320">
+                  <p>P5</p>
+                </td>
+                <td width="319">
+                  <p>3</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Average turn around time:</p>
+          <p>&nbsp;</p>
+          <p>Turn around time= waiting time + burst time</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Turn around time for p1= 0+5=5.</p>
+          <p>Turn around &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; time &nbsp;&nbsp;&nbsp; for p2=5+24=29 Turn around time for p3=29+16=45 Turn around time for p4=45+10=55 Turn around time for p5= 55+3=58</p>
+          <p>Average turn around time= (5+29++45+55+58/5) = 187/5 =37.5 millisecounds</p>
+          <p>&nbsp;</p>
+          <p>Average waiting time:</p>
+          <p>&nbsp;</p>
+          <p>waiting time= starting time- arrival time</p>
+          <p>&nbsp;</p>
+          <p>Waiting time for p1=0</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Waiting &nbsp;&nbsp;&nbsp; time &nbsp;&nbsp;&nbsp; for &nbsp;&nbsp;&nbsp; p2=5-0=5</p>
+          <p>Waiting time for p3=29-0=29</p>
+          <p>Waiting time for p4=45-0=45</p>
+          <p>Waiting time for p5=55-0=55</p>
+          <p>Average waiting time= 0+5+29+45+55/5 = 125/5 = 25 ms.</p>
+          <p>&nbsp;</p>
+          <p><u>Average Response Time :</u></p>
+          <p>&nbsp;</p>
+          <p>Formula : First Response - Arrival</p>
+          <p>Time Response Time for P1 =0</p>
+          <p>Response Time for P2 =&gt; 5-0 = 5</p>
+          <p>Response Time for P3 =&gt; 29-0 = 29</p>
+          <p>Response Time for P4 =&gt; 45-0 = 45</p>
+          <p>Response Time for P5 =&gt; 55-0 = 55</p>
+          <p>Average Response Time =&gt; (0+5+29+45+55)/5 =&gt;25ms</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>1)</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>First Come FirstServe:</u></p>
+          <p>&nbsp;</p>
+          <p>It is Non Primitive Scheduling Algorithm.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <table width="592">
+            <tbody>
+              <tr>
+                <td width="197">
+                  <p>PROCESS</p>
+                </td>
+                <td width="197">
+                  <p>BURST</p>
+                  <p>TIME</p>
+                </td>
+                <td width="197">
+                  <p>ARRIVAL</p>
+                  <p>TIME</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P1</p>
+                </td>
+                <td width="197">
+                  <p>3</p>
+                </td>
+                <td width="197">
+                  <p>0</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P2</p>
+                </td>
+                <td width="197">
+                  <p>6</p>
+                </td>
+                <td width="197">
+                  <p>2</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P3</p>
+                </td>
+                <td width="197">
+                  <p>4</p>
+                </td>
+                <td width="197">
+                  <p>4</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P4</p>
+                </td>
+                <td width="197">
+                  <p>5</p>
+                </td>
+                <td width="197">
+                  <p>6</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P5</p>
+                </td>
+                <td width="197">
+                  <p>2</p>
+                </td>
+                <td width="197">
+                  <p>8</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>Process arrived in the order P1, P2, P3, P4, P5.</p>
+          <p>P1 arrived at 0 ms.</p>
+          <p>P2 arrived at 2 ms.</p>
+          <p>P3 arrived at 4 ms.</p>
+          <p>P4 arrived at 6 ms.</p>
+          <p>P5 arrived at 8 ms.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p><u>Average Turn Around Time </u>&nbsp;</p>
+          <p>Formula : Turn around Time =<u>:</u> waiting time + burst time</p>
+          <p>Turn Around Time for P1 =&gt; 0+3= 3</p>
+          <p>Turn Around Time for P2 =&gt; 1+6 = 7</p>
+          <p>Turn Around Time for P3 =&gt; 5+4 = 9</p>
+          <p>Turn Around Time for P4 =&gt; 7+ 5= 12</p>
+          <p>Turn Around Time for P5 =&gt; 2+ 10=12</p>
+          <p>Average Turn Around Time =&gt; ( 3+7+9+12+12 )/5 =&gt;43/5 = 8.50 ms.</p>
+          <p><u>Average Response Time :</u></p>
+          <p>Formula : Response Time = First Response - Arrival Time</p>
+          <p>Response Time of P1 = 0</p>
+          <p>Response Time of P2 =&gt; 3-2 = 1</p>
+          <p>Response Time of P3 =&gt; 9-4 = 5</p>
+          <p>Response Time of P4 =&gt; 13-6 = 7</p>
+          <p>Response Time of P5 =&gt; 18-8 =10</p>
+          <p>Average Response Time =&gt; ( 0+1+5+7+10 )/5 =&gt; 23/5 = 4.6 ms Advantages: Easy to Implement, Simple.</p>
+          <p>Disadvantage: Average waiting time is very high.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>2)</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>Shortest Job First Scheduling ( SJF ):</u></p>
+          <p>&nbsp;</p>
+          <p>Which process having the smallest CPU burst time, CPU is assigned to that process . If two process having the same CPU burst time, FCFS is used.</p>
+          <p>&nbsp;</p>
+          <table width="592">
+            <tbody>
+              <tr>
+                <td width="296">
+                  <p>PROCESS</p>
+                </td>
+                <td width="296">
+                  <p>CPU BURST TIME</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="296">
+                  <p>P1</p>
+                </td>
+                <td width="296">
+                  <p>5</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="296">
+                  <p>P2</p>
+                </td>
+                <td width="296">
+                  <p>24</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="296">
+                  <p>P3</p>
+                </td>
+                <td width="296">
+                  <p>16</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="296">
+                  <p>P4</p>
+                </td>
+                <td width="296">
+                  <p>10</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="296">
+                  <p>P5</p>
+                </td>
+                <td width="296">
+                  <p>3</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>P5 having the least CPU burst time ( 3ms ). CPU assigned to that ( P5 ). After completion of P5 short term scheduler search for nest ( P1 ).......</p>
+          <p><u>Average Waiting Time :</u></p>
+          <p>&nbsp;</p>
+          <p>Formula = Staring Time - Arrival Time waiting Time for P1 =&gt; 3-0 = 3</p>
+          <p>waiting Time for P2 =&gt; 34-0 = 34</p>
+          <p>waiting Time for P3 =&gt; 18-0 = 18 waiting Time for P4 =&gt;8-0=8 waiting time for P5=0</p>
+          <p>Average waiting time =&gt; ( 3+34+18+8+0 )/5 =&gt; 63/5 =12.6 ms</p>
+          <p>&nbsp;</p>
+          <p><u>Average Turn Around Time :</u></p>
+          <p>&nbsp;</p>
+          <p>Formula = waiting Time + burst Time</p>
+          <p>&nbsp;</p>
+          <p>Turn Around Time for P1 =&gt; 3+5 =8</p>
+          <p>Turn Around for P2 =&gt; 34+24 =58</p>
+          <p>Turn Around for P3 =&gt; 18+16 = 34</p>
+          <p>Turn Around Time for P4 =&gt; 8+10 =18</p>
+          <p>Turn Around Time for P5 =&gt; 0+3 = 3</p>
+          <p>Average Turn around time =&gt; ( 8+58+34+18+3 )/5 =&gt; 121/5 = 24.2 ms</p>
+          <p><u>Average Response Time :</u></p>
+          <p>&nbsp;</p>
+          <p>Formula : First Response - Arrival Time</p>
+          <p>&nbsp;</p>
+          <p>First Response time for P1 =&gt;3-0 = 3</p>
+          <p>First Response time for P2 =&gt; 34-0 = 34</p>
+          <p>First Response time for P3 =&gt; 18-0 = 18</p>
+          <p>First Response time for P4 =&gt; 8-0 = 8</p>
+          <p>First Response time for P5 = 0</p>
+          <p>Average Response Time =&gt; ( 3+34+18+8+0 )/5 =&gt; 63/5 = 12.6 ms</p>
+          <p>SJF is Non primitive scheduling algorithm</p>
+          <p>Advantages : Least average waiting time Least average turn around time Least average response time</p>
+          <p>Average waiting time ( FCFS ) = 25 ms</p>
+          <p>Average waiting time ( SJF ) = 12.6 ms 50% time saved in SJF.</p>
+          <p>Disadvantages:</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Knowing the length of the next CPU burst time is difficult.</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aging ( Big Jobs are waiting for long time for CPU)</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>3)</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>Shortest Remaining Time First ( SRTF );</u></p>
+          <p>&nbsp;</p>
+          <p>This is primitive scheduling algorithm.</p>
+          <p>&nbsp;</p>
+          <p>Short term scheduler always chooses the process that has term shortest remaining time. When a new process joins the ready queue , short term scheduler compare the remaining time of executing process and new process. If the new process has the least CPU burst time, The scheduler selects that job and connect to CPU. Otherwise continue the old process.</p>
+          <p>&nbsp;</p>
+          <table width="363">
+            <tbody>
+              <tr>
+                <td width="111">
+                  <p>PROCESS</p>
+                </td>
+                <td width="126">
+                  <p>BURST TIME</p>
+                </td>
+                <td width="126">
+                  <p>ARRIVAL TIME</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="111">
+                  <p>P1</p>
+                </td>
+                <td width="126">
+                  <p>3</p>
+                </td>
+                <td width="126">
+                  <p>0</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="111">
+                  <p>P2</p>
+                </td>
+                <td width="126">
+                  <p>6</p>
+                </td>
+                <td width="126">
+                  <p>2</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="111">
+                  <p>P3</p>
+                </td>
+                <td width="126">
+                  <p>4</p>
+                </td>
+                <td width="126">
+                  <p>4</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="111">
+                  <p>P4</p>
+                </td>
+                <td width="126">
+                  <p>5</p>
+                </td>
+                <td width="126">
+                  <p>6</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="111">
+                  <p>P5</p>
+                </td>
+                <td width="126">
+                  <p>2</p>
+                </td>
+                <td width="126">
+                  <p>8</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>P1 arrives at time 0, P1 executing First , P2 arrives at time 2. Compare P1 remaining time and P2 ( 3-2 =</p>
+          <p>1) and 6. So, continue P1 after P1, executing P2, at time 4, P3 arrives, compare P2 remaining time (6-1=5 ) and 4 ( 4&lt;5 ) .So, executing P3 at time 6, P4 arrives. Compare P3 remaining time and P4 ( 4- 2=2 ) and 5 (2&lt;5 ). So, continue P3 , after P3, ready queue consisting P5 is the least out of three. So execute P5, next P2, P4.</p>
+          <p>FORMULA : Finish time - Arrival</p>
+          <p>Time Finish Time for P1 =&gt; 3-0 = 3</p>
+          <p>Finish Time for P2 =&gt; 15-2 = 13</p>
+          <p>Finish Time for P3 =&gt; 8-4 =4</p>
+          <p>Finish Time for P4 =&gt; 20-6 = 14</p>
+          <p>Finish Time for P5 =&gt; 10-8 = 2</p>
+          <p>&nbsp;</p>
+          <p>Average Turn around time =&gt; 36/5 = 7.2 ms.</p>
+          <p>&nbsp;</p>
+          <p><u>4 )ROUND ROBIN SCHEDULING ALGORITHM :</u></p>
+          <p>&nbsp;</p>
+          <p>It is designed especially for time sharing systems. Here CPU switches between the processes. When the time quantum expired, the CPU switched to another job. A small unit of time, called a time quantum or time slice. A time quantum is generally from 10 to 100 ms. The time quantum is generally depending on OS. Here ready queue is a circular queue. CPU scheduler picks the first process from ready queue, sets timer to interrupt after one time quantum and dispatches the process.</p>
+          <p>&nbsp;</p>
+          <table width="592">
+            <tbody>
+              <tr>
+                <td width="296">
+                  <p>PROCESS</p>
+                </td>
+                <td width="296">
+                  <p>BURST TIME</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="296">
+                  <p>P1</p>
+                </td>
+                <td width="296">
+                  <p>30</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="296">
+                  <p>P2</p>
+                </td>
+                <td width="296">
+                  <p>6</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="296">
+                  <p>P3</p>
+                </td>
+                <td width="296">
+                  <p>8</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p><u>AVERAGE WAITING TIME :</u></p>
+          <p>&nbsp;</p>
+          <p>Waiting time for P1 =&gt; 0+(15-5)+(24-20) =&gt; 0+10+4 = 14</p>
+          <p>Waiting time for P2 =&gt; 5+(20-10) =&gt; 5+10 = 15</p>
+          <p>Waiting time for P3 =&gt; 10+(21-15) =&gt; 10+6 = 16 Average waiting time =&gt; (14+15+16)/3 = 15 ms.</p>
+          <p>&nbsp;</p>
+          <p><u>AVERAGE TURN AROUND TIME :</u></p>
+          <p>FORMULA : Turn around time = waiting time + burst Time</p>
+          <p>Turn around time for P1 =&gt; 14+30 =44</p>
+          <p>Turn around time for P2 =&gt; 15+6 = 21</p>
+          <p>Turn around time for P3 =&gt; 16+8 = 24</p>
+          <p>Average turn around time =&gt; ( 44+21+24 )/3 = 29.66 ms</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>5)</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>PRIORITY SCHEDULING :</u></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <table width="592">
+            <tbody>
+              <tr>
+                <td width="197">
+                  <p>PROCESS</p>
+                </td>
+                <td width="197">
+                  <p>BURST</p>
+                  <p>TIME</p>
+                </td>
+                <td width="197">
+                  <p>PRIORITY</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P1</p>
+                </td>
+                <td width="197">
+                  <p>6</p>
+                </td>
+                <td width="197">
+                  <p>2</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P2</p>
+                </td>
+                <td width="197">
+                  <p>12</p>
+                </td>
+                <td width="197">
+                  <p>4</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P3</p>
+                </td>
+                <td width="197">
+                  <p>1</p>
+                </td>
+                <td width="197">
+                  <p>5</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P4</p>
+                </td>
+                <td width="197">
+                  <p>3</p>
+                </td>
+                <td width="197">
+                  <p>1</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="197">
+                  <p>P5</p>
+                </td>
+                <td width="197">
+                  <p>4</p>
+                </td>
+                <td width="197">
+                  <p>3</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+          <p>P4 has the highest priority. Allocate the CPU to process P4 first next P1, P5, P2, P3.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p><u>AVERAGE WAITING TIME :</u></p>
+          <p>&nbsp;</p>
+          <p>Waiting time for P1 =&gt; 3-0 =3 Waiting time for P2 =&gt; 13-0 = 13 Waiting time for P3 =&gt; 25-0 = 25 Waiting time for</p>
+          <p>P4 =&gt; 0</p>
+          <p>Waiting time for P5 =&gt; 9-0 =9</p>
+          <p>&nbsp;</p>
+          <p>Average waiting time =&gt; ( 3+13+25+0+9 )/5 = 10 ms</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p><u>AVERAGE TURN AROUND TIME :</u></p>
+          <p>&nbsp;</p>
+          <p>Turn around time for P1 =&gt;3+6 = 9</p>
+          <p>Turn around time for P2 =&gt; 13+12= 25</p>
+          <p>Turn around time for P3 =&gt; 25+1 = 26</p>
+          <p>Turn around time for P4 =&gt; 0+3= 3</p>
+          <p>Turn around time for P5 =&gt; 9+4 = 13</p>
+          <p>&nbsp;</p>
+          <p>Average Turn around time =&gt; ( 9+25+26+3+13 )/5 = 15.2 ms</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Disadvantage: Starvation</p>
+          <p>&nbsp;</p>
+          <p>Starvation means only high priority process are executing, but low priority process are waiting for the CPU for the longest period of the time.</p>
+        </div>
+      </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

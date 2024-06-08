@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM1 oops unit-5</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">&nbsp;</div>
+<div style="margin: 5px 0;">Unit-5:</div>
+<div style="margin: 5px 0;">
+  <h1>C++ stream class hierarchy</h1>
+</div>
+<div style="margin: 5px 0;">- C++ stream refers to the stream of characters that are transferred between the program thread and i/o.</div>
+<div style="margin: 5px 0;">- Stream classes&nbsp;in C++ are used to input and output operations on files and io<br />devices.<br />- The&nbsp;iostream.h&nbsp;library holds all the stream classes in the C++ programming<br />language.</div>
+<div style="margin: 5px 0;">
+  <div>ios class&nbsp;&minus; This class is the base class for all stream classes. The streams can be<br />input or output streams. This class defines members that are independent of how<br />the templates of the class are defined.<br />istream Class&nbsp;&minus; The istream class handles the input stream in c++ programming<br />language. These input stream objects are used to read and interpret the input as a<br />sequence of characters. The cin handles the input.<br />ostream class&nbsp;&minus; The ostream class handles the output stream in c++ programming<br />language. These output stream objects are used to write data as a sequence of</div>
+  <div>characters on the screen. cout and puts handle the out streams in c++<br />programming language.</div>
+  <div>Example<br />OUT STREAM<br />COUT</div>
+  <div>#include &amp;lt;iostream&amp;gt;<br />using namespace std;<br />int main(){<br />&nbsp; &nbsp;cout&amp;lt;&amp;lt;&amp;quot;This output is printed on screen&amp;quot;;<br />}<br />Output<br />This output is printed on screen<br />PUTS</div>
+  <div>#include &amp;lt;iostream&amp;gt;<br />using namespace std;<br />int main(){<br />&nbsp; &nbsp;puts(&amp;quot;This output is printed using puts&amp;quot;);<br />}<br />Output<br />This output is printed using puts<br />IN STREAM<br />CIN</div>
+  <div>#include &amp;lt;iostream&amp;gt;<br />using namespace std;<br />int main(){<br />&nbsp; &nbsp;int no;<br />&nbsp; &nbsp;cout&amp;lt;&amp;lt;&amp;quot;Enter a number &amp;quot;;<br />&nbsp; &nbsp;cin&amp;gt;&amp;gt;no;</div>
+  <div>&nbsp; &nbsp;cout&amp;lt;&amp;lt;&amp;quot;Number entered using cin is &amp;quot;&amp;lt;<br />Output<br />Enter a number 3453<br />Number entered using cin is 3453</div>
+  <div>gets<br />#include &amp;lt;iostream&amp;gt;<br />using namespace std;<br />int main(){<br />&nbsp; &nbsp;char ch[10];<br />&nbsp; &nbsp;puts(&amp;quot;Enter a character array&amp;quot;);<br />&nbsp; &nbsp;gets(ch);<br />&nbsp; &nbsp;puts(&amp;quot;The character array entered using gets is : &amp;quot;);<br />&nbsp; &nbsp;puts(ch);<br />}<br />Output<br />Enter a character array<br />thdgf<br />The character array entered using gets is :<br />thdgf</div>
+  <div>&nbsp;</div>
+  <div>
+    <h1>Class template &amp;amp; Function template</h1>
+  </div>
+  <div>- A C++ template is a powerful feature added to C++. It allows you to define the<br />generic classes and generic functions and thus provides support for generic<br />programming.<br />- Generic programming is a technique where generic types are used as parameters in<br />algorithms so that they can work for a variety of data types.</div>
+  <div>&nbsp;</div>
+  <div>
+    <h3>Class template</h3>
+    - A&nbsp;template&nbsp;is a simple yet very powerful tool in C++.<br />- The simple idea is to pass the data type as a parameter so that<br />we don&rsquo;t need to write the same code for different data types.&nbsp;<br />- &nbsp;For example, a software company may need to sort() for different<br />data types.<br />- Rather than writing and maintaining multiple codes, we can write<br />one sort() and pass the datatype as a parameter.&nbsp;<br />- C++ adds two new keywords to support<br />templates:&nbsp;&lsquo;template&rsquo;&nbsp;and&nbsp;&lsquo;type name&rsquo;. The second keyword can<br />always be replaced by the keyword&nbsp;&lsquo;class&rsquo;.<br />- Templates are expanded at compiler time. This is like macros.<br />The difference is, that the compiler does type-checking before<br />template expansion.<br />- The idea is simple, source code contains only function/class, but<br />compiled code may contain multiple copies of the same<br />function/class.&nbsp;<br />How Do Templates Work?<br />Templates are expanded at compiler time. This is like macros. The<br />difference is, that the compiler does type-checking before template<br />expansion. The idea is simple, source code contains only<br />function/class, but compiled code may contain multiple copies of the<br />same function/class.
+  </div>
+  <div>&nbsp;</div>
+  <div>Syntax<br />1. template&amp;lt;class&nbsp;Ttype&amp;gt;&nbsp;&nbsp;<br />2. class&nbsp;class_name&nbsp;&nbsp;<br />3. {&nbsp;&nbsp;<br />4. &nbsp;&nbsp;.&nbsp;&nbsp;<br />5. &nbsp;&nbsp;.&nbsp;&nbsp;<br />6. }</div>
+  <div>&nbsp;</div>
+  <div>
+    <div><h3>Function Templates<br /></h3>- Function templates are special functions that can operate<br />with&nbsp;generic types.&nbsp;<br />- A template parameter is a special kind of parameter that can be used<br />to pass a type as argument: just like regular function parameters can<br />be used to pass values to a function, template parameters allow to<br />pass also types to a function.<br />- This allows us to create a function template whose functionality can<br />be adapted to more than one type or class without repeating the<br />entire code for each type.<br />- A template parameter is a special kind of parameter that can be used<br />to pass a type as argument: just like regular function parameters can<br />be used to pass values to a function, template parameters allow to<br />pass also types to a function.</div>
+    <div>- template &amp;lt;typename T&amp;gt;<br />- T functionName(T parameter1, T parameter2, ...) {<br />- // code<br />- }</div>
+    <div>- In the above code,&nbsp;T&nbsp;is a template argument that accepts different<br />data types (int,&nbsp;float, etc.), and&nbsp;typename&nbsp;is a keyword.<br />- When an argument of a data type is passed to&nbsp;functionName(), the<br />compiler generates a new version of&nbsp;functionName()&nbsp;for the given data<br />type.</div>
+  </div>
+</div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

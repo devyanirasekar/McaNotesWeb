@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>SEM3 DSUP unit-2</title>
+</head>
+<body>
+    
+    <nav class="nav-container">
+        <div class="text_logo">
+            <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+        </div>
+
+        <ul class="list">
+            <a href="/index.html"><li class="listno list-diplay">Home</li></a>
+            <li class="listno list-diplay">About</li>
+            <li class="listno list-diplay">Contact</li>
+            <li><span class="download list-diplay" id="download">Download</span></li>
+            <li class="toggle"><i class="fa-solid fa-bars fa-lg toggle-btn"></i></li>
+        </ul>
+
+        
+    </nav>
+    <div class="dropDown">
+        <ul class="drop-list">
+            <a href="/index.html"><li class="listno ">Home</li></a>
+            <li class="listno ">About</li>
+            <li class="listno">Contact</li>
+            <li><span class="download " id="download">Download</span></li></ul>
+    </div>
+
+    <!-- .................................................................... -->
+    
+    <div class="noteContainer">
+    
+    <!------------------------ paste code here   ---------------------------------- -->
+    <div style="margin: 5px 0;">
+        <p><strong>Unit 2</strong></p>
+        <p>&nbsp;</p>
+        <p><strong><h1>INTRODUCTION OF SPYDER</h1></strong></p>
+        <p>Spyder is an open-source integrated development environment (IDE) for scientific and data science programming in Python. It is specifically designed for scientists, engineers, and data analysts, providing a range of tools and features to facilitate data analysis, scientific research, and development. Here are some key features and aspects of Spyder:</p>
+        <ol>
+          <li>*Interactive Environment*: Spyder provides an interactive development environment where you can write and execute Python code. It includes an interactive IPython console, which is excellent for exploratory data analysis and quick testing of code snippets.</li>
+          <li>*Code Editor*: Spyder has a built-in code editor with features like syntax highlighting, code completion, and code analysis to make coding in Python more efficient.</li>
+          <li>*Variable Explorer*: This tool allows you to view, inspect, and modify the values of variables in your code, making it easier to understand and debug your programs.</li>
+          <li>*Plots and Graphs*: Spyder integrates with Matplotlib and other plotting libraries, making it simple to create and visualize data through charts and graphs directly within the IDE.</li>
+          <li>*File Explorer*: Spyder includes a file explorer that helps you navigate and manage your project's files and directories.</li>
+          <li>*Project Support*: You can create and manage projects within Spyder, which helps organize your code, data, and resources effectively.</li>
+          <li>*Debugger*: Spyder offers a built-in debugger with features like setting breakpoints, stepping through code, and inspecting variables, which aids in identifying and resolving issues in your programs.</li>
+          <li>*Integration with Scientific Libraries*: It comes with built-in support for popular scientific libraries like NumPy, SciPy, Pandas, and scikit-learn, which are commonly used in data analysis and scientific computing.</li>
+          <li>*Documentation Integration*: Spyder provides access to Python's documentation and allows you to view docstrings and help information for functions and modules.</li>
+          <li>*Plugin System*: Spyder's functionality can be extended through a plugin system, allowing users to customize the IDE to suit their specific needs.</li>
+          <li>*Version Control Integration*: Spyder supports version control systems like Git, making it easier to manage and track changes in your code.</li>
+          <li>*Cross-Platform*: Spyder is cross-platform, meaning it can be used on Windows, macOS, and Linux.</li>
+        </ol>
+        <p>Spyder is a popular choice among data scientists and researchers because of its emphasis on scientific computing and data analysis tools. It provides an environment that streamlines the workflow for these tasks, making it a valuable tool for Python users in scientific and data-related fields.</p>
+        <p><strong>SETTING WORKING DIRECTORY</strong></p>
+        <p>In Python, the "working directory" refers to the directory from which your Python script or program is currently running. It serves as the base directory for relative file paths and is important for various file operations. Here's how it works:</p>
+        <ol>
+          <li>*Default Working Directory*: When you run a Python script or program, the working directory is set to the location of the script by default.</li>
+          <li>*Changing the Working Directory*: You can change the working directory using the `os` module. For example, you can use `os.chdir()` to set a new working directory:</li>
+        </ol>
+        <p>python import os</p>
+        <p>os.chdir('/path/to/new/directory')</p>
+        <ol start="3">
+          <li>*Relative File Paths*: The working directory is crucial when dealing with relative file paths. If you specify a file path without an absolute path (starting from the root directory), Python will assume it's relative to the working directory.</li>
+        </ol>
+        <p>For example, if your script is in `/home/user/scripts/` and you use a relative path like `"data.txt"`, Python will look for the file in `/home/user/scripts/data.txt`.</p>
+        <ol start="4">
+          <li>*Absolute Paths*: If you want to work with files in specific locations regardless of the working directory, you should use absolute file paths, e.g., `"/home/user/documents/file.txt"`.</li>
+          <li>*`os.getcwd()`*: You can retrieve the current working directory using `os.getcwd()`:</li>
+        </ol>
+        <p>python import os current_directory = os.getcwd()</p>
+        <ol start="6">
+          <li>*Importance*: Understanding and managing the working directory is important, especially when working with files, because it ensures that your program can access the right files in the right locations.</li>
+        </ol>
+        <p>Remember that it's good practice to be explicit about file paths by using absolute paths or explicitly setting the working directory in your code when necessary to avoid unexpected issues related to working directory changes.</p>
+        <p><strong>Creating and saving script files</strong></p>
+        <p>Creating and saving script files in Python is a fundamental aspect of writing and running Python code. Here are the steps to create and save Python script files:</p>
+        <ol>
+          <li>*Text Editor*:</li>
+        </ol>
+        <p>- To create a Python script, you need a text editor. You can use a variety of text editors, such as Notepad (on Windows), TextEdit (on macOS), or code editors like Visual Studio Code, Sublime Text, or PyCharm.</p>
+        <ol start="2">
+          <li>*Writing Python Code*:</li>
+        </ol>
+        <p>- Open your text editor and start writing your Python code. You can write Python scripts for various purposes, including data analysis, web development, automation, and more. Ensure your code has the `.py` file extension, which is the standard for Python script files.</p>
+        <ol start="3">
+          <li>*Example Python Script*: python</li>
+        </ol>
+        <p># This is a simple Python script print("Hello, World!")</p>
+        <ol start="4">
+          <li>*Saving the Script*:</li>
+        </ol>
+        <p>- To save the script, choose "Save" or "Save As" from the text editor's menu. Select the location where you want to save the script and provide a filename with the `.py` extension. For example, you can save the script as `hello.py`.</p>
+        <ol start="5">
+          <li>*Choosing the Location*:</li>
+        </ol>
+        <p>- You can save your script in any directory on your computer. It's a good practice to create a dedicated folder or directory for your Python projects to keep your files organized.</p>
+        <ol start="6">
+          <li>*Executing the Script*:</li>
+        </ol>
+        <p>- To run your Python script, you can open a command prompt or terminal, navigate to the directory where your script is located, and then type `python filename.py`. In this case, you would use `python hello.py` to run the `hello.py` script.</p>
+        <p>Alternatively, if you're using a code editor like Visual Studio Code or PyCharm, you can simply click a "Run" or "Execute" button to run your script.</p>
+        <ol start="7">
+          <li>*Saving Changes*:</li>
+        </ol>
+        <p>- After making changes to your script, don't forget to save it again. You can usually use the "Save" or "Save As" option in your text editor.</p>
+        <ol start="8">
+          <li>*Version Control*:</li>
+        </ol>
+        <p>- If you're working on larger projects or collaborating with others, consider using version control systems like Git to track changes and manage your code efficiently.</p>
+        <ol start="9">
+          <li>*Documentation*:</li>
+        </ol>
+        <p>- It's a good practice to add comments and docstrings to your code to explain its functionality. This makes it easier to understand your code, especially when others need to work with it.</p>
+        <p>Remember to save your Python script files with a `.py` extension, as this tells the Python interpreter that the file contains Python code. This extension is essential for Python to recognize and execute the script properly.</p>
+        <p><strong>FILE EXECUTION</strong></p>
+        <p>File execution in Python refers to the process of running Python code that is saved in script files. Python uses the `.py` file extension for script files, and you can execute these files in several ways:</p>
+        <ol>
+          <li>*Command Line Execution*:</li>
+        </ol>
+        <ul>
+          <li>Open a command prompt or terminal.</li>
+        </ul>
+        <br />
+        <p>Navigate to the directory where your Python script file is located using the `cd` (change directory) command.</p>
+        <ul>
+          <li>Execute the script by running `python filename.py`, where `filename.py` is the name of your script file.</li>
+        </ul>
+        <h1>Example:</h1>
+        <p>shell python my_script.py</p>
+        <ol start="2">
+          <li>*Integrated Development Environments (IDEs)*:</li>
+        </ol>
+        <ul>
+          <li>Many Python IDEs, such as PyCharm, Visual Studio Code, and IDLE, provide a convenient way to run Python scripts.</li>
+          <li>Open the script file in your chosen IDE.</li>
+          <li>Use the "Run" or "Execute" button within the IDE to run the script.</li>
+        </ul>
+        <ol start="3">
+          <li>*Interactive Python Console*:</li>
+        </ol>
+        <ul>
+          <li>You can open an interactive Python console (usually IPython) and execute code from a script interactively.</li>
+          <li>Use the `%run` magic command in IPython to execute a script.</li>
+        </ul>
+        <p>Example: python</p>
+        <p>%run filename.py</p>
+        <ol start="4">
+          <li>*Shebang Line (Unix/Linux)*:</li>
+        </ol>
+        <ul>
+          <li>On Unix-like systems (Linux, macOS), you can use a shebang line at the beginning of your script to specify the Python interpreter to use.</li>
+          <li>Make the script executable using the `chmod +x filename.py` command. - Run the script directly with `./filename.py`.</li>
+        </ul>
+        <p>Example of a script with a shebang line: python</p>
+        <p>#!/usr/bin/env python print("Hello, World!")</p>
+        <ol start="5">
+          <li>*Interactive Development Environments (IDEs)*:</li>
+        </ol>
+        <p>Some Python IDEs, such as Spyder, provide interactive coding environments where you can execute parts of a script interactively.</p>
+        <ol start="6">
+          <li>*Jupyter Notebooks*:</li>
+        </ol>
+        <p>- In Jupyter notebooks, you can execute code cells individually by pressing Shift+Enter or use the "Run All" option to execute the entire notebook.</p>
+        <p>File execution is a common way to run Python scripts for various purposes, from simple "Hello, World!" programs to complex applications and data analysis tasks. The choice of how you execute a Python script depends on your preferred workflow and the development environment you are using.</p>
+        <p><strong>CLEARING CONSOLE</strong></p>
+        <p>Clearing the console in Python typically means removing or erasing the content displayed in the terminal or command prompt where you're running your Python code. Clearing the console is often used to get a clean and uncluttered output, especially when you want to present information or results from your Python program more cleanly. How you clear the console depends on your operating system:</p>
+        <ol>
+          <li>*Windows*:</li>
+        </ol>
+        <ul>
+          <li>You can use the `os` module to clear the console in Windows. Here's a simple example:</li>
+        </ul>
+        <p>python import os</p>
+        <p>os.system('cls')</p>
+        <ul>
+          <li>This code executes the "cls" command, which clears the console in a Windows terminal.</li>
+        </ul>
+        <ol start="2">
+          <li>*Linux and macOS*:</li>
+        </ol>
+        <p>- You can use the `os` module to clear the console in Linux and macOS as well. Here's an example:</p>
+        <p>python import os</p>
+        <p>os.system('clear')</p>
+        <p>This code executes the "clear" command, which clears the console in a Linux or macOS terminal.</p>
+        <ol start="3">
+          <li>*Cross-Platform*:</li>
+        </ol>
+        <p>- If you want a cross-platform way to clear the console, you can use the `os` module to detect your operating system and choose the appropriate command:</p>
+        <p>python import os import platform</p>
+        <p>if platform.system() == 'Windows':</p>
+        <p>os.system('cls')</p>
+        <p>else: os.system('clear')</p>
+        <p>Please be cautious when clearing the console, especially in scripts meant for distribution or use by others, as it can be disruptive. It's often best used sparingly, such as when you want to start with a clean slate before displaying new information or results.</p>
+        <p><strong>CLEARING VARIABLE FROM ENVIRONMENT</strong></p>
+        <p>In Python, you can remove variables from the environment, also known as the global namespace or scope, by using the `del` statement. The `del` statement is used to delete a variable or a list of variables, effectively removing them from memory. Here's how it works:</p>
+        <ol>
+          <li>*Removing a Single Variable*:</li>
+        </ol>
+        <p>To remove a single variable from the environment, use the `del` statement followed by the variable name:</p>
+        <p>python my_variable = 42 del my_variable # Removes the 'my_variable' from the environment</p>
+        <ol start="2">
+          <li>*Removing Multiple Variables*:</li>
+        </ol>
+        <p>You can also remove multiple variables in a single `del` statement by separating the variable names with commas:</p>
+        <br />
+        <p>python var1 = 10 var2 = "hello" del var1, var2 # Removes both 'var1' and 'var2' from the environment</p>
+        <ol start="3">
+          <li>*Removing Variables from a List*:</li>
+        </ol>
+        <p>If you have a list of variable names to remove, you can iterate through the list and use the `del` statement within a loop:</p>
+        <p>python variables_to_remove = ['var1', 'var2', 'var3'] for var in variables_to_remove: del globals()[var]</p>
+        <p>This approach uses the `globals()` function to access the global namespace and delete the specified variables.</p>
+        <ol start="4">
+          <li>*Be Cautious*:</li>
+        </ol>
+        <p>Be careful when removing variables from the environment, as it can lead to unexpected behavior in your code, especially if you remove variables that are still needed. It's usually best to remove variables that you are certain are no longer required in your program.</p>
+        <ol start="5">
+          <li>*Garbage Collection*:</li>
+        </ol>
+        <p>In most cases, you don't need to manually remove variables to free up memory. Python has automatic memory management and a garbage collector that reclaims memory when variables are no longer referenced.</p>
+        <ol start="6">
+          <li>*Namespace Cleanup*:</li>
+        </ol>
+        <p>Removing variables from the environment can be helpful when working on interactive environments like Jupyter notebooks, where you want to clean up the workspace after a specific task.</p>
+        <p>Remember that excessive use of `del` to remove variables is not a common practice in regular Python scripts or programs. It is more commonly used in interactive environments where you want to manage your workspace or clear variables between steps of an analysis.</p>
+        <p><strong>Clearing the environment</strong></p>
+        <p>Clearing the environment in Python typically refers to resetting or cleaning up the entire Python workspace or global namespace. This involves removing all variables, functions, and objects that have been defined during the current session. Clearing the environment is often used when you want to start with a clean slate, especially in interactive environments like Jupyter notebooks or when dealing with long-running scripts. Here's how you can clear the environment in Python:</p>
+        <ol>
+          <li>*Restarting the Python Interpreter*:</li>
+        </ol>
+        <p>- The simplest way to clear the environment is to restart the Python interpreter. This effectively wipes the entire workspace and starts from scratch.</p>
+        <ol start="2">
+          <li>*Exit and Re-run the Script*:</li>
+        </ol>
+        <p>- If you're running a Python script in an interactive environment like Jupyter Notebook, you can exit the current session and re-run the script. This will clear all the variables defined in that session and load a fresh environment.</p>
+        <ol start="3">
+          <li>*Manually Remove Variables*:</li>
+        </ol>
+        <p>- You can manually remove variables and objects from the environment using the `del` statement. For example, you can use a loop to delete all variables:</p>
+        <p>python for var in dir():</p>
+        <p>if not var.startswith("__"): del globals()[var]</p>
+        <p>Be cautious when using this method, as it can lead to unexpected consequences if you accidentally remove necessary variables.</p>
+        <ol start="4">
+          <li>*Using IPython Magic Commands* (for IPython environments):</li>
+        </ol>
+        <p>- If you are working in an IPython environment (like Jupyter Notebook), you can use magic commands to clear the environment. The `%reset` command can remove all names defined interactively:</p>
+        <p>python</p>
+        <p>%reset -f</p>
+        <p>Use `%reset -f` with caution, as it will remove all interactive variables without confirmation.</p>
+        <ol start="5">
+          <li>*Reloading Modules*:</li>
+        </ol>
+        <p>- If you have imported modules in your script and you want to reload them, you can use the `importlib` module. This allows you to reload a module without clearing everything else in the environment.</p>
+        <p>python import importlib importlib.reload(module_name)</p>
+        <p>Remember that clearing the environment should be done with care, as it can lead to data loss and might not be suitable for all scenarios. It's typically used when you want to reset the environment for a specific purpose or after a significant change in your code. Always make sure you understand the implications of clearing the environment, especially in interactive environments where you might lose important data.</p>
+        <p><strong>Comments in Python </strong>are the lines in the code that are ignored by the interpreter during the execution of the program. Comments enhance the readability of the code and help the programmers to understand the code very carefully.</p>
+        <p>There are three types of comments in <a href="https://www.geeksforgeeks.org/python-programming-language/learn-python-tutorial/">Python</a>:</p>
+        <p>Single line Comments</p>
+        <p>Multiline Comments</p>
+        <p>Docstring Comments</p>
+        <p><strong>Comments in Python</strong></p>
+        <p>In the example, it can be seen that Python Comments are ignored by the interpreter during the execution of the program.</p>
+        <p># sample comment name <strong>= </strong>"abcd" print(name)</p>
+        <p><strong>Output: abcd</strong></p>
+        <p><strong>Types of Comments in Python</strong></p>
+        <p><strong>Single-Line Comments in Python</strong></p>
+        <p><strong>Python single-line comment starts with the hashtag symbol (#) with no white spaces and lasts till the end of the line. If the comment exceeds one line then put a hashtag on the next line and continue the Python Comments. Python&rsquo;s single-line comments are proved useful for supplying short explanations for variables, function declarations, and expressions. See the following code snippet demonstrating single line comment:</strong></p>
+        <p><strong>Example:</strong></p>
+        <p><strong># Print &ldquo;abcd !&rdquo; to console </strong><strong>print</strong><strong>(</strong><strong>"abcd"</strong><strong>) Output</strong></p>
+        <p><strong>GeeksforGeeks</strong></p>
+        <p><strong>Multi-Line Comments in Python</strong></p>
+        <p><strong>Python does not provide the option for </strong><a href="https://www.geeksforgeeks.org/multiline-comments-in-python/"><strong>multiline</strong></a> <a href="https://www.geeksforgeeks.org/multiline-comments-in-python/"><strong>comments</strong></a><strong>. However, there are different ways through which we can write multiline comments.</strong></p>
+        <p><strong>Multiline comments using multiple hashtags (#)</strong></p>
+        <p><strong>We can multiple hashtags (#) to write multiline comments in Python. Each and every line will be considered as a single-line comment.</strong></p>
+        <p><strong># Python program to demonstrate</strong></p>
+        <p><strong># multiline comments </strong><strong>print</strong><strong>(</strong><strong>"Multiline comments"</strong><strong>)</strong></p>
+        <p><strong>Output</strong></p>
+        <p><strong>Multiline comments</strong></p>
+        <p><strong>String Literals In Python</strong></p>
+        <p><strong>Python ignores the </strong><a href="https://www.geeksforgeeks.org/literals-in-python/#:~:text=What%20is%20String%20literals"><strong>string</strong></a> <a href="https://www.geeksforgeeks.org/literals-in-python/#:~:text=What%20is%20String%20literals"><strong>literals</strong></a> <strong>that are not assigned to a variable so we can use these string literals as Python Comments. Single-line comments using string literals</strong></p>
+        <p><strong>Loading ad</strong></p>
+        <p><strong>On executing the above code we can see that there will not be any output so we use the strings with </strong><a href="https://www.geeksforgeeks.org/triple-quotes-in-python/"><strong>triple</strong></a> <a href="https://www.geeksforgeeks.org/triple-quotes-in-python/"><strong>quotes</strong></a><strong>(&ldquo;&rdquo;&rdquo;) as multiline comments.</strong></p>
+        <p><strong>""" Python program to demonstrate</strong></p>
+        <p><strong>multiline comments"""</strong></p>
+        <p><strong>print</strong><strong>(</strong><strong>"Multiline comments"</strong><strong>)</strong></p>
+        <p><strong>Output</strong></p>
+        <p><strong>Multiline comments</strong></p>
+        <p><strong>Docstring in Python</strong></p>
+        <p><a href="https://www.geeksforgeeks.org/python-docstrings/"><strong>Python</strong></a> <a href="https://www.geeksforgeeks.org/python-docstrings/"><strong>docstring</strong></a> <strong>is the string literals with triple quotes that are appeared right after the function. It is used to associate documentation that has been written with Python modules, functions, classes, and methods. It is added right below the functions, modules, or classes to describe what they do. In Python, the docstring is then made available via the </strong><a href="https://www.geeksforgeeks.org/python-docstrings/"><strong>__doc__</strong></a> <a href="https://www.geeksforgeeks.org/python-docstrings/"><strong>attribute</strong></a><strong>.</strong></p>
+        <p><strong>Example:</strong></p>
+        <p><strong>def </strong><strong>multiply(a, b):</strong></p>
+        <p><strong>"""Multiplies the value of a and b"""</strong></p>
+        <p><strong>return </strong><strong>a</strong><strong>*</strong><strong>b</strong></p>
+        <p><strong># Print the docstring of multiply function</strong></p>
+        <p><strong>print</strong><strong>(multiply.__doc__)</strong></p>
+        <p><strong>Output:</strong></p>
+        <p><strong>Multiplies the value of a and b</strong></p>
+        <p><strong>Advantages of comments in Python</strong></p>
+        <p><strong>Comments are generally used for the following purposes:</strong></p>
+        <p><strong>Code Readability</strong></p>
+        <p><strong>Explanation of the code or Metadata of the project</strong></p>
+        <p><strong>Prevent execution of code</strong></p>
+        <p><strong>To include resources</strong></p>
+        <p><strong>Variable creation</strong></p>
+        <p><strong>In </strong><a href="https://www.tutorialspoint.com/python/index.htm"><strong>Python</strong></a><strong>, we need not declare a variable with some specific </strong><a href="https://www.tutorialspoint.com/python/python_data_types.htm"><strong>data</strong></a> <a href="https://www.tutorialspoint.com/python/python_data_types.htm"><strong>type</strong></a><strong>.</strong></p>
+        <p><strong>Python has no command for declaring a variable. A variable is created when some value is assigned to it. The value assigned to a variable determines the data type of that variable.</strong></p>
+        <p><strong>Thus, declaring a variable in Python is very simple.</strong></p>
+        <p><strong>Just name the variable</strong></p>
+        <p><strong>Assign the required value to it</strong></p>
+        <p><strong>The data type of the variable will be automatically determined from the value assigned, we need not define it explicitly.</strong></p>
+        <p>Declare an integer variable</p>
+        <p><strong>To declare an integer variable &minus;</strong></p>
+        <p><strong>Name the variable</strong></p>
+        <p><strong>Assign an integer value to it</strong></p>
+        <p>Example <strong>x</strong><strong>=</strong><strong>2</strong></p>
+        <p><strong>print</strong><strong>(</strong><strong>x</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>type</strong><strong>(</strong><strong>x</strong><strong>))</strong></p>
+        <p><strong>This is how you declare a integer variable in Python. Just name the variable and assign the required value to it. The datatype is automatically determined.</strong></p>
+        <p>Output</p>
+        <p><strong>2</strong></p>
+        <p><strong>&lt;class 'int'&gt;</strong></p>
+        <p>Declare a string variable</p>
+        <p><strong>Assign a string value to the variable and it will become a string variable. In Python, the string value cane be assigned in single quotes or double quotes.</strong></p>
+        <p>Example</p>
+        <p><strong>x</strong><strong>=</strong><strong>'2' </strong><strong>print</strong><strong>(</strong><strong>x</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>type</strong><strong>(</strong><strong>x</strong><strong>))</strong></p>
+        <p>Output</p>
+        <p><strong>2</strong></p>
+        <p><strong>&lt;class 'str'&gt;</strong></p>
+        <p>Declare a float variable</p>
+        <p><strong>A float variable can be declared by assigning float value. Another way is by typecasting.</strong></p>
+        <p><strong>We will use both.</strong></p>
+        <p>Example</p>
+        <p><strong>x</strong><strong>=</strong><strong>2.0 </strong><strong>print</strong><strong>(</strong><strong>x</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>type</strong><strong>(</strong><strong>x</strong><strong>)) </strong><strong>y</strong><strong>=</strong><strong>float</strong><strong>(</strong><strong>2</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>y</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>type</strong><strong>(</strong><strong>y</strong><strong>))</strong></p>
+        <p>Output</p>
+        <p><strong>2.0</strong></p>
+        <p><strong>&lt;class 'float'&gt;</strong></p>
+        <p><strong>2.0</strong></p>
+        <p><strong>&lt;class 'float'&gt;</strong></p>
+        <p><strong>Note: The string variable can also be declared using type casting, when using integer values as string.</strong></p>
+        <p><strong>Unlike some another languages, where we can assign only the value of the defined data type to a variable. This means an integer variable can only be assigned an integer value throughout the program. But, in Python , the variable are not of a particular datatype. Their datatype can be changed even after it is set.</strong></p>
+        <p><strong>The following example will clarify the above concept.</strong></p>
+        <p>Example <strong>x</strong><strong>=</strong><strong>10</strong></p>
+        <p><strong>print</strong><strong>(</strong><strong>x</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>type</strong><strong>(</strong><strong>x</strong><strong>))</strong></p>
+        <p><strong>x</strong><strong>=</strong><strong>"abc"</strong></p>
+        <p><strong>print</strong><strong>(</strong><strong>x</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>type</strong><strong>(</strong><strong>x</strong><strong>))</strong></p>
+        <p>Output</p>
+        <p><strong>10</strong></p>
+        <p><strong>&lt;class 'int'&gt;</strong></p>
+        <p><strong>abc</strong></p>
+        <p><strong>&lt;class 'str'&gt;</strong></p>
+        <p><strong>The variable x was of type int. Later when string value is assigned to it, it changes into a string variable.</strong></p>
+        <p><strong><u>Arithmetic and logical operators</u></strong></p>
+        <p><strong><u>In </u></strong><a href="https://www.geeksforgeeks.org/python-programming-language/"><strong>Python</strong></a> <a href="https://www.geeksforgeeks.org/python-programming-language/"><strong>programming</strong></a><strong><u>, Operators in general are used to perform operations on values and variables. These are standard symbols used for the purpose of logical and arithmetic operations. In this article, we will look into different types of Python operators.</u></strong></p>
+        <p><strong><u>OPERATORS: These are the special symbols. Eg- + , * , /, etc.</u></strong></p>
+        <p><strong><u>OPERAND: It is the value on which the operator is applied</u></strong></p>
+        <p><strong><u>Types of Operators in Python</u></strong></p>
+        <p><a href="https://www.geeksforgeeks.org/python-arithmetic-operators/"><strong>Arithmetic</strong></a> <a href="https://www.geeksforgeeks.org/python-arithmetic-operators/"><strong>Operators</strong></a></p>
+        <p><a href="https://www.geeksforgeeks.org/relational-operators-in-python/"><strong>Comparison</strong></a> <a href="https://www.geeksforgeeks.org/relational-operators-in-python/"><strong>Operators</strong></a></p>
+        <p><a href="https://www.geeksforgeeks.org/python-logical-operators-with-examples-improvement-needed/"><strong>Logical</strong></a> <a href="https://www.geeksforgeeks.org/python-logical-operators-with-examples-improvement-needed/"><strong>Operators</strong></a></p>
+        <p><a href="https://www.geeksforgeeks.org/python-bitwise-operators/"><strong>Bitwise</strong></a> <a href="https://www.geeksforgeeks.org/python-bitwise-operators/"><strong>Operators</strong></a></p>
+        <p><a href="https://www.geeksforgeeks.org/assignment-operators-in-python/"><strong>Assignment</strong></a> <a href="https://www.geeksforgeeks.org/assignment-operators-in-python/"><strong>Operators</strong></a></p>
+        <p><a href="https://www.geeksforgeeks.org/python-membership-identity-operators-not-not/"><strong>Identity</strong></a> <a href="https://www.geeksforgeeks.org/python-membership-identity-operators-not-not/"><strong>Operators</strong></a> <a href="https://www.geeksforgeeks.org/python-membership-identity-operators-not-not/"><strong>and</strong></a> <a href="https://www.geeksforgeeks.org/python-membership-identity-operators-not-not/"><strong>Membership</strong></a> <a href="https://www.geeksforgeeks.org/python-membership-identity-operators-not-not/"><strong>Operators</strong></a></p>
+        <p><strong><u>Arithmetic Operators in Python</u></strong></p>
+        <p><strong><u>Python </u></strong><a href="https://www.geeksforgeeks.org/python-arithmetic-operators/"><strong>Arithmetic</strong></a> <a href="https://www.geeksforgeeks.org/python-arithmetic-operators/"><strong>operators</strong></a> <strong><u>are used to perform basic mathematical operations like addition, subtraction, multiplication, and division.</u></strong></p>
+        <p><strong><u>In Python 3.x the result of division is a floating-point while in Python 2.x division of 2 integers was an integer. To obtain an integer result in Python 3.x floored (// integer) is used.</u></strong></p>
+        <table width="591">
+          <tbody>
+            <tr>
+              <td width="88">
+                <p><strong><u>Operator</u></strong></p>
+              </td>
+              <td width="420">
+                <p><strong><u>Description</u></strong></p>
+              </td>
+              <td width="83">
+                <p><strong><u>Syntax</u></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p><strong><u>+</u></strong></p>
+              </td>
+              <td width="420">
+                <p><strong><u>Addition: adds two operands</u></strong></p>
+              </td>
+              <td width="83">
+                <p><strong><u>x + y</u></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p><strong><u>&ndash;</u></strong></p>
+              </td>
+              <td width="420">
+                <p><strong><u>Subtraction: subtracts two operands</u></strong></p>
+              </td>
+              <td width="83">
+                <p><strong><u>x &ndash; y</u></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p><strong><u>*</u></strong></p>
+              </td>
+              <td width="420">
+                <p><strong><u>Multiplication: multiplies two operands</u></strong></p>
+              </td>
+              <td width="83">
+                <p><strong><u>x * y</u></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p><strong><u>/</u></strong></p>
+              </td>
+              <td width="420">
+                <p><strong><u>Division (float): divides the first operand by the second</u></strong></p>
+              </td>
+              <td width="83">
+                <p><strong><u>x / y</u></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p><strong><u>//</u></strong></p>
+              </td>
+              <td width="420">
+                <p><strong><u>Division (floor): divides the first operand by the second</u></strong></p>
+              </td>
+              <td width="83">
+                <p><strong><u>x // y</u></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p><strong><u>%</u></strong></p>
+              </td>
+              <td width="420">
+                <p><strong><u>Modulus: returns the remainder when the first operand is divided by the second</u></strong></p>
+              </td>
+              <td width="83">
+                <p><strong><u>x % y</u></strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="88">
+                <p><strong><u>**</u></strong></p>
+              </td>
+              <td width="420">
+                <p><strong><u>Power: Returns first raised to power second</u></strong></p>
+              </td>
+              <td width="83">
+                <p><strong><u>x ** y</u></strong></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong><u>Example of Arithmetic Operators in Python</u></strong></p>
+        <p><strong><u>Division Operators</u></strong></p>
+        <p><strong><u>Division Operators allow you to divide two numbers and return a quotient, i.e., the first number or number at the left is divided by the second number or number at the right and returns the quotient.</u></strong></p>
+        <p><strong><u>There are two types of division operators:</u></strong></p>
+        <p><strong><u>Float division</u></strong></p>
+        <p><strong><u>Floor division</u></strong></p>
+        <p><strong><u>Float division</u></strong></p>
+        <p><strong><u>The quotient returned by this operator is always a float number, no matter if two numbers are integers. For example:</u></strong></p>
+        <p><strong># python program to demonstrate the use of "/" </strong><strong>print</strong><strong>(</strong><strong>5</strong><strong>/</strong><strong>5</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>10</strong><strong>/</strong><strong>2</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>-</strong><strong>10</strong><strong>/</strong><strong>2</strong><strong>) </strong><strong>print</strong><strong>(</strong><strong>20.0</strong><strong>/</strong><strong>2</strong><strong>)</strong></p>
+        <p><strong>Output:</strong></p>
+        <p><strong>1.0</strong></p>
+        <p><strong>5.0</strong></p>
+        <p><strong>-5.0</strong></p>
+        <p><strong>10.0</strong></p>
+        <p><strong>Integer division( Floor division)</strong></p>
+        <p><strong>The quotient returned by this operator is dependent on the argument being passed. If any of the numbers is float, it returns output in float. It is also known as Floor division because, if any number is negative, then the output will be floored. For example:</strong></p>
+        <p><strong># python program to demonstrate the use of "//" </strong><strong>print</strong><strong>(</strong><strong>10</strong><strong>//</strong><strong>3</strong><strong>) </strong><strong>print </strong><strong>(</strong><strong>-</strong><strong>5</strong><strong>//</strong><strong>2</strong><strong>) </strong><strong>print </strong><strong>(</strong><strong>5.0</strong><strong>//</strong><strong>2</strong><strong>) </strong><strong>print </strong><strong>(</strong><strong>-</strong><strong>5.0</strong><strong>//</strong><strong>2</strong><strong>)</strong></p>
+        <p><strong>Output:</strong></p>
+        <p><strong>3</strong></p>
+        <p><strong>-3</strong></p>
+        <p><strong>2.0</strong></p>
+        <p><strong>-3.0</strong></p>
+        <p><strong>Arithmetic Operators With Addition, Subtraction, Multiplication, Modulo and Power</strong></p>
+        <p><strong>Here is an example showing how different Arithmetic Operators in Python work:</strong></p>
+        <p><strong># Examples of Arithmetic Operator</strong></p>
+        <h1>a = 9</h1>
+        <h1>b = 4</h1>
+        <p><strong># Addition of numbers </strong><strong>add </strong><strong>= </strong><strong>a </strong><strong>+ </strong><strong>b</strong></p>
+        <p><strong># Subtraction of numbers </strong><strong>sub </strong><strong>= </strong><strong>a </strong><strong>- </strong><strong>b</strong></p>
+        <p><strong># Multiplication of number</strong></p>
+        <p><strong>mul </strong><strong>= </strong><strong>a </strong><strong>* </strong><strong>b</strong></p>
+        <p><strong># Modulo of both number</strong></p>
+        <p><strong>mod </strong><strong>= </strong><strong>a </strong><strong>% </strong><strong>b</strong></p>
+        <p><strong># Power </strong><strong>p </strong><strong>= </strong><strong>a </strong><strong>** </strong><strong>b</strong></p>
+        <p><strong># print results </strong><strong>print</strong><strong>(add) </strong><strong>print</strong><strong>(sub) </strong><strong>print</strong><strong>(mul) </strong><strong>print</strong><strong>(mod) </strong><strong>print</strong><strong>(p)</strong></p>
+        <p><strong>Output:</strong></p>
+        <p>13</p>
+        <p>5</p>
+        <p>36</p>
+        <p>1</p>
+        <p>6561</p>
+        <p><strong>Logical operators</strong></p>
+        <p>In Python, Logical operators are used on conditional statements (either True or False).</p>
+        <p>They perform <strong>Logical AND</strong>, <strong>Logical OR </strong>and <strong>Logical NOT </strong>operations.</p>
+        <table width="589">
+          <tbody>
+            <tr>
+              <td width="113">
+                <p><strong>OPERATOR</strong></p>
+              </td>
+              <td width="380">
+                <p><strong>DESCRIPTION</strong></p>
+              </td>
+              <td width="96">
+                <p><strong>SYNTA</strong></p>
+                <p><strong>X</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="113">
+                <p>and</p>
+              </td>
+              <td width="380">
+                <p>Logical AND: True if both the operands are true</p>
+              </td>
+              <td width="96">
+                <p>x and y</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="113">
+                <p>or</p>
+              </td>
+              <td width="380">
+                <p>Logical OR: True if either of the operands is true</p>
+              </td>
+              <td width="96">
+                <p>x or y</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="113">
+                <p>not</p>
+              </td>
+              <td width="380">
+                <p>Logical NOT: True if operand is false</p>
+              </td>
+              <td width="96">
+                <p>not x</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>The truth table for all combinations of values of X and Y.</strong></p>
+        <p><em>Truth Table</em></p>
+        <p><strong>Logical AND operator</strong></p>
+        <br />
+        <p>operator returns True if both the operands are True else it returns False.</p>
+        <p>Example 1</p>
+        <p># Python program to demonstrate</p>
+        <p># logical and operator</p>
+        <ul>
+          <li><strong>= </strong>10</li>
+          <li><strong>= </strong>10</li>
+        </ul>
+        <h1>c&nbsp; = -10</h1>
+        <p><strong>if </strong>a &gt; 0 <strong>and </strong>b &gt; 0:</p>
+        <p><strong>print</strong>("The numbers are greater than 0")</p>
+        <p><strong>if </strong>a &gt; 0 <strong>and </strong>b &gt; 0 <strong>and </strong>c &gt; 0:</p>
+        <p>print("The numbers are greater than 0") <strong>else</strong>:</p>
+        <p>print("Atleast one number is not greater than 0")</p>
+        <p><strong>Output</strong></p>
+        <p>The numbers are greater than 0</p>
+        <p>Atleast one number is not greater than 0</p>
+        <p>Example 2</p>
+        <p># Python program to demonstrate</p>
+        <p># logical and operator</p>
+        <ul>
+          <li><strong>= </strong>10</li>
+          <li><strong>= </strong>12 c <strong>= </strong>0</li>
+        </ul>
+        <p><strong>if </strong>a <strong>and </strong>b <strong>and </strong>c:</p>
+        <p>print("All the numbers have boolean value as True") <strong>else</strong>:</p>
+        <p>print("Atleast one number has boolean value as False")</p>
+        <p><strong>Output</strong></p>
+        <p>Atleast one number has boolean value as False</p>
+        <p><strong>Note: </strong>If the first expression evaluated to be false while using and operator, then the further expressions are not evaluated.</p>
+        <p><strong>Logical OR operator</strong></p>
+        <p>or operator returns True if either of the operands is True.</p>
+        <p>Example 1</p>
+        <p># Python program to demonstrate</p>
+        <p># logical or operator</p>
+        <p>a <strong>= </strong>10 b <strong>= -</strong>10</p>
+        <p>c <strong>= </strong>0</p>
+        <p><strong>if </strong>a &gt; 0 <strong>or </strong>b &gt; 0:</p>
+        <p><strong>print</strong>("Either of the number is greater than 0") <strong>else</strong>:</p>
+        <p><strong>print</strong>("No number is greater than 0")</p>
+        <p><strong>if </strong>b &gt; 0 <strong>or </strong>c &gt; 0:</p>
+        <p>print("Either of the number is greater than 0") <strong>else</strong>:</p>
+        <p>print("No number is greater than 0")</p>
+        <p><strong>Output</strong></p>
+        <p>Either of the number is greater than 0</p>
+        <p>No number is greater than 0 Example 2</p>
+        <p># Python program to demonstrate</p>
+        <p># logical and operator</p>
+        <ul>
+          <li><strong>= </strong>10</li>
+          <li><strong>= </strong>12 c <strong>= </strong>0</li>
+        </ul>
+        <p><strong>if </strong>a <strong>or </strong>b <strong>or </strong>c:</p>
+        <p>print("Atleast one number has boolean value as True") <strong>else</strong>:</p>
+        <p>print("All the numbers have boolean value as False")</p>
+        <p><strong>Output</strong></p>
+        <p>Atleast one number has boolean value as True</p>
+        <p><strong>Note: </strong>If the first expression evaluated to be True while using or operator, then the further expressions are not evaluated.</p>
+        <p><strong>Logical not operator</strong></p>
+        <p>not operator work with the single boolean value. If the boolean value is True it</p>
+        <p>returns False and vice-versa.</p>
+        <p># Python program to demonstrate</p>
+        <p># logical not operator</p>
+        <p>a <strong>= </strong>10</p>
+        <p><strong>if not </strong>a: <strong>print</strong>("Boolean value of a is True")</p>
+        <p><strong>if not </strong>(a<strong>%</strong>3 <strong>== </strong>0 <strong>or </strong>a<strong>%</strong>5 <strong>== </strong>0):</p>
+        <p>print("10 is not divisible by either 3 or 5") <strong>else</strong>:</p>
+        <p><strong>print</strong>("10 is divisible by either 3 or 5")</p>
+        <p><strong>Output</strong></p>
+        <p>10 is divisible by either 3 or 5</p>
+        <p>Data types</p>
+        <p>Data types are the classification or categorization of data items. It represents the kind of value that tells what operations can be performed on a particular data. Since everything is an object in <a href="https://www.geeksforgeeks.org/python-programming-language/">Python</a> <a href="https://www.geeksforgeeks.org/python-programming-language/">programming</a>, data types are actually classes and variables are instances (object) of these classes. The following are the standard or built-in data types in Python:</p>
+        <p><strong>Numeric</strong></p>
+        <p><strong>Sequence Type</strong></p>
+        <p><strong>Boolean</strong></p>
+        <p><strong>Set</strong></p>
+        <p><strong>Dictionary</strong></p>
+        <p><strong>Binary Types( </strong><a href="https://www.geeksforgeeks.org/memoryview-in-python/"><strong>memoryview</strong></a><strong>, </strong><a href="https://www.geeksforgeeks.org/python-bytearray-function/"><strong>bytearray</strong></a><strong>, </strong><a href="https://www.geeksforgeeks.org/python-bytes-method/"><strong>bytes</strong></a><strong>)</strong></p>
+        <br />
+        <p><strong>What is Python type() Function?</strong></p>
+        <p>To define the values of various data types and check their data types we <strong>use the </strong><a href="https://www.geeksforgeeks.org/python-type-function/"><strong>type() </strong></a><a href="https://www.geeksforgeeks.org/python-type-function/"><strong>function</strong></a><strong>. </strong>Consider the following examples.</p>
+        <p># DataType Output: str x <strong>= </strong>"Hello World"</p>
+        <p># DataType Output: int</p>
+        <p>x <strong>= </strong>50</p>
+        <p># DataType Output: float x <strong>= </strong>60.5</p>
+        <p># DataType Output: complex x <strong>= </strong>3j</p>
+        <p># DataType Output: list x <strong>= </strong>["geeks", "for", "geeks"]</p>
+        <p># DataType Output: tuple x <strong>= </strong>("geeks", "for", "geeks")</p>
+        <p># DataType Output: range x <strong>= </strong>range(10)</p>
+        <p># DataType Output: dict x <strong>= </strong>{"name": "Suraj", "age": 24}</p>
+        <p># DataType Output: set x <strong>= </strong>{"geeks", "for", "geeks"}</p>
+        <p># DataType Output: frozenset x <strong>= </strong>frozenset({"geeks", "for", "geeks"})</p>
+        <p># DataType Output: bool x <strong>= </strong>True</p>
+        <p># DataType Output: bytes x <strong>= </strong>b"Geeks"</p>
+        <p># DataType Output: bytearray x <strong>= </strong>bytearray(4)</p>
+        <p># DataType Output: memoryview x <strong>= </strong>memoryview(bytes(6))</p>
+        <p># DataType Output: NoneType x <strong>= </strong>None</p>
+        <p><strong>Numeric Data Type in Python</strong></p>
+        <p>The numeric data type in Python represents the data that has a numeric value. A numeric value can be an integer, a floating number, or even a complex number. These values are defined as <a href="https://www.geeksforgeeks.org/python-int-function/">Python</a> <a href="https://www.geeksforgeeks.org/python-int-function/">int</a>, <a href="https://www.geeksforgeeks.org/float-in-python/">Python</a> <a href="https://www.geeksforgeeks.org/float-in-python/">float</a>, and <a href="https://www.geeksforgeeks.org/python-complex-function/">Python</a> <a href="https://www.geeksforgeeks.org/python-complex-function/">complex</a> classes in <a href="https://www.geeksforgeeks.org/python-programming-language/">Python</a>.</p>
+        <p><strong>Integers </strong>&ndash; This value is represented by int class. It contains positive or negative whole numbers (without fractions or decimals). In Python, there is no limit to how long an integer value can be.</p>
+        <p><strong>Float </strong>&ndash; This value is represented by the float class. It is a real number with a floating-point representation. It is specified by a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation.</p>
+        <p><strong>Complex Numbers </strong>&ndash; Complex number is represented by a complex class. It is specified as <em>(real part) + (imaginary part)j</em>. For example &ndash; 2+3j</p>
+        <p><strong>Note </strong>&ndash; <a href="https://www.geeksforgeeks.org/python-type-function/">type()</a> <a href="https://www.geeksforgeeks.org/python-type-function/">function</a> is used to determine the type of data type.</p>
+        <p># Python program to # demonstrate numeric value</p>
+        <ul>
+          <li><strong>= </strong>5</li>
+        </ul>
+        <p><strong>print</strong>("Type of a: ", type(a))</p>
+        <ul>
+          <li><strong>= </strong>0</li>
+        </ul>
+        <p><strong>print</strong>("\nType of b: ", type(b))</p>
+        <ul>
+          <li><strong>= </strong>2 <strong>+ </strong>4j</li>
+        </ul>
+        <p>print("\nType of c: ", type(c))</p>
+        <p><strong>Output:</strong></p>
+        <p>Type of a: &lt;class 'int'&gt;</p>
+        <p>Type of b: &lt;class 'float'&gt;</p>
+        <p>Type of c: &lt;class 'complex'&gt;</p>
+        <p><strong>Sequence Data Type in Python</strong></p>
+        <p>The sequence Data Type in Python is the ordered collection of similar or different data types. Sequences allow storing of multiple values in an organized and efficient fashion.</p>
+        <p>There are several sequence types in Python &ndash;</p>
+        <p><a href="https://www.geeksforgeeks.org/python-data-types/#string">Python</a> <a href="https://www.geeksforgeeks.org/python-data-types/#string">String</a></p>
+        <p><a href="https://www.geeksforgeeks.org/python-data-types/#list">Python</a> <a href="https://www.geeksforgeeks.org/python-data-types/#list">List</a></p>
+        <p><a href="https://www.geeksforgeeks.org/python-data-types/#tuple">Python</a> <a href="https://www.geeksforgeeks.org/python-data-types/#tuple">Tuple</a></p>
+        <p><strong>String Data Type</strong></p>
+        <p><a href="https://www.geeksforgeeks.org/python-strings/">Strings</a> in Python are arrays of bytes representing Unicode characters. A string is a collection of one or more characters put in a single quote, double-quote, or triple-quote. In python there is no character data type, a character is a string of length one. It is represented by str class.</p>
+        <p><strong>Creating String</strong></p>
+        <p>Strings in Python can be created using single quotes or double quotes or even triple quotes.</p>
+        <p># Python Program for # Creation of String</p>
+        <p># Creating a String</p>
+        <p># with single Quotes</p>
+        <p>String1 <strong>= </strong>'Welcome to the Geeks World' print("String with the use of Single Quotes: ") <strong>print</strong>(String1)</p>
+        <p># Creating a String</p>
+        <p># with double Quotes</p>
+        <p>String1 <strong>= </strong>"I'm a Geek" <strong>print</strong>("\nString with the use of Double Quotes: ") <strong>print</strong>(String1) print(type(String1))</p>
+        <p># Creating a String</p>
+        <p># with triple Quotes</p>
+        <p>String1 <strong>= </strong>'''I'm a Geek and I live in a world of "Geeks"''' <strong>print</strong>("\nString with the use of Triple Quotes: ") print(String1) print(type(String1))</p>
+        <p># Creating String with triple</p>
+        <p># Quotes allows multiple lines</p>
+        <p>String1 <strong>= </strong>'''Geeks</p>
+        <p>For</p>
+        <p>Life'''</p>
+        <p>print("\nCreating a multiline String: ") print(String1)</p>
+        <p><strong>Output:</strong></p>
+        <p>String with the use of Single Quotes: Welcome to the Geeks World</p>
+        <p>String with the use of Double Quotes:</p>
+        <p>I'm a Geek</p>
+        <p>&lt;class 'str'&gt;</p>
+        <p>String with the use of Triple Quotes:</p>
+        <p>I'm a Geek and I live in a world of "Geeks"</p>
+        <p>&lt;class 'str'&gt;</p>
+        <p>Creating a multiline String:</p>
+        <p>Geeks</p>
+        <p>For</p>
+        <p>Life</p>
+        <p><strong>Accessing elements of String</strong></p>
+        <p>In Python, individual characters of a String can be accessed by using the method of Indexing. <a href="https://www.geeksforgeeks.org/python-negative-index-of-element-in-list/">Negative</a> <a href="https://www.geeksforgeeks.org/python-negative-index-of-element-in-list/">Indexing</a> allows negative address references to access characters from the back of the String, e.g. -1 refers to the last character, -2 refers to the second last character, and so on.</p>
+        <p># Python Program to Access # characters of String</p>
+        <p>String1 <strong>= </strong>"GeeksForGeeks" <strong>print</strong>("Initial String: ") print(String1)</p>
+        <p># Printing First character</p>
+        <p>print("\nFirst character of String is: ") <strong>print</strong>(String1[0])</p>
+        <p># Printing Last character <strong>print</strong>("\nLast character of String is: ") print(String1[<strong>-</strong>1])</p>
+        <p><strong>Output:</strong></p>
+        <p>Initial String:</p>
+        <p>GeeksForGeeks</p>
+        <p>First character of String is:</p>
+        <p>G</p>
+        <p>Last character of String is: s</p>
+        <p><strong>List Data Type</strong></p>
+        <p><a href="https://www.geeksforgeeks.org/python-list/">Lists</a> are just like arrays, declared in other languages which is an ordered collection of data. It is very flexible as the items in a list do not need to be of the same type.</p>
+        <p><strong>Creating List</strong></p>
+        <p>Lists in Python can be created by just placing the sequence inside the square brackets[].</p>
+        <p># Creating a List</p>
+        <p>List <strong>= </strong>[] <strong>print</strong>("Initial blank List: ") <strong>print</strong>(List)</p>
+        <p># Creating a List with</p>
+        <p># the use of a String</p>
+        <p>List <strong>= </strong>['GeeksForGeeks'] <strong>print</strong>("\nList with the use of String: ") <strong>print</strong>(List)</p>
+        <p># Creating a List with</p>
+        <p># the use of multiple values</p>
+        <p>List <strong>= </strong>["Geeks", "For", "Geeks"] print("\nList containing multiple values: ") <strong>print</strong>(List[0]) print(List[2])</p>
+        <p># Creating a Multi-Dimensional List</p>
+        <p># (By Nesting a list inside a List)</p>
+        <p>List <strong>= </strong>[['Geeks', 'For'], ['Geeks']] <strong>print</strong>("\nMulti-Dimensional List: ") print(List)</p>
+        <p>Initial blank List: []</p>
+        <p>List with the use of String:</p>
+        <p>['GeeksForGeeks']</p>
+        <p>List containing multiple values:</p>
+        <p>Geeks</p>
+        <p>Geeks</p>
+        <p>Multi-Dimensional List:</p>
+        <p>[['Geeks', 'For'], ['Geeks']]</p>
+        <p><strong>Python Access List Items</strong></p>
+        <p>In order to access the list items refer to the index number. Use the index operator [ ] to access an item in a list. In Python, negative sequence indexes represent positions from the end of the array. Instead of having to compute the offset as in List[len(List)-3], it is enough to just write List[-3]. Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second-last item, etc.</p>
+        <p>&nbsp;</p>
+        <table width="601">
+          <tbody>
+            <tr>
+              <td width="601">
+                <p>Python program to demonstrate</p>
+                <p># accessing of element from list</p>
+                <p># Creating a List with</p>
+                <p># the use of multiple values</p>
+                <p>List <strong>= </strong>["Geeks", "For", "Geeks"]</p>
+                <p># accessing a element from the</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <table width="601">
+          <tbody>
+            <tr>
+              <td width="601">
+                <p># list using index number</p>
+                <p><strong>print</strong>("Accessing element from the list")</p>
+                <p><strong>print</strong>(List[0])</p>
+                <p><strong>print</strong>(List[2])</p>
+                <p># accessing a element using # negative indexing</p>
+                <p>print("Accessing element using negative indexing")</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p># print the last element of list</p>
+        <p><strong>print</strong>(List[<strong>-</strong>1])</p>
+        <p># print the third last element of list</p>
+        <p><strong>print</strong>(List[<strong>-</strong>3])</p>
+        <p><strong>Output:</strong></p>
+        <p>Accessing element from the list</p>
+        <p>Geeks</p>
+        <p>Geeks</p>
+        <p>Accessing element using negative indexing</p>
+        <p>Geeks</p>
+        <p>Geeks</p>
+        <p><strong>Tuple Data Type</strong></p>
+        <p>Just like a list, a <a href="https://www.geeksforgeeks.org/python-tuples/">tuple</a> is also an ordered collection of Python objects. The only difference between a tuple and a list is that tuples are immutable i.e. tuples cannot be modified after it is created. It is represented by a tuple class.</p>
+        <p><strong>Creating a Tuple</strong></p>
+        <p>In Python, <a href="https://www.geeksforgeeks.org/python-tuples/">tuples</a> are created by placing a sequence of values separated by a &lsquo;comma&rsquo; with or without the use of parentheses for grouping the data sequence. Tuples can contain any number of elements and of any datatype (like strings, integers, lists, etc.). <strong>Note: </strong>Tuples can also be created with a single element, but it is a bit tricky. Having one element in the parentheses is not sufficient, there must be a trailing &lsquo;comma&rsquo; to make it a tuple.</p>
+        <p>Creating an empty tuple</p>
+        <p>Tuple1 <strong>= </strong>() <strong>print</strong>("Initial empty Tuple: ") <strong>print</strong>(Tuple1)</p>
+        <p># Creating a Tuple with</p>
+        <p># the use of Strings</p>
+        <p>Tuple1 <strong>= </strong>('Geeks', 'For') print("\nTuple with the use of String: ") print(Tuple1)</p>
+        <p># Creating a Tuple with # the use of list list1 <strong>= </strong>[1, 2, 4, 5, 6] print("\nTuple using List: ") <strong>print</strong>(tuple(list1))</p>
+        <p># Creating a Tuple with the</p>
+        <p># use of built-in function</p>
+        <p>Tuple1 <strong>= </strong>tuple('Geeks') print("\nTuple with the use of function: ") <strong>print</strong>(Tuple1)</p>
+        <p># Creating a Tuple</p>
+        <p># with nested tuples</p>
+        <p>Tuple1 <strong>= </strong>(0, 1, 2, 3)</p>
+        <p>Tuple2 <strong>= </strong>('python', 'geek')</p>
+        <p>Tuple3 <strong>= </strong>(Tuple1, Tuple2) print("\nTuple with nested tuples: ")</p>
+        <p>print(Tuple3)</p>
+        <p>Initial empty Tuple:</p>
+        <p>()</p>
+        <p>Tuple with the use of String:</p>
+        <p>('Geeks', 'For')</p>
+        <p>Tuple using List:</p>
+        <p>(1, 2, 4, 5, 6)</p>
+        <p>Tuple with the use of function:</p>
+        <p>('G', 'e', 'e', 'k', 's')</p>
+        <p>Tuple with nested tuples: ((0, 1, 2, 3), ('python', 'geek'))</p>
+        <p>Initial empty Tuple:</p>
+        <p>()</p>
+        <p>Tuple with the use of String:</p>
+        <p>('Geeks', 'For')</p>
+        <p>Tuple using List:</p>
+        <p>(1, 2, 4, 5, 6)</p>
+        <p>Tuple with the use of function:</p>
+        <p>('G', 'e', 'e', 'k', 's')</p>
+        <p>Tuple with nested tuples:</p>
+        <p>((0, 1, 2, 3), ('python', 'geek'))</p>
+        <p><strong>Access Tuple Items</strong></p>
+        <p>In order to access the tuple items refer to the index number. Use the index operator [ ] to access an item in a tuple. The index must be an integer. Nested tuples are accessed using nested indexing.</p>
+        <p># Python program to # demonstrate accessing tuple</p>
+        <p>tuple1 <strong>= </strong>tuple([1, 2, 3, 4, 5])</p>
+        <p># Accessing element using indexing <strong>print</strong>("First element of tuple") <strong>print</strong>(tuple1[0])</p>
+        <p># Accessing element from last # negative indexing print("\nLast element of tuple") print(tuple1[<strong>-</strong>1])</p>
+        <p>print("\nThird last element of tuple") print(tuple1[<strong>-</strong>3])</p>
+        <p><strong>Output:</strong></p>
+        <p>First element of tuple 1</p>
+        <p>Last element of tuple</p>
+        <p>5</p>
+        <p>Third last element of tuple</p>
+        <p>3</p>
+        <p><strong>Boolean Data Type in Python</strong></p>
+        <p>Data type with one of the two built-in values, True or False. Boolean objects that are equal to True are truthy (true), and those equal to False are falsy (false). But non-Boolean objects can be evaluated in a Boolean context as well and determined to be true or false. It is denoted by the class bool.</p>
+        <p><strong>Note </strong>&ndash; True and False with capital &lsquo;T&rsquo; and &lsquo;F&rsquo; are valid booleans otherwise python will throw an error.</p>
+        <p># Python program to # demonstrate boolean type</p>
+        <p>print(type(True)) print(type(False))</p>
+        <p><strong>print</strong>(type(true))</p>
+        <p>&lt;class 'bool'&gt;</p>
+        <p>&lt;class 'bool'&gt;</p>
+        <p>Traceback (most recent call last):</p>
+        <p>File "/home/7e8862763fb66153d70824099d4f5fb7.py", line 8, in print(type(true))</p>
+        <p>NameError: name 'true' is not defined</p>
+        <p><strong>Set Data Type in Python</strong></p>
+        <p>In Python, a <a href="https://www.geeksforgeeks.org/python-sets/">Set</a> is an unordered collection of data types that is iterable, mutable and has no duplicate elements. The order of elements in a set is undefined though it may consist of various elements.</p>
+        <p><strong>Create a Set in Python</strong></p>
+        <p>Sets can be created by using the built-in set() function with an iterable object or a sequence by placing the sequence inside curly braces, separated by a &lsquo;comma&rsquo;. The type of elements in a set need not be the same, various mixed-up data type values can also be passed to the set.</p>
+        <p># Python program to demonstrate</p>
+        <p># Creation of Set in Python</p>
+        <p># Creating a Set set1 <strong>= </strong>set() print("Initial blank Set: ") <strong>print</strong>(set1)</p>
+        <p># Creating a Set with # the use of a String set1 <strong>= </strong>set("GeeksForGeeks") print("\nSet with the use of String: ") print(set1)</p>
+        <p># Creating a Set with # the use of a List set1 <strong>= </strong>set(["Geeks", "For", "Geeks"]) <strong>print</strong>("\nSet with the use of List: ") print(set1)</p>
+        <p># Creating a Set with</p>
+        <p># a mixed type of values</p>
+        <p># (Having numbers and strings) set1 <strong>= </strong>set([1, 2, 'Geeks', 4, 'For', 6, 'Geeks']) print("\nSet with the use of Mixed Values") print(set1)</p>
+        <p>Initial blank Set: set()</p>
+        <p>Set with the use of String:</p>
+        <p>{'F', 'o', 'G', 's', 'r', 'k', 'e'}</p>
+        <p>Set with the use of List: {'Geeks', 'For'}</p>
+        <p>Set with the use of Mixed Values {1, 2, 4, 6, 'Geeks', 'For'}</p>
+        <p><strong>Access Set Items</strong></p>
+        <p>Set items cannot be accessed by referring to an index, since sets are unordered the items has no index. But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in the keyword.</p>
+        <p># Python program to demonstrate</p>
+        <p># Accessing of elements in a set</p>
+        <p># Creating a set</p>
+        <p>set1 <strong>= </strong>set(["Geeks", "For", "Geeks"]) <strong>print</strong>("\nInitial set") <strong>print</strong>(set1)</p>
+        <p># Accessing element using</p>
+        <p># for loop print("\nElements of set: ") <strong>for </strong>i <strong>in </strong>set1: print(i, end<strong>=</strong>" ")</p>
+        <p># Checking the element # using in keyword print("Geeks" <strong>in </strong>set1) <strong>Output:</strong></p>
+        <p>Initial set:</p>
+        <p>{'Geeks', 'For'}</p>
+        <p>Elements of set: Geeks For</p>
+        <p>True</p>
+        <p><strong>Dictionary Data Type in Python</strong></p>
+        <p>A dictionary in Python is an unordered collection of data values, used to store data values like a map, unlike other Data Types that hold only a single value as an element, a Dictionary holds a key: value pair. Key-value is provided in the dictionary to make it more optimized. Each key-value pair in a Dictionary is separated by a colon : , whereas each key is separated by a &lsquo;comma&rsquo;.</p>
+        <p><strong>Create a Dictionary</strong></p>
+        <p>In Python, a Dictionary can be created by placing a sequence of elements within curly {} braces, separated by &lsquo;comma&rsquo;. Values in a dictionary can be of any datatype and can be duplicated, whereas keys can&rsquo;t be repeated and must be immutable. The dictionary can also be created by the built-in function dict(). An empty dictionary can be created by just placing it in curly braces{}. <strong>Note </strong>&ndash; Dictionary keys are case sensitive, the same name but different cases of Key will be treated distinctl</p>
+        <p># Creating an empty Dictionary</p>
+        <p>Dict <strong>= </strong>{}</p>
+        <p>print("Empty Dictionary: ")</p>
+        <p><strong>print</strong>(Dict)</p>
+        <p># Creating a Dictionary</p>
+        <p># with Integer Keys</p>
+        <p>Dict <strong>= </strong>{1: 'Geeks', 2: 'For', 3: 'Geeks'} <strong>print</strong>("\nDictionary with the use of Integer Keys: ") <strong>print</strong>(Dict)</p>
+        <p># Creating a Dictionary</p>
+        <p># with Mixed keys</p>
+        <p>Dict <strong>= </strong>{'Name': 'Geeks', 1: [1, 2, 3, 4]} <strong>print</strong>("\nDictionary with the use of Mixed Keys: ") print(Dict)</p>
+        <p># Creating a Dictionary</p>
+        <p># with dict() method</p>
+        <p>Dict <strong>= </strong>dict({1: 'Geeks', 2: 'For', 3: 'Geeks'}) <strong>print</strong>("\nDictionary with the use of dict(): ") print(Dict)</p>
+        <p># Creating a Dictionary</p>
+        <p># with each item as a Pair</p>
+        <p>Dict <strong>= </strong>dict([(1, 'Geeks'), (2, 'For')]) <strong>print</strong>("\nDictionary with each item as a pair: ") print(Dict)</p>
+        <p><strong>Output:</strong></p>
+        <p>Empty Dictionary:</p>
+        <p>{}</p>
+        <p>Dictionary with the use of Integer Keys: {1: 'Geeks', 2: 'For', 3: 'Geeks'}</p>
+        <p>Dictionary with the use of Mixed Keys: {1: [1, 2, 3, 4], 'Name': 'Geeks'}</p>
+        <p>Dictionary with the use of dict():</p>
+        <p>{1: 'Geeks', 2: 'For', 3: 'Geeks'}</p>
+        <p>Dictionary with each item as a pair:</p>
+        <p>{1: 'Geeks', 2: 'For'}</p>
+        <p><strong>Accessing Key-value in Dictionary</strong></p>
+        <p>In order to access the items of a dictionary refer to its key name. Key can be used inside square brackets. There is also a method called get() that will also help in accessing the element from a dictionary.</p>
+        <p># Python program to demonstrate</p>
+        <p># accessing a element from a Dictionary</p>
+        <p># Creating a Dictionary</p>
+        <p>Dict <strong>= </strong>{1: 'Geeks', 'name': 'For', 3: 'Geeks'}</p>
+        <p># accessing a element using key <strong>print</strong>("Accessing a element using key:") print(Dict['name'])</p>
+        <p># accessing a element using get()</p>
+        <p># method print("Accessing a element using get:") print(Dict.get(3))</p>
+        <p><strong>Output:</strong></p>
+        <p>Accessing a element using key:</p>
+        <p>For</p>
+        <p>Accessing a element using get:</p>
+        <p>Geeks</p>
+        <p><strong>Associativity of Python Operators</strong></p>
+        <p>If an expression contains two or more operators with the same precedence then Operator Associativity is used to determine. It can either be <strong>L</strong>eft to <strong>R</strong>ight or from <strong>R</strong>ight to <strong>L</strong>eft.</p>
+        <p><strong>Example</strong></p>
+        <p>In this code, &lsquo;*&rsquo; and &lsquo;/&rsquo; have the same precedence and their associativity is <strong>L</strong>eft <strong>t</strong>o <strong>R</strong>ight, so the expression &ldquo;100 / 10 * 10&rdquo; is treated as &ldquo;(100 / 10) * 10&rdquo;.</p>
+        <p># Left-right associativity</p>
+        <p># 100 / 10 * 10 is calculated as</p>
+        <p># (100 / 10) * 10 and not # as 100 / (10 * 10) print(100 <strong>/ </strong>10 <strong>* </strong>10)</p>
+        <p># Left-right associativity</p>
+        <p># 5 - 2 + 3 is calculated as</p>
+        <p># (5 - 2) + 3 and not # as 5 - (2 + 3) print(5 <strong>- </strong>2 <strong>+ </strong>3)</p>
+        <p># left-right associativity print(5 <strong>- </strong>(2 <strong>+ </strong>3))</p>
+        <p># right-left associativity</p>
+        <p># 2 ** 3 ** 2 is calculated as</p>
+        <p># 2 ** (3 ** 2) and not # as (2 ** 3) ** 2 <strong>print</strong>(2 <strong>** </strong>3 <strong>** </strong>2)</p>
+        <p><strong>Output</strong></p>
+        <p>100</p>
+        <p>6</p>
+        <p>0</p>
+        <p>512</p>
+        <p><strong>Operators Precedence and Associativity in Python</strong></p>
+        <p>Operators Precedence and Associativity are two main characteristics of operators that determine the evaluation order of sub-expressions in the absence of brackets.</p>
+        <p><strong>Example</strong></p>
+        <p>100 + 200 / 10 - 3 * 10</p>
+        <p>100 + 200 / 10 - 3 * 10 is calculated as 100 + (200 / 10) - (3 * 10) and not as (100 + 200) / (10 - 3) * 10</p>
+        <p>expression <strong>= </strong>100 <strong>+ </strong>200 <strong>/ </strong>10 <strong>- </strong>3 <strong>* </strong>10</p>
+        <p>print(expression)</p>
+        <p><strong>Output</strong></p>
+        <p>90.0</p>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <div class="webLogo">
+                        <h2 class="logo">MCA_<span class="notes_text"> Notes</span></h2>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>All Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact US</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="#">Quetion Paper</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <script src="/gSap.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
